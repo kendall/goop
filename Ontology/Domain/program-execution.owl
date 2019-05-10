@@ -1,0 +1,361 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns="http://nemo.inf.ufes.br/ontologies/stakeholders#"
+     xml:base="http://nemo.inf.ufes.br/ontologies/stakeholders"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:goop="http://nemo.inf.ufes.br/ontologies/goop#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#">
+    <owl:Ontology rdf:about="http://nemo.inf.ufes.br/ontologies/program-execution">
+        <owl:imports rdf:resource="http://nemo.inf.ufes.br/ontologies/goop"/>
+    </owl:Ontology>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Individuals
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://nemo.inf.ufes.br/ontologies/program-execution#Artifact -->
+
+    <owl:NamedIndividual rdf:about="http://nemo.inf.ufes.br/ontologies/program-execution#Artifact">
+        <rdf:type rdf:resource="http://nemo.inf.ufes.br/ontologies/goop#Class"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://nemo.inf.ufes.br/ontologies/program-execution#Controller -->
+
+    <owl:NamedIndividual rdf:about="http://nemo.inf.ufes.br/ontologies/program-execution#Controller">
+        <rdf:type rdf:resource="http://nemo.inf.ufes.br/ontologies/goop#Class"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://nemo.inf.ufes.br/ontologies/program-execution#Define_how_program_execution_works -->
+
+    <owl:NamedIndividual rdf:about="http://nemo.inf.ufes.br/ontologies/program-execution#Define_how_program_execution_works">
+        <rdf:type rdf:resource="http://nemo.inf.ufes.br/ontologies/goop#Goal_Based_Requirement"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://nemo.inf.ufes.br/ontologies/program-execution#Document -->
+
+    <owl:NamedIndividual rdf:about="http://nemo.inf.ufes.br/ontologies/program-execution#Document">
+        <rdf:type rdf:resource="http://nemo.inf.ufes.br/ontologies/goop#Class"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://nemo.inf.ufes.br/ontologies/program-execution#Functional_Requirement -->
+
+    <owl:NamedIndividual rdf:about="http://nemo.inf.ufes.br/ontologies/program-execution#Functional_Requirement">
+        <rdf:type rdf:resource="http://nemo.inf.ufes.br/ontologies/goop#Class"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://nemo.inf.ufes.br/ontologies/program-execution#Goop -->
+
+    <owl:NamedIndividual rdf:about="http://nemo.inf.ufes.br/ontologies/program-execution#Goop">
+        <rdf:type rdf:resource="http://nemo.inf.ufes.br/ontologies/goop#Goop"/>
+        <goop:composed_by rdf:resource="http://nemo.inf.ufes.br/ontologies/program-execution#Define_how_program_execution_works"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://nemo.inf.ufes.br/ontologies/program-execution#Information_Item -->
+
+    <owl:NamedIndividual rdf:about="http://nemo.inf.ufes.br/ontologies/program-execution#Information_Item">
+        <rdf:type rdf:resource="http://nemo.inf.ufes.br/ontologies/goop#Class"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://nemo.inf.ufes.br/ontologies/program-execution#Loaded_Program_Copy -->
+
+    <owl:NamedIndividual rdf:about="http://nemo.inf.ufes.br/ontologies/program-execution#Loaded_Program_Copy">
+        <rdf:type rdf:resource="http://nemo.inf.ufes.br/ontologies/goop#Class"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://nemo.inf.ufes.br/ontologies/program-execution#Machine -->
+
+    <owl:NamedIndividual rdf:about="http://nemo.inf.ufes.br/ontologies/program-execution#Machine">
+        <rdf:type rdf:resource="http://nemo.inf.ufes.br/ontologies/goop#Class"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://nemo.inf.ufes.br/ontologies/program-execution#Model_Fragment -->
+
+    <owl:NamedIndividual rdf:about="http://nemo.inf.ufes.br/ontologies/program-execution#Model_Fragment">
+        <rdf:type rdf:resource="http://nemo.inf.ufes.br/ontologies/goop#Model_Fragment"/>
+        <goop:composed_by rdf:resource="http://nemo.inf.ufes.br/ontologies/program-execution#Artifact"/>
+        <goop:composed_by rdf:resource="http://nemo.inf.ufes.br/ontologies/program-execution#Controller"/>
+        <goop:composed_by rdf:resource="http://nemo.inf.ufes.br/ontologies/program-execution#Document"/>
+        <goop:composed_by rdf:resource="http://nemo.inf.ufes.br/ontologies/program-execution#Functional_Requirement"/>
+        <goop:composed_by rdf:resource="http://nemo.inf.ufes.br/ontologies/program-execution#Information_Item"/>
+        <goop:composed_by rdf:resource="http://nemo.inf.ufes.br/ontologies/program-execution#Loaded_Program_Copy"/>
+        <goop:composed_by rdf:resource="http://nemo.inf.ufes.br/ontologies/program-execution#Machine"/>
+        <goop:composed_by rdf:resource="http://nemo.inf.ufes.br/ontologies/program-execution#Observable_State"/>
+        <goop:composed_by rdf:resource="http://nemo.inf.ufes.br/ontologies/program-execution#Program"/>
+        <goop:composed_by rdf:resource="http://nemo.inf.ufes.br/ontologies/program-execution#Program_Copy_Execution"/>
+        <goop:composed_by rdf:resource="http://nemo.inf.ufes.br/ontologies/program-execution#Program_Specification"/>
+        <goop:composed_by rdf:resource="http://nemo.inf.ufes.br/ontologies/program-execution#Requirement"/>
+        <goop:composed_by rdf:resource="http://nemo.inf.ufes.br/ontologies/program-execution#Requirement_Artifact"/>
+        <goop:composed_by rdf:resource="http://nemo.inf.ufes.br/ontologies/program-execution#Software_Function"/>
+        <goop:composed_by rdf:resource="http://nemo.inf.ufes.br/ontologies/program-execution#Software_Function_Universal"/>
+        <goop:composed_by rdf:resource="http://nemo.inf.ufes.br/ontologies/program-execution#Software_Item"/>
+        <goop:composed_by rdf:resource="http://nemo.inf.ufes.br/ontologies/program-execution#brings_about"/>
+        <goop:composed_by rdf:resource="http://nemo.inf.ufes.br/ontologies/program-execution#constituted_by"/>
+        <goop:composed_by rdf:resource="http://nemo.inf.ufes.br/ontologies/program-execution#describes"/>
+        <goop:composed_by rdf:resource="http://nemo.inf.ufes.br/ontologies/program-execution#execution_of"/>
+        <goop:composed_by rdf:resource="http://nemo.inf.ufes.br/ontologies/program-execution#implements"/>
+        <goop:composed_by rdf:resource="http://nemo.inf.ufes.br/ontologies/program-execution#inheres_in"/>
+        <goop:composed_by rdf:resource="http://nemo.inf.ufes.br/ontologies/program-execution#instance_of"/>
+        <goop:composed_by rdf:resource="http://nemo.inf.ufes.br/ontologies/program-execution#intends_to_implement"/>
+        <goop:composed_by rdf:resource="http://nemo.inf.ufes.br/ontologies/program-execution#intends_to_satisfy"/>
+        <goop:composed_by rdf:resource="http://nemo.inf.ufes.br/ontologies/program-execution#materialization_of"/>
+        <goop:composed_by rdf:resource="http://nemo.inf.ufes.br/ontologies/program-execution#participates_in"/>
+        <goop:composed_by rdf:resource="http://nemo.inf.ufes.br/ontologies/program-execution#refers_to"/>
+        <goop:composed_by rdf:resource="http://nemo.inf.ufes.br/ontologies/program-execution#UFO-A::Situation"/>
+        <goop:composed_by rdf:resource="http://nemo.inf.ufes.br/ontologies/program-execution#UFO-B::Event"/>
+        <goop:composed_by rdf:resource="http://nemo.inf.ufes.br/ontologies/program-execution#UFO-C::Disposition"/>
+        <goop:composed_by rdf:resource="http://nemo.inf.ufes.br/ontologies/program-execution#UFO-C::Function"/>
+        <goop:composed_by rdf:resource="http://nemo.inf.ufes.br/ontologies/program-execution#UFO-C::Function_Universal"/>
+        <goop:composed_by rdf:resource="http://nemo.inf.ufes.br/ontologies/program-execution#UFO-C::Object"/>
+        <goop:is_used_to_satisfy rdf:resource="http://nemo.inf.ufes.br/ontologies/program-execution#Goop"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://nemo.inf.ufes.br/ontologies/program-execution#Observable_State -->
+
+    <owl:NamedIndividual rdf:about="http://nemo.inf.ufes.br/ontologies/program-execution#Observable_State">
+        <rdf:type rdf:resource="http://nemo.inf.ufes.br/ontologies/goop#Class"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://nemo.inf.ufes.br/ontologies/program-execution#Program -->
+
+    <owl:NamedIndividual rdf:about="http://nemo.inf.ufes.br/ontologies/program-execution#Program">
+        <rdf:type rdf:resource="http://nemo.inf.ufes.br/ontologies/goop#Class"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://nemo.inf.ufes.br/ontologies/program-execution#Program_Copy_Execution -->
+
+    <owl:NamedIndividual rdf:about="http://nemo.inf.ufes.br/ontologies/program-execution#Program_Copy_Execution">
+        <rdf:type rdf:resource="http://nemo.inf.ufes.br/ontologies/goop#Class"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://nemo.inf.ufes.br/ontologies/program-execution#Program_Specification -->
+
+    <owl:NamedIndividual rdf:about="http://nemo.inf.ufes.br/ontologies/program-execution#Program_Specification">
+        <rdf:type rdf:resource="http://nemo.inf.ufes.br/ontologies/goop#Class"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://nemo.inf.ufes.br/ontologies/program-execution#Requirement -->
+
+    <owl:NamedIndividual rdf:about="http://nemo.inf.ufes.br/ontologies/program-execution#Requirement">
+        <rdf:type rdf:resource="http://nemo.inf.ufes.br/ontologies/goop#Class"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://nemo.inf.ufes.br/ontologies/program-execution#Requirement_Artifact -->
+
+    <owl:NamedIndividual rdf:about="http://nemo.inf.ufes.br/ontologies/program-execution#Requirement_Artifact">
+        <rdf:type rdf:resource="http://nemo.inf.ufes.br/ontologies/goop#Class"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://nemo.inf.ufes.br/ontologies/program-execution#Software_Function -->
+
+    <owl:NamedIndividual rdf:about="http://nemo.inf.ufes.br/ontologies/program-execution#Software_Function">
+        <rdf:type rdf:resource="http://nemo.inf.ufes.br/ontologies/goop#Class"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://nemo.inf.ufes.br/ontologies/program-execution#Software_Function_Universal -->
+
+    <owl:NamedIndividual rdf:about="http://nemo.inf.ufes.br/ontologies/program-execution#Software_Function_Universal">
+        <rdf:type rdf:resource="http://nemo.inf.ufes.br/ontologies/goop#Class"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://nemo.inf.ufes.br/ontologies/program-execution#Software_Item -->
+
+    <owl:NamedIndividual rdf:about="http://nemo.inf.ufes.br/ontologies/program-execution#Software_Item">
+        <rdf:type rdf:resource="http://nemo.inf.ufes.br/ontologies/goop#Class"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://nemo.inf.ufes.br/ontologies/program-execution#brings_about -->
+
+    <owl:NamedIndividual rdf:about="http://nemo.inf.ufes.br/ontologies/program-execution#brings_about">
+        <rdf:type rdf:resource="http://nemo.inf.ufes.br/ontologies/goop#Object_Property"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://nemo.inf.ufes.br/ontologies/program-execution#constituted_by -->
+
+    <owl:NamedIndividual rdf:about="http://nemo.inf.ufes.br/ontologies/program-execution#constituted_by">
+        <rdf:type rdf:resource="http://nemo.inf.ufes.br/ontologies/goop#Object_Property"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://nemo.inf.ufes.br/ontologies/program-execution#describes -->
+
+    <owl:NamedIndividual rdf:about="http://nemo.inf.ufes.br/ontologies/program-execution#describes">
+        <rdf:type rdf:resource="http://nemo.inf.ufes.br/ontologies/goop#Object_Property"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://nemo.inf.ufes.br/ontologies/program-execution#execution_of -->
+
+    <owl:NamedIndividual rdf:about="http://nemo.inf.ufes.br/ontologies/program-execution#execution_of">
+        <rdf:type rdf:resource="http://nemo.inf.ufes.br/ontologies/goop#Object_Property"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://nemo.inf.ufes.br/ontologies/program-execution#implements -->
+
+    <owl:NamedIndividual rdf:about="http://nemo.inf.ufes.br/ontologies/program-execution#implements">
+        <rdf:type rdf:resource="http://nemo.inf.ufes.br/ontologies/goop#Object_Property"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://nemo.inf.ufes.br/ontologies/program-execution#inheres_in -->
+
+    <owl:NamedIndividual rdf:about="http://nemo.inf.ufes.br/ontologies/program-execution#inheres_in">
+        <rdf:type rdf:resource="http://nemo.inf.ufes.br/ontologies/goop#Object_Property"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://nemo.inf.ufes.br/ontologies/program-execution#instance_of -->
+
+    <owl:NamedIndividual rdf:about="http://nemo.inf.ufes.br/ontologies/program-execution#instance_of">
+        <rdf:type rdf:resource="http://nemo.inf.ufes.br/ontologies/goop#Object_Property"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://nemo.inf.ufes.br/ontologies/program-execution#intends_to_implement -->
+
+    <owl:NamedIndividual rdf:about="http://nemo.inf.ufes.br/ontologies/program-execution#intends_to_implement">
+        <rdf:type rdf:resource="http://nemo.inf.ufes.br/ontologies/goop#Object_Property"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://nemo.inf.ufes.br/ontologies/program-execution#intends_to_satisfy -->
+
+    <owl:NamedIndividual rdf:about="http://nemo.inf.ufes.br/ontologies/program-execution#intends_to_satisfy">
+        <rdf:type rdf:resource="http://nemo.inf.ufes.br/ontologies/goop#Object_Property"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://nemo.inf.ufes.br/ontologies/program-execution#materialization_of -->
+
+    <owl:NamedIndividual rdf:about="http://nemo.inf.ufes.br/ontologies/program-execution#materialization_of">
+        <rdf:type rdf:resource="http://nemo.inf.ufes.br/ontologies/goop#Object_Property"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://nemo.inf.ufes.br/ontologies/program-execution#participates_in -->
+
+    <owl:NamedIndividual rdf:about="http://nemo.inf.ufes.br/ontologies/program-execution#participates_in">
+        <rdf:type rdf:resource="http://nemo.inf.ufes.br/ontologies/goop#Object_Property"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://nemo.inf.ufes.br/ontologies/program-execution#refers_to -->
+
+    <owl:NamedIndividual rdf:about="http://nemo.inf.ufes.br/ontologies/program-execution#refers_to">
+        <rdf:type rdf:resource="http://nemo.inf.ufes.br/ontologies/goop#Object_Property"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://nemo.inf.ufes.br/ontologies/program-execution#UFO-A::Situation -->
+
+    <owl:NamedIndividual rdf:about="http://nemo.inf.ufes.br/ontologies/program-execution#UFO-A::Situation">
+        <rdf:type rdf:resource="http://nemo.inf.ufes.br/ontologies/goop#Class"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://nemo.inf.ufes.br/ontologies/program-execution#UFO-B::Event -->
+
+    <owl:NamedIndividual rdf:about="http://nemo.inf.ufes.br/ontologies/program-execution#UFO-B::Event">
+        <rdf:type rdf:resource="http://nemo.inf.ufes.br/ontologies/goop#Class"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://nemo.inf.ufes.br/ontologies/program-execution#UFO-C::Disposition -->
+
+    <owl:NamedIndividual rdf:about="http://nemo.inf.ufes.br/ontologies/program-execution#UFO-C::Disposition">
+        <rdf:type rdf:resource="http://nemo.inf.ufes.br/ontologies/goop#Class"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://nemo.inf.ufes.br/ontologies/program-execution#UFO-C::Function -->
+
+    <owl:NamedIndividual rdf:about="http://nemo.inf.ufes.br/ontologies/program-execution#UFO-C::Function">
+        <rdf:type rdf:resource="http://nemo.inf.ufes.br/ontologies/goop#Class"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://nemo.inf.ufes.br/ontologies/program-execution#UFO-C::Function_Universal -->
+
+    <owl:NamedIndividual rdf:about="http://nemo.inf.ufes.br/ontologies/program-execution#UFO-C::Function_Universal">
+        <rdf:type rdf:resource="http://nemo.inf.ufes.br/ontologies/goop#Class"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://nemo.inf.ufes.br/ontologies/program-execution#UFO-C::Object -->
+
+    <owl:NamedIndividual rdf:about="http://nemo.inf.ufes.br/ontologies/program-execution#UFO-C::Object">
+        <rdf:type rdf:resource="http://nemo.inf.ufes.br/ontologies/goop#Class"/>
+    </owl:NamedIndividual>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 4.5.7.2018-12-02T02:23:35Z) https://github.com/owlcs/owlapi -->
+

@@ -1,0 +1,928 @@
+<?xml version="1.0"?>
+<Ontology xmlns="http://www.w3.org/2002/07/owl#"
+     xml:base="http://nemo.inf.ufes.br/ontologies/goop_good_relations"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     ontologyIRI="http://nemo.inf.ufes.br/ontologies/goop_good_relations">
+    <Prefix name="" IRI="http://nemo.inf.ufes.br/ontologies/goop#"/>
+    <Prefix name="owl" IRI="http://www.w3.org/2002/07/owl#"/>
+    <Prefix name="rdf" IRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#"/>
+    <Prefix name="xml" IRI="http://www.w3.org/XML/1998/namespace"/>
+    <Prefix name="xsd" IRI="http://www.w3.org/2001/XMLSchema#"/>
+    <Prefix name="rdfs" IRI="http://www.w3.org/2000/01/rdf-schema#"/>
+    <Declaration>
+        <Class IRI="http://nemo.inf.ufes.br/ontology/goop#Class"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="http://nemo.inf.ufes.br/ontology/goop#Goal"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="http://nemo.inf.ufes.br/ontology/goop#Goop"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="http://nemo.inf.ufes.br/ontology/goop#IntentionalElement"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="http://nemo.inf.ufes.br/ontology/goop#ModelFragment"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="http://nemo.inf.ufes.br/ontology/goop#Object"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="http://nemo.inf.ufes.br/ontology/goop#Ontology_User"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="http://nemo.inf.ufes.br/ontology/goop#Task"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="http://nemo.inf.ufes.br/ontology/goop#achieves"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="http://nemo.inf.ufes.br/ontology/goop#composedBy"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="http://nemo.inf.ufes.br/ontology/goop#hasDomain"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="http://nemo.inf.ufes.br/ontology/goop#hasRange"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="http://nemo.inf.ufes.br/ontology/goop#performs"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="http://nemo.inf.ufes.br/ontology/goop#satisfies"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#Description"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#IRI"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Atomic_Offering_Item_Comp"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Business_Entity"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Characterization"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Characterization1"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Characterization2"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Characterization3"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Complex_Offering_Item_Component"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#ComponentOf"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#ComponentOf1"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#ComponentOf2"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#ComponentOf3"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#ComponentOf4"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#ComponentOf5"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#ComponentOf6"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Delivery_Entity"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Delivery_Method"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Delivery_Price_Specification"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Entity"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Good_Relations_Goop"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Good_Relations_Model_Fragment"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#HaveDeliveryOrShip"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#HaveOfferingDescrSpec"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#HaveOfferingSpecified"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#HavePaymentMethSpec"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Individual_Entity"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Individual_Product"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Individual_Product_SM_Specification"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Individual_Product_Specified_By_Model"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#InformOffering"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#InformOfferingType"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#InformPaymentMethods"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#InformShippingOrDelvMeth"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Location"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Material"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Mediation"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Mediation1"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Model_Specification"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Offering"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#OfferingSpecifier"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Offering_Item"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Offering_Item_Component"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Offering_Payment_Method"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Offering_Price_Specification"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Offering_Provider"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Offering_Type"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Offerred_Model_Specification"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#OntologyEngineer"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Payment_Entity"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Period"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Price_Specification"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Product_Model"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Product_Type"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Qualititative_Property"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Quantitative_Property"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Specification"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Specification_With_Warranty"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Warrantier_Entity"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Warranty"/>
+    </Declaration>
+    <SubClassOf>
+        <Class IRI="http://nemo.inf.ufes.br/ontology/goop#Goal"/>
+        <Class IRI="http://nemo.inf.ufes.br/ontology/goop#IntentionalElement"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://nemo.inf.ufes.br/ontology/goop#Task"/>
+        <Class IRI="http://nemo.inf.ufes.br/ontology/goop#IntentionalElement"/>
+    </SubClassOf>
+    <ClassAssertion>
+        <Class IRI="http://nemo.inf.ufes.br/ontology/goop#Class"/>
+        <NamedIndividual IRI="#Atomic_Offering_Item_Comp"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="http://nemo.inf.ufes.br/ontology/goop#Class"/>
+        <NamedIndividual IRI="#Business_Entity"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="http://nemo.inf.ufes.br/ontology/goop#Object"/>
+        <NamedIndividual IRI="#Characterization"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="http://nemo.inf.ufes.br/ontology/goop#Object"/>
+        <NamedIndividual IRI="#Characterization1"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="http://nemo.inf.ufes.br/ontology/goop#Object"/>
+        <NamedIndividual IRI="#Characterization2"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="http://nemo.inf.ufes.br/ontology/goop#Object"/>
+        <NamedIndividual IRI="#Characterization3"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="http://nemo.inf.ufes.br/ontology/goop#Class"/>
+        <NamedIndividual IRI="#Complex_Offering_Item_Component"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="http://nemo.inf.ufes.br/ontology/goop#Object"/>
+        <NamedIndividual IRI="#ComponentOf"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="http://nemo.inf.ufes.br/ontology/goop#Object"/>
+        <NamedIndividual IRI="#ComponentOf1"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="http://nemo.inf.ufes.br/ontology/goop#Object"/>
+        <NamedIndividual IRI="#ComponentOf3"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="http://nemo.inf.ufes.br/ontology/goop#Object"/>
+        <NamedIndividual IRI="#ComponentOf4"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="http://nemo.inf.ufes.br/ontology/goop#Object"/>
+        <NamedIndividual IRI="#ComponentOf5"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="http://nemo.inf.ufes.br/ontology/goop#Object"/>
+        <NamedIndividual IRI="#ComponentOf6"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="http://nemo.inf.ufes.br/ontology/goop#Class"/>
+        <NamedIndividual IRI="#Delivery_Entity"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="http://nemo.inf.ufes.br/ontology/goop#Class"/>
+        <NamedIndividual IRI="#Delivery_Method"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="http://nemo.inf.ufes.br/ontology/goop#Class"/>
+        <NamedIndividual IRI="#Delivery_Price_Specification"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="http://nemo.inf.ufes.br/ontology/goop#Class"/>
+        <NamedIndividual IRI="#Entity"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="http://nemo.inf.ufes.br/ontology/goop#Goop"/>
+        <NamedIndividual IRI="#Good_Relations_Goop"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="http://nemo.inf.ufes.br/ontology/goop#ModelFragment"/>
+        <NamedIndividual IRI="#Good_Relations_Model_Fragment"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="http://nemo.inf.ufes.br/ontology/goop#Goal"/>
+        <NamedIndividual IRI="#HaveDeliveryOrShip"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="http://nemo.inf.ufes.br/ontology/goop#Goal"/>
+        <NamedIndividual IRI="#HaveOfferingDescrSpec"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="http://nemo.inf.ufes.br/ontology/goop#Goal"/>
+        <NamedIndividual IRI="#HaveOfferingSpecified"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="http://nemo.inf.ufes.br/ontology/goop#Goal"/>
+        <NamedIndividual IRI="#HavePaymentMethSpec"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="http://nemo.inf.ufes.br/ontology/goop#Class"/>
+        <NamedIndividual IRI="#Individual_Entity"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="http://nemo.inf.ufes.br/ontology/goop#Class"/>
+        <NamedIndividual IRI="#Individual_Product"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="http://nemo.inf.ufes.br/ontology/goop#Class"/>
+        <NamedIndividual IRI="#Individual_Product_SM_Specification"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="http://nemo.inf.ufes.br/ontology/goop#Class"/>
+        <NamedIndividual IRI="#Individual_Product_Specified_By_Model"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="http://nemo.inf.ufes.br/ontology/goop#Task"/>
+        <NamedIndividual IRI="#InformOffering"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="http://nemo.inf.ufes.br/ontology/goop#Task"/>
+        <NamedIndividual IRI="#InformOfferingType"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="http://nemo.inf.ufes.br/ontology/goop#Task"/>
+        <NamedIndividual IRI="#InformPaymentMethods"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="http://nemo.inf.ufes.br/ontology/goop#Task"/>
+        <NamedIndividual IRI="#InformShippingOrDelvMeth"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="http://nemo.inf.ufes.br/ontology/goop#Class"/>
+        <NamedIndividual IRI="#Location"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="http://nemo.inf.ufes.br/ontology/goop#Object"/>
+        <NamedIndividual IRI="#Material"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="http://nemo.inf.ufes.br/ontology/goop#Object"/>
+        <NamedIndividual IRI="#Mediation"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="http://nemo.inf.ufes.br/ontology/goop#Object"/>
+        <NamedIndividual IRI="#Mediation1"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="http://nemo.inf.ufes.br/ontology/goop#Class"/>
+        <NamedIndividual IRI="#Model_Specification"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="http://nemo.inf.ufes.br/ontology/goop#Class"/>
+        <NamedIndividual IRI="#Offering"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="http://nemo.inf.ufes.br/ontology/goop#Ontology_User"/>
+        <NamedIndividual IRI="#OfferingSpecifier"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="http://nemo.inf.ufes.br/ontology/goop#Class"/>
+        <NamedIndividual IRI="#Offering_Item"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="http://nemo.inf.ufes.br/ontology/goop#Class"/>
+        <NamedIndividual IRI="#Offering_Item_Component"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="http://nemo.inf.ufes.br/ontology/goop#Class"/>
+        <NamedIndividual IRI="#Offering_Payment_Method"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="http://nemo.inf.ufes.br/ontology/goop#Class"/>
+        <NamedIndividual IRI="#Offering_Price_Specification"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="http://nemo.inf.ufes.br/ontology/goop#Class"/>
+        <NamedIndividual IRI="#Offering_Provider"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="http://nemo.inf.ufes.br/ontology/goop#Class"/>
+        <NamedIndividual IRI="#Offering_Type"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="http://nemo.inf.ufes.br/ontology/goop#Class"/>
+        <NamedIndividual IRI="#Offerred_Model_Specification"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="http://nemo.inf.ufes.br/ontology/goop#Ontology_User"/>
+        <NamedIndividual IRI="#OntologyEngineer"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="http://nemo.inf.ufes.br/ontology/goop#Class"/>
+        <NamedIndividual IRI="#Payment_Entity"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="http://nemo.inf.ufes.br/ontology/goop#Class"/>
+        <NamedIndividual IRI="#Period"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="http://nemo.inf.ufes.br/ontology/goop#Class"/>
+        <NamedIndividual IRI="#Price_Specification"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="http://nemo.inf.ufes.br/ontology/goop#Class"/>
+        <NamedIndividual IRI="#Product_Model"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="http://nemo.inf.ufes.br/ontology/goop#Class"/>
+        <NamedIndividual IRI="#Product_Type"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="http://nemo.inf.ufes.br/ontology/goop#Class"/>
+        <NamedIndividual IRI="#Qualititative_Property"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="http://nemo.inf.ufes.br/ontology/goop#Class"/>
+        <NamedIndividual IRI="#Quantitative_Property"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="http://nemo.inf.ufes.br/ontology/goop#Class"/>
+        <NamedIndividual IRI="#Specification"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="http://nemo.inf.ufes.br/ontology/goop#Class"/>
+        <NamedIndividual IRI="#Specification_With_Warranty"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="http://nemo.inf.ufes.br/ontology/goop#Class"/>
+        <NamedIndividual IRI="#Warrantier_Entity"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="http://nemo.inf.ufes.br/ontology/goop#Class"/>
+        <NamedIndividual IRI="#Warranty"/>
+    </ClassAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="http://nemo.inf.ufes.br/ontology/goop#hasDomain"/>
+        <NamedIndividual IRI="#Characterization"/>
+        <NamedIndividual IRI="#Delivery_Method"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="http://nemo.inf.ufes.br/ontology/goop#hasRange"/>
+        <NamedIndividual IRI="#Characterization"/>
+        <NamedIndividual IRI="#Offering"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="http://nemo.inf.ufes.br/ontology/goop#hasDomain"/>
+        <NamedIndividual IRI="#Characterization1"/>
+        <NamedIndividual IRI="#Offering_Price_Specification"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="http://nemo.inf.ufes.br/ontology/goop#hasRange"/>
+        <NamedIndividual IRI="#Characterization1"/>
+        <NamedIndividual IRI="#Offering"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="http://nemo.inf.ufes.br/ontology/goop#hasDomain"/>
+        <NamedIndividual IRI="#Characterization2"/>
+        <NamedIndividual IRI="#Offering_Type"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="http://nemo.inf.ufes.br/ontology/goop#hasRange"/>
+        <NamedIndividual IRI="#Characterization2"/>
+        <NamedIndividual IRI="#Offering"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="http://nemo.inf.ufes.br/ontology/goop#hasDomain"/>
+        <NamedIndividual IRI="#Characterization3"/>
+        <NamedIndividual IRI="#Offering_Payment_Method"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="http://nemo.inf.ufes.br/ontology/goop#hasRange"/>
+        <NamedIndividual IRI="#Characterization3"/>
+        <NamedIndividual IRI="#Offering"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="http://nemo.inf.ufes.br/ontology/goop#hasDomain"/>
+        <NamedIndividual IRI="#ComponentOf"/>
+        <NamedIndividual IRI="#Complex_Offering_Item_Component"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="http://nemo.inf.ufes.br/ontology/goop#hasRange"/>
+        <NamedIndividual IRI="#ComponentOf"/>
+        <NamedIndividual IRI="#Offering_Item_Component"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="http://nemo.inf.ufes.br/ontology/goop#hasDomain"/>
+        <NamedIndividual IRI="#ComponentOf1"/>
+        <NamedIndividual IRI="#Offering"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="http://nemo.inf.ufes.br/ontology/goop#hasRange"/>
+        <NamedIndividual IRI="#ComponentOf1"/>
+        <NamedIndividual IRI="#Delivery_Entity"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="http://nemo.inf.ufes.br/ontology/goop#hasDomain"/>
+        <NamedIndividual IRI="#ComponentOf2"/>
+        <NamedIndividual IRI="#Offering_Item"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="http://nemo.inf.ufes.br/ontology/goop#hasRange"/>
+        <NamedIndividual IRI="#ComponentOf2"/>
+        <NamedIndividual IRI="#Offering_Item_Component"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="http://nemo.inf.ufes.br/ontology/goop#hasDomain"/>
+        <NamedIndividual IRI="#ComponentOf3"/>
+        <NamedIndividual IRI="#Offering"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="http://nemo.inf.ufes.br/ontology/goop#hasRange"/>
+        <NamedIndividual IRI="#ComponentOf3"/>
+        <NamedIndividual IRI="#Offering_Provider"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="http://nemo.inf.ufes.br/ontology/goop#hasDomain"/>
+        <NamedIndividual IRI="#ComponentOf4"/>
+        <NamedIndividual IRI="#Offering"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="http://nemo.inf.ufes.br/ontology/goop#hasRange"/>
+        <NamedIndividual IRI="#ComponentOf4"/>
+        <NamedIndividual IRI="#Warrantier_Entity"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="http://nemo.inf.ufes.br/ontology/goop#hasDomain"/>
+        <NamedIndividual IRI="#ComponentOf5"/>
+        <NamedIndividual IRI="#Offering"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="http://nemo.inf.ufes.br/ontology/goop#hasRange"/>
+        <NamedIndividual IRI="#ComponentOf5"/>
+        <NamedIndividual IRI="#Payment_Entity"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="http://nemo.inf.ufes.br/ontology/goop#hasDomain"/>
+        <NamedIndividual IRI="#ComponentOf6"/>
+        <NamedIndividual IRI="#Specification_With_Warranty"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="http://nemo.inf.ufes.br/ontology/goop#hasRange"/>
+        <NamedIndividual IRI="#ComponentOf6"/>
+        <NamedIndividual IRI="#Warranty"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="http://nemo.inf.ufes.br/ontology/goop#composedBy"/>
+        <NamedIndividual IRI="#Good_Relations_Goop"/>
+        <NamedIndividual IRI="#HaveDeliveryOrShip"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="http://nemo.inf.ufes.br/ontology/goop#composedBy"/>
+        <NamedIndividual IRI="#Good_Relations_Goop"/>
+        <NamedIndividual IRI="#HaveOfferingDescrSpec"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="http://nemo.inf.ufes.br/ontology/goop#composedBy"/>
+        <NamedIndividual IRI="#Good_Relations_Goop"/>
+        <NamedIndividual IRI="#HaveOfferingSpecified"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="http://nemo.inf.ufes.br/ontology/goop#composedBy"/>
+        <NamedIndividual IRI="#Good_Relations_Goop"/>
+        <NamedIndividual IRI="#HavePaymentMethSpec"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="http://nemo.inf.ufes.br/ontology/goop#composedBy"/>
+        <NamedIndividual IRI="#Good_Relations_Goop"/>
+        <NamedIndividual IRI="#InformOffering"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="http://nemo.inf.ufes.br/ontology/goop#composedBy"/>
+        <NamedIndividual IRI="#Good_Relations_Goop"/>
+        <NamedIndividual IRI="#InformOfferingType"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="http://nemo.inf.ufes.br/ontology/goop#composedBy"/>
+        <NamedIndividual IRI="#Good_Relations_Goop"/>
+        <NamedIndividual IRI="#InformPaymentMethods"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="http://nemo.inf.ufes.br/ontology/goop#composedBy"/>
+        <NamedIndividual IRI="#Good_Relations_Goop"/>
+        <NamedIndividual IRI="#InformShippingOrDelvMeth"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="http://nemo.inf.ufes.br/ontology/goop#composedBy"/>
+        <NamedIndividual IRI="#Good_Relations_Model_Fragment"/>
+        <NamedIndividual IRI="#Atomic_Offering_Item_Comp"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="http://nemo.inf.ufes.br/ontology/goop#composedBy"/>
+        <NamedIndividual IRI="#Good_Relations_Model_Fragment"/>
+        <NamedIndividual IRI="#Business_Entity"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="http://nemo.inf.ufes.br/ontology/goop#composedBy"/>
+        <NamedIndividual IRI="#Good_Relations_Model_Fragment"/>
+        <NamedIndividual IRI="#Characterization"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="http://nemo.inf.ufes.br/ontology/goop#composedBy"/>
+        <NamedIndividual IRI="#Good_Relations_Model_Fragment"/>
+        <NamedIndividual IRI="#Characterization1"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="http://nemo.inf.ufes.br/ontology/goop#composedBy"/>
+        <NamedIndividual IRI="#Good_Relations_Model_Fragment"/>
+        <NamedIndividual IRI="#Characterization2"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="http://nemo.inf.ufes.br/ontology/goop#composedBy"/>
+        <NamedIndividual IRI="#Good_Relations_Model_Fragment"/>
+        <NamedIndividual IRI="#Characterization3"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="http://nemo.inf.ufes.br/ontology/goop#composedBy"/>
+        <NamedIndividual IRI="#Good_Relations_Model_Fragment"/>
+        <NamedIndividual IRI="#Complex_Offering_Item_Component"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="http://nemo.inf.ufes.br/ontology/goop#composedBy"/>
+        <NamedIndividual IRI="#Good_Relations_Model_Fragment"/>
+        <NamedIndividual IRI="#ComponentOf"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="http://nemo.inf.ufes.br/ontology/goop#composedBy"/>
+        <NamedIndividual IRI="#Good_Relations_Model_Fragment"/>
+        <NamedIndividual IRI="#ComponentOf1"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="http://nemo.inf.ufes.br/ontology/goop#composedBy"/>
+        <NamedIndividual IRI="#Good_Relations_Model_Fragment"/>
+        <NamedIndividual IRI="#ComponentOf2"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="http://nemo.inf.ufes.br/ontology/goop#composedBy"/>
+        <NamedIndividual IRI="#Good_Relations_Model_Fragment"/>
+        <NamedIndividual IRI="#ComponentOf3"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="http://nemo.inf.ufes.br/ontology/goop#composedBy"/>
+        <NamedIndividual IRI="#Good_Relations_Model_Fragment"/>
+        <NamedIndividual IRI="#ComponentOf4"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="http://nemo.inf.ufes.br/ontology/goop#composedBy"/>
+        <NamedIndividual IRI="#Good_Relations_Model_Fragment"/>
+        <NamedIndividual IRI="#ComponentOf5"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="http://nemo.inf.ufes.br/ontology/goop#composedBy"/>
+        <NamedIndividual IRI="#Good_Relations_Model_Fragment"/>
+        <NamedIndividual IRI="#ComponentOf6"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="http://nemo.inf.ufes.br/ontology/goop#composedBy"/>
+        <NamedIndividual IRI="#Good_Relations_Model_Fragment"/>
+        <NamedIndividual IRI="#Delivery_Entity"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="http://nemo.inf.ufes.br/ontology/goop#composedBy"/>
+        <NamedIndividual IRI="#Good_Relations_Model_Fragment"/>
+        <NamedIndividual IRI="#Delivery_Method"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="http://nemo.inf.ufes.br/ontology/goop#composedBy"/>
+        <NamedIndividual IRI="#Good_Relations_Model_Fragment"/>
+        <NamedIndividual IRI="#Delivery_Price_Specification"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="http://nemo.inf.ufes.br/ontology/goop#composedBy"/>
+        <NamedIndividual IRI="#Good_Relations_Model_Fragment"/>
+        <NamedIndividual IRI="#Entity"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="http://nemo.inf.ufes.br/ontology/goop#composedBy"/>
+        <NamedIndividual IRI="#Good_Relations_Model_Fragment"/>
+        <NamedIndividual IRI="#Individual_Entity"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="http://nemo.inf.ufes.br/ontology/goop#composedBy"/>
+        <NamedIndividual IRI="#Good_Relations_Model_Fragment"/>
+        <NamedIndividual IRI="#Individual_Product"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="http://nemo.inf.ufes.br/ontology/goop#composedBy"/>
+        <NamedIndividual IRI="#Good_Relations_Model_Fragment"/>
+        <NamedIndividual IRI="#Individual_Product_SM_Specification"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="http://nemo.inf.ufes.br/ontology/goop#composedBy"/>
+        <NamedIndividual IRI="#Good_Relations_Model_Fragment"/>
+        <NamedIndividual IRI="#Individual_Product_Specified_By_Model"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="http://nemo.inf.ufes.br/ontology/goop#composedBy"/>
+        <NamedIndividual IRI="#Good_Relations_Model_Fragment"/>
+        <NamedIndividual IRI="#Location"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="http://nemo.inf.ufes.br/ontology/goop#composedBy"/>
+        <NamedIndividual IRI="#Good_Relations_Model_Fragment"/>
+        <NamedIndividual IRI="#Material"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="http://nemo.inf.ufes.br/ontology/goop#composedBy"/>
+        <NamedIndividual IRI="#Good_Relations_Model_Fragment"/>
+        <NamedIndividual IRI="#Mediation"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="http://nemo.inf.ufes.br/ontology/goop#composedBy"/>
+        <NamedIndividual IRI="#Good_Relations_Model_Fragment"/>
+        <NamedIndividual IRI="#Mediation1"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="http://nemo.inf.ufes.br/ontology/goop#composedBy"/>
+        <NamedIndividual IRI="#Good_Relations_Model_Fragment"/>
+        <NamedIndividual IRI="#Model_Specification"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="http://nemo.inf.ufes.br/ontology/goop#composedBy"/>
+        <NamedIndividual IRI="#Good_Relations_Model_Fragment"/>
+        <NamedIndividual IRI="#Offering"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="http://nemo.inf.ufes.br/ontology/goop#composedBy"/>
+        <NamedIndividual IRI="#Good_Relations_Model_Fragment"/>
+        <NamedIndividual IRI="#Offering_Item"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="http://nemo.inf.ufes.br/ontology/goop#composedBy"/>
+        <NamedIndividual IRI="#Good_Relations_Model_Fragment"/>
+        <NamedIndividual IRI="#Offering_Item_Component"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="http://nemo.inf.ufes.br/ontology/goop#composedBy"/>
+        <NamedIndividual IRI="#Good_Relations_Model_Fragment"/>
+        <NamedIndividual IRI="#Offering_Payment_Method"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="http://nemo.inf.ufes.br/ontology/goop#composedBy"/>
+        <NamedIndividual IRI="#Good_Relations_Model_Fragment"/>
+        <NamedIndividual IRI="#Offering_Price_Specification"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="http://nemo.inf.ufes.br/ontology/goop#composedBy"/>
+        <NamedIndividual IRI="#Good_Relations_Model_Fragment"/>
+        <NamedIndividual IRI="#Offering_Provider"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="http://nemo.inf.ufes.br/ontology/goop#composedBy"/>
+        <NamedIndividual IRI="#Good_Relations_Model_Fragment"/>
+        <NamedIndividual IRI="#Offering_Type"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="http://nemo.inf.ufes.br/ontology/goop#composedBy"/>
+        <NamedIndividual IRI="#Good_Relations_Model_Fragment"/>
+        <NamedIndividual IRI="#Offerred_Model_Specification"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="http://nemo.inf.ufes.br/ontology/goop#composedBy"/>
+        <NamedIndividual IRI="#Good_Relations_Model_Fragment"/>
+        <NamedIndividual IRI="#Payment_Entity"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="http://nemo.inf.ufes.br/ontology/goop#composedBy"/>
+        <NamedIndividual IRI="#Good_Relations_Model_Fragment"/>
+        <NamedIndividual IRI="#Period"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="http://nemo.inf.ufes.br/ontology/goop#composedBy"/>
+        <NamedIndividual IRI="#Good_Relations_Model_Fragment"/>
+        <NamedIndividual IRI="#Price_Specification"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="http://nemo.inf.ufes.br/ontology/goop#composedBy"/>
+        <NamedIndividual IRI="#Good_Relations_Model_Fragment"/>
+        <NamedIndividual IRI="#Product_Model"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="http://nemo.inf.ufes.br/ontology/goop#composedBy"/>
+        <NamedIndividual IRI="#Good_Relations_Model_Fragment"/>
+        <NamedIndividual IRI="#Product_Type"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="http://nemo.inf.ufes.br/ontology/goop#composedBy"/>
+        <NamedIndividual IRI="#Good_Relations_Model_Fragment"/>
+        <NamedIndividual IRI="#Qualititative_Property"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="http://nemo.inf.ufes.br/ontology/goop#composedBy"/>
+        <NamedIndividual IRI="#Good_Relations_Model_Fragment"/>
+        <NamedIndividual IRI="#Quantitative_Property"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="http://nemo.inf.ufes.br/ontology/goop#composedBy"/>
+        <NamedIndividual IRI="#Good_Relations_Model_Fragment"/>
+        <NamedIndividual IRI="#Specification"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="http://nemo.inf.ufes.br/ontology/goop#composedBy"/>
+        <NamedIndividual IRI="#Good_Relations_Model_Fragment"/>
+        <NamedIndividual IRI="#Specification_With_Warranty"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="http://nemo.inf.ufes.br/ontology/goop#composedBy"/>
+        <NamedIndividual IRI="#Good_Relations_Model_Fragment"/>
+        <NamedIndividual IRI="#Warrantier_Entity"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="http://nemo.inf.ufes.br/ontology/goop#composedBy"/>
+        <NamedIndividual IRI="#Good_Relations_Model_Fragment"/>
+        <NamedIndividual IRI="#Warranty"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="http://nemo.inf.ufes.br/ontology/goop#hasDomain"/>
+        <NamedIndividual IRI="#Material"/>
+        <NamedIndividual IRI="#Individual_Product_Specified_By_Model"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="http://nemo.inf.ufes.br/ontology/goop#hasRange"/>
+        <NamedIndividual IRI="#Material"/>
+        <NamedIndividual IRI="#Product_Model"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="http://nemo.inf.ufes.br/ontology/goop#hasDomain"/>
+        <NamedIndividual IRI="#Mediation"/>
+        <NamedIndividual IRI="#Individual_Product_SM_Specification"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="http://nemo.inf.ufes.br/ontology/goop#hasRange"/>
+        <NamedIndividual IRI="#Mediation"/>
+        <NamedIndividual IRI="#Product_Model"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="http://nemo.inf.ufes.br/ontology/goop#hasDomain"/>
+        <NamedIndividual IRI="#Mediation1"/>
+        <NamedIndividual IRI="#Individual_Product_SM_Specification"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="http://nemo.inf.ufes.br/ontology/goop#hasRange"/>
+        <NamedIndividual IRI="#Mediation1"/>
+        <NamedIndividual IRI="#Individual_Product_Specified_By_Model"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="http://nemo.inf.ufes.br/ontology/goop#achieves"/>
+        <NamedIndividual IRI="#OfferingSpecifier"/>
+        <NamedIndividual IRI="#HaveDeliveryOrShip"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="http://nemo.inf.ufes.br/ontology/goop#achieves"/>
+        <NamedIndividual IRI="#OfferingSpecifier"/>
+        <NamedIndividual IRI="#HaveOfferingDescrSpec"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="http://nemo.inf.ufes.br/ontology/goop#achieves"/>
+        <NamedIndividual IRI="#OfferingSpecifier"/>
+        <NamedIndividual IRI="#HaveOfferingSpecified"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="http://nemo.inf.ufes.br/ontology/goop#achieves"/>
+        <NamedIndividual IRI="#OfferingSpecifier"/>
+        <NamedIndividual IRI="#HavePaymentMethSpec"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="http://nemo.inf.ufes.br/ontology/goop#performs"/>
+        <NamedIndividual IRI="#OfferingSpecifier"/>
+        <NamedIndividual IRI="#InformOffering"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="http://nemo.inf.ufes.br/ontology/goop#performs"/>
+        <NamedIndividual IRI="#OfferingSpecifier"/>
+        <NamedIndividual IRI="#InformOfferingType"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="http://nemo.inf.ufes.br/ontology/goop#performs"/>
+        <NamedIndividual IRI="#OfferingSpecifier"/>
+        <NamedIndividual IRI="#InformPaymentMethods"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="http://nemo.inf.ufes.br/ontology/goop#performs"/>
+        <NamedIndividual IRI="#OfferingSpecifier"/>
+        <NamedIndividual IRI="#InformShippingOrDelvMeth"/>
+    </ObjectPropertyAssertion>
+</Ontology>
+
+
+
+<!-- Generated by the OWL API (version 4.5.6.2018-09-06T00:27:41Z) https://github.com/owlcs/owlapi -->
+

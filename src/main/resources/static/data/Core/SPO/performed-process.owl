@@ -1,0 +1,231 @@
+@prefix : <http://nemo.inf.ufes.br/ontologies/fragments/performed-process#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix goop: <http://nemo.inf.ufes.br/ontologies/goop#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@base <http://nemo.inf.ufes.br/ontologies/fragments/performed-process> .
+
+<http://nemo.inf.ufes.br/ontologies/fragments/performed-process> rdf:type owl:Ontology ;
+                                                                  owl:imports <http://nemo.inf.ufes.br/ontologies/goop> .
+
+#################################################################
+#    Individuals
+#################################################################
+
+###  http://nemo.inf.ufes.br/ontologies/fragments/performed-process#Activity_Universal
+:Activity_Universal rdf:type owl:NamedIndividual ,
+                             goop:Class ;
+                    rdfs:comment """Action Universal representing any generic activity in an Organization (formalized or not), which is the powertype of every Performed Activity. 
+Ex.: a formalized standard Requirements Elicitation activity, a non-formalized generic (alternative) Requirements Elicitation activity."""^^rdfs:Literal .
+
+
+###  http://nemo.inf.ufes.br/ontologies/fragments/performed-process#Define_Performed_Process
+:Define_Performed_Process rdf:type owl:NamedIndividual ,
+                                   goop:Goal_Based_Requirement ;
+                          rdfs:comment """Performed Processes and Activities are actions performed in a specific period of time, in the past. They typically are the processes or activities executed in a project or organization by some agent. A Performed Process can occur in a Project, configuring a Project Performed Process (such as a performed Design Process), or in the context of an Organization, configuring an Organizational Performed Process (such as a performed Recruitment Process).
+A Performed Process can be general or specific. A General Performed Process is composed of two or more Specific Performed Processes (e.g. a Development Process can be composed of Requirements, Design, Construction and Test Processes). Specific Performed Processes are composed of two or more Performed Activities. A Performed Activity, analogously, can be simple or composite. A Composite Performed Activity is composed of other Performed Activities; a Simple Performed Activity is an atomic action that cannot be decomposed into smaller activities. Performed Activities can also depend on other Performed Activities (e.g. a Review activity that depends on a Documentation activity)."""^^rdfs:Literal .
+
+
+###  http://nemo.inf.ufes.br/ontologies/fragments/performed-process#Describe_Intented_Process
+:Describe_Intented_Process rdf:type owl:NamedIndividual ,
+                                    goop:Goal_Based_Requirement .
+
+
+###  http://nemo.inf.ufes.br/ontologies/fragments/performed-process#General_Intended_Process
+:General_Intended_Process rdf:type owl:NamedIndividual ,
+                                   goop:Class ;
+                          goop:specifies :Intended_Process ;
+                          rdfs:comment """Intended Process that is composed of Specific Intended Processes, allowing an Organization or Project to define sub-processes that are part of a complete Intended Process. 
+Ex.: the overall Development Process defined for the Alpha Project."""^^rdfs:Literal .
+
+
+###  http://nemo.inf.ufes.br/ontologies/fragments/performed-process#Goop-1
+:Goop-1 rdf:type owl:NamedIndividual ;
+        goop:composed_by :Define_Performed_Process .
+
+
+###  http://nemo.inf.ufes.br/ontologies/fragments/performed-process#Goop-2
+:Goop-2 rdf:type owl:NamedIndividual ;
+        goop:composed_by :Describe_Intented_Process .
+
+
+###  http://nemo.inf.ufes.br/ontologies/fragments/performed-process#Intended_Activity
+:Intended_Activity rdf:type owl:NamedIndividual ,
+                            goop:Class ;
+                   goop:component_of :Intended_Activity ;
+                   rdfs:comment """Intention (Internal Commitment) representing the activity defined to be performed as part of an Intended Process, by a defined role, potentially consuming and producing artifacts, using resources and adopting procedures. 
+Ex.: Unit Testing, Measure Collection, Strategic Goals Definition."""^^rdfs:Literal .
+
+
+###  http://nemo.inf.ufes.br/ontologies/fragments/performed-process#Intended_Process
+:Intended_Process rdf:type owl:NamedIndividual ,
+                           goop:Class ;
+                  rdfs:comment """Intention (Internal Commitment) representing the process defined to be performed in a specific project or organizational area, considering its particularities. 
+Ex.: Testing, Measurement, Strategic Planning intended processes."""^^rdfs:Literal .
+
+
+###  http://nemo.inf.ufes.br/ontologies/fragments/performed-process#Model_Fragment-1
+:Model_Fragment-1 rdf:type owl:NamedIndividual ;
+                  goop:composed_by :Activity_Universal ,
+                                   :Performed_Activity ,
+                                   :Performed_Composite_Activity ,
+                                   :Performed_General_Process ,
+                                   :Performed_Organizational_Process ,
+                                   :Performed_Process ,
+                                   :Performed_Project_Activity ,
+                                   :Performed_Project_Process ,
+                                   :Performed_Simple_Activity ,
+                                   :Performed_Specific_Process ,
+                                   :caused_by ,
+                                   :depends_on ,
+                                   :instance_of ,
+                                   :performed_in ;
+                  goop:is_used_to_satisfy :Goop-1 .
+
+
+###  http://nemo.inf.ufes.br/ontologies/fragments/performed-process#Model_Fragment-2
+:Model_Fragment-2 rdf:type owl:NamedIndividual ;
+                  goop:composed_by :General_Intended_Process ,
+                                   :Intended_Activity ,
+                                   :Intended_Process ,
+                                   :Project_Activity ,
+                                   :Project_Process ,
+                                   :Software_Project ,
+                                   :Specific_Intended_Process ,
+                                   :defined_for ;
+                  goop:is_used_to_satisfy :Goop-2 .
+
+
+###  http://nemo.inf.ufes.br/ontologies/fragments/performed-process#Performed_Activity
+:Performed_Activity rdf:type owl:NamedIndividual ,
+                             goop:Class ;
+                    rdfs:comment """Action performed, in a specific Time Interval, by a Stakeholder, potentially producing and consuming Artifacts, as part of a Specific Performed Process. 
+Ex.: Requirement Elicitation, Component Design, Coding, Integration Test, Training Planning."""^^rdfs:Literal .
+
+
+###  http://nemo.inf.ufes.br/ontologies/fragments/performed-process#Performed_Composite_Activity
+:Performed_Composite_Activity rdf:type owl:NamedIndividual ,
+                                       goop:Class ;
+                              goop:specifies :Performed_Activity ;
+                              rdfs:comment "Performed Activity composed of other Performed Activities."^^rdfs:Literal .
+
+
+###  http://nemo.inf.ufes.br/ontologies/fragments/performed-process#Performed_General_Process
+:Performed_General_Process rdf:type owl:NamedIndividual ,
+                                    goop:Class ;
+                           goop:specifies :Performed_Process ;
+                           rdfs:comment """The overall Performed Process executed in a specific Project or Organization, which is necessarily composed of Specific Performed Processes. 
+Ex.: the overall process performed in a software project."""^^rdfs:Literal .
+
+
+###  http://nemo.inf.ufes.br/ontologies/fragments/performed-process#Performed_Organizational_Process
+:Performed_Organizational_Process rdf:type owl:NamedIndividual ,
+                                           goop:Class ;
+                                  goop:specifies :Performed_Process ;
+                                  rdfs:comment """Performed Process executed in the context of an Organization, regardless of specific Projects. 
+Ex.: a performed Portfolio Management Process, a performed Human Resource Hiring Process."""^^rdfs:Literal .
+
+
+###  http://nemo.inf.ufes.br/ontologies/fragments/performed-process#Performed_Process
+:Performed_Process rdf:type owl:NamedIndividual ,
+                            goop:Class ;
+                   rdfs:comment """Complex Action, composed of other processes or activities, performed in a specific Time Interval, for reaching a goal in a Project or Organization. 
+Ex.: Development, Configuration Management, Training performed processes."""^^rdfs:Literal .
+
+
+###  http://nemo.inf.ufes.br/ontologies/fragments/performed-process#Performed_Project_Activity
+:Performed_Project_Activity rdf:type owl:NamedIndividual ,
+                                     goop:Class ;
+                            goop:specifies :Performed_Activity .
+
+
+###  http://nemo.inf.ufes.br/ontologies/fragments/performed-process#Performed_Project_Process
+:Performed_Project_Process rdf:type owl:NamedIndividual ,
+                                    goop:Class ;
+                           goop:specifies :Performed_Process ;
+                           rdfs:comment """Performed Process executed within a Project. 
+Ex.: a performed Requirement Process, a performed Construction Process."""^^rdfs:Literal .
+
+
+###  http://nemo.inf.ufes.br/ontologies/fragments/performed-process#Performed_Simple_Activity
+:Performed_Simple_Activity rdf:type owl:NamedIndividual ,
+                                    goop:Class ;
+                           goop:specifies :Performed_Activity ;
+                           rdfs:comment "Performed Activity that is not further decomposed into other Performed Activities."^^rdfs:Literal .
+
+
+###  http://nemo.inf.ufes.br/ontologies/fragments/performed-process#Performed_Specific_Process
+:Performed_Specific_Process rdf:type owl:NamedIndividual ,
+                                     goop:Class ;
+                            goop:component_of :Performed_General_Process ;
+                            goop:specifies :Performed_Process ;
+                            rdfs:comment """Performed Process that is part of the General Performed Process of a Project or Organization, necessarily composed of at least two Performed Activities. 
+Ex.: the Project Management Process performed in a specific project; the Portfolio Management Process performed in an organization."""^^rdfs:Literal .
+
+
+###  http://nemo.inf.ufes.br/ontologies/fragments/performed-process#Process_Universal
+:Process_Universal rdf:type owl:NamedIndividual ,
+                            goop:Class ;
+                   rdfs:comment """Complex Action Universal representing any generic process in an Organization (formalized or not), which is the powertype of every Performed Process. 
+Ex.: a formalized Standard Process (e.g. Development Process), a non-formalized generic process (e.g. Reuse Process)."""^^rdfs:Literal .
+
+
+###  http://nemo.inf.ufes.br/ontologies/fragments/performed-process#Project_Activity
+:Project_Activity rdf:type owl:NamedIndividual ,
+                           goop:Class ;
+                  goop:specifies :Intended_Activity ;
+                  rdfs:comment """Intended Activity defined to be performed within a Project, and thus that is part of a Project Process. 
+Ex.: a project Requirement Process, a project Construction Process."""^^rdfs:Literal .
+
+
+###  http://nemo.inf.ufes.br/ontologies/fragments/performed-process#Project_Process
+:Project_Process rdf:type owl:NamedIndividual ,
+                          goop:Class ;
+                 goop:specifies :Intended_Process ;
+                 rdfs:comment """Intended Process defined to be performed within a Project. 
+Ex.: a project Requirement Process, a project Construction Process."""^^rdfs:Literal .
+
+
+###  http://nemo.inf.ufes.br/ontologies/fragments/performed-process#Software_Project
+:Software_Project rdf:type owl:NamedIndividual ,
+                           goop:Class ;
+                  rdfs:comment "A Project related to software development or maintenance."^^rdfs:Literal .
+
+
+###  http://nemo.inf.ufes.br/ontologies/fragments/performed-process#Specific_Intended_Process
+:Specific_Intended_Process rdf:type owl:NamedIndividual ,
+                                    goop:Class ;
+                           goop:component_of :General_Intended_Process ;
+                           goop:specifies :Intended_Process ;
+                           rdfs:comment """Intended Process that is part of the General Intended Process of a Project or Organization, necessarily composed of at least two Intended Activities. 
+Ex.: the Construction Process defined for a specific project; the Training Process defined for an organizational OO training."""^^rdfs:Literal .
+
+
+###  http://nemo.inf.ufes.br/ontologies/fragments/performed-process#caused_by
+:caused_by rdf:type owl:NamedIndividual ,
+                    goop:Object_Property .
+
+
+###  http://nemo.inf.ufes.br/ontologies/fragments/performed-process#defined_for
+:defined_for rdf:type owl:NamedIndividual ,
+                      goop:Object_Property .
+
+
+###  http://nemo.inf.ufes.br/ontologies/fragments/performed-process#depends_on
+:depends_on rdf:type owl:NamedIndividual ,
+                     goop:Object_Property .
+
+
+###  http://nemo.inf.ufes.br/ontologies/fragments/performed-process#instance_of
+:instance_of rdf:type owl:NamedIndividual ,
+                      goop:Object_Property .
+
+
+###  http://nemo.inf.ufes.br/ontologies/fragments/performed-process#performed_in
+:performed_in rdf:type owl:NamedIndividual ,
+                       goop:Object_Property .
+
+
+###  Generated by the OWL API (version 4.5.7.2018-12-02T02:23:35Z) https://github.com/owlcs/owlapi

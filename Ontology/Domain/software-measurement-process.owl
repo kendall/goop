@@ -1,0 +1,514 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns="http://nemo.inf.ufes.br/ontologies/software-measurement-process#"
+     xml:base="http://nemo.inf.ufes.br/ontologies/software-measurement-process"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:goop="http://nemo.inf.ufes.br/ontologies/goop#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#">
+    <owl:Ontology rdf:about="http://nemo.inf.ufes.br/ontologies/software-measurement-process">
+        <owl:imports rdf:resource="http://nemo.inf.ufes.br/ontologies/goop"/>
+    </owl:Ontology>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Individuals
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://nemo.inf.ufes.br/ontologies/software-measurement-process#Analysis_Result_Description -->
+
+    <owl:NamedIndividual rdf:about="http://nemo.inf.ufes.br/ontologies/software-measurement-process#Analysis_Result_Description">
+        <rdf:type rdf:resource="http://nemo.inf.ufes.br/ontologies/goop#Class"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://nemo.inf.ufes.br/ontologies/software-measurement-process#Artifact -->
+
+    <owl:NamedIndividual rdf:about="http://nemo.inf.ufes.br/ontologies/software-measurement-process#Artifact">
+        <rdf:type rdf:resource="http://nemo.inf.ufes.br/ontologies/goop#Class"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://nemo.inf.ufes.br/ontologies/software-measurement-process#Composite_Artifact -->
+
+    <owl:NamedIndividual rdf:about="http://nemo.inf.ufes.br/ontologies/software-measurement-process#Composite_Artifact">
+        <rdf:type rdf:resource="http://nemo.inf.ufes.br/ontologies/goop#Class"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://nemo.inf.ufes.br/ontologies/software-measurement-process#Data_Analysis -->
+
+    <owl:NamedIndividual rdf:about="http://nemo.inf.ufes.br/ontologies/software-measurement-process#Data_Analysis">
+        <rdf:type rdf:resource="http://nemo.inf.ufes.br/ontologies/goop#Class"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://nemo.inf.ufes.br/ontologies/software-measurement-process#Data_Collection -->
+
+    <owl:NamedIndividual rdf:about="http://nemo.inf.ufes.br/ontologies/software-measurement-process#Data_Collection">
+        <rdf:type rdf:resource="http://nemo.inf.ufes.br/ontologies/goop#Class"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://nemo.inf.ufes.br/ontologies/software-measurement-process#Define_the_Software_Measurement_Process -->
+
+    <owl:NamedIndividual rdf:about="http://nemo.inf.ufes.br/ontologies/software-measurement-process#Define_the_Software_Measurement_Process">
+        <rdf:type rdf:resource="http://nemo.inf.ufes.br/ontologies/goop#Goal_Based_Requirement"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://nemo.inf.ufes.br/ontologies/software-measurement-process#Document -->
+
+    <owl:NamedIndividual rdf:about="http://nemo.inf.ufes.br/ontologies/software-measurement-process#Document">
+        <rdf:type rdf:resource="http://nemo.inf.ufes.br/ontologies/goop#Class"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://nemo.inf.ufes.br/ontologies/software-measurement-process#Goop -->
+
+    <owl:NamedIndividual rdf:about="http://nemo.inf.ufes.br/ontologies/software-measurement-process#Goop">
+        <rdf:type rdf:resource="http://nemo.inf.ufes.br/ontologies/goop#Goop"/>
+        <goop:composed_by rdf:resource="http://nemo.inf.ufes.br/ontologies/software-measurement-process#Define_the_Software_Measurement_Process"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://nemo.inf.ufes.br/ontologies/software-measurement-process#Information_Item -->
+
+    <owl:NamedIndividual rdf:about="http://nemo.inf.ufes.br/ontologies/software-measurement-process#Information_Item">
+        <rdf:type rdf:resource="http://nemo.inf.ufes.br/ontologies/goop#Class"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://nemo.inf.ufes.br/ontologies/software-measurement-process#Information_Need_Description -->
+
+    <owl:NamedIndividual rdf:about="http://nemo.inf.ufes.br/ontologies/software-measurement-process#Information_Need_Description">
+        <rdf:type rdf:resource="http://nemo.inf.ufes.br/ontologies/goop#Class"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://nemo.inf.ufes.br/ontologies/software-measurement-process#Information_Needs_Identification -->
+
+    <owl:NamedIndividual rdf:about="http://nemo.inf.ufes.br/ontologies/software-measurement-process#Information_Needs_Identification">
+        <rdf:type rdf:resource="http://nemo.inf.ufes.br/ontologies/goop#Class"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://nemo.inf.ufes.br/ontologies/software-measurement-process#Measured_Value_Description -->
+
+    <owl:NamedIndividual rdf:about="http://nemo.inf.ufes.br/ontologies/software-measurement-process#Measured_Value_Description">
+        <rdf:type rdf:resource="http://nemo.inf.ufes.br/ontologies/goop#Class"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://nemo.inf.ufes.br/ontologies/software-measurement-process#Measurement_Analyst -->
+
+    <owl:NamedIndividual rdf:about="http://nemo.inf.ufes.br/ontologies/software-measurement-process#Measurement_Analyst">
+        <rdf:type rdf:resource="http://nemo.inf.ufes.br/ontologies/goop#Class"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://nemo.inf.ufes.br/ontologies/software-measurement-process#Measurement_Executor -->
+
+    <owl:NamedIndividual rdf:about="http://nemo.inf.ufes.br/ontologies/software-measurement-process#Measurement_Executor">
+        <rdf:type rdf:resource="http://nemo.inf.ufes.br/ontologies/goop#Class"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://nemo.inf.ufes.br/ontologies/software-measurement-process#Measurement_Goals_Establishment -->
+
+    <owl:NamedIndividual rdf:about="http://nemo.inf.ufes.br/ontologies/software-measurement-process#Measurement_Goals_Establishment">
+        <rdf:type rdf:resource="http://nemo.inf.ufes.br/ontologies/goop#Class"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://nemo.inf.ufes.br/ontologies/software-measurement-process#Measurement_Manager -->
+
+    <owl:NamedIndividual rdf:about="http://nemo.inf.ufes.br/ontologies/software-measurement-process#Measurement_Manager">
+        <rdf:type rdf:resource="http://nemo.inf.ufes.br/ontologies/goop#Class"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://nemo.inf.ufes.br/ontologies/software-measurement-process#Measurement_Plan_Item_Selection -->
+
+    <owl:NamedIndividual rdf:about="http://nemo.inf.ufes.br/ontologies/software-measurement-process#Measurement_Plan_Item_Selection">
+        <rdf:type rdf:resource="http://nemo.inf.ufes.br/ontologies/goop#Class"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://nemo.inf.ufes.br/ontologies/software-measurement-process#Measurement_Planning_Start -->
+
+    <owl:NamedIndividual rdf:about="http://nemo.inf.ufes.br/ontologies/software-measurement-process#Measurement_Planning_Start">
+        <rdf:type rdf:resource="http://nemo.inf.ufes.br/ontologies/goop#Class"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://nemo.inf.ufes.br/ontologies/software-measurement-process#Measurement_Result_Reporting -->
+
+    <owl:NamedIndividual rdf:about="http://nemo.inf.ufes.br/ontologies/software-measurement-process#Measurement_Result_Reporting">
+        <rdf:type rdf:resource="http://nemo.inf.ufes.br/ontologies/goop#Class"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://nemo.inf.ufes.br/ontologies/software-measurement-process#Measures_Identification -->
+
+    <owl:NamedIndividual rdf:about="http://nemo.inf.ufes.br/ontologies/software-measurement-process#Measures_Identification">
+        <rdf:type rdf:resource="http://nemo.inf.ufes.br/ontologies/goop#Class"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://nemo.inf.ufes.br/ontologies/software-measurement-process#Model -->
+
+    <owl:NamedIndividual rdf:about="http://nemo.inf.ufes.br/ontologies/software-measurement-process#Model">
+        <rdf:type rdf:resource="http://nemo.inf.ufes.br/ontologies/goop#Class"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://nemo.inf.ufes.br/ontologies/software-measurement-process#Model_Fragment -->
+
+    <owl:NamedIndividual rdf:about="http://nemo.inf.ufes.br/ontologies/software-measurement-process#Model_Fragment">
+        <rdf:type rdf:resource="http://nemo.inf.ufes.br/ontologies/goop#Model_Fragment"/>
+        <goop:composed_by rdf:resource="http://nemo.inf.ufes.br/ontologies/software-measurement-process#Analysis_Result_Description"/>
+        <goop:composed_by rdf:resource="http://nemo.inf.ufes.br/ontologies/software-measurement-process#Artifact"/>
+        <goop:composed_by rdf:resource="http://nemo.inf.ufes.br/ontologies/software-measurement-process#Composite_Artifact"/>
+        <goop:composed_by rdf:resource="http://nemo.inf.ufes.br/ontologies/software-measurement-process#Data_Analysis"/>
+        <goop:composed_by rdf:resource="http://nemo.inf.ufes.br/ontologies/software-measurement-process#Data_Collection"/>
+        <goop:composed_by rdf:resource="http://nemo.inf.ufes.br/ontologies/software-measurement-process#Document"/>
+        <goop:composed_by rdf:resource="http://nemo.inf.ufes.br/ontologies/software-measurement-process#Information_Item"/>
+        <goop:composed_by rdf:resource="http://nemo.inf.ufes.br/ontologies/software-measurement-process#Information_Need_Description"/>
+        <goop:composed_by rdf:resource="http://nemo.inf.ufes.br/ontologies/software-measurement-process#Information_Needs_Identification"/>
+        <goop:composed_by rdf:resource="http://nemo.inf.ufes.br/ontologies/software-measurement-process#Measured_Value_Description"/>
+        <goop:composed_by rdf:resource="http://nemo.inf.ufes.br/ontologies/software-measurement-process#Measurement_Analyst"/>
+        <goop:composed_by rdf:resource="http://nemo.inf.ufes.br/ontologies/software-measurement-process#Measurement_Executor"/>
+        <goop:composed_by rdf:resource="http://nemo.inf.ufes.br/ontologies/software-measurement-process#Measurement_Goals_Establishment"/>
+        <goop:composed_by rdf:resource="http://nemo.inf.ufes.br/ontologies/software-measurement-process#Measurement_Manager"/>
+        <goop:composed_by rdf:resource="http://nemo.inf.ufes.br/ontologies/software-measurement-process#Measurement_Plan_Item_Selection"/>
+        <goop:composed_by rdf:resource="http://nemo.inf.ufes.br/ontologies/software-measurement-process#Measurement_Planning_Start"/>
+        <goop:composed_by rdf:resource="http://nemo.inf.ufes.br/ontologies/software-measurement-process#Measurement_Result_Reporting"/>
+        <goop:composed_by rdf:resource="http://nemo.inf.ufes.br/ontologies/software-measurement-process#Measures_Identification"/>
+        <goop:composed_by rdf:resource="http://nemo.inf.ufes.br/ontologies/software-measurement-process#Model"/>
+        <goop:composed_by rdf:resource="http://nemo.inf.ufes.br/ontologies/software-measurement-process#Operational_Definition_of_Measure"/>
+        <goop:composed_by rdf:resource="http://nemo.inf.ufes.br/ontologies/software-measurement-process#Operational_Definition_of_Measure_Establishment"/>
+        <goop:composed_by rdf:resource="http://nemo.inf.ufes.br/ontologies/software-measurement-process#Performed_Activty"/>
+        <goop:composed_by rdf:resource="http://nemo.inf.ufes.br/ontologies/software-measurement-process#Performed_Composite_Activity"/>
+        <goop:composed_by rdf:resource="http://nemo.inf.ufes.br/ontologies/software-measurement-process#Performed_General_Process"/>
+        <goop:composed_by rdf:resource="http://nemo.inf.ufes.br/ontologies/software-measurement-process#Performed_Process"/>
+        <goop:composed_by rdf:resource="http://nemo.inf.ufes.br/ontologies/software-measurement-process#Performed_Simple_Activity"/>
+        <goop:composed_by rdf:resource="http://nemo.inf.ufes.br/ontologies/software-measurement-process#Performed_Specific_Process"/>
+        <goop:composed_by rdf:resource="http://nemo.inf.ufes.br/ontologies/software-measurement-process#Planning_Item_Documentation"/>
+        <goop:composed_by rdf:resource="http://nemo.inf.ufes.br/ontologies/software-measurement-process#Selection_of_Data_for_Analysis"/>
+        <goop:composed_by rdf:resource="http://nemo.inf.ufes.br/ontologies/software-measurement-process#Selection_of_Entity_for_Measurement"/>
+        <goop:composed_by rdf:resource="http://nemo.inf.ufes.br/ontologies/software-measurement-process#Selection_of_Measurement_Goals_for_Analysis"/>
+        <goop:composed_by rdf:resource="http://nemo.inf.ufes.br/ontologies/software-measurement-process#Selection_of_Measures_for_Analysis"/>
+        <goop:composed_by rdf:resource="http://nemo.inf.ufes.br/ontologies/software-measurement-process#Simple_Artifact"/>
+        <goop:composed_by rdf:resource="http://nemo.inf.ufes.br/ontologies/software-measurement-process#Software_Item"/>
+        <goop:composed_by rdf:resource="http://nemo.inf.ufes.br/ontologies/software-measurement-process#Software_Measurement_Analysis"/>
+        <goop:composed_by rdf:resource="http://nemo.inf.ufes.br/ontologies/software-measurement-process#Software_Measurement_Execution"/>
+        <goop:composed_by rdf:resource="http://nemo.inf.ufes.br/ontologies/software-measurement-process#Software_Measurement_Goal_Description"/>
+        <goop:composed_by rdf:resource="http://nemo.inf.ufes.br/ontologies/software-measurement-process#Software_Measurement_Plan"/>
+        <goop:composed_by rdf:resource="http://nemo.inf.ufes.br/ontologies/software-measurement-process#Software_Measurement_Planning"/>
+        <goop:composed_by rdf:resource="http://nemo.inf.ufes.br/ontologies/software-measurement-process#Software_Measurement_Planning_Item"/>
+        <goop:composed_by rdf:resource="http://nemo.inf.ufes.br/ontologies/software-measurement-process#Software_Measurement_Process"/>
+        <goop:composed_by rdf:resource="http://nemo.inf.ufes.br/ontologies/software-measurement-process#Software_Product"/>
+        <goop:composed_by rdf:resource="http://nemo.inf.ufes.br/ontologies/software-measurement-process#Stakeholder"/>
+        <goop:composed_by rdf:resource="http://nemo.inf.ufes.br/ontologies/software-measurement-process#changes"/>
+        <goop:composed_by rdf:resource="http://nemo.inf.ufes.br/ontologies/software-measurement-process#creates"/>
+        <goop:composed_by rdf:resource="http://nemo.inf.ufes.br/ontologies/software-measurement-process#depends_on"/>
+        <goop:composed_by rdf:resource="http://nemo.inf.ufes.br/ontologies/software-measurement-process#describes"/>
+        <goop:composed_by rdf:resource="http://nemo.inf.ufes.br/ontologies/software-measurement-process#is_in_charge_of"/>
+        <goop:composed_by rdf:resource="http://nemo.inf.ufes.br/ontologies/software-measurement-process#participates_in"/>
+        <goop:composed_by rdf:resource="http://nemo.inf.ufes.br/ontologies/software-measurement-process#subProcess"/>
+        <goop:composed_by rdf:resource="http://nemo.inf.ufes.br/ontologies/software-measurement-process#uses"/>
+        <goop:is_used_to_satisfy rdf:resource="http://nemo.inf.ufes.br/ontologies/software-measurement-process#Goop"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://nemo.inf.ufes.br/ontologies/software-measurement-process#Operational_Definition_of_Measure -->
+
+    <owl:NamedIndividual rdf:about="http://nemo.inf.ufes.br/ontologies/software-measurement-process#Operational_Definition_of_Measure">
+        <rdf:type rdf:resource="http://nemo.inf.ufes.br/ontologies/goop#Class"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://nemo.inf.ufes.br/ontologies/software-measurement-process#Operational_Definition_of_Measure_Establishment -->
+
+    <owl:NamedIndividual rdf:about="http://nemo.inf.ufes.br/ontologies/software-measurement-process#Operational_Definition_of_Measure_Establishment">
+        <rdf:type rdf:resource="http://nemo.inf.ufes.br/ontologies/goop#Class"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://nemo.inf.ufes.br/ontologies/software-measurement-process#Performed_Activty -->
+
+    <owl:NamedIndividual rdf:about="http://nemo.inf.ufes.br/ontologies/software-measurement-process#Performed_Activty">
+        <rdf:type rdf:resource="http://nemo.inf.ufes.br/ontologies/goop#Class"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://nemo.inf.ufes.br/ontologies/software-measurement-process#Performed_Composite_Activity -->
+
+    <owl:NamedIndividual rdf:about="http://nemo.inf.ufes.br/ontologies/software-measurement-process#Performed_Composite_Activity">
+        <rdf:type rdf:resource="http://nemo.inf.ufes.br/ontologies/goop#Class"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://nemo.inf.ufes.br/ontologies/software-measurement-process#Performed_General_Process -->
+
+    <owl:NamedIndividual rdf:about="http://nemo.inf.ufes.br/ontologies/software-measurement-process#Performed_General_Process">
+        <rdf:type rdf:resource="http://nemo.inf.ufes.br/ontologies/goop#Class"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://nemo.inf.ufes.br/ontologies/software-measurement-process#Performed_Process -->
+
+    <owl:NamedIndividual rdf:about="http://nemo.inf.ufes.br/ontologies/software-measurement-process#Performed_Process">
+        <rdf:type rdf:resource="http://nemo.inf.ufes.br/ontologies/goop#Class"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://nemo.inf.ufes.br/ontologies/software-measurement-process#Performed_Simple_Activity -->
+
+    <owl:NamedIndividual rdf:about="http://nemo.inf.ufes.br/ontologies/software-measurement-process#Performed_Simple_Activity">
+        <rdf:type rdf:resource="http://nemo.inf.ufes.br/ontologies/goop#Class"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://nemo.inf.ufes.br/ontologies/software-measurement-process#Performed_Specific_Process -->
+
+    <owl:NamedIndividual rdf:about="http://nemo.inf.ufes.br/ontologies/software-measurement-process#Performed_Specific_Process">
+        <rdf:type rdf:resource="http://nemo.inf.ufes.br/ontologies/goop#Class"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://nemo.inf.ufes.br/ontologies/software-measurement-process#Planning_Item_Documentation -->
+
+    <owl:NamedIndividual rdf:about="http://nemo.inf.ufes.br/ontologies/software-measurement-process#Planning_Item_Documentation">
+        <rdf:type rdf:resource="http://nemo.inf.ufes.br/ontologies/goop#Class"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://nemo.inf.ufes.br/ontologies/software-measurement-process#Selection_of_Data_for_Analysis -->
+
+    <owl:NamedIndividual rdf:about="http://nemo.inf.ufes.br/ontologies/software-measurement-process#Selection_of_Data_for_Analysis">
+        <rdf:type rdf:resource="http://nemo.inf.ufes.br/ontologies/goop#Class"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://nemo.inf.ufes.br/ontologies/software-measurement-process#Selection_of_Entity_for_Measurement -->
+
+    <owl:NamedIndividual rdf:about="http://nemo.inf.ufes.br/ontologies/software-measurement-process#Selection_of_Entity_for_Measurement">
+        <rdf:type rdf:resource="http://nemo.inf.ufes.br/ontologies/goop#Class"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://nemo.inf.ufes.br/ontologies/software-measurement-process#Selection_of_Measurement_Goals_for_Analysis -->
+
+    <owl:NamedIndividual rdf:about="http://nemo.inf.ufes.br/ontologies/software-measurement-process#Selection_of_Measurement_Goals_for_Analysis">
+        <rdf:type rdf:resource="http://nemo.inf.ufes.br/ontologies/goop#Class"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://nemo.inf.ufes.br/ontologies/software-measurement-process#Selection_of_Measures_for_Analysis -->
+
+    <owl:NamedIndividual rdf:about="http://nemo.inf.ufes.br/ontologies/software-measurement-process#Selection_of_Measures_for_Analysis">
+        <rdf:type rdf:resource="http://nemo.inf.ufes.br/ontologies/goop#Class"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://nemo.inf.ufes.br/ontologies/software-measurement-process#Simple_Artifact -->
+
+    <owl:NamedIndividual rdf:about="http://nemo.inf.ufes.br/ontologies/software-measurement-process#Simple_Artifact">
+        <rdf:type rdf:resource="http://nemo.inf.ufes.br/ontologies/goop#Class"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://nemo.inf.ufes.br/ontologies/software-measurement-process#Software_Item -->
+
+    <owl:NamedIndividual rdf:about="http://nemo.inf.ufes.br/ontologies/software-measurement-process#Software_Item">
+        <rdf:type rdf:resource="http://nemo.inf.ufes.br/ontologies/goop#Class"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://nemo.inf.ufes.br/ontologies/software-measurement-process#Software_Measurement_Analysis -->
+
+    <owl:NamedIndividual rdf:about="http://nemo.inf.ufes.br/ontologies/software-measurement-process#Software_Measurement_Analysis">
+        <rdf:type rdf:resource="http://nemo.inf.ufes.br/ontologies/goop#Class"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://nemo.inf.ufes.br/ontologies/software-measurement-process#Software_Measurement_Execution -->
+
+    <owl:NamedIndividual rdf:about="http://nemo.inf.ufes.br/ontologies/software-measurement-process#Software_Measurement_Execution">
+        <rdf:type rdf:resource="http://nemo.inf.ufes.br/ontologies/goop#Class"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://nemo.inf.ufes.br/ontologies/software-measurement-process#Software_Measurement_Goal_Description -->
+
+    <owl:NamedIndividual rdf:about="http://nemo.inf.ufes.br/ontologies/software-measurement-process#Software_Measurement_Goal_Description">
+        <rdf:type rdf:resource="http://nemo.inf.ufes.br/ontologies/goop#Class"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://nemo.inf.ufes.br/ontologies/software-measurement-process#Software_Measurement_Plan -->
+
+    <owl:NamedIndividual rdf:about="http://nemo.inf.ufes.br/ontologies/software-measurement-process#Software_Measurement_Plan">
+        <rdf:type rdf:resource="http://nemo.inf.ufes.br/ontologies/goop#Class"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://nemo.inf.ufes.br/ontologies/software-measurement-process#Software_Measurement_Planning -->
+
+    <owl:NamedIndividual rdf:about="http://nemo.inf.ufes.br/ontologies/software-measurement-process#Software_Measurement_Planning">
+        <rdf:type rdf:resource="http://nemo.inf.ufes.br/ontologies/goop#Class"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://nemo.inf.ufes.br/ontologies/software-measurement-process#Software_Measurement_Planning_Item -->
+
+    <owl:NamedIndividual rdf:about="http://nemo.inf.ufes.br/ontologies/software-measurement-process#Software_Measurement_Planning_Item">
+        <rdf:type rdf:resource="http://nemo.inf.ufes.br/ontologies/goop#Class"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://nemo.inf.ufes.br/ontologies/software-measurement-process#Software_Measurement_Process -->
+
+    <owl:NamedIndividual rdf:about="http://nemo.inf.ufes.br/ontologies/software-measurement-process#Software_Measurement_Process">
+        <rdf:type rdf:resource="http://nemo.inf.ufes.br/ontologies/goop#Class"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://nemo.inf.ufes.br/ontologies/software-measurement-process#Software_Product -->
+
+    <owl:NamedIndividual rdf:about="http://nemo.inf.ufes.br/ontologies/software-measurement-process#Software_Product">
+        <rdf:type rdf:resource="http://nemo.inf.ufes.br/ontologies/goop#Class"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://nemo.inf.ufes.br/ontologies/software-measurement-process#Stakeholder -->
+
+    <owl:NamedIndividual rdf:about="http://nemo.inf.ufes.br/ontologies/software-measurement-process#Stakeholder">
+        <rdf:type rdf:resource="http://nemo.inf.ufes.br/ontologies/goop#Class"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://nemo.inf.ufes.br/ontologies/software-measurement-process#changes -->
+
+    <owl:NamedIndividual rdf:about="http://nemo.inf.ufes.br/ontologies/software-measurement-process#changes">
+        <rdf:type rdf:resource="http://nemo.inf.ufes.br/ontologies/goop#Object_Property"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://nemo.inf.ufes.br/ontologies/software-measurement-process#creates -->
+
+    <owl:NamedIndividual rdf:about="http://nemo.inf.ufes.br/ontologies/software-measurement-process#creates">
+        <rdf:type rdf:resource="http://nemo.inf.ufes.br/ontologies/goop#Object_Property"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://nemo.inf.ufes.br/ontologies/software-measurement-process#depends_on -->
+
+    <owl:NamedIndividual rdf:about="http://nemo.inf.ufes.br/ontologies/software-measurement-process#depends_on">
+        <rdf:type rdf:resource="http://nemo.inf.ufes.br/ontologies/goop#Object_Property"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://nemo.inf.ufes.br/ontologies/software-measurement-process#describes -->
+
+    <owl:NamedIndividual rdf:about="http://nemo.inf.ufes.br/ontologies/software-measurement-process#describes">
+        <rdf:type rdf:resource="http://nemo.inf.ufes.br/ontologies/goop#Object_Property"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://nemo.inf.ufes.br/ontologies/software-measurement-process#is_in_charge_of -->
+
+    <owl:NamedIndividual rdf:about="http://nemo.inf.ufes.br/ontologies/software-measurement-process#is_in_charge_of">
+        <rdf:type rdf:resource="http://nemo.inf.ufes.br/ontologies/goop#Object_Property"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://nemo.inf.ufes.br/ontologies/software-measurement-process#participates_in -->
+
+    <owl:NamedIndividual rdf:about="http://nemo.inf.ufes.br/ontologies/software-measurement-process#participates_in">
+        <rdf:type rdf:resource="http://nemo.inf.ufes.br/ontologies/goop#Object_Property"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://nemo.inf.ufes.br/ontologies/software-measurement-process#subProcess -->
+
+    <owl:NamedIndividual rdf:about="http://nemo.inf.ufes.br/ontologies/software-measurement-process#subProcess">
+        <rdf:type rdf:resource="http://nemo.inf.ufes.br/ontologies/goop#Object_Property"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://nemo.inf.ufes.br/ontologies/software-measurement-process#uses -->
+
+    <owl:NamedIndividual rdf:about="http://nemo.inf.ufes.br/ontologies/software-measurement-process#uses">
+        <rdf:type rdf:resource="http://nemo.inf.ufes.br/ontologies/goop#Object_Property"/>
+    </owl:NamedIndividual>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 4.5.6.2018-09-06T00:27:41Z) https://github.com/owlcs/owlapi -->
+

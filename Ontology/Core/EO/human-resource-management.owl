@@ -1,0 +1,297 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns="http://nemo.inf.ufes.br/ontologies/human-resource-management#"
+     xml:base="http://nemo.inf.ufes.br/ontologies/human-resource-management"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:goop="http://nemo.inf.ufes.br/ontologies/goop#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#">
+    <owl:Ontology rdf:about="http://nemo.inf.ufes.br/ontologies/human-resource-management">
+        <owl:imports rdf:resource="http://nemo.inf.ufes.br/ontologies/goop"/>
+    </owl:Ontology>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Individuals
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://nemo.inf.ufes.br/ontologies/human-resource-management#Allocation_Unit -->
+
+    <owl:NamedIndividual rdf:about="http://nemo.inf.ufes.br/ontologies/human-resource-management#Allocation_Unit">
+        <rdf:type rdf:resource="http://nemo.inf.ufes.br/ontologies/goop#Class"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://nemo.inf.ufes.br/ontologies/human-resource-management#Business_Role -->
+
+    <owl:NamedIndividual rdf:about="http://nemo.inf.ufes.br/ontologies/human-resource-management#Business_Role">
+        <rdf:type rdf:resource="http://nemo.inf.ufes.br/ontologies/goop#Class"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://nemo.inf.ufes.br/ontologies/human-resource-management#Defines_Human_Resource_Management -->
+
+    <owl:NamedIndividual rdf:about="http://nemo.inf.ufes.br/ontologies/human-resource-management#Defines_Human_Resource_Management">
+        <rdf:type rdf:resource="http://nemo.inf.ufes.br/ontologies/goop#Goal_Based_Requirement"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://nemo.inf.ufes.br/ontologies/human-resource-management#Employment -->
+
+    <owl:NamedIndividual rdf:about="http://nemo.inf.ufes.br/ontologies/human-resource-management#Employment">
+        <rdf:type rdf:resource="http://nemo.inf.ufes.br/ontologies/goop#Class"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://nemo.inf.ufes.br/ontologies/human-resource-management#Employment_Type -->
+
+    <owl:NamedIndividual rdf:about="http://nemo.inf.ufes.br/ontologies/human-resource-management#Employment_Type">
+        <rdf:type rdf:resource="http://nemo.inf.ufes.br/ontologies/goop#Class"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://nemo.inf.ufes.br/ontologies/human-resource-management#Formal_Organization -->
+
+    <owl:NamedIndividual rdf:about="http://nemo.inf.ufes.br/ontologies/human-resource-management#Formal_Organization">
+        <rdf:type rdf:resource="http://nemo.inf.ufes.br/ontologies/goop#Class"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://nemo.inf.ufes.br/ontologies/human-resource-management#Formal_Organization_Employer -->
+
+    <owl:NamedIndividual rdf:about="http://nemo.inf.ufes.br/ontologies/human-resource-management#Formal_Organization_Employer">
+        <rdf:type rdf:resource="http://nemo.inf.ufes.br/ontologies/goop#Class"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://nemo.inf.ufes.br/ontologies/human-resource-management#Formal_Organization_Member_Type -->
+
+    <owl:NamedIndividual rdf:about="http://nemo.inf.ufes.br/ontologies/human-resource-management#Formal_Organization_Member_Type">
+        <rdf:type rdf:resource="http://nemo.inf.ufes.br/ontologies/goop#Class"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://nemo.inf.ufes.br/ontologies/human-resource-management#Formal_Organization_Type -->
+
+    <owl:NamedIndividual rdf:about="http://nemo.inf.ufes.br/ontologies/human-resource-management#Formal_Organization_Type">
+        <rdf:type rdf:resource="http://nemo.inf.ufes.br/ontologies/goop#Class"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://nemo.inf.ufes.br/ontologies/human-resource-management#Goop -->
+
+    <owl:NamedIndividual rdf:about="http://nemo.inf.ufes.br/ontologies/human-resource-management#Goop">
+        <rdf:type rdf:resource="http://nemo.inf.ufes.br/ontologies/goop#Goop"/>
+        <goop:composed_by rdf:resource="http://nemo.inf.ufes.br/ontologies/human-resource-management#Defines_Human_Resource_Management"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://nemo.inf.ufes.br/ontologies/human-resource-management#Human_Resource -->
+
+    <owl:NamedIndividual rdf:about="http://nemo.inf.ufes.br/ontologies/human-resource-management#Human_Resource">
+        <rdf:type rdf:resource="http://nemo.inf.ufes.br/ontologies/goop#Class"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://nemo.inf.ufes.br/ontologies/human-resource-management#Human_Resource_Role -->
+
+    <owl:NamedIndividual rdf:about="http://nemo.inf.ufes.br/ontologies/human-resource-management#Human_Resource_Role">
+        <rdf:type rdf:resource="http://nemo.inf.ufes.br/ontologies/goop#Class"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://nemo.inf.ufes.br/ontologies/human-resource-management#Model_Fragment -->
+
+    <owl:NamedIndividual rdf:about="http://nemo.inf.ufes.br/ontologies/human-resource-management#Model_Fragment">
+        <rdf:type rdf:resource="http://nemo.inf.ufes.br/ontologies/goop#Model_Fragment"/>
+        <goop:composed_by rdf:resource="http://nemo.inf.ufes.br/ontologies/human-resource-management#Allocation_Unit"/>
+        <goop:composed_by rdf:resource="http://nemo.inf.ufes.br/ontologies/human-resource-management#Business_Role"/>
+        <goop:composed_by rdf:resource="http://nemo.inf.ufes.br/ontologies/human-resource-management#Employment"/>
+        <goop:composed_by rdf:resource="http://nemo.inf.ufes.br/ontologies/human-resource-management#Employment_Type"/>
+        <goop:composed_by rdf:resource="http://nemo.inf.ufes.br/ontologies/human-resource-management#Formal_Organization"/>
+        <goop:composed_by rdf:resource="http://nemo.inf.ufes.br/ontologies/human-resource-management#Formal_Organization_Employer"/>
+        <goop:composed_by rdf:resource="http://nemo.inf.ufes.br/ontologies/human-resource-management#Formal_Organization_Member_Type"/>
+        <goop:composed_by rdf:resource="http://nemo.inf.ufes.br/ontologies/human-resource-management#Formal_Organization_Type"/>
+        <goop:composed_by rdf:resource="http://nemo.inf.ufes.br/ontologies/human-resource-management#Human_Resource"/>
+        <goop:composed_by rdf:resource="http://nemo.inf.ufes.br/ontologies/human-resource-management#Human_Resource_Role"/>
+        <goop:composed_by rdf:resource="http://nemo.inf.ufes.br/ontologies/human-resource-management#OU_Assignment"/>
+        <goop:composed_by rdf:resource="http://nemo.inf.ufes.br/ontologies/human-resource-management#OU_Assignment_Type"/>
+        <goop:composed_by rdf:resource="http://nemo.inf.ufes.br/ontologies/human-resource-management#OU_Member"/>
+        <goop:composed_by rdf:resource="http://nemo.inf.ufes.br/ontologies/human-resource-management#Organization"/>
+        <goop:composed_by rdf:resource="http://nemo.inf.ufes.br/ontologies/human-resource-management#Organizational_Unit"/>
+        <goop:composed_by rdf:resource="http://nemo.inf.ufes.br/ontologies/human-resource-management#Person"/>
+        <goop:composed_by rdf:resource="http://nemo.inf.ufes.br/ontologies/human-resource-management#Physical_Agent"/>
+        <goop:composed_by rdf:resource="http://nemo.inf.ufes.br/ontologies/human-resource-management#assigns"/>
+        <goop:composed_by rdf:resource="http://nemo.inf.ufes.br/ontologies/human-resource-management#assigns_to"/>
+        <goop:composed_by rdf:resource="http://nemo.inf.ufes.br/ontologies/human-resource-management#covers"/>
+        <goop:composed_by rdf:resource="http://nemo.inf.ufes.br/ontologies/human-resource-management#employs"/>
+        <goop:composed_by rdf:resource="http://nemo.inf.ufes.br/ontologies/human-resource-management#made_by"/>
+        <goop:composed_by rdf:resource="http://nemo.inf.ufes.br/ontologies/human-resource-management#mediates_business_role"/>
+        <goop:composed_by rdf:resource="http://nemo.inf.ufes.br/ontologies/human-resource-management#mediates_org_member_type"/>
+        <goop:composed_by rdf:resource="http://nemo.inf.ufes.br/ontologies/human-resource-management#mediates_org_type"/>
+        <goop:composed_by rdf:resource="http://nemo.inf.ufes.br/ontologies/human-resource-management#mediates_ou_type"/>
+        <goop:is_used_to_satisfy rdf:resource="http://nemo.inf.ufes.br/ontologies/human-resource-management#Goop"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://nemo.inf.ufes.br/ontologies/human-resource-management#OU_Assignment -->
+
+    <owl:NamedIndividual rdf:about="http://nemo.inf.ufes.br/ontologies/human-resource-management#OU_Assignment">
+        <rdf:type rdf:resource="http://nemo.inf.ufes.br/ontologies/goop#Class"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://nemo.inf.ufes.br/ontologies/human-resource-management#OU_Assignment_Type -->
+
+    <owl:NamedIndividual rdf:about="http://nemo.inf.ufes.br/ontologies/human-resource-management#OU_Assignment_Type">
+        <rdf:type rdf:resource="http://nemo.inf.ufes.br/ontologies/goop#Class"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://nemo.inf.ufes.br/ontologies/human-resource-management#OU_Member -->
+
+    <owl:NamedIndividual rdf:about="http://nemo.inf.ufes.br/ontologies/human-resource-management#OU_Member">
+        <rdf:type rdf:resource="http://nemo.inf.ufes.br/ontologies/goop#Class"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://nemo.inf.ufes.br/ontologies/human-resource-management#Organization -->
+
+    <owl:NamedIndividual rdf:about="http://nemo.inf.ufes.br/ontologies/human-resource-management#Organization">
+        <rdf:type rdf:resource="http://nemo.inf.ufes.br/ontologies/goop#Class"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://nemo.inf.ufes.br/ontologies/human-resource-management#Organizational_Unit -->
+
+    <owl:NamedIndividual rdf:about="http://nemo.inf.ufes.br/ontologies/human-resource-management#Organizational_Unit">
+        <rdf:type rdf:resource="http://nemo.inf.ufes.br/ontologies/goop#Class"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://nemo.inf.ufes.br/ontologies/human-resource-management#Organizational_Unit_Type -->
+
+    <owl:NamedIndividual rdf:about="http://nemo.inf.ufes.br/ontologies/human-resource-management#Organizational_Unit_Type">
+        <rdf:type rdf:resource="http://nemo.inf.ufes.br/ontologies/goop#Class"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://nemo.inf.ufes.br/ontologies/human-resource-management#Person -->
+
+    <owl:NamedIndividual rdf:about="http://nemo.inf.ufes.br/ontologies/human-resource-management#Person">
+        <rdf:type rdf:resource="http://nemo.inf.ufes.br/ontologies/goop#Class"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://nemo.inf.ufes.br/ontologies/human-resource-management#Physical_Agent -->
+
+    <owl:NamedIndividual rdf:about="http://nemo.inf.ufes.br/ontologies/human-resource-management#Physical_Agent">
+        <rdf:type rdf:resource="http://nemo.inf.ufes.br/ontologies/goop#Class"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://nemo.inf.ufes.br/ontologies/human-resource-management#assigns -->
+
+    <owl:NamedIndividual rdf:about="http://nemo.inf.ufes.br/ontologies/human-resource-management#assigns">
+        <rdf:type rdf:resource="http://nemo.inf.ufes.br/ontologies/goop#Object_Property"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://nemo.inf.ufes.br/ontologies/human-resource-management#assigns_to -->
+
+    <owl:NamedIndividual rdf:about="http://nemo.inf.ufes.br/ontologies/human-resource-management#assigns_to">
+        <rdf:type rdf:resource="http://nemo.inf.ufes.br/ontologies/goop#Object_Property"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://nemo.inf.ufes.br/ontologies/human-resource-management#covers -->
+
+    <owl:NamedIndividual rdf:about="http://nemo.inf.ufes.br/ontologies/human-resource-management#covers">
+        <rdf:type rdf:resource="http://nemo.inf.ufes.br/ontologies/goop#Object_Property"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://nemo.inf.ufes.br/ontologies/human-resource-management#employs -->
+
+    <owl:NamedIndividual rdf:about="http://nemo.inf.ufes.br/ontologies/human-resource-management#employs">
+        <rdf:type rdf:resource="http://nemo.inf.ufes.br/ontologies/goop#Object_Property"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://nemo.inf.ufes.br/ontologies/human-resource-management#made_by -->
+
+    <owl:NamedIndividual rdf:about="http://nemo.inf.ufes.br/ontologies/human-resource-management#made_by">
+        <rdf:type rdf:resource="http://nemo.inf.ufes.br/ontologies/goop#Object_Property"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://nemo.inf.ufes.br/ontologies/human-resource-management#mediates_business_role -->
+
+    <owl:NamedIndividual rdf:about="http://nemo.inf.ufes.br/ontologies/human-resource-management#mediates_business_role">
+        <rdf:type rdf:resource="http://nemo.inf.ufes.br/ontologies/goop#Object_Property"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://nemo.inf.ufes.br/ontologies/human-resource-management#mediates_org_member_type -->
+
+    <owl:NamedIndividual rdf:about="http://nemo.inf.ufes.br/ontologies/human-resource-management#mediates_org_member_type">
+        <rdf:type rdf:resource="http://nemo.inf.ufes.br/ontologies/goop#Object_Property"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://nemo.inf.ufes.br/ontologies/human-resource-management#mediates_org_type -->
+
+    <owl:NamedIndividual rdf:about="http://nemo.inf.ufes.br/ontologies/human-resource-management#mediates_org_type">
+        <rdf:type rdf:resource="http://nemo.inf.ufes.br/ontologies/goop#Object_Property"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://nemo.inf.ufes.br/ontologies/human-resource-management#mediates_ou_type -->
+
+    <owl:NamedIndividual rdf:about="http://nemo.inf.ufes.br/ontologies/human-resource-management#mediates_ou_type">
+        <rdf:type rdf:resource="http://nemo.inf.ufes.br/ontologies/goop#Object_Property"/>
+    </owl:NamedIndividual>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 4.5.6.2018-09-06T00:27:41Z) https://github.com/owlcs/owlapi -->
+

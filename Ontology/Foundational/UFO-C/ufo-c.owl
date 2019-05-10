@@ -1,0 +1,143 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns="http://nemo.inf.ufes.br/ontologies/ufo-c#"
+     xml:base="http://nemo.inf.ufes.br/ontologies/ufo-c"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:goop="http://nemo.inf.ufes.br/ontologies/goop#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#">
+    <owl:Ontology rdf:about="http://nemo.inf.ufes.br/ontologies/ufo-c">
+        <owl:imports rdf:resource="http://nemo.inf.ufes.br/ontologies/goop"/>
+    </owl:Ontology>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Individuals
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://nemo.inf.ufes.br/ontologies/ufo-c#Agent -->
+
+    <owl:NamedIndividual rdf:about="http://nemo.inf.ufes.br/ontologies/ufo-c#Agent">
+        <rdf:type rdf:resource="http://nemo.inf.ufes.br/ontologies/goop#Class"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://nemo.inf.ufes.br/ontologies/ufo-c#Belief -->
+
+    <owl:NamedIndividual rdf:about="http://nemo.inf.ufes.br/ontologies/ufo-c#Belief">
+        <rdf:type rdf:resource="http://nemo.inf.ufes.br/ontologies/goop#Class"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://nemo.inf.ufes.br/ontologies/ufo-c#Describe_Mental_Moments -->
+
+    <owl:NamedIndividual rdf:about="http://nemo.inf.ufes.br/ontologies/ufo-c#Describe_Mental_Moments">
+        <rdf:type rdf:resource="http://nemo.inf.ufes.br/ontologies/goop#Goal_Based_Requirement"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://nemo.inf.ufes.br/ontologies/ufo-c#Desire -->
+
+    <owl:NamedIndividual rdf:about="http://nemo.inf.ufes.br/ontologies/ufo-c#Desire">
+        <rdf:type rdf:resource="http://nemo.inf.ufes.br/ontologies/goop#Class"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://nemo.inf.ufes.br/ontologies/ufo-c#Goal -->
+
+    <owl:NamedIndividual rdf:about="http://nemo.inf.ufes.br/ontologies/ufo-c#Goal">
+        <rdf:type rdf:resource="http://nemo.inf.ufes.br/ontologies/goop#Class"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://nemo.inf.ufes.br/ontologies/ufo-c#Goop -->
+
+    <owl:NamedIndividual rdf:about="http://nemo.inf.ufes.br/ontologies/ufo-c#Goop">
+        <rdf:type rdf:resource="http://nemo.inf.ufes.br/ontologies/goop#Goop"/>
+        <goop:composed_by rdf:resource="http://nemo.inf.ufes.br/ontologies/ufo-c#Describe_Mental_Moments"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://nemo.inf.ufes.br/ontologies/ufo-c#Intention -->
+
+    <owl:NamedIndividual rdf:about="http://nemo.inf.ufes.br/ontologies/ufo-c#Intention">
+        <rdf:type rdf:resource="http://nemo.inf.ufes.br/ontologies/goop#Class"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://nemo.inf.ufes.br/ontologies/ufo-c#Intentional_Moment -->
+
+    <owl:NamedIndividual rdf:about="http://nemo.inf.ufes.br/ontologies/ufo-c#Intentional_Moment">
+        <rdf:type rdf:resource="http://nemo.inf.ufes.br/ontologies/goop#Class"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://nemo.inf.ufes.br/ontologies/ufo-c#Mental_Moment -->
+
+    <owl:NamedIndividual rdf:about="http://nemo.inf.ufes.br/ontologies/ufo-c#Mental_Moment">
+        <rdf:type rdf:resource="http://nemo.inf.ufes.br/ontologies/goop#Class"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://nemo.inf.ufes.br/ontologies/ufo-c#Model_Fragment -->
+
+    <owl:NamedIndividual rdf:about="http://nemo.inf.ufes.br/ontologies/ufo-c#Model_Fragment">
+        <rdf:type rdf:resource="http://nemo.inf.ufes.br/ontologies/goop#Model_Fragment"/>
+        <goop:composed_by rdf:resource="http://nemo.inf.ufes.br/ontologies/ufo-c#Agent"/>
+        <goop:composed_by rdf:resource="http://nemo.inf.ufes.br/ontologies/ufo-c#Belief"/>
+        <goop:composed_by rdf:resource="http://nemo.inf.ufes.br/ontologies/ufo-c#Desire"/>
+        <goop:composed_by rdf:resource="http://nemo.inf.ufes.br/ontologies/ufo-c#Goal"/>
+        <goop:composed_by rdf:resource="http://nemo.inf.ufes.br/ontologies/ufo-c#Intention"/>
+        <goop:composed_by rdf:resource="http://nemo.inf.ufes.br/ontologies/ufo-c#Intentional_Moment"/>
+        <goop:composed_by rdf:resource="http://nemo.inf.ufes.br/ontologies/ufo-c#Mental_Moment"/>
+        <goop:composed_by rdf:resource="http://nemo.inf.ufes.br/ontologies/ufo-c#Proposition"/>
+        <goop:is_used_to_satisfy rdf:resource="http://nemo.inf.ufes.br/ontologies/ufo-c#Goop"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://nemo.inf.ufes.br/ontologies/ufo-c#Proposition -->
+
+    <owl:NamedIndividual rdf:about="http://nemo.inf.ufes.br/ontologies/ufo-c#Proposition">
+        <rdf:type rdf:resource="http://nemo.inf.ufes.br/ontologies/goop#Class"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://nemo.inf.ufes.br/ontologies/ufo-c#inheres_in -->
+
+    <owl:NamedIndividual rdf:about="http://nemo.inf.ufes.br/ontologies/ufo-c#inheres_in">
+        <rdf:type rdf:resource="http://nemo.inf.ufes.br/ontologies/goop#Object_Property"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://nemo.inf.ufes.br/ontologies/ufo-c#propositional_content_of -->
+
+    <owl:NamedIndividual rdf:about="http://nemo.inf.ufes.br/ontologies/ufo-c#propositional_content_of">
+        <rdf:type rdf:resource="http://nemo.inf.ufes.br/ontologies/goop#Object_Property"/>
+    </owl:NamedIndividual>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 4.5.6.2018-09-06T00:27:41Z) https://github.com/owlcs/owlapi -->
+

@@ -1,0 +1,145 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns="http://nemo.inf.ufes.br/ontologies/testing-techniques#"
+     xml:base="http://nemo.inf.ufes.br/ontologies/testing-techniques"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:goop="http://nemo.inf.ufes.br/ontologies/goop#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#">
+    <owl:Ontology rdf:about="http://nemo.inf.ufes.br/ontologies/testing-techniques">
+        <owl:imports rdf:resource="http://nemo.inf.ufes.br/ontologies/goop"/>
+    </owl:Ontology>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Individuals
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://nemo.inf.ufes.br/ontologies/testing-techniques#Black-box_Testing_Technique -->
+
+    <owl:NamedIndividual rdf:about="http://nemo.inf.ufes.br/ontologies/testing-techniques#Black-box_Testing_Technique">
+        <rdf:type rdf:resource="http://nemo.inf.ufes.br/ontologies/goop#Class"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://nemo.inf.ufes.br/ontologies/testing-techniques#Define_how_testing_techniques_are_classified -->
+
+    <owl:NamedIndividual rdf:about="http://nemo.inf.ufes.br/ontologies/testing-techniques#Define_how_testing_techniques_are_classified">
+        <rdf:type rdf:resource="http://nemo.inf.ufes.br/ontologies/goop#Goal_Based_Requirement"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://nemo.inf.ufes.br/ontologies/testing-techniques#Goop -->
+
+    <owl:NamedIndividual rdf:about="http://nemo.inf.ufes.br/ontologies/testing-techniques#Goop">
+        <rdf:type rdf:resource="http://nemo.inf.ufes.br/ontologies/goop#Goop"/>
+        <goop:composed_by rdf:resource="http://nemo.inf.ufes.br/ontologies/testing-techniques#Define_how_testing_techniques_are_classified"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://nemo.inf.ufes.br/ontologies/testing-techniques#Model-based_Testing_Technique -->
+
+    <owl:NamedIndividual rdf:about="http://nemo.inf.ufes.br/ontologies/testing-techniques#Model-based_Testing_Technique">
+        <rdf:type rdf:resource="http://nemo.inf.ufes.br/ontologies/goop#Class"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://nemo.inf.ufes.br/ontologies/testing-techniques#Model_Fragment -->
+
+    <owl:NamedIndividual rdf:about="http://nemo.inf.ufes.br/ontologies/testing-techniques#Model_Fragment">
+        <rdf:type rdf:resource="http://nemo.inf.ufes.br/ontologies/goop#Model_Fragment"/>
+        <goop:composed_by rdf:resource="http://nemo.inf.ufes.br/ontologies/testing-techniques#Black-box_Testing_Technique"/>
+        <goop:composed_by rdf:resource="http://nemo.inf.ufes.br/ontologies/testing-techniques#Model-based_Testing_Technique"/>
+        <goop:composed_by rdf:resource="http://nemo.inf.ufes.br/ontologies/testing-techniques#Mutation_Testing_Technique"/>
+        <goop:composed_by rdf:resource="http://nemo.inf.ufes.br/ontologies/testing-techniques#Technique"/>
+        <goop:composed_by rdf:resource="http://nemo.inf.ufes.br/ontologies/testing-techniques#Testing_Level"/>
+        <goop:composed_by rdf:resource="http://nemo.inf.ufes.br/ontologies/testing-techniques#Testing_Technique"/>
+        <goop:composed_by rdf:resource="http://nemo.inf.ufes.br/ontologies/testing-techniques#Testing_Technique_Type"/>
+        <goop:composed_by rdf:resource="http://nemo.inf.ufes.br/ontologies/testing-techniques#White-box_Testing_Technique"/>
+        <goop:composed_by rdf:resource="http://nemo.inf.ufes.br/ontologies/testing-techniques#applies_to"/>
+        <goop:composed_by rdf:resource="http://nemo.inf.ufes.br/ontologies/testing-techniques#instanceOf"/>
+        <goop:is_used_to_satisfy rdf:resource="http://nemo.inf.ufes.br/ontologies/testing-techniques#Goop"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://nemo.inf.ufes.br/ontologies/testing-techniques#Mutation_Testing_Technique -->
+
+    <owl:NamedIndividual rdf:about="http://nemo.inf.ufes.br/ontologies/testing-techniques#Mutation_Testing_Technique">
+        <rdf:type rdf:resource="http://nemo.inf.ufes.br/ontologies/goop#Class"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://nemo.inf.ufes.br/ontologies/testing-techniques#Technique -->
+
+    <owl:NamedIndividual rdf:about="http://nemo.inf.ufes.br/ontologies/testing-techniques#Technique">
+        <rdf:type rdf:resource="http://nemo.inf.ufes.br/ontologies/goop#Class"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://nemo.inf.ufes.br/ontologies/testing-techniques#Testing_Level -->
+
+    <owl:NamedIndividual rdf:about="http://nemo.inf.ufes.br/ontologies/testing-techniques#Testing_Level">
+        <rdf:type rdf:resource="http://nemo.inf.ufes.br/ontologies/goop#Class"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://nemo.inf.ufes.br/ontologies/testing-techniques#Testing_Technique -->
+
+    <owl:NamedIndividual rdf:about="http://nemo.inf.ufes.br/ontologies/testing-techniques#Testing_Technique">
+        <rdf:type rdf:resource="http://nemo.inf.ufes.br/ontologies/goop#Class"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://nemo.inf.ufes.br/ontologies/testing-techniques#Testing_Technique_Type -->
+
+    <owl:NamedIndividual rdf:about="http://nemo.inf.ufes.br/ontologies/testing-techniques#Testing_Technique_Type">
+        <rdf:type rdf:resource="http://nemo.inf.ufes.br/ontologies/goop#Class"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://nemo.inf.ufes.br/ontologies/testing-techniques#White-box_Testing_Technique -->
+
+    <owl:NamedIndividual rdf:about="http://nemo.inf.ufes.br/ontologies/testing-techniques#White-box_Testing_Technique">
+        <rdf:type rdf:resource="http://nemo.inf.ufes.br/ontologies/goop#Class"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://nemo.inf.ufes.br/ontologies/testing-techniques#applies_to -->
+
+    <owl:NamedIndividual rdf:about="http://nemo.inf.ufes.br/ontologies/testing-techniques#applies_to">
+        <rdf:type rdf:resource="http://nemo.inf.ufes.br/ontologies/goop#Object_Property"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://nemo.inf.ufes.br/ontologies/testing-techniques#instanceOf -->
+
+    <owl:NamedIndividual rdf:about="http://nemo.inf.ufes.br/ontologies/testing-techniques#instanceOf">
+        <rdf:type rdf:resource="http://nemo.inf.ufes.br/ontologies/goop#Object_Property"/>
+    </owl:NamedIndividual>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 4.5.6.2018-09-06T00:27:41Z) https://github.com/owlcs/owlapi -->
+

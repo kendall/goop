@@ -1,0 +1,363 @@
+@prefix : <http://nemo.inf.ufes.br/ontologies/fragments/software-measurement-planning#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix goop: <http://nemo.inf.ufes.br/ontologies/goop#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@base <http://nemo.inf.ufes.br/ontologies/fragments/software-measurement-planning> .
+
+<http://nemo.inf.ufes.br/ontologies/fragments/software-measurement-planning> rdf:type owl:Ontology ;
+                                                                              owl:imports <http://nemo.inf.ufes.br/ontologies/goop> .
+
+#################################################################
+#    Individuals
+#################################################################
+
+###  http://nemo.inf.ufes.br/ontologies/fragments/software-measurement-planning#Business_Goal
+:Business_Goal rdf:type owl:NamedIndividual ,
+                        goop:Class .
+
+
+###  http://nemo.inf.ufes.br/ontologies/fragments/software-measurement-planning#Define_Information_Need
+:Define_Information_Need rdf:type owl:NamedIndividual ,
+                                  goop:Goal_Based_Requirement .
+
+
+###  http://nemo.inf.ufes.br/ontologies/fragments/software-measurement-planning#Define_Measurement_Planning
+:Define_Measurement_Planning rdf:type owl:NamedIndividual ,
+                                      goop:Goal_Based_Requirement ;
+                             goop:composed_by :Define_Information_Need .
+
+
+###  http://nemo.inf.ufes.br/ontologies/fragments/software-measurement-planning#Define_Software_Measurement_Planning
+:Define_Software_Measurement_Planning rdf:type owl:NamedIndividual ,
+                                               goop:Goal_Based_Requirement ;
+                                      goop:composed_by :Define_Information_Need ,
+                                                       :Define_Measurement_Planning .
+
+
+###  http://nemo.inf.ufes.br/ontologies/fragments/software-measurement-planning#Goop-1
+:Goop-1 rdf:type owl:NamedIndividual ,
+                 goop:Goop ;
+        goop:composed_by :Define_Information_Need .
+
+
+###  http://nemo.inf.ufes.br/ontologies/fragments/software-measurement-planning#Goop-2
+:Goop-2 rdf:type owl:NamedIndividual ,
+                 goop:Goop ;
+        goop:composed_by :Define_Measurement_Planning .
+
+
+###  http://nemo.inf.ufes.br/ontologies/fragments/software-measurement-planning#Goop-3
+:Goop-3 rdf:type owl:NamedIndividual ,
+                 goop:Goop ;
+        goop:composed_by :Define_Software_Measurement_Planning .
+
+
+###  http://nemo.inf.ufes.br/ontologies/fragments/software-measurement-planning#Indicator
+:Indicator rdf:type owl:NamedIndividual ,
+                    goop:Class ;
+           goop:specifies :Indicator .
+
+
+###  http://nemo.inf.ufes.br/ontologies/fragments/software-measurement-planning#Information_Need
+:Information_Need rdf:type owl:NamedIndividual ,
+                           goop:Class ;
+                  rdfs:comment """Information Needs are identified from Measurement Goals and determine which information have to be met by Measures in order to monitor the achievement of the related Measurement Goal. 
+Ex.: the information need What is the patient body mass index? could be identified from the measurement goal Check if the patient has a good body mass index."""^^rdfs:Literal .
+
+
+###  http://nemo.inf.ufes.br/ontologies/fragments/software-measurement-planning#Information_Need_Description
+:Information_Need_Description rdf:type owl:NamedIndividual ,
+                                       goop:Class .
+
+
+###  http://nemo.inf.ufes.br/ontologies/fragments/software-measurement-planning#Measurable_Element
+:Measurable_Element rdf:type owl:NamedIndividual ,
+                             goop:Class .
+
+
+###  http://nemo.inf.ufes.br/ontologies/fragments/software-measurement-planning#Measurable_Entity
+:Measurable_Entity rdf:type owl:NamedIndividual ,
+                            goop:Class .
+
+
+###  http://nemo.inf.ufes.br/ontologies/fragments/software-measurement-planning#Measurable_Entity_Type
+:Measurable_Entity_Type rdf:type owl:NamedIndividual ,
+                                 goop:Class .
+
+
+###  http://nemo.inf.ufes.br/ontologies/fragments/software-measurement-planning#Measurable_Software-Related_Entity
+:Measurable_Software-Related_Entity rdf:type owl:NamedIndividual ,
+                                             goop:Class ;
+                                    goop:specifies :Measurable_Entity .
+
+
+###  http://nemo.inf.ufes.br/ontologies/fragments/software-measurement-planning#Measurable_Software-Related_Entity_Type
+:Measurable_Software-Related_Entity_Type rdf:type owl:NamedIndividual ,
+                                                  goop:Class ;
+                                         goop:specifies :Measurable_Entity_Type .
+
+
+###  http://nemo.inf.ufes.br/ontologies/fragments/software-measurement-planning#Measure
+:Measure rdf:type owl:NamedIndividual ,
+                  goop:Class .
+
+
+###  http://nemo.inf.ufes.br/ontologies/fragments/software-measurement-planning#Measure_Description
+:Measure_Description rdf:type owl:NamedIndividual ,
+                              goop:Class .
+
+
+###  http://nemo.inf.ufes.br/ontologies/fragments/software-measurement-planning#Measurement_Analysis_Procedure
+:Measurement_Analysis_Procedure rdf:type owl:NamedIndividual ,
+                                         goop:Class .
+
+
+###  http://nemo.inf.ufes.br/ontologies/fragments/software-measurement-planning#Measurement_Goal
+:Measurement_Goal rdf:type owl:NamedIndividual ,
+                           goop:Class ;
+                  rdfs:comment """Goal that can be used to drive the identification of the Measures needed to provide information in a certain context. Measurement Goals are established based on more general Goals. 
+Ex.: in the context of a doctorâ€™s office, a doctor could be the general goal of Taking a good care of the patients. From this general goal, could be established the measurement goal Monitor the patient health, which could be decomposed in others, such as Check if the patient has a good body mass index and Check if the patient has a good blood pressure."""^^rdfs:Literal .
+
+
+###  http://nemo.inf.ufes.br/ontologies/fragments/software-measurement-planning#Measurement_Planning
+:Measurement_Planning rdf:type owl:NamedIndividual ,
+                               goop:Class ;
+                      rdfs:comment "Action that plans the measurement, i.e., determines the Measurement Goals to be monitored, the Information Needs to be considered, the Measures to be collected to meet the Information Needs and the Measurement Procedures to be applied."^^rdfs:Literal .
+
+
+###  http://nemo.inf.ufes.br/ontologies/fragments/software-measurement-planning#Measurement_Planning_Item
+:Measurement_Planning_Item rdf:type owl:NamedIndividual ,
+                                    goop:Class ;
+                           rdfs:comment """Social Object produced during Measurement Planning. A Measurement Planning Item specifies a Measurement Goal to be monitored, an Information Need to be considered, a Measure to be used to meet the Information Need and a Measurement Procedure to be applied to collect data for the Measure. Several Measurement Planning Items can be produced during Measurement Planning. 
+Ex.: the measurement planning item specifying the measurement goal Check if the patient has a good body mass index, the information need What is the patient body mass index?, the measure body mass index in kilos and meters to be collected by using the measurement procedure Obtain the values measured to the measures weight in grams and and height in centimeters considering a same measurement date; apply the measurement formula to calculate the body mass index in kilos and meters; record the measured value and the measurement date."""^^rdfs:Literal .
+
+
+###  http://nemo.inf.ufes.br/ontologies/fragments/software-measurement-planning#Measurement_Procedure
+:Measurement_Procedure rdf:type owl:NamedIndividual ,
+                                goop:Class .
+
+
+###  http://nemo.inf.ufes.br/ontologies/fragments/software-measurement-planning#Model_Fragment-1
+:Model_Fragment-1 rdf:type owl:NamedIndividual ,
+                           goop:Model_Fragment ;
+                  goop:composed_by :Information_Need ,
+                                   :Measurement_Goal ,
+                                   :Measurement_Planning ,
+                                   :Measurement_Planning_Item ,
+                                   :is_identified_from ,
+                                   :produces ,
+                                   :specifies ;
+                  goop:is_used_to_satisfy :Goop-1 .
+
+
+###  http://nemo.inf.ufes.br/ontologies/fragments/software-measurement-planning#Model_Fragment-2
+:Model_Fragment-2 rdf:type owl:NamedIndividual ,
+                           goop:Model_Fragment ;
+                  goop:composed_by :Indicator ,
+                                   :Measurable_Element ,
+                                   :Measurable_Entity ,
+                                   :Measurable_Entity_Type ,
+                                   :Measure ,
+                                   :Measurement_Procedure ,
+                                   :applies_to ,
+                                   :characterized_by ,
+                                   :indicates_achievement_of ,
+                                   :meets ,
+                                   :refers_to ,
+                                   :specifies ,
+                                   :used_to_characterize ,
+                                   :used_to_quantify .
+
+
+###  http://nemo.inf.ufes.br/ontologies/fragments/software-measurement-planning#Model_Fragment-3
+:Model_Fragment-3 rdf:type owl:NamedIndividual ,
+                           goop:Model_Fragment ;
+                  goop:composed_by :Business_Goal ,
+                                   :Information_Need_Description ,
+                                   :Measurable_Software-Related_Entity ,
+                                   :Measurable_Software-Related_Entity_Type ,
+                                   :Measure_Description ,
+                                   :Operational_Definition_of_Measure ,
+                                   :Organizational_Role ,
+                                   :Periodicity ,
+                                   :Software-Related_Measure ,
+                                   :Software_Goal ,
+                                   :Software_Measurement_Goal ,
+                                   :Software_Measurement_Goal_Description ,
+                                   :Software_Measurement_Plan ,
+                                   :Software_Measurement_Planning ,
+                                   :Software_Measurement_Planning_Item ,
+                                   :Software_Organization ,
+                                   :Software_Project ,
+                                   :Software_Project_Measurement_Plan ,
+                                   :Standard_Activity ,
+                                   :based_on ,
+                                   :defined_for ,
+                                   :describes ,
+                                   :establishes ,
+                                   :indicates ,
+                                   :instance_of ,
+                                   :produces .
+
+
+###  http://nemo.inf.ufes.br/ontologies/fragments/software-measurement-planning#Operational_Definition_of_Measure
+:Operational_Definition_of_Measure rdf:type owl:NamedIndividual ,
+                                            goop:Class .
+
+
+###  http://nemo.inf.ufes.br/ontologies/fragments/software-measurement-planning#Organizational_Role
+:Organizational_Role rdf:type owl:NamedIndividual ,
+                              goop:Class .
+
+
+###  http://nemo.inf.ufes.br/ontologies/fragments/software-measurement-planning#Periodicity
+:Periodicity rdf:type owl:NamedIndividual ,
+                      goop:Class .
+
+
+###  http://nemo.inf.ufes.br/ontologies/fragments/software-measurement-planning#Software-Related_Measure
+:Software-Related_Measure rdf:type owl:NamedIndividual ,
+                                   goop:Class ;
+                          goop:specifies :Measure .
+
+
+###  http://nemo.inf.ufes.br/ontologies/fragments/software-measurement-planning#Software_Goal
+:Software_Goal rdf:type owl:NamedIndividual ,
+                        goop:Class .
+
+
+###  http://nemo.inf.ufes.br/ontologies/fragments/software-measurement-planning#Software_Measurement_Goal
+:Software_Measurement_Goal rdf:type owl:NamedIndividual ,
+                                    goop:Class .
+
+
+###  http://nemo.inf.ufes.br/ontologies/fragments/software-measurement-planning#Software_Measurement_Goal_Description
+:Software_Measurement_Goal_Description rdf:type owl:NamedIndividual ,
+                                                goop:Class .
+
+
+###  http://nemo.inf.ufes.br/ontologies/fragments/software-measurement-planning#Software_Measurement_Plan
+:Software_Measurement_Plan rdf:type owl:NamedIndividual ,
+                                    goop:Class ;
+                           goop:component_of :Software_Measurement_Planning_Item .
+
+
+###  http://nemo.inf.ufes.br/ontologies/fragments/software-measurement-planning#Software_Measurement_Planning
+:Software_Measurement_Planning rdf:type owl:NamedIndividual ,
+                                        goop:Class .
+
+
+###  http://nemo.inf.ufes.br/ontologies/fragments/software-measurement-planning#Software_Measurement_Planning_Item
+:Software_Measurement_Planning_Item rdf:type owl:NamedIndividual ,
+                                             goop:Class ;
+                                    goop:component_of :Information_Need_Description ,
+                                                      :Measure_Description ,
+                                                      :Operational_Definition_of_Measure ,
+                                                      :Software_Measurement_Goal_Description .
+
+
+###  http://nemo.inf.ufes.br/ontologies/fragments/software-measurement-planning#Software_Organization
+:Software_Organization rdf:type owl:NamedIndividual ,
+                                goop:Class .
+
+
+###  http://nemo.inf.ufes.br/ontologies/fragments/software-measurement-planning#Software_Project
+:Software_Project rdf:type owl:NamedIndividual ,
+                           goop:Class .
+
+
+###  http://nemo.inf.ufes.br/ontologies/fragments/software-measurement-planning#Software_Project_Measurement_Plan
+:Software_Project_Measurement_Plan rdf:type owl:NamedIndividual ,
+                                            goop:Class ;
+                                   goop:specifies :Software_Measurement_Plan .
+
+
+###  http://nemo.inf.ufes.br/ontologies/fragments/software-measurement-planning#Standard_Activity
+:Standard_Activity rdf:type owl:NamedIndividual ,
+                            goop:Class .
+
+
+###  http://nemo.inf.ufes.br/ontologies/fragments/software-measurement-planning#applies_to
+:applies_to rdf:type owl:NamedIndividual ,
+                     goop:Object_Property .
+
+
+###  http://nemo.inf.ufes.br/ontologies/fragments/software-measurement-planning#based_on
+:based_on rdf:type owl:NamedIndividual ,
+                   goop:Object_Property .
+
+
+###  http://nemo.inf.ufes.br/ontologies/fragments/software-measurement-planning#characterized_by
+:characterized_by rdf:type owl:NamedIndividual ,
+                           goop:Object_Property .
+
+
+###  http://nemo.inf.ufes.br/ontologies/fragments/software-measurement-planning#defined_for
+:defined_for rdf:type owl:NamedIndividual ,
+                      goop:Object_Property .
+
+
+###  http://nemo.inf.ufes.br/ontologies/fragments/software-measurement-planning#describes
+:describes rdf:type owl:NamedIndividual ,
+                    goop:Object_Property .
+
+
+###  http://nemo.inf.ufes.br/ontologies/fragments/software-measurement-planning#establishes
+:establishes rdf:type owl:NamedIndividual ,
+                      goop:Object_Property .
+
+
+###  http://nemo.inf.ufes.br/ontologies/fragments/software-measurement-planning#indicates
+:indicates rdf:type owl:NamedIndividual ,
+                    goop:Object_Property .
+
+
+###  http://nemo.inf.ufes.br/ontologies/fragments/software-measurement-planning#indicates_achievement_of
+:indicates_achievement_of rdf:type owl:NamedIndividual ,
+                                   goop:Object_Property .
+
+
+###  http://nemo.inf.ufes.br/ontologies/fragments/software-measurement-planning#instance_of
+:instance_of rdf:type owl:NamedIndividual ,
+                      goop:Object_Property .
+
+
+###  http://nemo.inf.ufes.br/ontologies/fragments/software-measurement-planning#is_identified_from
+:is_identified_from rdf:type owl:NamedIndividual ,
+                             goop:Object_Property .
+
+
+###  http://nemo.inf.ufes.br/ontologies/fragments/software-measurement-planning#meets
+:meets rdf:type owl:NamedIndividual ,
+                goop:Object_Property .
+
+
+###  http://nemo.inf.ufes.br/ontologies/fragments/software-measurement-planning#produces
+:produces rdf:type owl:NamedIndividual ,
+                   goop:Object_Property .
+
+
+###  http://nemo.inf.ufes.br/ontologies/fragments/software-measurement-planning#refers_to
+:refers_to rdf:type owl:NamedIndividual ,
+                    goop:Object_Property .
+
+
+###  http://nemo.inf.ufes.br/ontologies/fragments/software-measurement-planning#specifies
+:specifies rdf:type owl:NamedIndividual ,
+                    goop:Object_Property .
+
+
+###  http://nemo.inf.ufes.br/ontologies/fragments/software-measurement-planning#used_to_characterize
+:used_to_characterize rdf:type owl:NamedIndividual ,
+                               goop:Object_Property .
+
+
+###  http://nemo.inf.ufes.br/ontologies/fragments/software-measurement-planning#used_to_quantify
+:used_to_quantify rdf:type owl:NamedIndividual ,
+                           goop:Object_Property .
+
+
+###  Generated by the OWL API (version 4.5.7.2018-12-02T02:23:35Z) https://github.com/owlcs/owlapi

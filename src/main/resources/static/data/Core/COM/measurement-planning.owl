@@ -1,0 +1,173 @@
+@prefix : <http://nemo.inf.ufes.br/ontologies/fragments/measurement-planning#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix goop: <http://nemo.inf.ufes.br/ontologies/goop#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@base <http://nemo.inf.ufes.br/ontologies/fragments/measurement-planning> .
+
+<http://nemo.inf.ufes.br/ontologies/fragments/measurement-planning> rdf:type owl:Ontology ;
+                                                                     owl:imports <http://nemo.inf.ufes.br/ontologies/goop> .
+
+#################################################################
+#    Individuals
+#################################################################
+
+###  http://nemo.inf.ufes.br/ontologies/fragments/measurement-planning#Define_Information_Need
+:Define_Information_Need rdf:type owl:NamedIndividual ,
+                                  goop:Goal_Based_Requirement .
+
+
+###  http://nemo.inf.ufes.br/ontologies/fragments/measurement-planning#Define_Measurement_Planning
+:Define_Measurement_Planning rdf:type owl:NamedIndividual ;
+                             goop:composed_by :Define_Information_Need .
+
+
+###  http://nemo.inf.ufes.br/ontologies/fragments/measurement-planning#Goop-1
+:Goop-1 rdf:type owl:NamedIndividual ,
+                 goop:Goop ;
+        goop:composed_by :Define_Information_Need .
+
+
+###  http://nemo.inf.ufes.br/ontologies/fragments/measurement-planning#Goop-2
+:Goop-2 rdf:type owl:NamedIndividual ,
+                 goop:Goop ;
+        goop:composed_by :Define_Measurement_Planning .
+
+
+###  http://nemo.inf.ufes.br/ontologies/fragments/measurement-planning#Indicator
+:Indicator rdf:type owl:NamedIndividual ,
+                    goop:Class ;
+           goop:specifies :Indicator .
+
+
+###  http://nemo.inf.ufes.br/ontologies/fragments/measurement-planning#Information_Need
+:Information_Need rdf:type owl:NamedIndividual ,
+                           goop:Class ;
+                  rdfs:comment """Information Needs are identified from Measurement Goals and determine which information have to be met by Measures in order to monitor the achievement of the related Measurement Goal. 
+Ex.: the information need What is the patient body mass index? could be identified from the measurement goal Check if the patient has a good body mass index."""^^rdfs:Literal .
+
+
+###  http://nemo.inf.ufes.br/ontologies/fragments/measurement-planning#Measurable_Element
+:Measurable_Element rdf:type owl:NamedIndividual ,
+                             goop:Class .
+
+
+###  http://nemo.inf.ufes.br/ontologies/fragments/measurement-planning#Measurable_Entity_Type
+:Measurable_Entity_Type rdf:type owl:NamedIndividual ,
+                                 goop:Class .
+
+
+###  http://nemo.inf.ufes.br/ontologies/fragments/measurement-planning#Measure
+:Measure rdf:type owl:NamedIndividual ,
+                  goop:Class .
+
+
+###  http://nemo.inf.ufes.br/ontologies/fragments/measurement-planning#Measurement_Goal
+:Measurement_Goal rdf:type owl:NamedIndividual ,
+                           goop:Class ;
+                  rdfs:comment """Goal that can be used to drive the identification of the Measures needed to provide information in a certain context. Measurement Goals are established based on more general Goals. 
+Ex.: in the context of a doctorâ€™s office, a doctor could be the general goal of Taking a good care of the patients. From this general goal, could be established the measurement goal Monitor the patient health, which could be decomposed in others, such as Check if the patient has a good body mass index and Check if the patient has a good blood pressure."""^^rdfs:Literal .
+
+
+###  http://nemo.inf.ufes.br/ontologies/fragments/measurement-planning#Measurement_Planning
+:Measurement_Planning rdf:type owl:NamedIndividual ,
+                               goop:Class ;
+                      rdfs:comment "Action that plans the measurement, i.e., determines the Measurement Goals to be monitored, the Information Needs to be considered, the Measures to be collected to meet the Information Needs and the Measurement Procedures to be applied."^^rdfs:Literal .
+
+
+###  http://nemo.inf.ufes.br/ontologies/fragments/measurement-planning#Measurement_Planning_Item
+:Measurement_Planning_Item rdf:type owl:NamedIndividual ,
+                                    goop:Class ;
+                           rdfs:comment """Social Object produced during Measurement Planning. A Measurement Planning Item specifies a Measurement Goal to be monitored, an Information Need to be considered, a Measure to be used to meet the Information Need and a Measurement Procedure to be applied to collect data for the Measure. Several Measurement Planning Items can be produced during Measurement Planning. 
+Ex.: the measurement planning item specifying the measurement goal Check if the patient has a good body mass index, the information need What is the patient body mass index?, the measure body mass index in kilos and meters to be collected by using the measurement procedure Obtain the values measured to the measures weight in grams and and height in centimeters considering a same measurement date; apply the measurement formula to calculate the body mass index in kilos and meters; record the measured value and the measurement date."""^^rdfs:Literal .
+
+
+###  http://nemo.inf.ufes.br/ontologies/fragments/measurement-planning#Measurement_Procedure
+:Measurement_Procedure rdf:type owl:NamedIndividual ,
+                                goop:Class .
+
+
+###  http://nemo.inf.ufes.br/ontologies/fragments/measurement-planning#Model_Fragment-1
+:Model_Fragment-1 rdf:type owl:NamedIndividual ,
+                           goop:Model_Fragment ;
+                  goop:composed_by :Information_Need ,
+                                   :Measurement_Goal ,
+                                   :Measurement_Planning ,
+                                   :Measurement_Planning_Item ,
+                                   :is_identified_from ,
+                                   :produces ,
+                                   :specifies ;
+                  goop:is_used_to_satisfy :Goop-1 .
+
+
+###  http://nemo.inf.ufes.br/ontologies/fragments/measurement-planning#Model_Fragment-2
+:Model_Fragment-2 rdf:type owl:NamedIndividual ,
+                           goop:Model_Fragment ;
+                  goop:composed_by :Indicator ,
+                                   :Measurable_Element ,
+                                   :Measurable_Entity_Type ,
+                                   :Measure ,
+                                   :Measurement_Procedure ,
+                                   :applies_to ,
+                                   :characterized_by ,
+                                   :indicates_achievement_of ,
+                                   :meets ,
+                                   :refers_to ,
+                                   :specifies ,
+                                   :used_to_characterize ,
+                                   :used_to_quantify .
+
+
+###  http://nemo.inf.ufes.br/ontologies/fragments/measurement-planning#applies_to
+:applies_to rdf:type owl:NamedIndividual ,
+                     goop:Object_Property .
+
+
+###  http://nemo.inf.ufes.br/ontologies/fragments/measurement-planning#characterized_by
+:characterized_by rdf:type owl:NamedIndividual ,
+                           goop:Object_Property .
+
+
+###  http://nemo.inf.ufes.br/ontologies/fragments/measurement-planning#indicates_achievement_of
+:indicates_achievement_of rdf:type owl:NamedIndividual ,
+                                   goop:Object_Property .
+
+
+###  http://nemo.inf.ufes.br/ontologies/fragments/measurement-planning#is_identified_from
+:is_identified_from rdf:type owl:NamedIndividual ,
+                             goop:Object_Property .
+
+
+###  http://nemo.inf.ufes.br/ontologies/fragments/measurement-planning#meets
+:meets rdf:type owl:NamedIndividual ,
+                goop:Object_Property .
+
+
+###  http://nemo.inf.ufes.br/ontologies/fragments/measurement-planning#produces
+:produces rdf:type owl:NamedIndividual ,
+                   goop:Object_Property .
+
+
+###  http://nemo.inf.ufes.br/ontologies/fragments/measurement-planning#refers_to
+:refers_to rdf:type owl:NamedIndividual ,
+                    goop:Object_Property .
+
+
+###  http://nemo.inf.ufes.br/ontologies/fragments/measurement-planning#specifies
+:specifies rdf:type owl:NamedIndividual ,
+                    goop:Object_Property .
+
+
+###  http://nemo.inf.ufes.br/ontologies/fragments/measurement-planning#used_to_characterize
+:used_to_characterize rdf:type owl:NamedIndividual ,
+                               goop:Object_Property .
+
+
+###  http://nemo.inf.ufes.br/ontologies/fragments/measurement-planning#used_to_quantify
+:used_to_quantify rdf:type owl:NamedIndividual ,
+                           goop:Object_Property .
+
+
+###  Generated by the OWL API (version 4.5.7.2018-12-02T02:23:35Z) https://github.com/owlcs/owlapi

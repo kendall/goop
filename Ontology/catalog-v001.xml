@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<catalog prefer="public" xmlns="urn:oasis:names:tc:entity:xmlns:xml:catalog">
+    <uri id="Imports Wizard Entry" name="http://nemo.inf.ufes.br/ontologies/address" uri="goop_address.owl"/>
+    <uri id="Imports Wizard Entry" name="http://nemo.inf.ufes.br/ontologies/goop" uri="goop.owl"/>
+    <group id="Folder Repository, directory=, recursive=true, Auto-Update=true, version=2" prefer="public" xml:base="">
+        <uri id="Automatically generated entry, Timestamp=1548343971141" name="http:/nemo.inf.ufes.br/ontologies/goop_payment_method" uri="goop_payment_method.owl"/>
+        <uri id="Automatically generated entry, Timestamp=1548343971141" name="http://nemo.inf.ufes.br/ontologies/" uri="Domain/wbs.owl"/>
+        <uri id="Automatically generated entry, Timestamp=1548343971141" name="http://nemo.inf.ufes.br/ontologies/Allocation" uri="Core/SPO/allocation.owl"/>
+        <uri id="Automatically generated entry, Timestamp=1548343971141" name="http://nemo.inf.ufes.br/ontologies/address" uri="goop_address.owl"/>
+        <uri id="Automatically generated entry, Timestamp=1548343971141" name="http://nemo.inf.ufes.br/ontologies/artifact-participation" uri="Core/SPO/artifact-participation.owl"/>
+        <uri id="Automatically generated entry, Timestamp=1548343971141" name="http://nemo.inf.ufes.br/ontologies/artifacts" uri="Core/SPO/artifacts.owl"/>
+        <uri id="Automatically generated entry, Timestamp=1548343971141" name="http://nemo.inf.ufes.br/ontologies/default" uri="default.owl"/>
+        <uri id="Automatically generated entry, Timestamp=1548343971141" name="http://nemo.inf.ufes.br/ontologies/estimated-process" uri="Domain/estimated-process.owl"/>
+        <uri id="Automatically generated entry, Timestamp=1548343971141" name="http://nemo.inf.ufes.br/ontologies/goop" uri="goop_good_relations_rdf.owl"/>
+        <uri id="Automatically generated entry, Timestamp=1548343971141" name="http://nemo.inf.ufes.br/ontologies/goop_good_relations" uri="goop_good_relations.owl"/>
+        <uri id="Automatically generated entry, Timestamp=1548343971141" name="http://nemo.inf.ufes.br/ontologies/goop_offering" uri="goop_offering.owl"/>
+        <uri id="Automatically generated entry, Timestamp=1548343971141" name="http://nemo.inf.ufes.br/ontologies/human-resource-management" uri="Core/EO/human-resource-management.owl"/>
+        <uri id="Automatically generated entry, Timestamp=1548343971141" name="http://nemo.inf.ufes.br/ontologies/intended-activity-definition" uri="Core/SPO/intended-activity-definition.owl"/>
+        <uri id="Automatically generated entry, Timestamp=1548343971141" name="http://nemo.inf.ufes.br/ontologies/intended-process-structure" uri="Core/SPO/intended-process-structure.owl"/>
+        <uri id="Automatically generated entry, Timestamp=1548343971141" name="http://nemo.inf.ufes.br/ontologies/job-plan-and-roles" uri="Core/EO/job-plan-and-roles.owl"/>
+        <uri id="Automatically generated entry, Timestamp=1548343971141" name="http://nemo.inf.ufes.br/ontologies/location" uri="goop_location.owl"/>
+        <uri id="Automatically generated entry, Timestamp=1548343971141" name="http://nemo.inf.ufes.br/ontologies/measurable-entities" uri="Core/COM/measurable-entities.owl"/>
+        <uri id="Automatically generated entry, Timestamp=1548343971141" name="http://nemo.inf.ufes.br/ontologies/measure" uri="Core/COM/measure.owl"/>
+        <uri id="Automatically generated entry, Timestamp=1548343971141" name="http://nemo.inf.ufes.br/ontologies/measurement" uri="Core/COM/measurement.owl"/>
+        <uri id="Automatically generated entry, Timestamp=1548343971141" name="http://nemo.inf.ufes.br/ontologies/measurement-analysis" uri="Core/COM/measurement-analysis.owl"/>
+        <uri id="Automatically generated entry, Timestamp=1548343971141" name="http://nemo.inf.ufes.br/ontologies/measurement-planning" uri="Core/COM/measurement-planning.owl"/>
+        <uri id="Automatically generated entry, Timestamp=1548343971141" name="http://nemo.inf.ufes.br/ontologies/organizational-structure" uri="Core/EO/organizational-structure.owl"/>
+        <uri id="Automatically generated entry, Timestamp=1548343971141" name="http://nemo.inf.ufes.br/ontologies/performed-process" uri="Core/SPO/performed-process.owl"/>
+        <uri id="Automatically generated entry, Timestamp=1548343971141" name="http://nemo.inf.ufes.br/ontologies/procedure-participation" uri="Core/SPO/procedure-participation.owl"/>
+        <uri id="Automatically generated entry, Timestamp=1548343971141" name="http://nemo.inf.ufes.br/ontologies/procedures" uri="Core/SPO/procedures.owl"/>
+        <uri id="Automatically generated entry, Timestamp=1548343971141" name="http://nemo.inf.ufes.br/ontologies/quality-assurance-process" uri="Domain/configuration-management-process.owl"/>
+        <uri id="Automatically generated entry, Timestamp=1548343971141" name="http://nemo.inf.ufes.br/ontologies/resource-participation" uri="Core/SPO/resource-participation.owl"/>
+        <uri id="Automatically generated entry, Timestamp=1548343971141" name="http://nemo.inf.ufes.br/ontologies/resources" uri="Core/SPO/resources.owl"/>
+        <uri id="Automatically generated entry, Timestamp=1548343971141" name="http://nemo.inf.ufes.br/ontologies/scheduled-process" uri="Core/SPO/scheduled-process.owl"/>
+        <uri id="Automatically generated entry, Timestamp=1548343971141" name="http://nemo.inf.ufes.br/ontologies/software-measurement-entities" uri="Domain/software-measurement-entities.owl"/>
+        <uri id="Automatically generated entry, Timestamp=1548343971141" name="http://nemo.inf.ufes.br/ontologies/software-measurement-execution" uri="Domain/software-measurement-execution.owl"/>
+        <uri id="Automatically generated entry, Timestamp=1548343971141" name="http://nemo.inf.ufes.br/ontologies/software-measurement-planning" uri="Domain/software-measurement-planning.owl"/>
+        <uri id="Automatically generated entry, Timestamp=1548343971141" name="http://nemo.inf.ufes.br/ontologies/software-measurement-process" uri="Domain/software-measurement-process.owl"/>
+        <uri id="Automatically generated entry, Timestamp=1548343971141" name="http://nemo.inf.ufes.br/ontologies/software-ontology" uri="Domain/software-ontology.owl"/>
+        <uri id="Automatically generated entry, Timestamp=1548343971141" name="http://nemo.inf.ufes.br/ontologies/stakeholder-participation" uri="Core/SPO/stakeholder-participation.owl"/>
+        <uri id="Automatically generated entry, Timestamp=1548343971141" name="http://nemo.inf.ufes.br/ontologies/stakeholders" uri="Core/SPO/stakeholders.owl"/>
+        <uri id="Automatically generated entry, Timestamp=1548343971141" name="http://nemo.inf.ufes.br/ontologies/standard-process-structure" uri="Core/SPO/standard-process-structure.owl"/>
+        <uri id="Automatically generated entry, Timestamp=1548343971141" name="http://nemo.inf.ufes.br/ontologies/teams" uri="Core/EO/teams.owl"/>
+        <uri id="Automatically generated entry, Timestamp=1548343971141" name="http://nemo.inf.ufes.br/ontologies/testing-artifacts" uri="Domain/testing-artifacts.owl"/>
+        <uri id="Automatically generated entry, Timestamp=1548343971141" name="http://nemo.inf.ufes.br/ontologies/testing-environment" uri="Domain/testing-environment.owl"/>
+        <uri id="Automatically generated entry, Timestamp=1548343971141" name="duplicate:http://nemo.inf.ufes.br/ontologies/testing-process" uri="Domain/quality-assurance-process.owl"/>
+        <uri id="Automatically generated entry, Timestamp=1548343971141" name="duplicate:http://nemo.inf.ufes.br/ontologies/testing-process" uri="Domain/testing-proces.owl"/>
+        <uri id="Automatically generated entry, Timestamp=1548343971141" name="http://nemo.inf.ufes.br/ontologies/testing-stakeholders" uri="Domain/testing-stakeholders.owl"/>
+        <uri id="Automatically generated entry, Timestamp=1548343971141" name="http://nemo.inf.ufes.br/ontologies/testing-techniques" uri="Domain/testing-techniques.owl"/>
+        <uri id="Automatically generated entry, Timestamp=1548343971141" name="http://nemo.inf.ufes.br/ontologies/tracked-process" uri="Domain/tracked-process.owl"/>
+        <uri id="Automatically generated entry, Timestamp=1548343971141" name="http://nemo.inf.ufes.br/ontologies/ufo-a" uri="Foundational/UFO-A/ufo-a.owl"/>
+        <uri id="Automatically generated entry, Timestamp=1548343971141" name="http://nemo.inf.ufes.br/ontologies/ufo-b" uri="Foundational/UFO-B/ufo-b.owl"/>
+        <uri id="Automatically generated entry, Timestamp=1548343971141" name="http://nemo.inf.ufes.br/ontologies/ufo-c" uri="Foundational/UFO-C/ufo-c.owl"/>
+        <uri id="Automatically generated entry, Timestamp=1548343971141" name="shadowed:http://nemo.inf.ufes.br/ontologies/default" uri="Core/SPO/standard-activity-definition.owl"/>
+    </group>
+</catalog>

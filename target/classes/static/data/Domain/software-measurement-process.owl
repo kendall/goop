@@ -1,0 +1,531 @@
+@prefix : <http://nemo.inf.ufes.br/ontologies/fragments/software-measurement-process#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix goop: <http://nemo.inf.ufes.br/ontologies/goop#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@base <http://nemo.inf.ufes.br/ontologies/fragments/software-measurement-process> .
+
+<http://nemo.inf.ufes.br/ontologies/fragments/software-measurement-process> rdf:type owl:Ontology ;
+                                                                             owl:imports <http://nemo.inf.ufes.br/ontologies/goop> .
+
+#################################################################
+#    Individuals
+#################################################################
+
+###  http://nemo.inf.ufes.br/ontologies/fragments/software-measurement-process#Analysis_Result_Description
+:Analysis_Result_Description rdf:type owl:NamedIndividual ,
+                                      goop:Class ;
+                             goop:specifies :Information_Item .
+
+
+###  http://nemo.inf.ufes.br/ontologies/fragments/software-measurement-process#Artifact
+:Artifact rdf:type owl:NamedIndividual ,
+                   goop:Class ;
+          rdfs:comment """Object intentionally made to serve a given purpose in the context of a software Project or Organization. 
+Ex.: a document, a model, a library, an e-mail, a bug."""^^rdfs:Literal .
+
+
+###  http://nemo.inf.ufes.br/ontologies/fragments/software-measurement-process#Composite_Artifact
+:Composite_Artifact rdf:type owl:NamedIndividual ,
+                             goop:Class ;
+                    goop:component_of :Composite_Artifact ;
+                    goop:specifies :Artifact ;
+                    rdfs:comment "Artifact composed of other Artifacts."^^rdfs:Literal .
+
+
+###  http://nemo.inf.ufes.br/ontologies/fragments/software-measurement-process#Data_Analysis
+:Data_Analysis rdf:type owl:NamedIndividual ,
+                        goop:Class .
+
+
+###  http://nemo.inf.ufes.br/ontologies/fragments/software-measurement-process#Data_Collection
+:Data_Collection rdf:type owl:NamedIndividual ,
+                          goop:Class .
+
+
+###  http://nemo.inf.ufes.br/ontologies/fragments/software-measurement-process#Define_Artifact
+:Define_Artifact rdf:type owl:NamedIndividual ,
+                          goop:Goal_Based_Requirement ;
+                 goop:composed_by :Define_Artifact_by_Nature ,
+                                  :Define_Artifact_by_Parts ;
+                 rdfs:comment "In the context of the software domain, Artifacts are objects intentionally made to serve a given purpose in the context of a Software Project or Organization."^^rdfs:Literal .
+
+
+###  http://nemo.inf.ufes.br/ontologies/fragments/software-measurement-process#Define_Artifact_by_Nature
+:Define_Artifact_by_Nature rdf:type owl:NamedIndividual ,
+                                    goop:Goal_Based_Requirement ;
+                           rdfs:comment "Artifact Type partitions the generalization set of Artifacts according to their nature, giving rise to a taxonomy of artifacts. More specific taxonomies can be established for specific types of artifacts, such as documents (established by instances of Document Type) and Software Product (Software Product Type), among others."^^rdfs:Literal .
+
+
+###  http://nemo.inf.ufes.br/ontologies/fragments/software-measurement-process#Define_Artifact_by_Parts
+:Define_Artifact_by_Parts rdf:type owl:NamedIndividual ,
+                                   goop:Goal_Based_Requirement ;
+                          rdfs:comment "Can be composed of other artifacts (Composite Artifact) or not (Simple Artifact)."^^rdfs:Literal .
+
+
+###  http://nemo.inf.ufes.br/ontologies/fragments/software-measurement-process#Define_Performed_Process
+:Define_Performed_Process rdf:type owl:NamedIndividual ,
+                                   goop:Goal_Based_Requirement .
+
+
+###  http://nemo.inf.ufes.br/ontologies/fragments/software-measurement-process#Define_Software_Measurement_Artifacts
+:Define_Software_Measurement_Artifacts rdf:type owl:NamedIndividual ,
+                                                goop:Goal_Based_Requirement .
+
+
+###  http://nemo.inf.ufes.br/ontologies/fragments/software-measurement-process#Define_Software_Measurement_Process
+:Define_Software_Measurement_Process rdf:type owl:NamedIndividual ,
+                                              goop:Goal_Based_Requirement ;
+                                     goop:composed_by :Define_Artifact ,
+                                                      :Define_Performed_Process ,
+                                                      :Define_Software_Measurement_Artifacts ,
+                                                      :Define_Stakeholders_Participation ,
+                                                      :Describe_Software_Measurement_Process_and_Activities .
+
+
+###  http://nemo.inf.ufes.br/ontologies/fragments/software-measurement-process#Define_Stakeholders_Participation
+:Define_Stakeholders_Participation rdf:type owl:NamedIndividual ,
+                                            goop:Goal_Based_Requirement .
+
+
+###  http://nemo.inf.ufes.br/ontologies/fragments/software-measurement-process#Describe_Software_Measurement_Process_and_Activities
+:Describe_Software_Measurement_Process_and_Activities rdf:type owl:NamedIndividual ,
+                                                               goop:Goal_Based_Requirement .
+
+
+###  http://nemo.inf.ufes.br/ontologies/fragments/software-measurement-process#Document
+:Document rdf:type owl:NamedIndividual ,
+                   goop:Class ;
+          goop:specifies :Artifact ;
+          rdfs:comment """Any written or pictorial, uniquely identified, information related to the software development, usually presented in a predefined format. 
+Ex.: a Requirements Document, a specification, a report."""^^rdfs:Literal .
+
+
+###  http://nemo.inf.ufes.br/ontologies/fragments/software-measurement-process#Goop-1
+:Goop-1 rdf:type owl:NamedIndividual ,
+                 goop:Goop ;
+        goop:composed_by :Define_Artifact_by_Nature .
+
+
+###  http://nemo.inf.ufes.br/ontologies/fragments/software-measurement-process#Goop-2
+:Goop-2 rdf:type owl:NamedIndividual ,
+                 goop:Goop ;
+        goop:composed_by :Define_Artifact_by_Parts .
+
+
+###  http://nemo.inf.ufes.br/ontologies/fragments/software-measurement-process#Goop-3
+:Goop-3 rdf:type owl:NamedIndividual ,
+                 goop:Goop ;
+        goop:composed_by :Define_Performed_Process .
+
+
+###  http://nemo.inf.ufes.br/ontologies/fragments/software-measurement-process#Goop-4
+:Goop-4 rdf:type owl:NamedIndividual ,
+                 goop:Goop ;
+        goop:composed_by :Define_Stakeholders_Participation .
+
+
+###  http://nemo.inf.ufes.br/ontologies/fragments/software-measurement-process#Goop-5
+:Goop-5 rdf:type owl:NamedIndividual ,
+                 goop:Goop ;
+        goop:composed_by :Describe_Software_Measurement_Process_and_Activities .
+
+
+###  http://nemo.inf.ufes.br/ontologies/fragments/software-measurement-process#Goop-6
+:Goop-6 rdf:type owl:NamedIndividual ,
+                 goop:Goop .
+
+
+###  http://nemo.inf.ufes.br/ontologies/fragments/software-measurement-process#Goop-7
+:Goop-7 rdf:type owl:NamedIndividual ;
+        goop:composed_by :Define_Software_Measurement_Process .
+
+
+###  http://nemo.inf.ufes.br/ontologies/fragments/software-measurement-process#Goop-General
+:Goop-General rdf:type owl:NamedIndividual ,
+                       goop:Goop ;
+              goop:composed_by :Define_Artifact .
+
+
+###  http://nemo.inf.ufes.br/ontologies/fragments/software-measurement-process#Information_Item
+:Information_Item rdf:type owl:NamedIndividual ,
+                           goop:Class ;
+                  goop:specifies :Artifact ;
+                  rdfs:comment """Relevant information for human use, produced or used by Performed Activity. 
+Ex.: a documented requirement, a bug reported, an agreement e-mail, a component description."""^^rdfs:Literal .
+
+
+###  http://nemo.inf.ufes.br/ontologies/fragments/software-measurement-process#Information_Need_Description
+:Information_Need_Description rdf:type owl:NamedIndividual ,
+                                       goop:Class ;
+                              goop:specifies :Information_Item .
+
+
+###  http://nemo.inf.ufes.br/ontologies/fragments/software-measurement-process#Information_Needs_Identification
+:Information_Needs_Identification rdf:type owl:NamedIndividual ,
+                                           goop:Class ;
+                                  goop:specifies :Performed_Simple_Activity .
+
+
+###  http://nemo.inf.ufes.br/ontologies/fragments/software-measurement-process#Measure_Description
+:Measure_Description rdf:type owl:NamedIndividual ,
+                              goop:Class ;
+                     goop:specifies :Information_Item .
+
+
+###  http://nemo.inf.ufes.br/ontologies/fragments/software-measurement-process#Measured_Value_Description
+:Measured_Value_Description rdf:type owl:NamedIndividual ,
+                                     goop:Class ;
+                            goop:specifies :Information_Item .
+
+
+###  http://nemo.inf.ufes.br/ontologies/fragments/software-measurement-process#Measurement_Analyst
+:Measurement_Analyst rdf:type owl:NamedIndividual ,
+                              goop:Class ;
+                     goop:specifies :Stakeholder .
+
+
+###  http://nemo.inf.ufes.br/ontologies/fragments/software-measurement-process#Measurement_Executor
+:Measurement_Executor rdf:type owl:NamedIndividual ,
+                               goop:Class ;
+                      goop:specifies :Stakeholder .
+
+
+###  http://nemo.inf.ufes.br/ontologies/fragments/software-measurement-process#Measurement_Goals_Establishment
+:Measurement_Goals_Establishment rdf:type owl:NamedIndividual ,
+                                          goop:Class ;
+                                 goop:specifies :Performed_Simple_Activity .
+
+
+###  http://nemo.inf.ufes.br/ontologies/fragments/software-measurement-process#Measurement_Manager
+:Measurement_Manager rdf:type owl:NamedIndividual ,
+                              goop:Class ;
+                     goop:specifies :Stakeholder .
+
+
+###  http://nemo.inf.ufes.br/ontologies/fragments/software-measurement-process#Measurement_Plan_Item_Selection
+:Measurement_Plan_Item_Selection rdf:type owl:NamedIndividual ,
+                                          goop:Class .
+
+
+###  http://nemo.inf.ufes.br/ontologies/fragments/software-measurement-process#Measurement_Planning_Start
+:Measurement_Planning_Start rdf:type owl:NamedIndividual ,
+                                     goop:Class ;
+                            goop:specifies :Performed_Simple_Activity .
+
+
+###  http://nemo.inf.ufes.br/ontologies/fragments/software-measurement-process#Measurement_Result_Reporting
+:Measurement_Result_Reporting rdf:type owl:NamedIndividual ,
+                                       goop:Class .
+
+
+###  http://nemo.inf.ufes.br/ontologies/fragments/software-measurement-process#Measures_Identification
+:Measures_Identification rdf:type owl:NamedIndividual ,
+                                  goop:Class ;
+                         goop:specifies :Performed_Simple_Activity .
+
+
+###  http://nemo.inf.ufes.br/ontologies/fragments/software-measurement-process#Model
+:Model rdf:type owl:NamedIndividual ,
+                goop:Class ;
+       goop:specifies :Artifact .
+
+
+###  http://nemo.inf.ufes.br/ontologies/fragments/software-measurement-process#Model_Fragment-1
+:Model_Fragment-1 rdf:type owl:NamedIndividual ,
+                           goop:Model_Fragment ;
+                  goop:composed_by :Artifact ,
+                                   :Document ,
+                                   :Information_Item ,
+                                   :Model ,
+                                   :Software_Item ,
+                                   :Software_Product ,
+                                   :describes ;
+                  goop:is_used_to_satisfy :Goop-1 .
+
+
+###  http://nemo.inf.ufes.br/ontologies/fragments/software-measurement-process#Model_Fragment-2
+:Model_Fragment-2 rdf:type owl:NamedIndividual ,
+                           goop:Model_Fragment ;
+                  goop:composed_by :Artifact ,
+                                   :Composite_Artifact ,
+                                   :Simple_Artifact ;
+                  goop:is_used_to_satisfy :Goop-2 .
+
+
+###  http://nemo.inf.ufes.br/ontologies/fragments/software-measurement-process#Model_Fragment-3
+:Model_Fragment-3 rdf:type owl:NamedIndividual ,
+                           goop:Model_Fragment ;
+                  goop:composed_by :Performed_Activity ,
+                                   :Performed_Composite_Activity ,
+                                   :Performed_General_Process ,
+                                   :Performed_Process ,
+                                   :Performed_Simple_Activity ,
+                                   :Performed_Specific_Process ,
+                                   :changes ,
+                                   :creates ,
+                                   :depends_on ,
+                                   :uses ;
+                  goop:is_used_to_satisfy :Goop-3 .
+
+
+###  http://nemo.inf.ufes.br/ontologies/fragments/software-measurement-process#Model_Fragment-4
+:Model_Fragment-4 rdf:type owl:NamedIndividual ,
+                           goop:Model_Fragment ;
+                  goop:composed_by :Measurement_Analyst ,
+                                   :Measurement_Executor ,
+                                   :Measurement_Manager ,
+                                   :Stakeholder ,
+                                   :is_in_charge_of ,
+                                   :participates_in ;
+                  goop:is_used_to_satisfy :Goop-4 .
+
+
+###  http://nemo.inf.ufes.br/ontologies/fragments/software-measurement-process#Model_Fragment-5
+:Model_Fragment-5 rdf:type owl:NamedIndividual ,
+                           goop:Model_Fragment ;
+                  goop:composed_by :Data_Analysis ,
+                                   :Data_Collection ,
+                                   :Information_Needs_Identification ,
+                                   :Measurement_Goals_Establishment ,
+                                   :Measurement_Plan_Item_Selection ,
+                                   :Measurement_Planning_Start ,
+                                   :Measurement_Result_Reporting ,
+                                   :Measures_Identification ,
+                                   :Operational_Definition_of_Measure_Establishment ,
+                                   :Planning_Item_Documentation ,
+                                   :Selection_of_Data_for_Analysis ,
+                                   :Selection_of_Entity_for_Measurement ,
+                                   :Selection_of_Measurement_Goals_for_Analysis ,
+                                   :Selection_of_Measures_for_Analysis ,
+                                   :Software_Measurement_Analysis ,
+                                   :Software_Measurement_Execution ,
+                                   :Software_Measurement_Planning ,
+                                   :Software_Measurement_Process ,
+                                   :changes ,
+                                   :creates ,
+                                   :uses ;
+                  goop:is_used_to_satisfy :Goop-5 .
+
+
+###  http://nemo.inf.ufes.br/ontologies/fragments/software-measurement-process#Model_Fragment-6
+:Model_Fragment-6 rdf:type owl:NamedIndividual ,
+                           goop:Model_Fragment ;
+                  goop:composed_by :Analysis_Result_Description ,
+                                   :Information_Need_Description ,
+                                   :Measure_Description ,
+                                   :Measured_Value_Description ,
+                                   :Operational_Definition_of_Measure ,
+                                   :Software_Measurement_Goal_Description ,
+                                   :Software_Measurement_Plan ,
+                                   :Software_Measurement_Planning_Item ,
+                                   :describes ;
+                  goop:is_used_to_satisfy :Goop-6 .
+
+
+###  http://nemo.inf.ufes.br/ontologies/fragments/software-measurement-process#Model_Fragment-General
+:Model_Fragment-General rdf:type owl:NamedIndividual ,
+                                 goop:Model_Fragment ;
+                        goop:composed_by :depends_on ;
+                        goop:is_used_to_satisfy :Goop-General .
+
+
+###  http://nemo.inf.ufes.br/ontologies/fragments/software-measurement-process#Operational_Definition_of_Measure
+:Operational_Definition_of_Measure rdf:type owl:NamedIndividual ,
+                                            goop:Class ;
+                                   goop:specifies :Information_Item .
+
+
+###  http://nemo.inf.ufes.br/ontologies/fragments/software-measurement-process#Operational_Definition_of_Measure_Establishment
+:Operational_Definition_of_Measure_Establishment rdf:type owl:NamedIndividual ,
+                                                          goop:Class ;
+                                                 goop:specifies :Performed_Simple_Activity .
+
+
+###  http://nemo.inf.ufes.br/ontologies/fragments/software-measurement-process#Performed_Activity
+:Performed_Activity rdf:type owl:NamedIndividual ,
+                             goop:Class .
+
+
+###  http://nemo.inf.ufes.br/ontologies/fragments/software-measurement-process#Performed_Composite_Activity
+:Performed_Composite_Activity rdf:type owl:NamedIndividual ,
+                                       goop:Class ;
+                              goop:component_of :Performed_Activity ;
+                              goop:specifies :Performed_Composite_Activity .
+
+
+###  http://nemo.inf.ufes.br/ontologies/fragments/software-measurement-process#Performed_General_Process
+:Performed_General_Process rdf:type owl:NamedIndividual ,
+                                    goop:Class ;
+                           goop:component_of :Performed_Specific_Process ;
+                           goop:specifies :Performed_Process .
+
+
+###  http://nemo.inf.ufes.br/ontologies/fragments/software-measurement-process#Performed_Process
+:Performed_Process rdf:type owl:NamedIndividual ,
+                            goop:Class .
+
+
+###  http://nemo.inf.ufes.br/ontologies/fragments/software-measurement-process#Performed_Simple_Activity
+:Performed_Simple_Activity rdf:type owl:NamedIndividual ,
+                                    goop:Class ;
+                           goop:specifies :Performed_Activity .
+
+
+###  http://nemo.inf.ufes.br/ontologies/fragments/software-measurement-process#Performed_Specific_Process
+:Performed_Specific_Process rdf:type owl:NamedIndividual ,
+                                     goop:Class ;
+                            goop:component_of :Performed_Activity ;
+                            goop:specifies :Performed_Process .
+
+
+###  http://nemo.inf.ufes.br/ontologies/fragments/software-measurement-process#Planning_Item_Documentation
+:Planning_Item_Documentation rdf:type owl:NamedIndividual ,
+                                      goop:Class ;
+                             goop:specifies :Performed_Simple_Activity .
+
+
+###  http://nemo.inf.ufes.br/ontologies/fragments/software-measurement-process#Selection_of_Data_for_Analysis
+:Selection_of_Data_for_Analysis rdf:type owl:NamedIndividual ,
+                                         goop:Class .
+
+
+###  http://nemo.inf.ufes.br/ontologies/fragments/software-measurement-process#Selection_of_Entity_for_Measurement
+:Selection_of_Entity_for_Measurement rdf:type owl:NamedIndividual ,
+                                              goop:Class .
+
+
+###  http://nemo.inf.ufes.br/ontologies/fragments/software-measurement-process#Selection_of_Measurement_Goals_for_Analysis
+:Selection_of_Measurement_Goals_for_Analysis rdf:type owl:NamedIndividual ,
+                                                      goop:Class .
+
+
+###  http://nemo.inf.ufes.br/ontologies/fragments/software-measurement-process#Selection_of_Measures_for_Analysis
+:Selection_of_Measures_for_Analysis rdf:type owl:NamedIndividual ,
+                                             goop:Class .
+
+
+###  http://nemo.inf.ufes.br/ontologies/fragments/software-measurement-process#Simple_Artifact
+:Simple_Artifact rdf:type owl:NamedIndividual ,
+                          goop:Class ;
+                 goop:specifies :Artifact ;
+                 rdfs:comment "Artifact that is not decomposed into other Artifacts."^^rdfs:Literal .
+
+
+###  http://nemo.inf.ufes.br/ontologies/fragments/software-measurement-process#Software_Item
+:Software_Item rdf:type owl:NamedIndividual ,
+                        goop:Class ;
+               goop:specifies :Artifact .
+
+
+###  http://nemo.inf.ufes.br/ontologies/fragments/software-measurement-process#Software_Measurement_Analysis
+:Software_Measurement_Analysis rdf:type owl:NamedIndividual ,
+                                        goop:Class ;
+                               goop:component_of :Data_Analysis ,
+                                                 :Measurement_Result_Reporting ,
+                                                 :Selection_of_Data_for_Analysis ,
+                                                 :Selection_of_Measurement_Goals_for_Analysis ,
+                                                 :Selection_of_Measures_for_Analysis ;
+                               goop:specifies :Performed_Composite_Activity .
+
+
+###  http://nemo.inf.ufes.br/ontologies/fragments/software-measurement-process#Software_Measurement_Execution
+:Software_Measurement_Execution rdf:type owl:NamedIndividual ,
+                                         goop:Class ;
+                                goop:component_of :Data_Collection ,
+                                                  :Measurement_Plan_Item_Selection ,
+                                                  :Selection_of_Entity_for_Measurement ;
+                                goop:specifies :Performed_Composite_Activity .
+
+
+###  http://nemo.inf.ufes.br/ontologies/fragments/software-measurement-process#Software_Measurement_Goal_Description
+:Software_Measurement_Goal_Description rdf:type owl:NamedIndividual ,
+                                                goop:Class ;
+                                       goop:specifies :Information_Item .
+
+
+###  http://nemo.inf.ufes.br/ontologies/fragments/software-measurement-process#Software_Measurement_Plan
+:Software_Measurement_Plan rdf:type owl:NamedIndividual ,
+                                    goop:Class ;
+                           goop:specifies :Document .
+
+
+###  http://nemo.inf.ufes.br/ontologies/fragments/software-measurement-process#Software_Measurement_Planning
+:Software_Measurement_Planning rdf:type owl:NamedIndividual ;
+                               goop:component_of :Information_Needs_Identification ,
+                                                 :Measurement_Goals_Establishment ,
+                                                 :Measurement_Planning_Start ,
+                                                 :Measures_Identification ,
+                                                 :Operational_Definition_of_Measure_Establishment ,
+                                                 :Planning_Item_Documentation ;
+                               goop:specifies :Performed_Composite_Activity .
+
+
+###  http://nemo.inf.ufes.br/ontologies/fragments/software-measurement-process#Software_Measurement_Planning_Item
+:Software_Measurement_Planning_Item rdf:type owl:NamedIndividual ,
+                                             goop:Class ;
+                                    goop:component_of :Information_Need_Description ,
+                                                      :Measure_Description ,
+                                                      :Operational_Definition_of_Measure ,
+                                                      :Software_Measurement_Goal_Description ;
+                                    goop:specifies :Information_Item .
+
+
+###  http://nemo.inf.ufes.br/ontologies/fragments/software-measurement-process#Software_Measurement_Process
+:Software_Measurement_Process rdf:type owl:NamedIndividual ,
+                                       goop:Class ;
+                              goop:component_of :Software_Measurement_Planning ;
+                              goop:composed_by :Software_Measurement_Analysis ,
+                                               :Software_Measurement_Execution ;
+                              goop:specifies :Performed_Specific_Process .
+
+
+###  http://nemo.inf.ufes.br/ontologies/fragments/software-measurement-process#Software_Product
+:Software_Product rdf:type owl:NamedIndividual ,
+                           goop:Class ;
+                  goop:specifies :Artifact .
+
+
+###  http://nemo.inf.ufes.br/ontologies/fragments/software-measurement-process#Stakeholder
+:Stakeholder rdf:type owl:NamedIndividual ,
+                      goop:Class .
+
+
+###  http://nemo.inf.ufes.br/ontologies/fragments/software-measurement-process#changes
+:changes rdf:type owl:NamedIndividual ,
+                  goop:Object_Property .
+
+
+###  http://nemo.inf.ufes.br/ontologies/fragments/software-measurement-process#creates
+:creates rdf:type owl:NamedIndividual ,
+                  goop:Object_Property .
+
+
+###  http://nemo.inf.ufes.br/ontologies/fragments/software-measurement-process#depends_on
+:depends_on rdf:type owl:NamedIndividual ,
+                     goop:Object_Property .
+
+
+###  http://nemo.inf.ufes.br/ontologies/fragments/software-measurement-process#describes
+:describes rdf:type owl:NamedIndividual ,
+                    goop:Object_Property .
+
+
+###  http://nemo.inf.ufes.br/ontologies/fragments/software-measurement-process#is_in_charge_of
+:is_in_charge_of rdf:type owl:NamedIndividual ,
+                          goop:Object_Property .
+
+
+###  http://nemo.inf.ufes.br/ontologies/fragments/software-measurement-process#participates_in
+:participates_in rdf:type owl:NamedIndividual ,
+                          goop:Object_Property .
+
+
+###  http://nemo.inf.ufes.br/ontologies/fragments/software-measurement-process#uses
+:uses rdf:type owl:NamedIndividual ,
+               goop:Object_Property .
+
+
+###  Generated by the OWL API (version 4.5.7.2018-12-02T02:23:35Z) https://github.com/owlcs/owlapi

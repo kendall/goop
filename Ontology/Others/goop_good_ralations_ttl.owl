@@ -1,0 +1,483 @@
+@prefix : <http://nemo.inf.ufes.br/ontologies/goop_good_relations#> .
+@prefix gp: <http://nemo.inf.ufes.br/ontologies/goop#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@base <http://nemo.inf.ufes.br/ontologies/goop_good_relations> .
+
+<http://nemo.inf.ufes.br/ontologies/goop_good_relations> rdf:type owl:Ontology ;
+                                                          owl:imports <http://nemo.inf.ufes.br/ontologies/goop> .
+
+#################################################################
+#    Object Properties
+#################################################################
+
+###  http://nemo.inf.ufes.br/ontologies/goop_good_relations#meansEnd
+:meansEnd rdf:type owl:ObjectProperty .
+
+
+###  http://nemo.inf.ufes.br/ontology/goop#achieves
+<http://nemo.inf.ufes.br/ontology/goop#achieves> rdf:type owl:ObjectProperty .
+
+
+###  http://nemo.inf.ufes.br/ontology/goop#composedBy
+<http://nemo.inf.ufes.br/ontology/goop#composedBy> rdf:type owl:ObjectProperty ;
+                                                   owl:propertyChainAxiom ( <http://nemo.inf.ufes.br/ontology/goop#satisfies>
+                                                                            :meansEnd
+                                                                            [ owl:inverseOf <http://nemo.inf.ufes.br/ontology/goop#satisfies>
+                                                                            ]
+                                                                          ) .
+
+
+###  http://nemo.inf.ufes.br/ontology/goop#hasDomain
+<http://nemo.inf.ufes.br/ontology/goop#hasDomain> rdf:type owl:ObjectProperty .
+
+
+###  http://nemo.inf.ufes.br/ontology/goop#hasRange
+<http://nemo.inf.ufes.br/ontology/goop#hasRange> rdf:type owl:ObjectProperty .
+
+
+###  http://nemo.inf.ufes.br/ontology/goop#performs
+<http://nemo.inf.ufes.br/ontology/goop#performs> rdf:type owl:ObjectProperty .
+
+
+###  http://nemo.inf.ufes.br/ontology/goop#satisfies
+<http://nemo.inf.ufes.br/ontology/goop#satisfies> rdf:type owl:ObjectProperty .
+
+
+#################################################################
+#    Data properties
+#################################################################
+
+###  http://nemo.inf.ufes.br/ontologies/goop#Description
+gp:Description rdf:type owl:DatatypeProperty .
+
+
+###  http://nemo.inf.ufes.br/ontologies/goop#IRI
+gp:IRI rdf:type owl:DatatypeProperty .
+
+
+#################################################################
+#    Classes
+#################################################################
+
+###  http://nemo.inf.ufes.br/ontology/goop#Class
+<http://nemo.inf.ufes.br/ontology/goop#Class> rdf:type owl:Class .
+
+
+###  http://nemo.inf.ufes.br/ontology/goop#Goal
+<http://nemo.inf.ufes.br/ontology/goop#Goal> rdf:type owl:Class ;
+                                             rdfs:subClassOf <http://nemo.inf.ufes.br/ontology/goop#IntentionalElement> .
+
+
+###  http://nemo.inf.ufes.br/ontology/goop#Goop
+<http://nemo.inf.ufes.br/ontology/goop#Goop> rdf:type owl:Class .
+
+
+###  http://nemo.inf.ufes.br/ontology/goop#IntentionalElement
+<http://nemo.inf.ufes.br/ontology/goop#IntentionalElement> rdf:type owl:Class .
+
+
+###  http://nemo.inf.ufes.br/ontology/goop#ModelFragment
+<http://nemo.inf.ufes.br/ontology/goop#ModelFragment> rdf:type owl:Class .
+
+
+###  http://nemo.inf.ufes.br/ontology/goop#Object
+<http://nemo.inf.ufes.br/ontology/goop#Object> rdf:type owl:Class .
+
+
+###  http://nemo.inf.ufes.br/ontology/goop#Ontology_User
+<http://nemo.inf.ufes.br/ontology/goop#Ontology_User> rdf:type owl:Class .
+
+
+###  http://nemo.inf.ufes.br/ontology/goop#Task
+<http://nemo.inf.ufes.br/ontology/goop#Task> rdf:type owl:Class ;
+                                             rdfs:subClassOf <http://nemo.inf.ufes.br/ontology/goop#IntentionalElement> .
+
+
+#################################################################
+#    Individuals
+#################################################################
+
+###  http://nemo.inf.ufes.br/ontologies/goop#Atomic_Offering_Item_Comp
+gp:Atomic_Offering_Item_Comp rdf:type owl:NamedIndividual ,
+                                      <http://nemo.inf.ufes.br/ontology/goop#Class> .
+
+
+###  http://nemo.inf.ufes.br/ontologies/goop#Business_Entity
+gp:Business_Entity rdf:type owl:NamedIndividual ,
+                            <http://nemo.inf.ufes.br/ontology/goop#Class> .
+
+
+###  http://nemo.inf.ufes.br/ontologies/goop#Characterization
+gp:Characterization rdf:type owl:NamedIndividual ,
+                             <http://nemo.inf.ufes.br/ontology/goop#Object> ;
+                    <http://nemo.inf.ufes.br/ontology/goop#hasDomain> gp:Delivery_Method ;
+                    <http://nemo.inf.ufes.br/ontology/goop#hasRange> gp:Offering .
+
+
+###  http://nemo.inf.ufes.br/ontologies/goop#Characterization1
+gp:Characterization1 rdf:type owl:NamedIndividual ,
+                              <http://nemo.inf.ufes.br/ontology/goop#Object> ;
+                     <http://nemo.inf.ufes.br/ontology/goop#hasDomain> gp:Offering_Price_Specification ;
+                     <http://nemo.inf.ufes.br/ontology/goop#hasRange> gp:Offering .
+
+
+###  http://nemo.inf.ufes.br/ontologies/goop#Characterization2
+gp:Characterization2 rdf:type owl:NamedIndividual ,
+                              <http://nemo.inf.ufes.br/ontology/goop#Object> ;
+                     <http://nemo.inf.ufes.br/ontology/goop#hasDomain> gp:Offering_Type ;
+                     <http://nemo.inf.ufes.br/ontology/goop#hasRange> gp:Offering .
+
+
+###  http://nemo.inf.ufes.br/ontologies/goop#Characterization3
+gp:Characterization3 rdf:type owl:NamedIndividual ,
+                              <http://nemo.inf.ufes.br/ontology/goop#Object> ;
+                     <http://nemo.inf.ufes.br/ontology/goop#hasDomain> gp:Offering_Payment_Method ;
+                     <http://nemo.inf.ufes.br/ontology/goop#hasRange> gp:Offering .
+
+
+###  http://nemo.inf.ufes.br/ontologies/goop#Complex_Offering_Item_Component
+gp:Complex_Offering_Item_Component rdf:type owl:NamedIndividual ,
+                                            <http://nemo.inf.ufes.br/ontology/goop#Class> .
+
+
+###  http://nemo.inf.ufes.br/ontologies/goop#ComponentOf
+gp:ComponentOf rdf:type owl:NamedIndividual ,
+                        <http://nemo.inf.ufes.br/ontology/goop#Object> ;
+               <http://nemo.inf.ufes.br/ontology/goop#hasDomain> gp:Complex_Offering_Item_Component ;
+               <http://nemo.inf.ufes.br/ontology/goop#hasRange> gp:Offering_Item_Component .
+
+
+###  http://nemo.inf.ufes.br/ontologies/goop#ComponentOf1
+gp:ComponentOf1 rdf:type owl:NamedIndividual ,
+                         <http://nemo.inf.ufes.br/ontology/goop#Object> ;
+                <http://nemo.inf.ufes.br/ontology/goop#hasDomain> gp:Offering ;
+                <http://nemo.inf.ufes.br/ontology/goop#hasRange> gp:Delivery_Entity .
+
+
+###  http://nemo.inf.ufes.br/ontologies/goop#ComponentOf2
+gp:ComponentOf2 rdf:type owl:NamedIndividual ;
+                <http://nemo.inf.ufes.br/ontology/goop#hasDomain> gp:Offering_Item ;
+                <http://nemo.inf.ufes.br/ontology/goop#hasRange> gp:Offering_Item_Component .
+
+
+###  http://nemo.inf.ufes.br/ontologies/goop#ComponentOf3
+gp:ComponentOf3 rdf:type owl:NamedIndividual ,
+                         <http://nemo.inf.ufes.br/ontology/goop#Object> ;
+                <http://nemo.inf.ufes.br/ontology/goop#hasDomain> gp:Offering ;
+                <http://nemo.inf.ufes.br/ontology/goop#hasRange> gp:Offering_Provider .
+
+
+###  http://nemo.inf.ufes.br/ontologies/goop#ComponentOf4
+gp:ComponentOf4 rdf:type owl:NamedIndividual ,
+                         <http://nemo.inf.ufes.br/ontology/goop#Object> ;
+                <http://nemo.inf.ufes.br/ontology/goop#hasDomain> gp:Offering ;
+                <http://nemo.inf.ufes.br/ontology/goop#hasRange> gp:Warrantier_Entity .
+
+
+###  http://nemo.inf.ufes.br/ontologies/goop#ComponentOf5
+gp:ComponentOf5 rdf:type owl:NamedIndividual ,
+                         <http://nemo.inf.ufes.br/ontology/goop#Object> ;
+                <http://nemo.inf.ufes.br/ontology/goop#hasDomain> gp:Offering ;
+                <http://nemo.inf.ufes.br/ontology/goop#hasRange> gp:Payment_Entity .
+
+
+###  http://nemo.inf.ufes.br/ontologies/goop#ComponentOf6
+gp:ComponentOf6 rdf:type owl:NamedIndividual ,
+                         <http://nemo.inf.ufes.br/ontology/goop#Object> ;
+                <http://nemo.inf.ufes.br/ontology/goop#hasDomain> gp:Specification_With_Warranty ;
+                <http://nemo.inf.ufes.br/ontology/goop#hasRange> gp:Warranty .
+
+
+###  http://nemo.inf.ufes.br/ontologies/goop#Delivery_Entity
+gp:Delivery_Entity rdf:type owl:NamedIndividual ,
+                            <http://nemo.inf.ufes.br/ontology/goop#Class> .
+
+
+###  http://nemo.inf.ufes.br/ontologies/goop#Delivery_Method
+gp:Delivery_Method rdf:type owl:NamedIndividual ,
+                            <http://nemo.inf.ufes.br/ontology/goop#Class> .
+
+
+###  http://nemo.inf.ufes.br/ontologies/goop#Delivery_Price_Specification
+gp:Delivery_Price_Specification rdf:type owl:NamedIndividual ,
+                                         <http://nemo.inf.ufes.br/ontology/goop#Class> .
+
+
+###  http://nemo.inf.ufes.br/ontologies/goop#Entity
+gp:Entity rdf:type owl:NamedIndividual ,
+                   <http://nemo.inf.ufes.br/ontology/goop#Class> .
+
+
+###  http://nemo.inf.ufes.br/ontologies/goop#Good_Relations_Goop
+gp:Good_Relations_Goop rdf:type owl:NamedIndividual ,
+                                <http://nemo.inf.ufes.br/ontology/goop#Goop> ;
+                       <http://nemo.inf.ufes.br/ontology/goop#composedBy> gp:HaveDeliveryOrShip ,
+                                                                          gp:HaveOfferingDescrSpec ,
+                                                                          gp:HaveOfferingSpecified ,
+                                                                          gp:HavePaymentMethSpec ,
+                                                                          gp:InformOffering ,
+                                                                          gp:InformOfferingType ,
+                                                                          gp:InformPaymentMethods ,
+                                                                          gp:InformShippingOrDelvMeth .
+
+
+###  http://nemo.inf.ufes.br/ontologies/goop#Good_Relations_Model_Fragment
+gp:Good_Relations_Model_Fragment rdf:type owl:NamedIndividual ,
+                                          <http://nemo.inf.ufes.br/ontology/goop#ModelFragment> ;
+                                 <http://nemo.inf.ufes.br/ontology/goop#composedBy> gp:Atomic_Offering_Item_Comp ,
+                                                                                    gp:Business_Entity ,
+                                                                                    gp:Characterization ,
+                                                                                    gp:Characterization1 ,
+                                                                                    gp:Characterization2 ,
+                                                                                    gp:Characterization3 ,
+                                                                                    gp:Complex_Offering_Item_Component ,
+                                                                                    gp:ComponentOf ,
+                                                                                    gp:ComponentOf1 ,
+                                                                                    gp:ComponentOf2 ,
+                                                                                    gp:ComponentOf3 ,
+                                                                                    gp:ComponentOf4 ,
+                                                                                    gp:ComponentOf5 ,
+                                                                                    gp:ComponentOf6 ,
+                                                                                    gp:Delivery_Entity ,
+                                                                                    gp:Delivery_Method ,
+                                                                                    gp:Delivery_Price_Specification ,
+                                                                                    gp:Entity ,
+                                                                                    gp:Individual_Entity ,
+                                                                                    gp:Individual_Product ,
+                                                                                    gp:Individual_Product_SM_Specification ,
+                                                                                    gp:Individual_Product_Specified_By_Model ,
+                                                                                    gp:Location ,
+                                                                                    gp:Material ,
+                                                                                    gp:Mediation ,
+                                                                                    gp:Mediation1 ,
+                                                                                    gp:Model_Specification ,
+                                                                                    gp:Offering ,
+                                                                                    gp:Offering_Item ,
+                                                                                    gp:Offering_Item_Component ,
+                                                                                    gp:Offering_Payment_Method ,
+                                                                                    gp:Offering_Price_Specification ,
+                                                                                    gp:Offering_Provider ,
+                                                                                    gp:Offering_Type ,
+                                                                                    gp:Offerred_Model_Specification ,
+                                                                                    gp:Payment_Entity ,
+                                                                                    gp:Period ,
+                                                                                    gp:Price_Specification ,
+                                                                                    gp:Product_Model ,
+                                                                                    gp:Product_Type ,
+                                                                                    gp:Qualititative_Property ,
+                                                                                    gp:Quantitative_Property ,
+                                                                                    gp:Specification ,
+                                                                                    gp:Specification_With_Warranty ,
+                                                                                    gp:Warrantier_Entity ,
+                                                                                    gp:Warranty .
+
+
+###  http://nemo.inf.ufes.br/ontologies/goop#HaveDeliveryOrShip
+gp:HaveDeliveryOrShip rdf:type owl:NamedIndividual ,
+                               <http://nemo.inf.ufes.br/ontology/goop#Goal> .
+
+
+###  http://nemo.inf.ufes.br/ontologies/goop#HaveOfferingDescrSpec
+gp:HaveOfferingDescrSpec rdf:type owl:NamedIndividual ,
+                                  <http://nemo.inf.ufes.br/ontology/goop#Goal> .
+
+
+###  http://nemo.inf.ufes.br/ontologies/goop#HaveOfferingSpecified
+gp:HaveOfferingSpecified rdf:type owl:NamedIndividual ,
+                                  <http://nemo.inf.ufes.br/ontology/goop#Goal> .
+
+
+###  http://nemo.inf.ufes.br/ontologies/goop#HavePaymentMethSpec
+gp:HavePaymentMethSpec rdf:type owl:NamedIndividual ,
+                                <http://nemo.inf.ufes.br/ontology/goop#Goal> .
+
+
+###  http://nemo.inf.ufes.br/ontologies/goop#Individual_Entity
+gp:Individual_Entity rdf:type owl:NamedIndividual ,
+                              <http://nemo.inf.ufes.br/ontology/goop#Class> .
+
+
+###  http://nemo.inf.ufes.br/ontologies/goop#Individual_Product
+gp:Individual_Product rdf:type owl:NamedIndividual ,
+                               <http://nemo.inf.ufes.br/ontology/goop#Class> .
+
+
+###  http://nemo.inf.ufes.br/ontologies/goop#Individual_Product_SM_Specification
+gp:Individual_Product_SM_Specification rdf:type owl:NamedIndividual ,
+                                                <http://nemo.inf.ufes.br/ontology/goop#Class> .
+
+
+###  http://nemo.inf.ufes.br/ontologies/goop#Individual_Product_Specified_By_Model
+gp:Individual_Product_Specified_By_Model rdf:type owl:NamedIndividual ,
+                                                  <http://nemo.inf.ufes.br/ontology/goop#Class> .
+
+
+###  http://nemo.inf.ufes.br/ontologies/goop#InformOffering
+gp:InformOffering rdf:type owl:NamedIndividual ,
+                           <http://nemo.inf.ufes.br/ontology/goop#Task> .
+
+
+###  http://nemo.inf.ufes.br/ontologies/goop#InformOfferingType
+gp:InformOfferingType rdf:type owl:NamedIndividual ,
+                               <http://nemo.inf.ufes.br/ontology/goop#Task> .
+
+
+###  http://nemo.inf.ufes.br/ontologies/goop#InformPaymentMethods
+gp:InformPaymentMethods rdf:type owl:NamedIndividual ,
+                                 <http://nemo.inf.ufes.br/ontology/goop#Task> .
+
+
+###  http://nemo.inf.ufes.br/ontologies/goop#InformShippingOrDelvMeth
+gp:InformShippingOrDelvMeth rdf:type owl:NamedIndividual ,
+                                     <http://nemo.inf.ufes.br/ontology/goop#Task> .
+
+
+###  http://nemo.inf.ufes.br/ontologies/goop#Location
+gp:Location rdf:type owl:NamedIndividual ,
+                     <http://nemo.inf.ufes.br/ontology/goop#Class> .
+
+
+###  http://nemo.inf.ufes.br/ontologies/goop#Material
+gp:Material rdf:type owl:NamedIndividual ,
+                     <http://nemo.inf.ufes.br/ontology/goop#Object> ;
+            <http://nemo.inf.ufes.br/ontology/goop#hasDomain> gp:Individual_Product_Specified_By_Model ;
+            <http://nemo.inf.ufes.br/ontology/goop#hasRange> gp:Product_Model .
+
+
+###  http://nemo.inf.ufes.br/ontologies/goop#Mediation
+gp:Mediation rdf:type owl:NamedIndividual ,
+                      <http://nemo.inf.ufes.br/ontology/goop#Object> ;
+             <http://nemo.inf.ufes.br/ontology/goop#hasDomain> gp:Individual_Product_SM_Specification ;
+             <http://nemo.inf.ufes.br/ontology/goop#hasRange> gp:Product_Model .
+
+
+###  http://nemo.inf.ufes.br/ontologies/goop#Mediation1
+gp:Mediation1 rdf:type owl:NamedIndividual ,
+                       <http://nemo.inf.ufes.br/ontology/goop#Object> ;
+              <http://nemo.inf.ufes.br/ontology/goop#hasDomain> gp:Individual_Product_SM_Specification ;
+              <http://nemo.inf.ufes.br/ontology/goop#hasRange> gp:Individual_Product_Specified_By_Model .
+
+
+###  http://nemo.inf.ufes.br/ontologies/goop#Model_Specification
+gp:Model_Specification rdf:type owl:NamedIndividual ,
+                                <http://nemo.inf.ufes.br/ontology/goop#Class> .
+
+
+###  http://nemo.inf.ufes.br/ontologies/goop#Offering
+gp:Offering rdf:type owl:NamedIndividual ,
+                     <http://nemo.inf.ufes.br/ontology/goop#Class> .
+
+
+###  http://nemo.inf.ufes.br/ontologies/goop#OfferingSpecifier
+gp:OfferingSpecifier rdf:type owl:NamedIndividual ,
+                              <http://nemo.inf.ufes.br/ontology/goop#Ontology_User> ;
+                     <http://nemo.inf.ufes.br/ontology/goop#achieves> gp:HaveDeliveryOrShip ,
+                                                                      gp:HaveOfferingDescrSpec ,
+                                                                      gp:HaveOfferingSpecified ,
+                                                                      gp:HavePaymentMethSpec ;
+                     <http://nemo.inf.ufes.br/ontology/goop#performs> gp:InformOffering ,
+                                                                      gp:InformOfferingType ,
+                                                                      gp:InformPaymentMethods ,
+                                                                      gp:InformShippingOrDelvMeth .
+
+
+###  http://nemo.inf.ufes.br/ontologies/goop#Offering_Item
+gp:Offering_Item rdf:type owl:NamedIndividual ,
+                          <http://nemo.inf.ufes.br/ontology/goop#Class> .
+
+
+###  http://nemo.inf.ufes.br/ontologies/goop#Offering_Item_Component
+gp:Offering_Item_Component rdf:type owl:NamedIndividual ,
+                                    <http://nemo.inf.ufes.br/ontology/goop#Class> .
+
+
+###  http://nemo.inf.ufes.br/ontologies/goop#Offering_Payment_Method
+gp:Offering_Payment_Method rdf:type owl:NamedIndividual ,
+                                    <http://nemo.inf.ufes.br/ontology/goop#Class> .
+
+
+###  http://nemo.inf.ufes.br/ontologies/goop#Offering_Price_Specification
+gp:Offering_Price_Specification rdf:type owl:NamedIndividual ,
+                                         <http://nemo.inf.ufes.br/ontology/goop#Class> .
+
+
+###  http://nemo.inf.ufes.br/ontologies/goop#Offering_Provider
+gp:Offering_Provider rdf:type owl:NamedIndividual ,
+                              <http://nemo.inf.ufes.br/ontology/goop#Class> .
+
+
+###  http://nemo.inf.ufes.br/ontologies/goop#Offering_Type
+gp:Offering_Type rdf:type owl:NamedIndividual ,
+                          <http://nemo.inf.ufes.br/ontology/goop#Class> .
+
+
+###  http://nemo.inf.ufes.br/ontologies/goop#Offerred_Model_Specification
+gp:Offerred_Model_Specification rdf:type owl:NamedIndividual ,
+                                         <http://nemo.inf.ufes.br/ontology/goop#Class> .
+
+
+###  http://nemo.inf.ufes.br/ontologies/goop#OntologyEngineer
+gp:OntologyEngineer rdf:type owl:NamedIndividual ,
+                             <http://nemo.inf.ufes.br/ontology/goop#Ontology_User> .
+
+
+###  http://nemo.inf.ufes.br/ontologies/goop#Payment_Entity
+gp:Payment_Entity rdf:type owl:NamedIndividual ,
+                           <http://nemo.inf.ufes.br/ontology/goop#Class> .
+
+
+###  http://nemo.inf.ufes.br/ontologies/goop#Period
+gp:Period rdf:type owl:NamedIndividual ,
+                   <http://nemo.inf.ufes.br/ontology/goop#Class> .
+
+
+###  http://nemo.inf.ufes.br/ontologies/goop#Price_Specification
+gp:Price_Specification rdf:type owl:NamedIndividual ,
+                                <http://nemo.inf.ufes.br/ontology/goop#Class> .
+
+
+###  http://nemo.inf.ufes.br/ontologies/goop#Product_Model
+gp:Product_Model rdf:type owl:NamedIndividual ,
+                          <http://nemo.inf.ufes.br/ontology/goop#Class> .
+
+
+###  http://nemo.inf.ufes.br/ontologies/goop#Product_Type
+gp:Product_Type rdf:type owl:NamedIndividual ,
+                         <http://nemo.inf.ufes.br/ontology/goop#Class> .
+
+
+###  http://nemo.inf.ufes.br/ontologies/goop#Qualititative_Property
+gp:Qualititative_Property rdf:type owl:NamedIndividual ,
+                                   <http://nemo.inf.ufes.br/ontology/goop#Class> .
+
+
+###  http://nemo.inf.ufes.br/ontologies/goop#Quantitative_Property
+gp:Quantitative_Property rdf:type owl:NamedIndividual ,
+                                  <http://nemo.inf.ufes.br/ontology/goop#Class> .
+
+
+###  http://nemo.inf.ufes.br/ontologies/goop#Specification
+gp:Specification rdf:type owl:NamedIndividual ,
+                          <http://nemo.inf.ufes.br/ontology/goop#Class> .
+
+
+###  http://nemo.inf.ufes.br/ontologies/goop#Specification_With_Warranty
+gp:Specification_With_Warranty rdf:type owl:NamedIndividual ,
+                                        <http://nemo.inf.ufes.br/ontology/goop#Class> .
+
+
+###  http://nemo.inf.ufes.br/ontologies/goop#Warrantier_Entity
+gp:Warrantier_Entity rdf:type owl:NamedIndividual ,
+                              <http://nemo.inf.ufes.br/ontology/goop#Class> .
+
+
+###  http://nemo.inf.ufes.br/ontologies/goop#Warranty
+gp:Warranty rdf:type owl:NamedIndividual ,
+                     <http://nemo.inf.ufes.br/ontology/goop#Class> .
+
+
+###  Generated by the OWL API (version 4.5.6.2018-09-06T00:27:41Z) https://github.com/owlcs/owlapi

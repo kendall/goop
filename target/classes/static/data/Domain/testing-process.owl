@@ -1,0 +1,549 @@
+@prefix : <http://nemo.inf.ufes.br/ontologies/fragments/testing-process#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix goop: <http://nemo.inf.ufes.br/ontologies/goop#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@base <http://nemo.inf.ufes.br/ontologies/fragments/testing-process> .
+
+<http://nemo.inf.ufes.br/ontologies/fragments/testing-process> rdf:type owl:Ontology ;
+                                                                owl:imports <http://nemo.inf.ufes.br/ontologies/goop> .
+
+#################################################################
+#    Individuals
+#################################################################
+
+###  http://nemo.inf.ufes.br/ontologies/fragments/testing-process#Artifact
+:Artifact rdf:type owl:NamedIndividual ,
+                   goop:Class ;
+          rdfs:comment """Object intentionally made to serve a given purpose in the context of a software Project or Organization. 
+Ex.: a document, a model, a library, an e-mail, a bug."""^^rdfs:Literal .
+
+
+###  http://nemo.inf.ufes.br/ontologies/fragments/testing-process#Code
+:Code rdf:type owl:NamedIndividual ,
+               goop:Class ;
+      goop:specifies :Software_Item .
+
+
+###  http://nemo.inf.ufes.br/ontologies/fragments/testing-process#Code_To_Be_Tested
+:Code_To_Be_Tested rdf:type owl:NamedIndividual ,
+                            goop:Class ;
+                   goop:specifies :Code ;
+                   rdfs:comment "Portion of Code (software module) to be tested by a Test Case."^^rdfs:Literal .
+
+
+###  http://nemo.inf.ufes.br/ontologies/fragments/testing-process#Composite_Artifact
+:Composite_Artifact rdf:type owl:NamedIndividual ,
+                             goop:Class ;
+                    goop:component_of :Composite_Artifact ;
+                    goop:specifies :Artifact ;
+                    rdfs:comment "Artifact composed of other Artifacts."^^rdfs:Literal .
+
+
+###  http://nemo.inf.ufes.br/ontologies/fragments/testing-process#Define_Artifact
+:Define_Artifact rdf:type owl:NamedIndividual ,
+                          goop:Goal_Based_Requirement ;
+                 goop:composed_by :Define_Artifact_by_Nature ,
+                                  :Define_Artifact_by_Parts ;
+                 rdfs:comment "In the context of the software domain, Artifacts are objects intentionally made to serve a given purpose in the context of a Software Project or Organization."^^rdfs:Literal .
+
+
+###  http://nemo.inf.ufes.br/ontologies/fragments/testing-process#Define_Artifact_by_Nature
+:Define_Artifact_by_Nature rdf:type owl:NamedIndividual ,
+                                    goop:Goal_Based_Requirement ;
+                           rdfs:comment "Artifact Type partitions the generalization set of Artifacts according to their nature, giving rise to a taxonomy of artifacts. More specific taxonomies can be established for specific types of artifacts, such as documents (established by instances of Document Type) and Software Product (Software Product Type), among others."^^rdfs:Literal .
+
+
+###  http://nemo.inf.ufes.br/ontologies/fragments/testing-process#Define_Artifact_by_Parts
+:Define_Artifact_by_Parts rdf:type owl:NamedIndividual ,
+                                   goop:Goal_Based_Requirement ;
+                          rdfs:comment "Can be composed of other artifacts (Composite Artifact) or not (Simple Artifact)."^^rdfs:Literal .
+
+
+###  http://nemo.inf.ufes.br/ontologies/fragments/testing-process#Define_Performed_Process
+:Define_Performed_Process rdf:type owl:NamedIndividual ,
+                                   goop:Goal_Based_Requirement .
+
+
+###  http://nemo.inf.ufes.br/ontologies/fragments/testing-process#Define_Testing_Code
+:Define_Testing_Code rdf:type owl:NamedIndividual ,
+                              goop:Goal_Based_Requirement .
+
+
+###  http://nemo.inf.ufes.br/ontologies/fragments/testing-process#Define_Testing_Process
+:Define_Testing_Process rdf:type owl:NamedIndividual ,
+                                 goop:Goal_Based_Requirement ;
+                        goop:composed_by :Define_Artifact ,
+                                         :Define_Performed_Process ,
+                                         :Define_Testing_Code ,
+                                         :Describe_Satakholders_involved_in_Testing_Activities .
+
+
+###  http://nemo.inf.ufes.br/ontologies/fragments/testing-process#Describe_Satakholders_involved_in_Testing_Activities
+:Describe_Satakholders_involved_in_Testing_Activities rdf:type owl:NamedIndividual ,
+                                                               goop:Goal_Based_Requirement .
+
+
+###  http://nemo.inf.ufes.br/ontologies/fragments/testing-process#Document
+:Document rdf:type owl:NamedIndividual ,
+                   goop:Class ;
+          goop:specifies :Artifact ;
+          rdfs:comment """Any written or pictorial, uniquely identified, information related to the software development, usually presented in a predefined format. 
+Ex.: a Requirements Document, a specification, a report."""^^rdfs:Literal .
+
+
+###  http://nemo.inf.ufes.br/ontologies/fragments/testing-process#Goop-1
+:Goop-1 rdf:type owl:NamedIndividual ,
+                 goop:Goop ;
+        goop:composed_by :Define_Artifact_by_Nature .
+
+
+###  http://nemo.inf.ufes.br/ontologies/fragments/testing-process#Goop-2
+:Goop-2 rdf:type owl:NamedIndividual ,
+                 goop:Goop ;
+        goop:composed_by :Define_Artifact_by_Parts .
+
+
+###  http://nemo.inf.ufes.br/ontologies/fragments/testing-process#Goop-3
+:Goop-3 rdf:type owl:NamedIndividual ,
+                 goop:Goop ;
+        goop:composed_by :Define_Performed_Process .
+
+
+###  http://nemo.inf.ufes.br/ontologies/fragments/testing-process#Goop-4
+:Goop-4 rdf:type owl:NamedIndividual ,
+                 goop:Goop ;
+        goop:composed_by :Goop-4 .
+
+
+###  http://nemo.inf.ufes.br/ontologies/fragments/testing-process#Goop-5
+:Goop-5 rdf:type owl:NamedIndividual ,
+                 goop:Goop ;
+        goop:composed_by :Define_Testing_Code .
+
+
+###  http://nemo.inf.ufes.br/ontologies/fragments/testing-process#Goop-6
+:Goop-6 rdf:type owl:NamedIndividual ,
+                 goop:Goop ;
+        goop:composed_by :Define_Testing_Process .
+
+
+###  http://nemo.inf.ufes.br/ontologies/fragments/testing-process#Goop-General
+:Goop-General rdf:type owl:NamedIndividual ,
+                       goop:Goop ;
+              goop:composed_by :Define_Artifact .
+
+
+###  http://nemo.inf.ufes.br/ontologies/fragments/testing-process#Information_Item
+:Information_Item rdf:type owl:NamedIndividual ,
+                           goop:Class ;
+                  goop:specifies :Artifact ;
+                  rdfs:comment """Relevant information for human use, produced or used by Performed Activity. 
+Ex.: a documented requirement, a bug reported, an agreement e-mail, a component description."""^^rdfs:Literal .
+
+
+###  http://nemo.inf.ufes.br/ontologies/fragments/testing-process#Integration_Testing
+:Integration_Testing rdf:type owl:NamedIndividual ,
+                              goop:Class ;
+                     goop:specifies :Level-based_Testing ;
+                     rdfs:comment "Level-based Testing focusing on larger components, ensuring that a collection of units functions as desired."^^rdfs:Literal .
+
+
+###  http://nemo.inf.ufes.br/ontologies/fragments/testing-process#Level-based_Testing
+:Level-based_Testing rdf:type owl:NamedIndividual ,
+                              goop:Class ;
+                     goop:component_of :Test_Case_Design ;
+                     goop:specifies :Performed_Composite_Activity ;
+                     rdfs:comment "Composite Performed Activity consisting of testing activities and classified by the different levels they can be performed."^^rdfs:Literal .
+
+
+###  http://nemo.inf.ufes.br/ontologies/fragments/testing-process#Model
+:Model rdf:type owl:NamedIndividual ,
+                goop:Class ;
+       goop:specifies :Artifact .
+
+
+###  http://nemo.inf.ufes.br/ontologies/fragments/testing-process#Model_Fragment-1
+:Model_Fragment-1 rdf:type owl:NamedIndividual ,
+                           goop:Model_Fragment ;
+                  goop:composed_by :Artifact ,
+                                   :Document ,
+                                   :Information_Item ,
+                                   :Model ,
+                                   :Software_Item ,
+                                   :Software_Product ,
+                                   :describes ;
+                  goop:is_used_to_satisfy :Goop-1 .
+
+
+###  http://nemo.inf.ufes.br/ontologies/fragments/testing-process#Model_Fragment-2
+:Model_Fragment-2 rdf:type owl:NamedIndividual ,
+                           goop:Model_Fragment ;
+                  goop:composed_by :Artifact ,
+                                   :Composite_Artifact ,
+                                   :Simple_Artifact ;
+                  goop:is_used_to_satisfy :Goop-2 .
+
+
+###  http://nemo.inf.ufes.br/ontologies/fragments/testing-process#Model_Fragment-3
+:Model_Fragment-3 rdf:type owl:NamedIndividual ,
+                           goop:Model_Fragment ;
+                  goop:composed_by :Performed_Activity ,
+                                   :Performed_Composite_Activity ,
+                                   :Performed_General_Process ,
+                                   :Performed_Process ,
+                                   :Performed_Simple_Activity ,
+                                   :Performed_Specific_Process ,
+                                   :Procedure ,
+                                   :Technique ,
+                                   :adopts ,
+                                   :changes ,
+                                   :creates ,
+                                   :depends_on ,
+                                   :uses ;
+                  goop:is_used_to_satisfy :Goop-3 .
+
+
+###  http://nemo.inf.ufes.br/ontologies/fragments/testing-process#Model_Fragment-4
+:Model_Fragment-4 rdf:type owl:NamedIndividual ,
+                           goop:Model_Fragment ;
+                  goop:composed_by :Stakeholder ,
+                                   :Test_Case_Designer ,
+                                   :Test_Manager ,
+                                   :Tester ,
+                                   :is_in_charge_of ,
+                                   :participates_in ;
+                  goop:is_used_to_satisfy :Goop-4 .
+
+
+###  http://nemo.inf.ufes.br/ontologies/fragments/testing-process#Model_Fragment-5
+:Model_Fragment-5 rdf:type owl:NamedIndividual ,
+                           goop:Model_Fragment ;
+                  goop:composed_by :Code ,
+                                   :Code_To_Be_Tested ,
+                                   :Software_Item ,
+                                   :Test_Code ,
+                                   :implements ;
+                  goop:is_used_to_satisfy :Goop-5 .
+
+
+###  http://nemo.inf.ufes.br/ontologies/fragments/testing-process#Model_Fragment-6
+:Model_Fragment-6 rdf:type owl:NamedIndividual ,
+                           goop:Model_Fragment ;
+                  goop:composed_by :Integration_Testing ,
+                                   :Level-based_Testing ,
+                                   :System_Testing ,
+                                   :Test_Analysis_Report ,
+                                   :Test_Case ,
+                                   :Test_Case_Design ,
+                                   :Test_Case_Design_Input ,
+                                   :Test_Coding ,
+                                   :Test_Execution ,
+                                   :Test_Plan ,
+                                   :Test_Planning ,
+                                   :Test_Result ,
+                                   :Test_Result_Analysis ,
+                                   :Testing_Level ,
+                                   :Testing_Process ,
+                                   :Unit_Testing ,
+                                   :adopts ,
+                                   :analyzes ,
+                                   :built_applying ,
+                                   :creates ,
+                                   :executes ,
+                                   :instanceOf ,
+                                   :relative_to ,
+                                   :tests ,
+                                   :uses ;
+                  goop:is_used_to_satisfy :Goop-6 .
+
+
+###  http://nemo.inf.ufes.br/ontologies/fragments/testing-process#Model_Fragment-General
+:Model_Fragment-General rdf:type owl:NamedIndividual ,
+                                 goop:Model_Fragment ;
+                        goop:composed_by :depends_on ;
+                        goop:is_used_to_satisfy :Goop-General .
+
+
+###  http://nemo.inf.ufes.br/ontologies/fragments/testing-process#Performed_Activity
+:Performed_Activity rdf:type owl:NamedIndividual ,
+                             goop:Class .
+
+
+###  http://nemo.inf.ufes.br/ontologies/fragments/testing-process#Performed_Composite_Activity
+:Performed_Composite_Activity rdf:type owl:NamedIndividual ,
+                                       goop:Class ;
+                              goop:component_of :Performed_Activity ;
+                              goop:specifies :Performed_Composite_Activity .
+
+
+###  http://nemo.inf.ufes.br/ontologies/fragments/testing-process#Performed_General_Process
+:Performed_General_Process rdf:type owl:NamedIndividual ,
+                                    goop:Class ;
+                           goop:component_of :Performed_Specific_Process ;
+                           goop:specifies :Performed_Process .
+
+
+###  http://nemo.inf.ufes.br/ontologies/fragments/testing-process#Performed_Process
+:Performed_Process rdf:type owl:NamedIndividual ,
+                            goop:Class .
+
+
+###  http://nemo.inf.ufes.br/ontologies/fragments/testing-process#Performed_Simple_Activity
+:Performed_Simple_Activity rdf:type owl:NamedIndividual ,
+                                    goop:Class ;
+                           goop:specifies :Performed_Activity .
+
+
+###  http://nemo.inf.ufes.br/ontologies/fragments/testing-process#Performed_Specific_Process
+:Performed_Specific_Process rdf:type owl:NamedIndividual ,
+                                     goop:Class ;
+                            goop:component_of :Performed_Activity ;
+                            goop:specifies :Performed_Process .
+
+
+###  http://nemo.inf.ufes.br/ontologies/fragments/testing-process#Procedure
+:Procedure rdf:type owl:NamedIndividual ,
+                    goop:Class .
+
+
+###  http://nemo.inf.ufes.br/ontologies/fragments/testing-process#Simple_Artifact
+:Simple_Artifact rdf:type owl:NamedIndividual ,
+                          goop:Class ;
+                 goop:specifies :Artifact ;
+                 rdfs:comment "Artifact that is not decomposed into other Artifacts."^^rdfs:Literal .
+
+
+###  http://nemo.inf.ufes.br/ontologies/fragments/testing-process#Software_Item
+:Software_Item rdf:type owl:NamedIndividual ,
+                        goop:Class ;
+               goop:specifies :Artifact .
+
+
+###  http://nemo.inf.ufes.br/ontologies/fragments/testing-process#Software_Product
+:Software_Product rdf:type owl:NamedIndividual ,
+                           goop:Class ;
+                  goop:specifies :Artifact .
+
+
+###  http://nemo.inf.ufes.br/ontologies/fragments/testing-process#Stakeholder
+:Stakeholder rdf:type owl:NamedIndividual ,
+                      goop:Class .
+
+
+###  http://nemo.inf.ufes.br/ontologies/fragments/testing-process#System_Testing
+:System_Testing rdf:type owl:NamedIndividual ,
+                         goop:Class ;
+                goop:specifies :Level-based_Testing ;
+                rdfs:comment "Level-based Testing focusing on the behavior of the entire system, ensuring that it is in conformance with its requirements."^^rdfs:Literal .
+
+
+###  http://nemo.inf.ufes.br/ontologies/fragments/testing-process#Technique
+:Technique rdf:type owl:NamedIndividual ,
+                    goop:Class ;
+           goop:specifies :Procedure .
+
+
+###  http://nemo.inf.ufes.br/ontologies/fragments/testing-process#Test_Analysis_Report
+:Test_Analysis_Report rdf:type owl:NamedIndividual ,
+                               goop:Class ;
+                      goop:specifies :Document ;
+                      rdfs:comment "Document containing the analysis of Test Results and how they succeed."^^rdfs:Literal .
+
+
+###  http://nemo.inf.ufes.br/ontologies/fragments/testing-process#Test_Case
+:Test_Case rdf:type owl:NamedIndividual ,
+                    goop:Class ;
+           goop:specifies :Document ;
+           rdfs:comment "Document containing the input data, expected results, steps and general conditions for testing some situation regarding a Code To Be Tested."^^rdfs:Literal .
+
+
+###  http://nemo.inf.ufes.br/ontologies/fragments/testing-process#Test_Case_Design
+:Test_Case_Design rdf:type owl:NamedIndividual ,
+                           goop:Class ;
+                  goop:specifies :Performed_Simple_Activity ;
+                  rdfs:comment "Simple Performed Activity for designing the Test Cases to be executed, supported by input artifacts."^^rdfs:Literal .
+
+
+###  http://nemo.inf.ufes.br/ontologies/fragments/testing-process#Test_Case_Design_Input
+:Test_Case_Design_Input rdf:type owl:NamedIndividual ,
+                                 goop:Class ;
+                        goop:specifies :Artifact ;
+                        rdfs:comment """Some Artifact defined as an input for the Test Case Design. 
+Ex.: Requirements Document, Design Document, Code."""^^rdfs:Literal .
+
+
+###  http://nemo.inf.ufes.br/ontologies/fragments/testing-process#Test_Case_Designer
+:Test_Case_Designer rdf:type owl:NamedIndividual ,
+                             goop:Class ;
+                    goop:specifies :Stakeholder ;
+                    rdfs:comment "Stakeholder responsible for designing test cases and analysing test results."^^rdfs:Literal .
+
+
+###  http://nemo.inf.ufes.br/ontologies/fragments/testing-process#Test_Code
+:Test_Code rdf:type owl:NamedIndividual ,
+                    goop:Class ;
+           goop:specifies :Code ;
+           rdfs:comment "Code produced for implementing a Test Case."^^rdfs:Literal .
+
+
+###  http://nemo.inf.ufes.br/ontologies/fragments/testing-process#Test_Coding
+:Test_Coding rdf:type owl:NamedIndividual ,
+                      goop:Class ;
+             goop:specifies :Performed_Simple_Activity ;
+             rdfs:comment "Simple Performed Activity for implementing the Test Cases as Code artifacts (Test Code) to be used during Test Execution."^^rdfs:Literal .
+
+
+###  http://nemo.inf.ufes.br/ontologies/fragments/testing-process#Test_Execution
+:Test_Execution rdf:type owl:NamedIndividual ,
+                         goop:Class ;
+                goop:specifies :Performed_Simple_Activity ;
+                rdfs:comment "Simple Performed Activity for effectively executing the Test Cases, by running the Test Code and producing the Test Results."^^rdfs:Literal .
+
+
+###  http://nemo.inf.ufes.br/ontologies/fragments/testing-process#Test_Manager
+:Test_Manager rdf:type owl:NamedIndividual ,
+                       goop:Class ;
+              goop:specifies :Stakeholder ;
+              rdfs:comment "Stakeholder responsible for planning and managing the testing activities."^^rdfs:Literal .
+
+
+###  http://nemo.inf.ufes.br/ontologies/fragments/testing-process#Test_Plan
+:Test_Plan rdf:type owl:NamedIndividual ,
+                    goop:Class ;
+           goop:specifies :Document ;
+           rdfs:comment "Document describing how the tests should be performed, providing a roadmap for the testing activities."^^rdfs:Literal .
+
+
+###  http://nemo.inf.ufes.br/ontologies/fragments/testing-process#Test_Planning
+:Test_Planning rdf:type owl:NamedIndividual ,
+                        goop:Class ;
+               goop:specifies :Performed_Composite_Activity ;
+               rdfs:comment "Composite Performed Activity for planning how the testing activities should be performed, and documenting it in a Test Plan."^^rdfs:Literal .
+
+
+###  http://nemo.inf.ufes.br/ontologies/fragments/testing-process#Test_Result
+:Test_Result rdf:type owl:NamedIndividual ,
+                      goop:Class ;
+             goop:specifies :Document ;
+             rdfs:comment "Document containing the actual results and identified issues relative to a Test Case execution."^^rdfs:Literal .
+
+
+###  http://nemo.inf.ufes.br/ontologies/fragments/testing-process#Test_Result_Analysis
+:Test_Result_Analysis rdf:type owl:NamedIndividual ,
+                               goop:Class ;
+                      goop:specifies :Performed_Simple_Activity ;
+                      rdfs:comment "Simple Performed Activity for analyzing Test Results to determine whether or not tests have been successful in identifying defects."^^rdfs:Literal .
+
+
+###  http://nemo.inf.ufes.br/ontologies/fragments/testing-process#Tester
+:Tester rdf:type owl:NamedIndividual ,
+                 goop:Class ;
+        goop:specifies :Stakeholder ;
+        rdfs:comment "Stakeholder responsible for coding and executing test cases."^^rdfs:Literal .
+
+
+###  http://nemo.inf.ufes.br/ontologies/fragments/testing-process#Testing_Level
+:Testing_Level rdf:type owl:NamedIndividual ,
+                        goop:Class ;
+               rdfs:comment "Levels in which testing activities are performed, such as Unit, Integration and System testing."^^rdfs:Literal .
+
+
+###  http://nemo.inf.ufes.br/ontologies/fragments/testing-process#Testing_Process
+:Testing_Process rdf:type owl:NamedIndividual ,
+                          goop:Class ;
+                 goop:component_of :Level-based_Testing ;
+                 rdfs:comment "Specific Performed Process for planning and executing the dynamic testing activities for the software in development."^^rdfs:Literal .
+
+
+###  http://nemo.inf.ufes.br/ontologies/fragments/testing-process#Testing_Technique
+:Testing_Technique rdf:type owl:NamedIndividual ,
+                            goop:Class ;
+                   rdfs:comment "Technique for designing test cases. It can be Black-box, White-box, Model-based or Mutation testing techniques, among others."^^rdfs:Literal .
+
+
+###  http://nemo.inf.ufes.br/ontologies/fragments/testing-process#Unit_Testing
+:Unit_Testing rdf:type owl:NamedIndividual ,
+                       goop:Class ;
+              goop:specifies :Level-based_Testing ;
+              rdfs:comment "Level-based Testing focusing on the unit or the individual components that have been developed, ensuring that the unit functions correctly in isolation."^^rdfs:Literal .
+
+
+###  http://nemo.inf.ufes.br/ontologies/fragments/testing-process#adopts
+:adopts rdf:type owl:NamedIndividual ,
+                 goop:Object_Property .
+
+
+###  http://nemo.inf.ufes.br/ontologies/fragments/testing-process#analyzes
+:analyzes rdf:type owl:NamedIndividual ,
+                   goop:Object_Property .
+
+
+###  http://nemo.inf.ufes.br/ontologies/fragments/testing-process#built_applying
+:built_applying rdf:type owl:NamedIndividual ,
+                         goop:Object_Property .
+
+
+###  http://nemo.inf.ufes.br/ontologies/fragments/testing-process#changes
+:changes rdf:type owl:NamedIndividual ,
+                  goop:Object_Property .
+
+
+###  http://nemo.inf.ufes.br/ontologies/fragments/testing-process#creates
+:creates rdf:type owl:NamedIndividual ,
+                  goop:Object_Property .
+
+
+###  http://nemo.inf.ufes.br/ontologies/fragments/testing-process#depends_on
+:depends_on rdf:type owl:NamedIndividual ,
+                     goop:Object_Property .
+
+
+###  http://nemo.inf.ufes.br/ontologies/fragments/testing-process#describes
+:describes rdf:type owl:NamedIndividual ,
+                    goop:Object_Property .
+
+
+###  http://nemo.inf.ufes.br/ontologies/fragments/testing-process#executes
+:executes rdf:type owl:NamedIndividual ,
+                   goop:Object_Property .
+
+
+###  http://nemo.inf.ufes.br/ontologies/fragments/testing-process#implements
+:implements rdf:type owl:NamedIndividual ,
+                     goop:Object_Property .
+
+
+###  http://nemo.inf.ufes.br/ontologies/fragments/testing-process#instanceOf
+:instanceOf rdf:type owl:NamedIndividual ,
+                     goop:Object_Property .
+
+
+###  http://nemo.inf.ufes.br/ontologies/fragments/testing-process#is_in_charge_of
+:is_in_charge_of rdf:type owl:NamedIndividual ,
+                          goop:Object_Property .
+
+
+###  http://nemo.inf.ufes.br/ontologies/fragments/testing-process#participates_in
+:participates_in rdf:type owl:NamedIndividual ,
+                          goop:Object_Property .
+
+
+###  http://nemo.inf.ufes.br/ontologies/fragments/testing-process#relative_to
+:relative_to rdf:type owl:NamedIndividual ,
+                      goop:Object_Property .
+
+
+###  http://nemo.inf.ufes.br/ontologies/fragments/testing-process#tests
+:tests rdf:type owl:NamedIndividual ,
+                goop:Object_Property .
+
+
+###  http://nemo.inf.ufes.br/ontologies/fragments/testing-process#uses
+:uses rdf:type owl:NamedIndividual ,
+               goop:Object_Property .
+
+
+###  Generated by the OWL API (version 4.5.7.2018-12-02T02:23:35Z) https://github.com/owlcs/owlapi

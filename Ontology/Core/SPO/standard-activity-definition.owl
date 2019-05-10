@@ -1,0 +1,217 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns="http://nemo.inf.ufes.br/ontologies/default#"
+     xml:base="http://nemo.inf.ufes.br/ontologies/default"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:goop="http://nemo.inf.ufes.br/ontologies/goop#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#">
+    <owl:Ontology rdf:about="http://nemo.inf.ufes.br/ontologies/standard-activity-definition">
+        <owl:imports rdf:resource="http://nemo.inf.ufes.br/ontologies/goop"/>
+    </owl:Ontology>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Individuals
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://nemo.inf.ufes.br/ontologies/standard-activity-definition#Activity_Universal -->
+
+    <owl:NamedIndividual rdf:about="http://nemo.inf.ufes.br/ontologies/standard-activity-definition#Activity_Universal">
+        <rdf:type rdf:resource="http://nemo.inf.ufes.br/ontologies/goop#Class"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://nemo.inf.ufes.br/ontologies/standard-activity-definition#Artifact_Type -->
+
+    <owl:NamedIndividual rdf:about="http://nemo.inf.ufes.br/ontologies/standard-activity-definition#Artifact_Type">
+        <rdf:type rdf:resource="http://nemo.inf.ufes.br/ontologies/goop#Class"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://nemo.inf.ufes.br/ontologies/standard-activity-definition#Deal_with_the_Definition_of_Standard_Process_assets_involved_in_Standard_Activities -->
+
+    <owl:NamedIndividual rdf:about="http://nemo.inf.ufes.br/ontologies/standard-activity-definition#Deal_with_the_Definition_of_Standard_Process_assets_involved_in_Standard_Activities">
+        <rdf:type rdf:resource="http://nemo.inf.ufes.br/ontologies/goop#Goal_Based_Requirement"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://nemo.inf.ufes.br/ontologies/standard-activity-definition#Goop -->
+
+    <owl:NamedIndividual rdf:about="http://nemo.inf.ufes.br/ontologies/standard-activity-definition#Goop">
+        <rdf:type rdf:resource="http://nemo.inf.ufes.br/ontologies/goop#Goop"/>
+        <goop:composed_by rdf:resource="http://nemo.inf.ufes.br/ontologies/standard-activity-definition#Deal_with_the_Definition_of_Standard_Process_assets_involved_in_Standard_Activities"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://nemo.inf.ufes.br/ontologies/standard-activity-definition#Hardware_Type -->
+
+    <owl:NamedIndividual rdf:about="http://nemo.inf.ufes.br/ontologies/standard-activity-definition#Hardware_Type">
+        <rdf:type rdf:resource="http://nemo.inf.ufes.br/ontologies/goop#Class"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://nemo.inf.ufes.br/ontologies/standard-activity-definition#Model_Fragment -->
+
+    <owl:NamedIndividual rdf:about="http://nemo.inf.ufes.br/ontologies/standard-activity-definition#Model_Fragment">
+        <rdf:type rdf:resource="http://nemo.inf.ufes.br/ontologies/goop#Model_Fragment"/>
+        <goop:composed_by rdf:resource="http://nemo.inf.ufes.br/ontologies/standard-activity-definition#Activity_Universal"/>
+        <goop:composed_by rdf:resource="http://nemo.inf.ufes.br/ontologies/standard-activity-definition#Artifact_Type"/>
+        <goop:composed_by rdf:resource="http://nemo.inf.ufes.br/ontologies/standard-activity-definition#Hardware_Type"/>
+        <goop:composed_by rdf:resource="http://nemo.inf.ufes.br/ontologies/standard-activity-definition#Procedure"/>
+        <goop:composed_by rdf:resource="http://nemo.inf.ufes.br/ontologies/standard-activity-definition#Software_Product_Type"/>
+        <goop:composed_by rdf:resource="http://nemo.inf.ufes.br/ontologies/standard-activity-definition#Standard_Activity"/>
+        <goop:composed_by rdf:resource="http://nemo.inf.ufes.br/ontologies/standard-activity-definition#changes"/>
+        <goop:composed_by rdf:resource="http://nemo.inf.ufes.br/ontologies/standard-activity-definition#creates"/>
+        <goop:composed_by rdf:resource="http://nemo.inf.ufes.br/ontologies/standard-activity-definition#depends_on"/>
+        <goop:composed_by rdf:resource="http://nemo.inf.ufes.br/ontologies/standard-activity-definition#is_to_be_performed_adoting"/>
+        <goop:composed_by rdf:resource="http://nemo.inf.ufes.br/ontologies/standard-activity-definition#is_to_be_performed_by"/>
+        <goop:composed_by rdf:resource="http://nemo.inf.ufes.br/ontologies/standard-activity-definition#requires"/>
+        <goop:composed_by rdf:resource="http://nemo.inf.ufes.br/ontologies/standard-activity-definition#uses"/>
+        <goop:composed_by rdf:resource="http://nemo.inf.ufes.br/ontologies/standard-activity-definition#EO::Organizational_Role"/>
+        <goop:composed_by rdf:resource="http://nemo.inf.ufes.br/ontologies/standard-activity-definition#UFO-C::Normative_Description"/>
+        <goop:composed_by rdf:resource="http://nemo.inf.ufes.br/ontologies/standard-activity-definition#UFO-C::Object_Kind"/>
+        <goop:composed_by rdf:resource="http://nemo.inf.ufes.br/ontologies/standard-activity-definition#UFO-C::Social_Role"/>
+        <goop:composed_by rdf:resource="http://nemo.inf.ufes.br/ontologies/standard-activity-definition#UFO-C::Action_Universal_(Plan)"/>
+        <goop:is_used_to_satisfy rdf:resource="http://nemo.inf.ufes.br/ontologies/standard-activity-definition#Goop"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://nemo.inf.ufes.br/ontologies/standard-activity-definition#Procedure -->
+
+    <owl:NamedIndividual rdf:about="http://nemo.inf.ufes.br/ontologies/standard-activity-definition#Procedure">
+        <rdf:type rdf:resource="http://nemo.inf.ufes.br/ontologies/goop#Class"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://nemo.inf.ufes.br/ontologies/standard-activity-definition#Software_Product_Type -->
+
+    <owl:NamedIndividual rdf:about="http://nemo.inf.ufes.br/ontologies/standard-activity-definition#Software_Product_Type">
+        <rdf:type rdf:resource="http://nemo.inf.ufes.br/ontologies/goop#Class"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://nemo.inf.ufes.br/ontologies/standard-activity-definition#Standard_Activity -->
+
+    <owl:NamedIndividual rdf:about="http://nemo.inf.ufes.br/ontologies/standard-activity-definition#Standard_Activity">
+        <rdf:type rdf:resource="http://nemo.inf.ufes.br/ontologies/goop#Class"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://nemo.inf.ufes.br/ontologies/standard-activity-definition#changes -->
+
+    <owl:NamedIndividual rdf:about="http://nemo.inf.ufes.br/ontologies/standard-activity-definition#changes">
+        <rdf:type rdf:resource="http://nemo.inf.ufes.br/ontologies/goop#Object_Property"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://nemo.inf.ufes.br/ontologies/standard-activity-definition#creates -->
+
+    <owl:NamedIndividual rdf:about="http://nemo.inf.ufes.br/ontologies/standard-activity-definition#creates">
+        <rdf:type rdf:resource="http://nemo.inf.ufes.br/ontologies/goop#Object_Property"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://nemo.inf.ufes.br/ontologies/standard-activity-definition#depends_on -->
+
+    <owl:NamedIndividual rdf:about="http://nemo.inf.ufes.br/ontologies/standard-activity-definition#depends_on">
+        <rdf:type rdf:resource="http://nemo.inf.ufes.br/ontologies/goop#Object_Property"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://nemo.inf.ufes.br/ontologies/standard-activity-definition#is_to_be_performed_adoting -->
+
+    <owl:NamedIndividual rdf:about="http://nemo.inf.ufes.br/ontologies/standard-activity-definition#is_to_be_performed_adoting">
+        <rdf:type rdf:resource="http://nemo.inf.ufes.br/ontologies/goop#Object_Property"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://nemo.inf.ufes.br/ontologies/standard-activity-definition#is_to_be_performed_by -->
+
+    <owl:NamedIndividual rdf:about="http://nemo.inf.ufes.br/ontologies/standard-activity-definition#is_to_be_performed_by">
+        <rdf:type rdf:resource="http://nemo.inf.ufes.br/ontologies/goop#Object_Property"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://nemo.inf.ufes.br/ontologies/standard-activity-definition#requires -->
+
+    <owl:NamedIndividual rdf:about="http://nemo.inf.ufes.br/ontologies/standard-activity-definition#requires">
+        <rdf:type rdf:resource="http://nemo.inf.ufes.br/ontologies/goop#Object_Property"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://nemo.inf.ufes.br/ontologies/standard-activity-definition#uses -->
+
+    <owl:NamedIndividual rdf:about="http://nemo.inf.ufes.br/ontologies/standard-activity-definition#uses">
+        <rdf:type rdf:resource="http://nemo.inf.ufes.br/ontologies/goop#Object_Property"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://nemo.inf.ufes.br/ontologies/standard-activity-definition#EO::Organizational_Role -->
+
+    <owl:NamedIndividual rdf:about="http://nemo.inf.ufes.br/ontologies/standard-activity-definition#EO::Organizational_Role">
+        <rdf:type rdf:resource="http://nemo.inf.ufes.br/ontologies/goop#Class"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://nemo.inf.ufes.br/ontologies/standard-activity-definition#UFO-C::Normative_Description -->
+
+    <owl:NamedIndividual rdf:about="http://nemo.inf.ufes.br/ontologies/standard-activity-definition#UFO-C::Normative_Description">
+        <rdf:type rdf:resource="http://nemo.inf.ufes.br/ontologies/goop#Class"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://nemo.inf.ufes.br/ontologies/standard-activity-definition#UFO-C::Object_Kind -->
+
+    <owl:NamedIndividual rdf:about="http://nemo.inf.ufes.br/ontologies/standard-activity-definition#UFO-C::Object_Kind">
+        <rdf:type rdf:resource="http://nemo.inf.ufes.br/ontologies/goop#Class"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://nemo.inf.ufes.br/ontologies/standard-activity-definition#UFO-C::Social_Role -->
+
+    <owl:NamedIndividual rdf:about="http://nemo.inf.ufes.br/ontologies/standard-activity-definition#UFO-C::Social_Role">
+        <rdf:type rdf:resource="http://nemo.inf.ufes.br/ontologies/goop#Class"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://nemo.inf.ufes.br/ontologies/standard-activity-definition#UFO-C::Action_Universal_(Plan) -->
+
+    <owl:NamedIndividual rdf:about="http://nemo.inf.ufes.br/ontologies/standard-activity-definition#UFO-C::Action_Universal_(Plan)">
+        <rdf:type rdf:resource="http://nemo.inf.ufes.br/ontologies/goop#Class"/>
+    </owl:NamedIndividual>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 4.5.6.2018-09-06T00:27:41Z) https://github.com/owlcs/owlapi -->
+

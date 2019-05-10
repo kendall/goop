@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<catalog prefer="public" xmlns="urn:oasis:names:tc:entity:xmlns:xml:catalog">
+    <group id="Folder Repository, directory=, recursive=true, Auto-Update=true, version=2" prefer="public" xml:base="">
+        <uri id="Automatically generated entry, Timestamp=1548171070671" name="http://nemo.inf.ufes.br/ontologies/human-resource-management" uri="human-resource-management.owl"/>
+        <uri id="Automatically generated entry, Timestamp=1548171070671" name="http://nemo.inf.ufes.br/ontologies/job-plan-and-roles" uri="job-plan-and-roles.owl"/>
+        <uri id="Automatically generated entry, Timestamp=1548171070671" name="http://nemo.inf.ufes.br/ontologies/organizational-structure" uri="organizational-structure.owl"/>
+        <uri id="Automatically generated entry, Timestamp=1548171070671" name="http://nemo.inf.ufes.br/ontologies/teams" uri="teams.owl"/>
+    </group>
+</catalog>

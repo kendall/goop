@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<catalog prefer="public" xmlns="urn:oasis:names:tc:entity:xmlns:xml:catalog">
+    <group id="Folder Repository, directory=, recursive=true, Auto-Update=true, version=2" prefer="public" xml:base="">
+        <uri id="Automatically generated entry, Timestamp=1548095293668" name="http://nemo.inf.ufes.br/ontologies/Allocation" uri="allocation.owl"/>
+        <uri id="Automatically generated entry, Timestamp=1548095293668" name="http://nemo.inf.ufes.br/ontologies/artifact-participation" uri="artifact-participation.owl"/>
+        <uri id="Automatically generated entry, Timestamp=1548095293668" name="http://nemo.inf.ufes.br/ontologies/artifacts" uri="artifacts.owl"/>
+        <uri id="Automatically generated entry, Timestamp=1548095293668" name="http://nemo.inf.ufes.br/ontologies/default" uri="standard-activity-definition.owl"/>
+        <uri id="Automatically generated entry, Timestamp=1548095293668" name="http://nemo.inf.ufes.br/ontologies/intended-activity-definition" uri="intended-activity-definition.owl"/>
+        <uri id="Automatically generated entry, Timestamp=1548095293668" name="http://nemo.inf.ufes.br/ontologies/intended-process-structure" uri="intended-process-structure.owl"/>
+        <uri id="Automatically generated entry, Timestamp=1548095293668" name="http://nemo.inf.ufes.br/ontologies/performed-process" uri="performed-process.owl"/>
+        <uri id="Automatically generated entry, Timestamp=1548095293668" name="http://nemo.inf.ufes.br/ontologies/procedure-participation" uri="procedure-participation.owl"/>
+        <uri id="Automatically generated entry, Timestamp=1548095293668" name="http://nemo.inf.ufes.br/ontologies/procedures" uri="procedures.owl"/>
+        <uri id="Automatically generated entry, Timestamp=1548095293668" name="http://nemo.inf.ufes.br/ontologies/resource-participation" uri="resource-participation.owl"/>
+        <uri id="Automatically generated entry, Timestamp=1548095293668" name="http://nemo.inf.ufes.br/ontologies/resources" uri="resources.owl"/>
+        <uri id="Automatically generated entry, Timestamp=1548095293668" name="http://nemo.inf.ufes.br/ontologies/scheduled-process" uri="scheduled-process.owl"/>
+        <uri id="Automatically generated entry, Timestamp=1548095293668" name="http://nemo.inf.ufes.br/ontologies/stakeholder-participation" uri="stakeholder-participation.owl"/>
+        <uri id="Automatically generated entry, Timestamp=1548095293668" name="http://nemo.inf.ufes.br/ontologies/stakeholders" uri="stakeholders.owl"/>
+        <uri id="Automatically generated entry, Timestamp=1548095293668" name="http://nemo.inf.ufes.br/ontologies/standard-process-structure" uri="standard-process-structure.owl"/>
+    </group>
+</catalog>

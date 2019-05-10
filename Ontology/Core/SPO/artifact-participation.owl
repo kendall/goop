@@ -1,0 +1,234 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns="http://nemo.inf.ufes.br/ontologies/artifact-participation#"
+     xml:base="http://nemo.inf.ufes.br/ontologies/artifact-participation"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:goop="http://nemo.inf.ufes.br/ontologies/goop#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#">
+    <owl:Ontology rdf:about="http://nemo.inf.ufes.br/ontologies/artifact-participation">
+        <owl:imports rdf:resource="http://nemo.inf.ufes.br/ontologies/goop"/>
+    </owl:Ontology>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Individuals
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://nemo.inf.ufes.br/ontologies/artifact-participation#Artifact_Change -->
+
+    <owl:NamedIndividual rdf:about="http://nemo.inf.ufes.br/ontologies/artifact-participation#Artifact_Change">
+        <rdf:type rdf:resource="http://nemo.inf.ufes.br/ontologies/goop#Class"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://nemo.inf.ufes.br/ontologies/artifact-participation#Artifact_Creation -->
+
+    <owl:NamedIndividual rdf:about="http://nemo.inf.ufes.br/ontologies/artifact-participation#Artifact_Creation">
+        <rdf:type rdf:resource="http://nemo.inf.ufes.br/ontologies/goop#Class"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://nemo.inf.ufes.br/ontologies/artifact-participation#Artifact_Participation -->
+
+    <owl:NamedIndividual rdf:about="http://nemo.inf.ufes.br/ontologies/artifact-participation#Artifact_Participation">
+        <rdf:type rdf:resource="http://nemo.inf.ufes.br/ontologies/goop#Class"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://nemo.inf.ufes.br/ontologies/artifact-participation#Artifact_Usage -->
+
+    <owl:NamedIndividual rdf:about="http://nemo.inf.ufes.br/ontologies/artifact-participation#Artifact_Usage">
+        <rdf:type rdf:resource="http://nemo.inf.ufes.br/ontologies/goop#Class"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://nemo.inf.ufes.br/ontologies/artifact-participation#Deal_with_the_participation_of_artifacts_in_performed_activities -->
+
+    <owl:NamedIndividual rdf:about="http://nemo.inf.ufes.br/ontologies/artifact-participation#Deal_with_the_participation_of_artifacts_in_performed_activities">
+        <rdf:type rdf:resource="http://nemo.inf.ufes.br/ontologies/goop#Goal_Based_Requirement"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://nemo.inf.ufes.br/ontologies/artifact-participation#Goop -->
+
+    <owl:NamedIndividual rdf:about="http://nemo.inf.ufes.br/ontologies/artifact-participation#Goop">
+        <rdf:type rdf:resource="http://nemo.inf.ufes.br/ontologies/goop#Goop"/>
+        <goop:composed_by rdf:resource="http://nemo.inf.ufes.br/ontologies/artifact-participation#Deal_with_the_participation_of_artifacts_in_performed_activities"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://nemo.inf.ufes.br/ontologies/artifact-participation#Model_Fragment -->
+
+    <owl:NamedIndividual rdf:about="http://nemo.inf.ufes.br/ontologies/artifact-participation#Model_Fragment">
+        <rdf:type rdf:resource="http://nemo.inf.ufes.br/ontologies/goop#Model_Fragment"/>
+        <goop:composed_by rdf:resource="http://nemo.inf.ufes.br/ontologies/artifact-participation#Artifact_Change"/>
+        <goop:composed_by rdf:resource="http://nemo.inf.ufes.br/ontologies/artifact-participation#Artifact_Creation"/>
+        <goop:composed_by rdf:resource="http://nemo.inf.ufes.br/ontologies/artifact-participation#Artifact_Participation"/>
+        <goop:composed_by rdf:resource="http://nemo.inf.ufes.br/ontologies/artifact-participation#Artifact_Usage"/>
+        <goop:composed_by rdf:resource="http://nemo.inf.ufes.br/ontologies/artifact-participation#Performed_Activity"/>
+        <goop:composed_by rdf:resource="http://nemo.inf.ufes.br/ontologies/artifact-participation#changes"/>
+        <goop:composed_by rdf:resource="http://nemo.inf.ufes.br/ontologies/artifact-participation#creates"/>
+        <goop:composed_by rdf:resource="http://nemo.inf.ufes.br/ontologies/artifact-participation#framed_by"/>
+        <goop:composed_by rdf:resource="http://nemo.inf.ufes.br/ontologies/artifact-participation#participation_of"/>
+        <goop:composed_by rdf:resource="http://nemo.inf.ufes.br/ontologies/artifact-participation#Artifacts::Artifact"/>
+        <goop:composed_by rdf:resource="http://nemo.inf.ufes.br/ontologies/artifact-participation#UFO-B::Event"/>
+        <goop:composed_by rdf:resource="http://nemo.inf.ufes.br/ontologies/artifact-participation#UFO-B::Participation"/>
+        <goop:composed_by rdf:resource="http://nemo.inf.ufes.br/ontologies/artifact-participation#UFO-B::Time_Interval"/>
+        <goop:composed_by rdf:resource="http://nemo.inf.ufes.br/ontologies/artifact-participation#UFO-C::Action"/>
+        <goop:composed_by rdf:resource="http://nemo.inf.ufes.br/ontologies/artifact-participation#UFO-C::Change"/>
+        <goop:composed_by rdf:resource="http://nemo.inf.ufes.br/ontologies/artifact-participation#UFO-C::Creation"/>
+        <goop:composed_by rdf:resource="http://nemo.inf.ufes.br/ontologies/artifact-participation#UFO-C::Object"/>
+        <goop:composed_by rdf:resource="http://nemo.inf.ufes.br/ontologies/artifact-participation#UFO-C::Object_Participation"/>
+        <goop:composed_by rdf:resource="http://nemo.inf.ufes.br/ontologies/artifact-participation#UFO-C::Usage"/>
+        <goop:is_used_to_satisfy rdf:resource="http://nemo.inf.ufes.br/ontologies/artifact-participation#Goop"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://nemo.inf.ufes.br/ontologies/artifact-participation#Performed_Activity -->
+
+    <owl:NamedIndividual rdf:about="http://nemo.inf.ufes.br/ontologies/artifact-participation#Performed_Activity">
+        <rdf:type rdf:resource="http://nemo.inf.ufes.br/ontologies/goop#Class"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://nemo.inf.ufes.br/ontologies/artifact-participation#changes -->
+
+    <owl:NamedIndividual rdf:about="http://nemo.inf.ufes.br/ontologies/artifact-participation#changes">
+        <rdf:type rdf:resource="http://nemo.inf.ufes.br/ontologies/goop#Object_Property"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://nemo.inf.ufes.br/ontologies/artifact-participation#creates -->
+
+    <owl:NamedIndividual rdf:about="http://nemo.inf.ufes.br/ontologies/artifact-participation#creates">
+        <rdf:type rdf:resource="http://nemo.inf.ufes.br/ontologies/goop#Object_Property"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://nemo.inf.ufes.br/ontologies/artifact-participation#framed_by -->
+
+    <owl:NamedIndividual rdf:about="http://nemo.inf.ufes.br/ontologies/artifact-participation#framed_by">
+        <rdf:type rdf:resource="http://nemo.inf.ufes.br/ontologies/goop#Object_Property"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://nemo.inf.ufes.br/ontologies/artifact-participation#participation_of -->
+
+    <owl:NamedIndividual rdf:about="http://nemo.inf.ufes.br/ontologies/artifact-participation#participation_of">
+        <rdf:type rdf:resource="http://nemo.inf.ufes.br/ontologies/goop#Object_Property"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://nemo.inf.ufes.br/ontologies/artifact-participation#uses -->
+
+    <owl:NamedIndividual rdf:about="http://nemo.inf.ufes.br/ontologies/artifact-participation#uses">
+        <rdf:type rdf:resource="http://nemo.inf.ufes.br/ontologies/goop#Object_Property"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://nemo.inf.ufes.br/ontologies/artifact-participation#Artifacts::Artifact -->
+
+    <owl:NamedIndividual rdf:about="http://nemo.inf.ufes.br/ontologies/artifact-participation#Artifacts::Artifact">
+        <rdf:type rdf:resource="http://nemo.inf.ufes.br/ontologies/goop#Class"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://nemo.inf.ufes.br/ontologies/artifact-participation#UFO-B::Event -->
+
+    <owl:NamedIndividual rdf:about="http://nemo.inf.ufes.br/ontologies/artifact-participation#UFO-B::Event">
+        <rdf:type rdf:resource="http://nemo.inf.ufes.br/ontologies/goop#Class"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://nemo.inf.ufes.br/ontologies/artifact-participation#UFO-B::Participation -->
+
+    <owl:NamedIndividual rdf:about="http://nemo.inf.ufes.br/ontologies/artifact-participation#UFO-B::Participation">
+        <rdf:type rdf:resource="http://nemo.inf.ufes.br/ontologies/goop#Class"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://nemo.inf.ufes.br/ontologies/artifact-participation#UFO-B::Time_Interval -->
+
+    <owl:NamedIndividual rdf:about="http://nemo.inf.ufes.br/ontologies/artifact-participation#UFO-B::Time_Interval">
+        <rdf:type rdf:resource="http://nemo.inf.ufes.br/ontologies/goop#Class"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://nemo.inf.ufes.br/ontologies/artifact-participation#UFO-C::Action -->
+
+    <owl:NamedIndividual rdf:about="http://nemo.inf.ufes.br/ontologies/artifact-participation#UFO-C::Action">
+        <rdf:type rdf:resource="http://nemo.inf.ufes.br/ontologies/goop#Class"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://nemo.inf.ufes.br/ontologies/artifact-participation#UFO-C::Change -->
+
+    <owl:NamedIndividual rdf:about="http://nemo.inf.ufes.br/ontologies/artifact-participation#UFO-C::Change">
+        <rdf:type rdf:resource="http://nemo.inf.ufes.br/ontologies/goop#Class"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://nemo.inf.ufes.br/ontologies/artifact-participation#UFO-C::Creation -->
+
+    <owl:NamedIndividual rdf:about="http://nemo.inf.ufes.br/ontologies/artifact-participation#UFO-C::Creation">
+        <rdf:type rdf:resource="http://nemo.inf.ufes.br/ontologies/goop#Class"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://nemo.inf.ufes.br/ontologies/artifact-participation#UFO-C::Object -->
+
+    <owl:NamedIndividual rdf:about="http://nemo.inf.ufes.br/ontologies/artifact-participation#UFO-C::Object">
+        <rdf:type rdf:resource="http://nemo.inf.ufes.br/ontologies/goop#Class"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://nemo.inf.ufes.br/ontologies/artifact-participation#UFO-C::Object_Participation -->
+
+    <owl:NamedIndividual rdf:about="http://nemo.inf.ufes.br/ontologies/artifact-participation#UFO-C::Object_Participation">
+        <rdf:type rdf:resource="http://nemo.inf.ufes.br/ontologies/goop#Class"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://nemo.inf.ufes.br/ontologies/artifact-participation#UFO-C::Usage -->
+
+    <owl:NamedIndividual rdf:about="http://nemo.inf.ufes.br/ontologies/artifact-participation#UFO-C::Usage">
+        <rdf:type rdf:resource="http://nemo.inf.ufes.br/ontologies/goop#Class"/>
+    </owl:NamedIndividual>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 4.5.6.2018-09-06T00:27:41Z) https://github.com/owlcs/owlapi -->
+

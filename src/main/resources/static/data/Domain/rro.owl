@@ -1,0 +1,297 @@
+@prefix : <http://nemo.inf.ufes.br/ontologies/fragments/rro#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix goop: <http://nemo.inf.ufes.br/ontologies/goop#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@base <http://nemo.inf.ufes.br/ontologies/fragments/rro> .
+
+<http://nemo.inf.ufes.br/ontologies/fragments/rro> rdf:type owl:Ontology ;
+                                                    owl:imports <http://nemo.inf.ufes.br/ontologies/goop> .
+
+#################################################################
+#    Individuals
+#################################################################
+
+###  http://nemo.inf.ufes.br/ontologies/fragments/rro#Artifact
+:Artifact rdf:type owl:NamedIndividual ,
+                   goop:Class ;
+          rdfs:comment """Object intentionally made to serve a given purpose in the context of a software Project or Organization. 
+Ex.: a document, a model, a library, an e-mail, a bug."""^^rdfs:Literal .
+
+
+###  http://nemo.inf.ufes.br/ontologies/fragments/rro#Assumpiton
+:Assumpiton rdf:type owl:NamedIndividual ,
+                     goop:Class ;
+            rdfs:comment "Assumptions describe states-of-affairs in the environment of interest that the Stakeholders believe to be true, i.e., they are the propositional content of Stakeholders' Beliefs. They express the belief that a specific situation exists in the environment."^^rdfs:Literal .
+
+
+###  http://nemo.inf.ufes.br/ontologies/fragments/rro#Controller
+:Controller rdf:type owl:NamedIndividual ,
+                     goop:Class ;
+            goop:specifies :Machine ;
+            rdfs:comment "A Machine where a Loaded Program Copy is running (Program Copy Execution) plays the role of Controller."^^rdfs:Literal .
+
+
+###  http://nemo.inf.ufes.br/ontologies/fragments/rro#Define_Artifact
+:Define_Artifact rdf:type owl:NamedIndividual ,
+                          goop:Goal_Based_Requirement ;
+                 goop:composed_by :Define_Artifact_by_Nature ;
+                 rdfs:comment "In the context of the software domain, Artifacts are objects intentionally made to serve a given purpose in the context of a Software Project or Organization."^^rdfs:Literal .
+
+
+###  http://nemo.inf.ufes.br/ontologies/fragments/rro#Define_Artifact_by_Nature
+:Define_Artifact_by_Nature rdf:type owl:NamedIndividual ,
+                                    goop:Goal_Based_Requirement ;
+                           rdfs:comment "Artifact Type partitions the generalization set of Artifacts according to their nature, giving rise to a taxonomy of artifacts. More specific taxonomies can be established for specific types of artifacts, such as documents (established by instances of Document Type) and Software Product (Software Product Type), among others."^^rdfs:Literal .
+
+
+###  http://nemo.inf.ufes.br/ontologies/fragments/rro#Define_Requirement
+:Define_Requirement rdf:type owl:NamedIndividual ,
+                             goop:Goal_Based_Requirement .
+
+
+###  http://nemo.inf.ufes.br/ontologies/fragments/rro#Describe_how_a_Machine_works
+:Describe_how_a_Machine_works rdf:type owl:NamedIndividual ,
+                                       goop:Goal_Based_Requirement .
+
+
+###  http://nemo.inf.ufes.br/ontologies/fragments/rro#Document
+:Document rdf:type owl:NamedIndividual ,
+                   goop:Class ;
+          goop:specifies :Artifact ;
+          rdfs:comment """Any written or pictorial, uniquely identified, information related to the software development, usually presented in a predefined format. 
+Ex.: a Requirements Document, a specification, a report."""^^rdfs:Literal .
+
+
+###  http://nemo.inf.ufes.br/ontologies/fragments/rro#Functional_Requirement
+:Functional_Requirement rdf:type owl:NamedIndividual ,
+                                 goop:Class ;
+                        goop:specifies :Requirement ;
+                        rdfs:comment """Requirement defining a function to be available in the product being built. 
+Ex.: The need for the system to control client orders."""^^rdfs:Literal .
+
+
+###  http://nemo.inf.ufes.br/ontologies/fragments/rro#Goop-1
+:Goop-1 rdf:type owl:NamedIndividual ,
+                 goop:Goop ;
+        goop:composed_by :Define_Artifact_by_Nature .
+
+
+###  http://nemo.inf.ufes.br/ontologies/fragments/rro#Goop-2
+:Goop-2 rdf:type owl:NamedIndividual ;
+        goop:composed_by :Describe_how_a_Machine_works .
+
+
+###  http://nemo.inf.ufes.br/ontologies/fragments/rro#Goop-4
+:Goop-4 rdf:type owl:NamedIndividual ,
+                 goop:Goop ;
+        goop:composed_by :Define_Requirement .
+
+
+###  http://nemo.inf.ufes.br/ontologies/fragments/rro#Goop-General
+:Goop-General rdf:type owl:NamedIndividual ,
+                       goop:Goop ;
+              goop:composed_by :Define_Artifact .
+
+
+###  http://nemo.inf.ufes.br/ontologies/fragments/rro#Information_Item
+:Information_Item rdf:type owl:NamedIndividual ,
+                           goop:Class ;
+                  goop:specifies :Artifact ;
+                  rdfs:comment """Relevant information for human use, produced or used by Performed Activity. 
+Ex.: a documented requirement, a bug reported, an agreement e-mail, a component description."""^^rdfs:Literal .
+
+
+###  http://nemo.inf.ufes.br/ontologies/fragments/rro#Loaded_Program_Copy
+:Loaded_Program_Copy rdf:type owl:NamedIndividual ,
+                              goop:Class ;
+                     rdfs:comment """Loaded Program Copy is the materialization of a Program, inhering in a Machine. 
+Ex.: a copy of a program loaded in primary memory of my computer."""^^rdfs:Literal .
+
+
+###  http://nemo.inf.ufes.br/ontologies/fragments/rro#Machine
+:Machine rdf:type owl:NamedIndividual ,
+                  goop:Class ;
+         rdfs:comment "Machine is a hardware equipament able to run programs."^^rdfs:Literal .
+
+
+###  http://nemo.inf.ufes.br/ontologies/fragments/rro#Model_Fragment-1
+:Model_Fragment-1 rdf:type owl:NamedIndividual ,
+                           goop:Model_Fragment ;
+                  goop:composed_by :Artifact ,
+                                   :Document ,
+                                   :Information_Item ,
+                                   :Program_Specification ,
+                                   :Software_Item ,
+                                   :intends_to_implement ;
+                  goop:is_used_to_satisfy :Goop-1 .
+
+
+###  http://nemo.inf.ufes.br/ontologies/fragments/rro#Model_Fragment-2
+:Model_Fragment-2 rdf:type owl:NamedIndividual ;
+                  goop:composed_by :Controller ,
+                                   :Loaded_Program_Copy ,
+                                   :Machine ,
+                                   :Observable_State ,
+                                   :Program_Copy_Execution ,
+                                   :Software_Function ,
+                                   :brings_about ,
+                                   :constituted_by ,
+                                   :execution_of ,
+                                   :materialization_of ,
+                                   :participates_in ;
+                  goop:is_used_to_satisfy :Goop-2 .
+
+
+###  http://nemo.inf.ufes.br/ontologies/fragments/rro#Model_Fragment-4
+:Model_Fragment-4 rdf:type owl:NamedIndividual ,
+                           goop:Model_Fragment ;
+                  goop:composed_by :Functional_Requirement ,
+                                   :Requirement ,
+                                   :Requirement_Artifact ,
+                                   :Software_Function_Universal ,
+                                   :describes ,
+                                   :intends_to_satisfy ,
+                                   :refers_to ;
+                  goop:is_used_to_satisfy :Goop-4 .
+
+
+###  http://nemo.inf.ufes.br/ontologies/fragments/rro#Model_Fragment-General
+:Model_Fragment-General rdf:type owl:NamedIndividual ,
+                                 goop:Model_Fragment ;
+                        goop:composed_by :depends_on ;
+                        goop:is_used_to_satisfy :Goop-General .
+
+
+###  http://nemo.inf.ufes.br/ontologies/fragments/rro#Observable_State
+:Observable_State rdf:type owl:NamedIndividual ,
+                           goop:Class ;
+                  rdfs:comment "Observable State is a situation resulting from the execution of a program copy. It involves qualities and quality values (qualia) of the Machine in which the Loaded Program Copy inheres, as well as of entities residing in that Machine (including the Loaded Program Copy itself)."^^rdfs:Literal .
+
+
+###  http://nemo.inf.ufes.br/ontologies/fragments/rro#Program_Copy_Execution
+:Program_Copy_Execution rdf:type owl:NamedIndividual ,
+                                 goop:Class ;
+                        rdfs:comment "Program Copy Execution is an Event representing the execution of the Loaded Program Copy running in a Machine. In other words, the Program Copy Execution is the event of the physical manifestation of the dispositions (represented as the complex disposition Loaded Program Copy) that inhere in the Machine."^^rdfs:Literal .
+
+
+###  http://nemo.inf.ufes.br/ontologies/fragments/rro#Program_Specification
+:Program_Specification rdf:type owl:NamedIndividual ,
+                                goop:Class ;
+                       goop:specifies :Document .
+
+
+###  http://nemo.inf.ufes.br/ontologies/fragments/rro#Requirement
+:Requirement rdf:type owl:NamedIndividual ,
+                      goop:Class ;
+             rdfs:comment """Goal to be achieved, representing a condition or capacity needed for the system users for solving a problem. 
+Ex.: Providing a product register; Performing a function in an established time."""^^rdfs:Literal .
+
+
+###  http://nemo.inf.ufes.br/ontologies/fragments/rro#Requirement_Artifact
+:Requirement_Artifact rdf:type owl:NamedIndividual ,
+                               goop:Class ;
+                      goop:specifies :Information_Item ;
+                      rdfs:comment """Information Item describing a Requirement. 
+Ex.: \"The system shall provide a product register.\", \"The system shall control the client orders.\", \"The system shall be operable from Google Chrome version 32+.\""""^^rdfs:Literal .
+
+
+###  http://nemo.inf.ufes.br/ontologies/fragments/rro#Requirements_Engineer
+:Requirements_Engineer rdf:type owl:NamedIndividual ,
+                                goop:Class ;
+                       rdfs:comment """Stakeholder responsible for conducting the requirements development activities. 
+Ex.: an organization employee assigned as Requirements Engineer in the requirements development activities."""^^rdfs:Literal .
+
+
+###  http://nemo.inf.ufes.br/ontologies/fragments/rro#Software_Function
+:Software_Function rdf:type owl:NamedIndividual ,
+                            goop:Class ;
+                   rdfs:comment "Software Functions are functional dispositions that constitute the complex disposition Loaded Program Copy. Each Software Function is an instance of a Software Function Universal. When the software development process is accomplished correctly, the Software Functions that constitute the Loaded Program Copy are instances of the exact Software Function Universals described by the Program Specification and successfully implemented by the Program."^^rdfs:Literal .
+
+
+###  http://nemo.inf.ufes.br/ontologies/fragments/rro#Software_Function_Universal
+:Software_Function_Universal rdf:type owl:NamedIndividual ,
+                                      goop:Class ;
+                             rdfs:comment """Function Universal denoting the types of functions expected in a software. 
+Ex.: Controlling client orders."""^^rdfs:Literal .
+
+
+###  http://nemo.inf.ufes.br/ontologies/fragments/rro#Software_Item
+:Software_Item rdf:type owl:NamedIndividual ,
+                        goop:Class ;
+               goop:specifies :Artifact .
+
+
+###  http://nemo.inf.ufes.br/ontologies/fragments/rro#brings_about
+:brings_about rdf:type owl:NamedIndividual ,
+                       goop:Object_Property .
+
+
+###  http://nemo.inf.ufes.br/ontologies/fragments/rro#constituted_by
+:constituted_by rdf:type owl:NamedIndividual ,
+                         goop:Object_Property .
+
+
+###  http://nemo.inf.ufes.br/ontologies/fragments/rro#depends_on
+:depends_on rdf:type owl:NamedIndividual ,
+                     goop:Object_Property .
+
+
+###  http://nemo.inf.ufes.br/ontologies/fragments/rro#describes
+:describes rdf:type owl:NamedIndividual ,
+                    goop:Object_Property .
+
+
+###  http://nemo.inf.ufes.br/ontologies/fragments/rro#execution_of
+:execution_of rdf:type owl:NamedIndividual ,
+                       goop:Object_Property .
+
+
+###  http://nemo.inf.ufes.br/ontologies/fragments/rro#inheres_in
+:inheres_in rdf:type owl:NamedIndividual ,
+                     goop:Object_Property .
+
+
+###  http://nemo.inf.ufes.br/ontologies/fragments/rro#intends_to_implement
+:intends_to_implement rdf:type owl:NamedIndividual ,
+                               goop:Object_Property .
+
+
+###  http://nemo.inf.ufes.br/ontologies/fragments/rro#intends_to_satisfy
+:intends_to_satisfy rdf:type owl:NamedIndividual ,
+                             goop:Object_Property .
+
+
+###  http://nemo.inf.ufes.br/ontologies/fragments/rro#interested_in
+:interested_in rdf:type owl:NamedIndividual ,
+                        goop:Object_Property .
+
+
+###  http://nemo.inf.ufes.br/ontologies/fragments/rro#materialization_of
+:materialization_of rdf:type owl:NamedIndividual ,
+                             goop:Object_Property .
+
+
+###  http://nemo.inf.ufes.br/ontologies/fragments/rro#participates_in
+:participates_in rdf:type owl:NamedIndividual ,
+                          goop:Object_Property .
+
+
+###  http://nemo.inf.ufes.br/ontologies/fragments/rro#propostional_content_of
+:propostional_content_of rdf:type owl:NamedIndividual ,
+                                  goop:Object_Property .
+
+
+###  http://nemo.inf.ufes.br/ontologies/fragments/rro#refers_to
+:refers_to rdf:type owl:NamedIndividual ,
+                    goop:Object_Property .
+
+
+###  http://nemo.inf.ufes.br/ontologies/fragments/rro#resposible_for
+:resposible_for rdf:type owl:NamedIndividual ,
+                         goop:Object_Property .
+
+
+###  Generated by the OWL API (version 4.5.7.2018-12-02T02:23:35Z) https://github.com/owlcs/owlapi

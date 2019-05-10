@@ -1,0 +1,377 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns="http://nemo.inf.ufes.br/ontologies/stakeholders#"
+     xml:base="http://nemo.inf.ufes.br/ontologies/stakeholders"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:goop="http://nemo.inf.ufes.br/ontologies/goop#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#">
+    <owl:Ontology rdf:about="http://nemo.inf.ufes.br/ontologies/coding-process">
+        <owl:imports rdf:resource="http://nemo.inf.ufes.br/ontologies/goop"/>
+    </owl:Ontology>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Individuals
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://nemo.inf.ufes.br/ontologies/coding-process#Artifact -->
+
+    <owl:NamedIndividual rdf:about="http://nemo.inf.ufes.br/ontologies/coding-process#Artifact">
+        <rdf:type rdf:resource="http://nemo.inf.ufes.br/ontologies/goop#Class"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://nemo.inf.ufes.br/ontologies/coding-process#Code -->
+
+    <owl:NamedIndividual rdf:about="http://nemo.inf.ufes.br/ontologies/coding-process#Code">
+        <rdf:type rdf:resource="http://nemo.inf.ufes.br/ontologies/goop#Class"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://nemo.inf.ufes.br/ontologies/coding-process#Code_Development -->
+
+    <owl:NamedIndividual rdf:about="http://nemo.inf.ufes.br/ontologies/coding-process#Code_Development">
+        <rdf:type rdf:resource="http://nemo.inf.ufes.br/ontologies/goop#Class"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://nemo.inf.ufes.br/ontologies/coding-process#Code_Documentation -->
+
+    <owl:NamedIndividual rdf:about="http://nemo.inf.ufes.br/ontologies/coding-process#Code_Documentation">
+        <rdf:type rdf:resource="http://nemo.inf.ufes.br/ontologies/goop#Class"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://nemo.inf.ufes.br/ontologies/coding-process#Code_Review -->
+
+    <owl:NamedIndividual rdf:about="http://nemo.inf.ufes.br/ontologies/coding-process#Code_Review">
+        <rdf:type rdf:resource="http://nemo.inf.ufes.br/ontologies/goop#Class"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://nemo.inf.ufes.br/ontologies/coding-process#Code_Review_Report -->
+
+    <owl:NamedIndividual rdf:about="http://nemo.inf.ufes.br/ontologies/coding-process#Code_Review_Report">
+        <rdf:type rdf:resource="http://nemo.inf.ufes.br/ontologies/goop#Class"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://nemo.inf.ufes.br/ontologies/coding-process#Code_Reviewer -->
+
+    <owl:NamedIndividual rdf:about="http://nemo.inf.ufes.br/ontologies/coding-process#Code_Reviewer">
+        <rdf:type rdf:resource="http://nemo.inf.ufes.br/ontologies/goop#Class"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://nemo.inf.ufes.br/ontologies/coding-process#Coding -->
+
+    <owl:NamedIndividual rdf:about="http://nemo.inf.ufes.br/ontologies/coding-process#Coding">
+        <rdf:type rdf:resource="http://nemo.inf.ufes.br/ontologies/goop#Class"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://nemo.inf.ufes.br/ontologies/coding-process#Coding_Process -->
+
+    <owl:NamedIndividual rdf:about="http://nemo.inf.ufes.br/ontologies/coding-process#Coding_Process">
+        <rdf:type rdf:resource="http://nemo.inf.ufes.br/ontologies/goop#Class"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://nemo.inf.ufes.br/ontologies/coding-process#Composite_Artifact -->
+
+    <owl:NamedIndividual rdf:about="http://nemo.inf.ufes.br/ontologies/coding-process#Composite_Artifact">
+        <rdf:type rdf:resource="http://nemo.inf.ufes.br/ontologies/goop#Class"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://nemo.inf.ufes.br/ontologies/coding-process#Design_Document -->
+
+    <owl:NamedIndividual rdf:about="http://nemo.inf.ufes.br/ontologies/coding-process#Design_Document">
+        <rdf:type rdf:resource="http://nemo.inf.ufes.br/ontologies/goop#Class"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://nemo.inf.ufes.br/ontologies/coding-process#Design_Documentation -->
+
+    <owl:NamedIndividual rdf:about="http://nemo.inf.ufes.br/ontologies/coding-process#Design_Documentation">
+        <rdf:type rdf:resource="http://nemo.inf.ufes.br/ontologies/goop#Class"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://nemo.inf.ufes.br/ontologies/coding-process#Document -->
+
+    <owl:NamedIndividual rdf:about="http://nemo.inf.ufes.br/ontologies/coding-process#Document">
+        <rdf:type rdf:resource="http://nemo.inf.ufes.br/ontologies/goop#Class"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://nemo.inf.ufes.br/ontologies/coding-process#Goop -->
+
+    <owl:NamedIndividual rdf:about="http://nemo.inf.ufes.br/ontologies/coding-process#Goop">
+        <rdf:type rdf:resource="http://nemo.inf.ufes.br/ontologies/goop#Goop"/>
+        <goop:composed_by rdf:resource="http://nemo.inf.ufes.br/ontologies/coding-process#Producing_software_Code_in_conformance_with_the_requirements_and_design_decisions"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://nemo.inf.ufes.br/ontologies/coding-process#Information_Item -->
+
+    <owl:NamedIndividual rdf:about="http://nemo.inf.ufes.br/ontologies/coding-process#Information_Item">
+        <rdf:type rdf:resource="http://nemo.inf.ufes.br/ontologies/goop#Class"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://nemo.inf.ufes.br/ontologies/coding-process#Model -->
+
+    <owl:NamedIndividual rdf:about="http://nemo.inf.ufes.br/ontologies/coding-process#Model">
+        <rdf:type rdf:resource="http://nemo.inf.ufes.br/ontologies/goop#Class"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://nemo.inf.ufes.br/ontologies/coding-process#Model_Fragment -->
+
+    <owl:NamedIndividual rdf:about="http://nemo.inf.ufes.br/ontologies/coding-process#Model_Fragment">
+        <rdf:type rdf:resource="http://nemo.inf.ufes.br/ontologies/goop#Model_Fragment"/>
+        <goop:composed_by rdf:resource="http://nemo.inf.ufes.br/ontologies/coding-process#Artifact"/>
+        <goop:composed_by rdf:resource="http://nemo.inf.ufes.br/ontologies/coding-process#Code"/>
+        <goop:composed_by rdf:resource="http://nemo.inf.ufes.br/ontologies/coding-process#Code_Development"/>
+        <goop:composed_by rdf:resource="http://nemo.inf.ufes.br/ontologies/coding-process#Code_Documentation"/>
+        <goop:composed_by rdf:resource="http://nemo.inf.ufes.br/ontologies/coding-process#Code_Review"/>
+        <goop:composed_by rdf:resource="http://nemo.inf.ufes.br/ontologies/coding-process#Code_Review_Report"/>
+        <goop:composed_by rdf:resource="http://nemo.inf.ufes.br/ontologies/coding-process#Code_Reviewer"/>
+        <goop:composed_by rdf:resource="http://nemo.inf.ufes.br/ontologies/coding-process#Coding"/>
+        <goop:composed_by rdf:resource="http://nemo.inf.ufes.br/ontologies/coding-process#Coding_Process"/>
+        <goop:composed_by rdf:resource="http://nemo.inf.ufes.br/ontologies/coding-process#Composite_Artifact"/>
+        <goop:composed_by rdf:resource="http://nemo.inf.ufes.br/ontologies/coding-process#Design_Document"/>
+        <goop:composed_by rdf:resource="http://nemo.inf.ufes.br/ontologies/coding-process#Design_Documentation"/>
+        <goop:composed_by rdf:resource="http://nemo.inf.ufes.br/ontologies/coding-process#Information_Item"/>
+        <goop:composed_by rdf:resource="http://nemo.inf.ufes.br/ontologies/coding-process#Model"/>
+        <goop:composed_by rdf:resource="http://nemo.inf.ufes.br/ontologies/coding-process#Performed_Activity"/>
+        <goop:composed_by rdf:resource="http://nemo.inf.ufes.br/ontologies/coding-process#Performed_Composite_Activity"/>
+        <goop:composed_by rdf:resource="http://nemo.inf.ufes.br/ontologies/coding-process#Performed_General_Process"/>
+        <goop:composed_by rdf:resource="http://nemo.inf.ufes.br/ontologies/coding-process#Performed_Process"/>
+        <goop:composed_by rdf:resource="http://nemo.inf.ufes.br/ontologies/coding-process#Performed_Simple_Activity"/>
+        <goop:composed_by rdf:resource="http://nemo.inf.ufes.br/ontologies/coding-process#Performed_Specific_Process"/>
+        <goop:composed_by rdf:resource="http://nemo.inf.ufes.br/ontologies/coding-process#Programmer"/>
+        <goop:composed_by rdf:resource="http://nemo.inf.ufes.br/ontologies/coding-process#Requirements_Document"/>
+        <goop:composed_by rdf:resource="http://nemo.inf.ufes.br/ontologies/coding-process#Simple_Artifact"/>
+        <goop:composed_by rdf:resource="http://nemo.inf.ufes.br/ontologies/coding-process#Software_Item"/>
+        <goop:composed_by rdf:resource="http://nemo.inf.ufes.br/ontologies/coding-process#Software_Product"/>
+        <goop:composed_by rdf:resource="http://nemo.inf.ufes.br/ontologies/coding-process#Stakeholder"/>
+        <goop:composed_by rdf:resource="http://nemo.inf.ufes.br/ontologies/coding-process#changes"/>
+        <goop:composed_by rdf:resource="http://nemo.inf.ufes.br/ontologies/coding-process#conects"/>
+        <goop:composed_by rdf:resource="http://nemo.inf.ufes.br/ontologies/coding-process#creates"/>
+        <goop:composed_by rdf:resource="http://nemo.inf.ufes.br/ontologies/coding-process#depends_on"/>
+        <goop:composed_by rdf:resource="http://nemo.inf.ufes.br/ontologies/coding-process#describes"/>
+        <goop:composed_by rdf:resource="http://nemo.inf.ufes.br/ontologies/coding-process#participates_in"/>
+        <goop:composed_by rdf:resource="http://nemo.inf.ufes.br/ontologies/coding-process#subProcess"/>
+        <goop:composed_by rdf:resource="http://nemo.inf.ufes.br/ontologies/coding-process#uses"/>
+        <goop:is_used_to_satisfy rdf:resource="http://nemo.inf.ufes.br/ontologies/coding-process#Goop"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://nemo.inf.ufes.br/ontologies/coding-process#Performed_Activity -->
+
+    <owl:NamedIndividual rdf:about="http://nemo.inf.ufes.br/ontologies/coding-process#Performed_Activity">
+        <rdf:type rdf:resource="http://nemo.inf.ufes.br/ontologies/goop#Class"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://nemo.inf.ufes.br/ontologies/coding-process#Performed_Composite_Activity -->
+
+    <owl:NamedIndividual rdf:about="http://nemo.inf.ufes.br/ontologies/coding-process#Performed_Composite_Activity">
+        <rdf:type rdf:resource="http://nemo.inf.ufes.br/ontologies/goop#Class"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://nemo.inf.ufes.br/ontologies/coding-process#Performed_General_Process -->
+
+    <owl:NamedIndividual rdf:about="http://nemo.inf.ufes.br/ontologies/coding-process#Performed_General_Process">
+        <rdf:type rdf:resource="http://nemo.inf.ufes.br/ontologies/goop#Class"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://nemo.inf.ufes.br/ontologies/coding-process#Performed_Process -->
+
+    <owl:NamedIndividual rdf:about="http://nemo.inf.ufes.br/ontologies/coding-process#Performed_Process">
+        <rdf:type rdf:resource="http://nemo.inf.ufes.br/ontologies/goop#Class"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://nemo.inf.ufes.br/ontologies/coding-process#Performed_Simple_Activity -->
+
+    <owl:NamedIndividual rdf:about="http://nemo.inf.ufes.br/ontologies/coding-process#Performed_Simple_Activity">
+        <rdf:type rdf:resource="http://nemo.inf.ufes.br/ontologies/goop#Class"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://nemo.inf.ufes.br/ontologies/coding-process#Performed_Specific_Process -->
+
+    <owl:NamedIndividual rdf:about="http://nemo.inf.ufes.br/ontologies/coding-process#Performed_Specific_Process">
+        <rdf:type rdf:resource="http://nemo.inf.ufes.br/ontologies/goop#Class"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://nemo.inf.ufes.br/ontologies/coding-process#Producing_software_Code_in_conformance_with_the_requirements_and_design_decisions -->
+
+    <owl:NamedIndividual rdf:about="http://nemo.inf.ufes.br/ontologies/coding-process#Producing_software_Code_in_conformance_with_the_requirements_and_design_decisions">
+        <rdf:type rdf:resource="http://nemo.inf.ufes.br/ontologies/goop#Goal_Based_Requirement"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://nemo.inf.ufes.br/ontologies/coding-process#Programmer -->
+
+    <owl:NamedIndividual rdf:about="http://nemo.inf.ufes.br/ontologies/coding-process#Programmer">
+        <rdf:type rdf:resource="http://nemo.inf.ufes.br/ontologies/goop#Class"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://nemo.inf.ufes.br/ontologies/coding-process#Requirements_Document -->
+
+    <owl:NamedIndividual rdf:about="http://nemo.inf.ufes.br/ontologies/coding-process#Requirements_Document">
+        <rdf:type rdf:resource="http://nemo.inf.ufes.br/ontologies/goop#Class"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://nemo.inf.ufes.br/ontologies/coding-process#Simple_Artifact -->
+
+    <owl:NamedIndividual rdf:about="http://nemo.inf.ufes.br/ontologies/coding-process#Simple_Artifact">
+        <rdf:type rdf:resource="http://nemo.inf.ufes.br/ontologies/goop#Class"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://nemo.inf.ufes.br/ontologies/coding-process#Software_Item -->
+
+    <owl:NamedIndividual rdf:about="http://nemo.inf.ufes.br/ontologies/coding-process#Software_Item">
+        <rdf:type rdf:resource="http://nemo.inf.ufes.br/ontologies/goop#Class"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://nemo.inf.ufes.br/ontologies/coding-process#Software_Product -->
+
+    <owl:NamedIndividual rdf:about="http://nemo.inf.ufes.br/ontologies/coding-process#Software_Product">
+        <rdf:type rdf:resource="http://nemo.inf.ufes.br/ontologies/goop#Class"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://nemo.inf.ufes.br/ontologies/coding-process#Stakeholder -->
+
+    <owl:NamedIndividual rdf:about="http://nemo.inf.ufes.br/ontologies/coding-process#Stakeholder">
+        <rdf:type rdf:resource="http://nemo.inf.ufes.br/ontologies/goop#Class"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://nemo.inf.ufes.br/ontologies/coding-process#changes -->
+
+    <owl:NamedIndividual rdf:about="http://nemo.inf.ufes.br/ontologies/coding-process#changes">
+        <rdf:type rdf:resource="http://nemo.inf.ufes.br/ontologies/goop#Object_Property"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://nemo.inf.ufes.br/ontologies/coding-process#conects -->
+
+    <owl:NamedIndividual rdf:about="http://nemo.inf.ufes.br/ontologies/coding-process#conects">
+        <rdf:type rdf:resource="http://nemo.inf.ufes.br/ontologies/goop#Object_Property"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://nemo.inf.ufes.br/ontologies/coding-process#creates -->
+
+    <owl:NamedIndividual rdf:about="http://nemo.inf.ufes.br/ontologies/coding-process#creates">
+        <rdf:type rdf:resource="http://nemo.inf.ufes.br/ontologies/goop#Object_Property"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://nemo.inf.ufes.br/ontologies/coding-process#depends_on -->
+
+    <owl:NamedIndividual rdf:about="http://nemo.inf.ufes.br/ontologies/coding-process#depends_on">
+        <rdf:type rdf:resource="http://nemo.inf.ufes.br/ontologies/goop#Object_Property"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://nemo.inf.ufes.br/ontologies/coding-process#describes -->
+
+    <owl:NamedIndividual rdf:about="http://nemo.inf.ufes.br/ontologies/coding-process#describes">
+        <rdf:type rdf:resource="http://nemo.inf.ufes.br/ontologies/goop#Object_Property"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://nemo.inf.ufes.br/ontologies/coding-process#is_in_charge_of -->
+
+    <owl:NamedIndividual rdf:about="http://nemo.inf.ufes.br/ontologies/coding-process#is_in_charge_of">
+        <rdf:type rdf:resource="http://nemo.inf.ufes.br/ontologies/goop#Object_Property"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://nemo.inf.ufes.br/ontologies/coding-process#participates_in -->
+
+    <owl:NamedIndividual rdf:about="http://nemo.inf.ufes.br/ontologies/coding-process#participates_in">
+        <rdf:type rdf:resource="http://nemo.inf.ufes.br/ontologies/goop#Object_Property"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://nemo.inf.ufes.br/ontologies/coding-process#subProcess -->
+
+    <owl:NamedIndividual rdf:about="http://nemo.inf.ufes.br/ontologies/coding-process#subProcess">
+        <rdf:type rdf:resource="http://nemo.inf.ufes.br/ontologies/goop#Object_Property"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://nemo.inf.ufes.br/ontologies/coding-process#uses -->
+
+    <owl:NamedIndividual rdf:about="http://nemo.inf.ufes.br/ontologies/coding-process#uses">
+        <rdf:type rdf:resource="http://nemo.inf.ufes.br/ontologies/goop#Object_Property"/>
+    </owl:NamedIndividual>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 4.5.7.2018-12-02T02:23:35Z) https://github.com/owlcs/owlapi -->
+

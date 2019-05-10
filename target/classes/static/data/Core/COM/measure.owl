@@ -1,0 +1,303 @@
+@prefix : <http://nemo.inf.ufes.br/ontologies/fragments/measure#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix goop: <http://nemo.inf.ufes.br/ontologies/goop#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@base <http://nemo.inf.ufes.br/ontologies/fragments/measure> .
+
+<http://nemo.inf.ufes.br/ontologies/fragments/measure> rdf:type owl:Ontology ;
+                                                        owl:imports <http://nemo.inf.ufes.br/ontologies/goop> .
+
+#################################################################
+#    Individuals
+#################################################################
+
+###  http://nemo.inf.ufes.br/ontologies/fragments/measure#Base_Measure
+:Base_Measure rdf:type owl:NamedIndividual ,
+                       goop:Class ;
+              goop:specifies :Measure ;
+              rdfs:comment """Measure used to quantify a Directly Measurable Element. 
+Ex.: the base measure height in meters can be used to quantify the directly measurable element height."""^^rdfs:Literal .
+
+
+###  http://nemo.inf.ufes.br/ontologies/fragments/measure#Basic_Measurement_Procedure
+:Basic_Measurement_Procedure rdf:type owl:NamedIndividual ,
+                                      goop:Class ;
+                             goop:specifies :Basic_Measurement_Procedure ;
+                             rdfs:comment """Measurement Procedure applicable to a Base Measure. 
+Ex.: Measurement procedure to collect data for the measure weight in kilos: Use a weighting digital instrument to measure the person weight in kilos. Record the measured value and the measurement date."""^^rdfs:Literal .
+
+
+###  http://nemo.inf.ufes.br/ontologies/fragments/measure#Define_a_Measurable_Entity
+:Define_a_Measurable_Entity rdf:type owl:NamedIndividual ,
+                                     goop:Goal_Based_Requirement .
+
+
+###  http://nemo.inf.ufes.br/ontologies/fragments/measure#Define_the_Measure_Type
+:Define_the_Measure_Type rdf:type owl:NamedIndividual ,
+                                  goop:Goal_Based_Requirement .
+
+
+###  http://nemo.inf.ufes.br/ontologies/fragments/measure#Define_the_Measurement_Procedure
+:Define_the_Measurement_Procedure rdf:type owl:NamedIndividual ,
+                                           goop:Goal_Based_Requirement .
+
+
+###  http://nemo.inf.ufes.br/ontologies/fragments/measure#Define_the_Scale_Quantifier_Type
+:Define_the_Scale_Quantifier_Type rdf:type owl:NamedIndividual ,
+                                           goop:Goal_Based_Requirement .
+
+
+###  http://nemo.inf.ufes.br/ontologies/fragments/measure#Derivative_Measurement_Procedure
+:Derivative_Measurement_Procedure rdf:type owl:NamedIndividual ,
+                                           goop:Class ;
+                                  goop:specifies :Measurement_Procedure ;
+                                  rdfs:comment """Measurement Procedure applicable to a Derived Measure. 
+Ex.: Measurement procedure to collect data for the measure body mass index in kilos and meters: Obtain the values measured to the measures weight in kilos and and height in meters considering a same measurement date. Apply the measurement formula to calculate the body mass index in kilos and meters. Record the measured value and the measurement date."""^^rdfs:Literal .
+
+
+###  http://nemo.inf.ufes.br/ontologies/fragments/measure#Derived_Measure
+:Derived_Measure rdf:type owl:NamedIndividual ,
+                          goop:Class ;
+                 goop:specifies :Measure ;
+                 rdfs:comment """Measure used to quantify an Indirectly Measurable Element. 
+Ex.: the measure body mass index in kilos and meters can be used to quantify the indirectly measurable element body mass index."""^^rdfs:Literal .
+
+
+###  http://nemo.inf.ufes.br/ontologies/fragments/measure#Directly_Measurable_Element
+:Directly_Measurable_Element rdf:type owl:NamedIndividual ,
+                                      goop:Class ;
+                             goop:specifies :Measurable_Element ;
+                             rdfs:comment """Measurable Element that does not depend on others to be measured. 
+Ex.: weight and height."""^^rdfs:Literal .
+
+
+###  http://nemo.inf.ufes.br/ontologies/fragments/measure#Goop-1
+:Goop-1 rdf:type owl:NamedIndividual ,
+                 goop:Goop ;
+        goop:composed_by :Define_a_Measurable_Entity .
+
+
+###  http://nemo.inf.ufes.br/ontologies/fragments/measure#Goop-2
+:Goop-2 rdf:type owl:NamedIndividual ,
+                 goop:Goop ;
+        goop:composed_by :Define_the_Measure_Type .
+
+
+###  http://nemo.inf.ufes.br/ontologies/fragments/measure#Goop-3
+:Goop-3 rdf:type owl:NamedIndividual ,
+                 goop:Goop ;
+        goop:composed_by :Define_the_Measurement_Procedure .
+
+
+###  http://nemo.inf.ufes.br/ontologies/fragments/measure#Goop-4
+:Goop-4 rdf:type owl:NamedIndividual ;
+        goop:composed_by :Define_the_Scale_Quantifier_Type .
+
+
+###  http://nemo.inf.ufes.br/ontologies/fragments/measure#Indirectly_Measurable_Element
+:Indirectly_Measurable_Element rdf:type owl:NamedIndividual ,
+                                        goop:Class ;
+                               goop:component_of :Measurable_Element ;
+                               goop:specifies :Measurable_Element ;
+                               rdfs:comment """Measurable Element that depends on others (its sub-elements) to be measured. 
+Ex.: body mass index is an indirectly measurable element measured from weight and height."""^^rdfs:Literal .
+
+
+###  http://nemo.inf.ufes.br/ontologies/fragments/measure#Interval_Scale
+:Interval_Scale rdf:type owl:NamedIndividual ,
+                         goop:Class ;
+                goop:specifies :Scale ;
+                rdfs:comment """Scale in which it is possible to quantify the distance between its Scale Values and there is not a value to represent nonentity (absolute zero). In an Interval Scale, although it is possible to quantify the distance between Scale Values, it is not possible to establish other relations between them. 
+Ex.: the measure temperature in Celsius degree has an interval scale, since it is possible to quantify the distance between its scale values (e.g., there are 10o between the temperatures 20oC and 30oC), 0oC does not mean the absence of temperature and it is not possible to establish relations between scale values (e.g., we cannot say that 50oC is twice hotter than 25oC)."""^^rdfs:Literal .
+
+
+###  http://nemo.inf.ufes.br/ontologies/fragments/measure#Measurable_Element
+:Measurable_Element rdf:type owl:NamedIndividual ,
+                             goop:Class ;
+                    rdfs:comment """Measurable property that characterizes a Measurable Entity Type. 
+Ex.: height is a measurable element that characterizes measurable entities of the Person type."""^^rdfs:Literal .
+
+
+###  http://nemo.inf.ufes.br/ontologies/fragments/measure#Measurable_Entity_Type
+:Measurable_Entity_Type rdf:type owl:NamedIndividual ,
+                                 goop:Class ;
+                        rdfs:comment """Type of entities that can be measured. 
+Ex.: John is a measurable entity of the type Person."""^^rdfs:Literal .
+
+
+###  http://nemo.inf.ufes.br/ontologies/fragments/measure#Measure
+:Measure rdf:type owl:NamedIndividual ,
+                  goop:Class ;
+         rdfs:comment """Function used to associate a value (Measured Value) to a Measurable Element of a Measurable Entity. Measures quantify Measurable Elements and characterize Measurable Entity Types. 
+Ex.: the measure height in meters can be used to quantify the measurable element height of measurable entities of the type Person."""^^rdfs:Literal .
+
+
+###  http://nemo.inf.ufes.br/ontologies/fragments/measure#Measure_Unit
+:Measure_Unit rdf:type owl:NamedIndividual ,
+                       goop:Class ;
+              rdfs:comment """Unit in which measures can be expressed. 
+Ex.: meter, kilo, hour."""^^rdfs:Literal .
+
+
+###  http://nemo.inf.ufes.br/ontologies/fragments/measure#Measurement_Formula
+:Measurement_Formula rdf:type owl:NamedIndividual ,
+                              goop:Class ;
+                     rdfs:comment """Formula that quantifies relations between Measures from which a Derived Measure is obtained. 
+Ex.: the measure body mass index in kilos and meters (BMI) can be calculated from the measures weight in kilos (w) and height in meters (h) by applying the measurement formula BMI = w/(h*h)."""^^rdfs:Literal .
+
+
+###  http://nemo.inf.ufes.br/ontologies/fragments/measure#Measurement_Procedure
+:Measurement_Procedure rdf:type owl:NamedIndividual ,
+                                goop:Class ;
+                       rdfs:comment """Procedure applicable to a Measure and that describe the steps to be carried out to collect data for it. 
+Ex.: Measurement procedure to collect data for the measure weight in kilos: Use a weighting digital instrument to measure the person weight in kilos. Record the measured value and the measurement date."""^^rdfs:Literal .
+
+
+###  http://nemo.inf.ufes.br/ontologies/fragments/measure#Model_Fragment-1
+:Model_Fragment-1 rdf:type owl:NamedIndividual ,
+                           goop:Model_Fragment ;
+                  goop:composed_by :Directly_Measurable_Element ,
+                                   :Indirectly_Measurable_Element ,
+                                   :Measurable_Element ,
+                                   :Measurable_Entity_Type ,
+                                   :characterized_by ;
+                  goop:is_used_to_satisfy :Goop-1 .
+
+
+###  http://nemo.inf.ufes.br/ontologies/fragments/measure#Model_Fragment-2
+:Model_Fragment-2 rdf:type owl:NamedIndividual ,
+                           goop:Model_Fragment ;
+                  goop:composed_by :Base_Measure ,
+                                   :Derived_Measure ,
+                                   :Measure ,
+                                   :Measure_Unit ,
+                                   :correlated_to ,
+                                   :derived_from ,
+                                   :expressed_in ,
+                                   :used_to_characterize ,
+                                   :used_to_quantify ;
+                  goop:is_used_to_satisfy :Goop-2 .
+
+
+###  http://nemo.inf.ufes.br/ontologies/fragments/measure#Model_Fragment-3
+:Model_Fragment-3 rdf:type owl:NamedIndividual ,
+                           goop:Model_Fragment ;
+                  goop:composed_by :Basic_Measurement_Procedure ,
+                                   :Derivative_Measurement_Procedure ,
+                                   :Measurement_Formula ,
+                                   :Measurement_Procedure ,
+                                   :applies_to ,
+                                   :calcutaled_by ,
+                                   :includes ,
+                                   :uses ;
+                  goop:is_used_to_satisfy :Goop-3 .
+
+
+###  http://nemo.inf.ufes.br/ontologies/fragments/measure#Model_Fragment-4
+:Model_Fragment-4 rdf:type owl:NamedIndividual ,
+                           goop:Model_Fragment ;
+                  goop:composed_by :Interval_Scale ,
+                                   :Ordinal_Scale ,
+                                   :Rational_Scale ,
+                                   :Scale ,
+                                   :Scale_Value ,
+                                   :has ,
+                                   :partitioned_according_to ;
+                  goop:is_used_to_satisfy :Goop-4 .
+
+
+###  http://nemo.inf.ufes.br/ontologies/fragments/measure#Ordinal_Scale
+:Ordinal_Scale rdf:type owl:NamedIndividual ,
+                        goop:Class ;
+               goop:specifies :Scale ;
+               rdfs:comment """Scale whose Scale Values can be mapped to a certain order or ranking. 
+Ex.: the measure client satisfaction degree, which can be mapped to the values â€œhighâ€, â€œmediumâ€ or â€œlowâ€, has an Ordinal Scale."""^^rdfs:Literal .
+
+
+###  http://nemo.inf.ufes.br/ontologies/fragments/measure#Rational_Scale
+:Rational_Scale rdf:type owl:NamedIndividual ,
+                         goop:Class ;
+                goop:specifies :Scale ;
+                rdfs:comment """Scale in which it is possible to quantify the distance between its Scale Values, there is a value to represent nonentity (absolute zero) and it is possible to establish relations between Scale Values. 
+Ex.: the measure distance in kilometers has a rational scale, since 0km means the absence of distance, it is possible to quantify the distance between scale values (e.g., there are 10km between the distances 20km and 30km) as well as establish other relations between them (e.g., we can say that 100km is twice longer than 50km)."""^^rdfs:Literal .
+
+
+###  http://nemo.inf.ufes.br/ontologies/fragments/measure#Scale
+:Scale rdf:type owl:NamedIndividual ,
+                goop:Class ;
+       goop:component_of :Scale_Value ;
+       rdfs:comment """Delimitates the space of values possible to be associated by a Measure to a Measurable Element. 
+Ex.: the scale of the measure height in meters is a liner structure isomorphic to the positive half-line of the real numbers."""^^rdfs:Literal .
+
+
+###  http://nemo.inf.ufes.br/ontologies/fragments/measure#Scale_Value
+:Scale_Value rdf:type owl:NamedIndividual ,
+                      goop:Class ;
+             rdfs:comment """Value that compose a Scale. 
+Ex.: 0.5, 1, 1.8 are examples of values that compose the scale of the measure height in meters."""^^rdfs:Literal .
+
+
+###  http://nemo.inf.ufes.br/ontologies/fragments/measure#applies_to
+:applies_to rdf:type owl:NamedIndividual ,
+                     goop:Object_Property .
+
+
+###  http://nemo.inf.ufes.br/ontologies/fragments/measure#calcutaled_by
+:calcutaled_by rdf:type owl:NamedIndividual ,
+                        goop:Object_Property .
+
+
+###  http://nemo.inf.ufes.br/ontologies/fragments/measure#characterized_by
+:characterized_by rdf:type owl:NamedIndividual ,
+                           goop:Object_Property .
+
+
+###  http://nemo.inf.ufes.br/ontologies/fragments/measure#correlated_to
+:correlated_to rdf:type owl:NamedIndividual ,
+                        goop:Object_Property .
+
+
+###  http://nemo.inf.ufes.br/ontologies/fragments/measure#derived_from
+:derived_from rdf:type owl:NamedIndividual ,
+                       goop:Object_Property .
+
+
+###  http://nemo.inf.ufes.br/ontologies/fragments/measure#expressed_in
+:expressed_in rdf:type owl:NamedIndividual ,
+                       goop:Object_Property .
+
+
+###  http://nemo.inf.ufes.br/ontologies/fragments/measure#has
+:has rdf:type owl:NamedIndividual ,
+              goop:Object_Property .
+
+
+###  http://nemo.inf.ufes.br/ontologies/fragments/measure#includes
+:includes rdf:type owl:NamedIndividual ,
+                   goop:Object_Property .
+
+
+###  http://nemo.inf.ufes.br/ontologies/fragments/measure#partitioned_according_to
+:partitioned_according_to rdf:type owl:NamedIndividual ,
+                                   goop:Object_Property .
+
+
+###  http://nemo.inf.ufes.br/ontologies/fragments/measure#used_to_characterize
+:used_to_characterize rdf:type owl:NamedIndividual ,
+                               goop:Object_Property .
+
+
+###  http://nemo.inf.ufes.br/ontologies/fragments/measure#used_to_quantify
+:used_to_quantify rdf:type owl:NamedIndividual ,
+                           goop:Object_Property .
+
+
+###  http://nemo.inf.ufes.br/ontologies/fragments/measure#uses
+:uses rdf:type owl:NamedIndividual ,
+               goop:Object_Property .
+
+
+###  Generated by the OWL API (version 4.5.7.2018-12-02T02:23:35Z) https://github.com/owlcs/owlapi

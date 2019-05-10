@@ -1,0 +1,314 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns="http://nemo.inf.ufes.br/ontologies/stakeholders#"
+     xml:base="http://nemo.inf.ufes.br/ontologies/stakeholders"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:goop="http://nemo.inf.ufes.br/ontologies/goop#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#">
+    <owl:Ontology rdf:about="http://nemo.inf.ufes.br/ontologies/goro">
+        <owl:imports rdf:resource="http://nemo.inf.ufes.br/ontologies/goop"/>
+    </owl:Ontology>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Individuals
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://nemo.inf.ufes.br/ontologies/goro#Atomic_Task -->
+
+    <owl:NamedIndividual rdf:about="http://nemo.inf.ufes.br/ontologies/goro#Atomic_Task">
+        <rdf:type rdf:resource="http://nemo.inf.ufes.br/ontologies/goop#Class"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://nemo.inf.ufes.br/ontologies/goro#Complex_Task -->
+
+    <owl:NamedIndividual rdf:about="http://nemo.inf.ufes.br/ontologies/goro#Complex_Task">
+        <rdf:type rdf:resource="http://nemo.inf.ufes.br/ontologies/goop#Class"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://nemo.inf.ufes.br/ontologies/goro#Define_Goal-Oriented_Requirements_Ontology -->
+
+    <owl:NamedIndividual rdf:about="http://nemo.inf.ufes.br/ontologies/goro#Define_Goal-Oriented_Requirements_Ontology">
+        <rdf:type rdf:resource="http://nemo.inf.ufes.br/ontologies/goop#Goal_Based_Requirement"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://nemo.inf.ufes.br/ontologies/goro#Goop -->
+
+    <owl:NamedIndividual rdf:about="http://nemo.inf.ufes.br/ontologies/goro#Goop">
+        <rdf:type rdf:resource="http://nemo.inf.ufes.br/ontologies/goop#Goop"/>
+        <goop:composed_by rdf:resource="http://nemo.inf.ufes.br/ontologies/goro#Define_Goal-Oriented_Requirements_Ontology"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://nemo.inf.ufes.br/ontologies/goro#Hardgoal -->
+
+    <owl:NamedIndividual rdf:about="http://nemo.inf.ufes.br/ontologies/goro#Hardgoal">
+        <rdf:type rdf:resource="http://nemo.inf.ufes.br/ontologies/goop#Class"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://nemo.inf.ufes.br/ontologies/goro#Model_Fragment -->
+
+    <owl:NamedIndividual rdf:about="http://nemo.inf.ufes.br/ontologies/goro#Model_Fragment">
+        <rdf:type rdf:resource="http://nemo.inf.ufes.br/ontologies/goop#Model_Fragment"/>
+        <goop:composed_by rdf:resource="http://nemo.inf.ufes.br/ontologies/goro#Atomic_Task"/>
+        <goop:composed_by rdf:resource="http://nemo.inf.ufes.br/ontologies/goro#Complex_Task"/>
+        <goop:composed_by rdf:resource="http://nemo.inf.ufes.br/ontologies/goro#Hardgoal"/>
+        <goop:composed_by rdf:resource="http://nemo.inf.ufes.br/ontologies/goro#Softgoal"/>
+        <goop:composed_by rdf:resource="http://nemo.inf.ufes.br/ontologies/goro#Stakeholder"/>
+        <goop:composed_by rdf:resource="http://nemo.inf.ufes.br/ontologies/goro#Task"/>
+        <goop:composed_by rdf:resource="http://nemo.inf.ufes.br/ontologies/goro#alternativeGoal"/>
+        <goop:composed_by rdf:resource="http://nemo.inf.ufes.br/ontologies/goro#got_from"/>
+        <goop:composed_by rdf:resource="http://nemo.inf.ufes.br/ontologies/goro#inheres_in"/>
+        <goop:composed_by rdf:resource="http://nemo.inf.ufes.br/ontologies/goro#intends_to_operationalize"/>
+        <goop:composed_by rdf:resource="http://nemo.inf.ufes.br/ontologies/goro#mainGoal"/>
+        <goop:composed_by rdf:resource="http://nemo.inf.ufes.br/ontologies/goro#subGoal"/>
+        <goop:composed_by rdf:resource="http://nemo.inf.ufes.br/ontologies/goro#RSRO::Assumption"/>
+        <goop:composed_by rdf:resource="http://nemo.inf.ufes.br/ontologies/goro#RSRO::Functional_Requirement"/>
+        <goop:composed_by rdf:resource="http://nemo.inf.ufes.br/ontologies/goro#RSRO::Non-Functional_Requirement"/>
+        <goop:composed_by rdf:resource="http://nemo.inf.ufes.br/ontologies/goro#RSRO::Requirement"/>
+        <goop:composed_by rdf:resource="http://nemo.inf.ufes.br/ontologies/goro#RSRO::Requirements_Stakeholder"/>
+        <goop:composed_by rdf:resource="http://nemo.inf.ufes.br/ontologies/goro#RSRO::Stakeholder_Belief"/>
+        <goop:composed_by rdf:resource="http://nemo.inf.ufes.br/ontologies/goro#RSRO::Stakeholder_Intention"/>
+        <goop:composed_by rdf:resource="http://nemo.inf.ufes.br/ontologies/goro#UFO-C::Agent"/>
+        <goop:composed_by rdf:resource="http://nemo.inf.ufes.br/ontologies/goro#UFO-C::Belief"/>
+        <goop:composed_by rdf:resource="http://nemo.inf.ufes.br/ontologies/goro#UFO-C::Goal"/>
+        <goop:composed_by rdf:resource="http://nemo.inf.ufes.br/ontologies/goro#UFO-C::Intention"/>
+        <goop:composed_by rdf:resource="http://nemo.inf.ufes.br/ontologies/goro#UFO-C::Intentional_Moment"/>
+        <goop:composed_by rdf:resource="http://nemo.inf.ufes.br/ontologies/goro#UFO-C::Mental_Moment"/>
+        <goop:composed_by rdf:resource="http://nemo.inf.ufes.br/ontologies/goro#UFO-C::Proposition"/>
+        <goop:composed_by rdf:resource="http://nemo.inf.ufes.br/ontologies/goro#UFO-C::Action_Universal_(Plan)"/>
+        <goop:is_used_to_satisfy rdf:resource="http://nemo.inf.ufes.br/ontologies/goro#Goop"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://nemo.inf.ufes.br/ontologies/goro#Softgoal -->
+
+    <owl:NamedIndividual rdf:about="http://nemo.inf.ufes.br/ontologies/goro#Softgoal">
+        <rdf:type rdf:resource="http://nemo.inf.ufes.br/ontologies/goop#Class"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://nemo.inf.ufes.br/ontologies/goro#Stakeholder -->
+
+    <owl:NamedIndividual rdf:about="http://nemo.inf.ufes.br/ontologies/goro#Stakeholder">
+        <rdf:type rdf:resource="http://nemo.inf.ufes.br/ontologies/goop#Class"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://nemo.inf.ufes.br/ontologies/goro#Task -->
+
+    <owl:NamedIndividual rdf:about="http://nemo.inf.ufes.br/ontologies/goro#Task">
+        <rdf:type rdf:resource="http://nemo.inf.ufes.br/ontologies/goop#Class"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://nemo.inf.ufes.br/ontologies/goro#alternativeGoal -->
+
+    <owl:NamedIndividual rdf:about="http://nemo.inf.ufes.br/ontologies/goro#alternativeGoal">
+        <rdf:type rdf:resource="http://nemo.inf.ufes.br/ontologies/goop#Object_Property"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://nemo.inf.ufes.br/ontologies/goro#got_from -->
+
+    <owl:NamedIndividual rdf:about="http://nemo.inf.ufes.br/ontologies/goro#got_from">
+        <rdf:type rdf:resource="http://nemo.inf.ufes.br/ontologies/goop#Object_Property"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://nemo.inf.ufes.br/ontologies/goro#inheres_in -->
+
+    <owl:NamedIndividual rdf:about="http://nemo.inf.ufes.br/ontologies/goro#inheres_in">
+        <rdf:type rdf:resource="http://nemo.inf.ufes.br/ontologies/goop#Object_Property"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://nemo.inf.ufes.br/ontologies/goro#intends_to_operationalize -->
+
+    <owl:NamedIndividual rdf:about="http://nemo.inf.ufes.br/ontologies/goro#intends_to_operationalize">
+        <rdf:type rdf:resource="http://nemo.inf.ufes.br/ontologies/goop#Object_Property"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://nemo.inf.ufes.br/ontologies/goro#mainGoal -->
+
+    <owl:NamedIndividual rdf:about="http://nemo.inf.ufes.br/ontologies/goro#mainGoal">
+        <rdf:type rdf:resource="http://nemo.inf.ufes.br/ontologies/goop#Object_Property"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://nemo.inf.ufes.br/ontologies/goro#propositional_content_of -->
+
+    <owl:NamedIndividual rdf:about="http://nemo.inf.ufes.br/ontologies/goro#propositional_content_of">
+        <rdf:type rdf:resource="http://nemo.inf.ufes.br/ontologies/goop#Object_Property"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://nemo.inf.ufes.br/ontologies/goro#subGoal -->
+
+    <owl:NamedIndividual rdf:about="http://nemo.inf.ufes.br/ontologies/goro#subGoal">
+        <rdf:type rdf:resource="http://nemo.inf.ufes.br/ontologies/goop#Object_Property"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://nemo.inf.ufes.br/ontologies/goro#GORO::Requirement -->
+
+    <owl:NamedIndividual rdf:about="http://nemo.inf.ufes.br/ontologies/goro#GORO::Requirement">
+        <rdf:type rdf:resource="http://nemo.inf.ufes.br/ontologies/goop#Class"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://nemo.inf.ufes.br/ontologies/goro#RSRO::Assumption -->
+
+    <owl:NamedIndividual rdf:about="http://nemo.inf.ufes.br/ontologies/goro#RSRO::Assumption">
+        <rdf:type rdf:resource="http://nemo.inf.ufes.br/ontologies/goop#Class"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://nemo.inf.ufes.br/ontologies/goro#RSRO::Functional_Requirement -->
+
+    <owl:NamedIndividual rdf:about="http://nemo.inf.ufes.br/ontologies/goro#RSRO::Functional_Requirement">
+        <rdf:type rdf:resource="http://nemo.inf.ufes.br/ontologies/goop#Class"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://nemo.inf.ufes.br/ontologies/goro#RSRO::Non-Functional_Requirement -->
+
+    <owl:NamedIndividual rdf:about="http://nemo.inf.ufes.br/ontologies/goro#RSRO::Non-Functional_Requirement">
+        <rdf:type rdf:resource="http://nemo.inf.ufes.br/ontologies/goop#Class"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://nemo.inf.ufes.br/ontologies/goro#RSRO::Requirement -->
+
+    <owl:NamedIndividual rdf:about="http://nemo.inf.ufes.br/ontologies/goro#RSRO::Requirement">
+        <rdf:type rdf:resource="http://nemo.inf.ufes.br/ontologies/goop#Class"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://nemo.inf.ufes.br/ontologies/goro#RSRO::Requirements_Stakeholder -->
+
+    <owl:NamedIndividual rdf:about="http://nemo.inf.ufes.br/ontologies/goro#RSRO::Requirements_Stakeholder">
+        <rdf:type rdf:resource="http://nemo.inf.ufes.br/ontologies/goop#Class"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://nemo.inf.ufes.br/ontologies/goro#RSRO::Stakeholder_Belief -->
+
+    <owl:NamedIndividual rdf:about="http://nemo.inf.ufes.br/ontologies/goro#RSRO::Stakeholder_Belief">
+        <rdf:type rdf:resource="http://nemo.inf.ufes.br/ontologies/goop#Class"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://nemo.inf.ufes.br/ontologies/goro#RSRO::Stakeholder_Intention -->
+
+    <owl:NamedIndividual rdf:about="http://nemo.inf.ufes.br/ontologies/goro#RSRO::Stakeholder_Intention">
+        <rdf:type rdf:resource="http://nemo.inf.ufes.br/ontologies/goop#Class"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://nemo.inf.ufes.br/ontologies/goro#UFO-C::Agent -->
+
+    <owl:NamedIndividual rdf:about="http://nemo.inf.ufes.br/ontologies/goro#UFO-C::Agent">
+        <rdf:type rdf:resource="http://nemo.inf.ufes.br/ontologies/goop#Class"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://nemo.inf.ufes.br/ontologies/goro#UFO-C::Belief -->
+
+    <owl:NamedIndividual rdf:about="http://nemo.inf.ufes.br/ontologies/goro#UFO-C::Belief">
+        <rdf:type rdf:resource="http://nemo.inf.ufes.br/ontologies/goop#Class"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://nemo.inf.ufes.br/ontologies/goro#UFO-C::Goal -->
+
+    <owl:NamedIndividual rdf:about="http://nemo.inf.ufes.br/ontologies/goro#UFO-C::Goal">
+        <rdf:type rdf:resource="http://nemo.inf.ufes.br/ontologies/goop#Class"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://nemo.inf.ufes.br/ontologies/goro#UFO-C::Intention -->
+
+    <owl:NamedIndividual rdf:about="http://nemo.inf.ufes.br/ontologies/goro#UFO-C::Intention">
+        <rdf:type rdf:resource="http://nemo.inf.ufes.br/ontologies/goop#Class"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://nemo.inf.ufes.br/ontologies/goro#UFO-C::Intentional_Moment -->
+
+    <owl:NamedIndividual rdf:about="http://nemo.inf.ufes.br/ontologies/goro#UFO-C::Intentional_Moment">
+        <rdf:type rdf:resource="http://nemo.inf.ufes.br/ontologies/goop#Class"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://nemo.inf.ufes.br/ontologies/goro#UFO-C::Mental_Moment -->
+
+    <owl:NamedIndividual rdf:about="http://nemo.inf.ufes.br/ontologies/goro#UFO-C::Mental_Moment">
+        <rdf:type rdf:resource="http://nemo.inf.ufes.br/ontologies/goop#Class"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://nemo.inf.ufes.br/ontologies/goro#UFO-C::Proposition -->
+
+    <owl:NamedIndividual rdf:about="http://nemo.inf.ufes.br/ontologies/goro#UFO-C::Proposition">
+        <rdf:type rdf:resource="http://nemo.inf.ufes.br/ontologies/goop#Class"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://nemo.inf.ufes.br/ontologies/goro#UFO-C::Action_Universal_(Plan) -->
+
+    <owl:NamedIndividual rdf:about="http://nemo.inf.ufes.br/ontologies/goro#UFO-C::Action_Universal_(Plan)">
+        <rdf:type rdf:resource="http://nemo.inf.ufes.br/ontologies/goop#Class"/>
+    </owl:NamedIndividual>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 4.5.7.2018-12-02T02:23:35Z) https://github.com/owlcs/owlapi -->
+

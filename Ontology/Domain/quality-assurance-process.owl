@@ -1,0 +1,460 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns="http://nemo.inf.ufes.br/ontologies/testing-process#"
+     xml:base="http://nemo.inf.ufes.br/ontologies/testing-process"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:goop="http://nemo.inf.ufes.br/ontologies/goop#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#">
+    <owl:Ontology rdf:about="http://nemo.inf.ufes.br/ontologies/quality-assurance-process">
+        <owl:imports rdf:resource="http://nemo.inf.ufes.br/ontologies/goop"/>
+    </owl:Ontology>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Individuals
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://nemo.inf.ufes.br/ontologies/quality-assurance-process#Adherence_Evaluation -->
+
+    <owl:NamedIndividual rdf:about="http://nemo.inf.ufes.br/ontologies/quality-assurance-process#Adherence_Evaluation">
+        <rdf:type rdf:resource="http://nemo.inf.ufes.br/ontologies/goop#Class"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://nemo.inf.ufes.br/ontologies/quality-assurance-process#Artifact -->
+
+    <owl:NamedIndividual rdf:about="http://nemo.inf.ufes.br/ontologies/quality-assurance-process#Artifact">
+        <rdf:type rdf:resource="http://nemo.inf.ufes.br/ontologies/goop#Class"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://nemo.inf.ufes.br/ontologies/quality-assurance-process#Artifact_Evaluation -->
+
+    <owl:NamedIndividual rdf:about="http://nemo.inf.ufes.br/ontologies/quality-assurance-process#Artifact_Evaluation">
+        <rdf:type rdf:resource="http://nemo.inf.ufes.br/ontologies/goop#Class"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://nemo.inf.ufes.br/ontologies/quality-assurance-process#Composite_Artifact -->
+
+    <owl:NamedIndividual rdf:about="http://nemo.inf.ufes.br/ontologies/quality-assurance-process#Composite_Artifact">
+        <rdf:type rdf:resource="http://nemo.inf.ufes.br/ontologies/goop#Class"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://nemo.inf.ufes.br/ontologies/quality-assurance-process#Conduct_the_activities_realted_to_software_quality_assurance -->
+
+    <owl:NamedIndividual rdf:about="http://nemo.inf.ufes.br/ontologies/quality-assurance-process#Conduct_the_activities_realted_to_software_quality_assurance">
+        <rdf:type rdf:resource="http://nemo.inf.ufes.br/ontologies/goop#Goal_Based_Requirement"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://nemo.inf.ufes.br/ontologies/quality-assurance-process#Corrective_Action_Register -->
+
+    <owl:NamedIndividual rdf:about="http://nemo.inf.ufes.br/ontologies/quality-assurance-process#Corrective_Action_Register">
+        <rdf:type rdf:resource="http://nemo.inf.ufes.br/ontologies/goop#Class"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://nemo.inf.ufes.br/ontologies/quality-assurance-process#Document -->
+
+    <owl:NamedIndividual rdf:about="http://nemo.inf.ufes.br/ontologies/quality-assurance-process#Document">
+        <rdf:type rdf:resource="http://nemo.inf.ufes.br/ontologies/goop#Class"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://nemo.inf.ufes.br/ontologies/quality-assurance-process#Evaluated_Artifact -->
+
+    <owl:NamedIndividual rdf:about="http://nemo.inf.ufes.br/ontologies/quality-assurance-process#Evaluated_Artifact">
+        <rdf:type rdf:resource="http://nemo.inf.ufes.br/ontologies/goop#Class"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://nemo.inf.ufes.br/ontologies/quality-assurance-process#Evaluated_Process -->
+
+    <owl:NamedIndividual rdf:about="http://nemo.inf.ufes.br/ontologies/quality-assurance-process#Evaluated_Process">
+        <rdf:type rdf:resource="http://nemo.inf.ufes.br/ontologies/goop#Class"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://nemo.inf.ufes.br/ontologies/quality-assurance-process#Evaluation_Report -->
+
+    <owl:NamedIndividual rdf:about="http://nemo.inf.ufes.br/ontologies/quality-assurance-process#Evaluation_Report">
+        <rdf:type rdf:resource="http://nemo.inf.ufes.br/ontologies/goop#Class"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://nemo.inf.ufes.br/ontologies/quality-assurance-process#Goop -->
+
+    <owl:NamedIndividual rdf:about="http://nemo.inf.ufes.br/ontologies/quality-assurance-process#Goop">
+        <rdf:type rdf:resource="http://nemo.inf.ufes.br/ontologies/goop#Goop"/>
+        <goop:composed_by rdf:resource="http://nemo.inf.ufes.br/ontologies/quality-assurance-process#Conduct_the_activities_realted_to_software_quality_assurance"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://nemo.inf.ufes.br/ontologies/quality-assurance-process#Information_Item -->
+
+    <owl:NamedIndividual rdf:about="http://nemo.inf.ufes.br/ontologies/quality-assurance-process#Information_Item">
+        <rdf:type rdf:resource="http://nemo.inf.ufes.br/ontologies/goop#Class"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://nemo.inf.ufes.br/ontologies/quality-assurance-process#Level-based_Testing -->
+
+    <owl:NamedIndividual rdf:about="http://nemo.inf.ufes.br/ontologies/quality-assurance-process#Level-based_Testing">
+        <rdf:type rdf:resource="http://nemo.inf.ufes.br/ontologies/goop#Class"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://nemo.inf.ufes.br/ontologies/quality-assurance-process#Model -->
+
+    <owl:NamedIndividual rdf:about="http://nemo.inf.ufes.br/ontologies/quality-assurance-process#Model">
+        <rdf:type rdf:resource="http://nemo.inf.ufes.br/ontologies/goop#Class"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://nemo.inf.ufes.br/ontologies/quality-assurance-process#Model_Fragment -->
+
+    <owl:NamedIndividual rdf:about="http://nemo.inf.ufes.br/ontologies/quality-assurance-process#Model_Fragment">
+        <rdf:type rdf:resource="http://nemo.inf.ufes.br/ontologies/goop#Model_Fragment"/>
+        <goop:composed_by rdf:resource="http://nemo.inf.ufes.br/ontologies/quality-assurance-process#Adherence_Evaluation"/>
+        <goop:composed_by rdf:resource="http://nemo.inf.ufes.br/ontologies/quality-assurance-process#Artifact"/>
+        <goop:composed_by rdf:resource="http://nemo.inf.ufes.br/ontologies/quality-assurance-process#Artifact_Evaluation"/>
+        <goop:composed_by rdf:resource="http://nemo.inf.ufes.br/ontologies/quality-assurance-process#Composite_Artifact"/>
+        <goop:composed_by rdf:resource="http://nemo.inf.ufes.br/ontologies/quality-assurance-process#Corrective_Action_Register"/>
+        <goop:composed_by rdf:resource="http://nemo.inf.ufes.br/ontologies/quality-assurance-process#Document"/>
+        <goop:composed_by rdf:resource="http://nemo.inf.ufes.br/ontologies/quality-assurance-process#Evaluated_Artifact"/>
+        <goop:composed_by rdf:resource="http://nemo.inf.ufes.br/ontologies/quality-assurance-process#Evaluated_Process"/>
+        <goop:composed_by rdf:resource="http://nemo.inf.ufes.br/ontologies/quality-assurance-process#Evaluation_Report"/>
+        <goop:composed_by rdf:resource="http://nemo.inf.ufes.br/ontologies/quality-assurance-process#Information_Item"/>
+        <goop:composed_by rdf:resource="http://nemo.inf.ufes.br/ontologies/quality-assurance-process#Level-based_Testing"/>
+        <goop:composed_by rdf:resource="http://nemo.inf.ufes.br/ontologies/quality-assurance-process#Model"/>
+        <goop:composed_by rdf:resource="http://nemo.inf.ufes.br/ontologies/quality-assurance-process#Noncompiance_Identification"/>
+        <goop:composed_by rdf:resource="http://nemo.inf.ufes.br/ontologies/quality-assurance-process#Noncompliance_Closing"/>
+        <goop:composed_by rdf:resource="http://nemo.inf.ufes.br/ontologies/quality-assurance-process#Noncompliance_Control"/>
+        <goop:composed_by rdf:resource="http://nemo.inf.ufes.br/ontologies/quality-assurance-process#Noncompliance_Register"/>
+        <goop:composed_by rdf:resource="http://nemo.inf.ufes.br/ontologies/quality-assurance-process#Noncompliance_Resolution"/>
+        <goop:composed_by rdf:resource="http://nemo.inf.ufes.br/ontologies/quality-assurance-process#Noncompliance_Responsible"/>
+        <goop:composed_by rdf:resource="http://nemo.inf.ufes.br/ontologies/quality-assurance-process#Perfomed_Composite_Activity"/>
+        <goop:composed_by rdf:resource="http://nemo.inf.ufes.br/ontologies/quality-assurance-process#Perfomed_Process"/>
+        <goop:composed_by rdf:resource="http://nemo.inf.ufes.br/ontologies/quality-assurance-process#Performed_Activity"/>
+        <goop:composed_by rdf:resource="http://nemo.inf.ufes.br/ontologies/quality-assurance-process#Performed_General_Process"/>
+        <goop:composed_by rdf:resource="http://nemo.inf.ufes.br/ontologies/quality-assurance-process#Performed_Simple_Activity"/>
+        <goop:composed_by rdf:resource="http://nemo.inf.ufes.br/ontologies/quality-assurance-process#Performed_Specific_Process"/>
+        <goop:composed_by rdf:resource="http://nemo.inf.ufes.br/ontologies/quality-assurance-process#Person_Stakeholder"/>
+        <goop:composed_by rdf:resource="http://nemo.inf.ufes.br/ontologies/quality-assurance-process#Process_Evaluation"/>
+        <goop:composed_by rdf:resource="http://nemo.inf.ufes.br/ontologies/quality-assurance-process#Project_Manager"/>
+        <goop:composed_by rdf:resource="http://nemo.inf.ufes.br/ontologies/quality-assurance-process#Project_Plan"/>
+        <goop:composed_by rdf:resource="http://nemo.inf.ufes.br/ontologies/quality-assurance-process#Project_Team"/>
+        <goop:composed_by rdf:resource="http://nemo.inf.ufes.br/ontologies/quality-assurance-process#Quality_Assurance_Plan"/>
+        <goop:composed_by rdf:resource="http://nemo.inf.ufes.br/ontologies/quality-assurance-process#Quality_Assurance_Planning"/>
+        <goop:composed_by rdf:resource="http://nemo.inf.ufes.br/ontologies/quality-assurance-process#Quality_Assurance_Process"/>
+        <goop:composed_by rdf:resource="http://nemo.inf.ufes.br/ontologies/quality-assurance-process#Quality_Auditor"/>
+        <goop:composed_by rdf:resource="http://nemo.inf.ufes.br/ontologies/quality-assurance-process#Simple_Artifact"/>
+        <goop:composed_by rdf:resource="http://nemo.inf.ufes.br/ontologies/quality-assurance-process#Software_Item"/>
+        <goop:composed_by rdf:resource="http://nemo.inf.ufes.br/ontologies/quality-assurance-process#Software_Product"/>
+        <goop:composed_by rdf:resource="http://nemo.inf.ufes.br/ontologies/quality-assurance-process#Stakeholder"/>
+        <goop:composed_by rdf:resource="http://nemo.inf.ufes.br/ontologies/quality-assurance-process#System_Testing"/>
+        <goop:composed_by rdf:resource="http://nemo.inf.ufes.br/ontologies/quality-assurance-process#Team_Stakeholder"/>
+        <goop:composed_by rdf:resource="http://nemo.inf.ufes.br/ontologies/quality-assurance-process#changes"/>
+        <goop:composed_by rdf:resource="http://nemo.inf.ufes.br/ontologies/quality-assurance-process#creates"/>
+        <goop:composed_by rdf:resource="http://nemo.inf.ufes.br/ontologies/quality-assurance-process#is_in_charge_of"/>
+        <goop:composed_by rdf:resource="http://nemo.inf.ufes.br/ontologies/quality-assurance-process#participates_in"/>
+        <goop:composed_by rdf:resource="http://nemo.inf.ufes.br/ontologies/quality-assurance-process#subProcess"/>
+        <goop:composed_by rdf:resource="http://nemo.inf.ufes.br/ontologies/quality-assurance-process#uses"/>
+        <goop:is_used_to_satisfy rdf:resource="http://nemo.inf.ufes.br/ontologies/quality-assurance-process#Goop"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://nemo.inf.ufes.br/ontologies/quality-assurance-process#Noncompiance_Identification -->
+
+    <owl:NamedIndividual rdf:about="http://nemo.inf.ufes.br/ontologies/quality-assurance-process#Noncompiance_Identification">
+        <rdf:type rdf:resource="http://nemo.inf.ufes.br/ontologies/goop#Class"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://nemo.inf.ufes.br/ontologies/quality-assurance-process#Noncompliance_Closing -->
+
+    <owl:NamedIndividual rdf:about="http://nemo.inf.ufes.br/ontologies/quality-assurance-process#Noncompliance_Closing">
+        <rdf:type rdf:resource="http://nemo.inf.ufes.br/ontologies/goop#Class"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://nemo.inf.ufes.br/ontologies/quality-assurance-process#Noncompliance_Control -->
+
+    <owl:NamedIndividual rdf:about="http://nemo.inf.ufes.br/ontologies/quality-assurance-process#Noncompliance_Control">
+        <rdf:type rdf:resource="http://nemo.inf.ufes.br/ontologies/goop#Class"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://nemo.inf.ufes.br/ontologies/quality-assurance-process#Noncompliance_Register -->
+
+    <owl:NamedIndividual rdf:about="http://nemo.inf.ufes.br/ontologies/quality-assurance-process#Noncompliance_Register">
+        <rdf:type rdf:resource="http://nemo.inf.ufes.br/ontologies/goop#Class"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://nemo.inf.ufes.br/ontologies/quality-assurance-process#Noncompliance_Resolution -->
+
+    <owl:NamedIndividual rdf:about="http://nemo.inf.ufes.br/ontologies/quality-assurance-process#Noncompliance_Resolution">
+        <rdf:type rdf:resource="http://nemo.inf.ufes.br/ontologies/goop#Class"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://nemo.inf.ufes.br/ontologies/quality-assurance-process#Noncompliance_Responsible -->
+
+    <owl:NamedIndividual rdf:about="http://nemo.inf.ufes.br/ontologies/quality-assurance-process#Noncompliance_Responsible">
+        <rdf:type rdf:resource="http://nemo.inf.ufes.br/ontologies/goop#Class"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://nemo.inf.ufes.br/ontologies/quality-assurance-process#Perfomed_Composite_Activity -->
+
+    <owl:NamedIndividual rdf:about="http://nemo.inf.ufes.br/ontologies/quality-assurance-process#Perfomed_Composite_Activity">
+        <rdf:type rdf:resource="http://nemo.inf.ufes.br/ontologies/goop#Class"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://nemo.inf.ufes.br/ontologies/quality-assurance-process#Perfomed_Process -->
+
+    <owl:NamedIndividual rdf:about="http://nemo.inf.ufes.br/ontologies/quality-assurance-process#Perfomed_Process">
+        <rdf:type rdf:resource="http://nemo.inf.ufes.br/ontologies/goop#Class"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://nemo.inf.ufes.br/ontologies/quality-assurance-process#Performed_Activity -->
+
+    <owl:NamedIndividual rdf:about="http://nemo.inf.ufes.br/ontologies/quality-assurance-process#Performed_Activity">
+        <rdf:type rdf:resource="http://nemo.inf.ufes.br/ontologies/goop#Class"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://nemo.inf.ufes.br/ontologies/quality-assurance-process#Performed_General_Process -->
+
+    <owl:NamedIndividual rdf:about="http://nemo.inf.ufes.br/ontologies/quality-assurance-process#Performed_General_Process">
+        <rdf:type rdf:resource="http://nemo.inf.ufes.br/ontologies/goop#Class"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://nemo.inf.ufes.br/ontologies/quality-assurance-process#Performed_Simple_Activity -->
+
+    <owl:NamedIndividual rdf:about="http://nemo.inf.ufes.br/ontologies/quality-assurance-process#Performed_Simple_Activity">
+        <rdf:type rdf:resource="http://nemo.inf.ufes.br/ontologies/goop#Class"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://nemo.inf.ufes.br/ontologies/quality-assurance-process#Performed_Specific_Process -->
+
+    <owl:NamedIndividual rdf:about="http://nemo.inf.ufes.br/ontologies/quality-assurance-process#Performed_Specific_Process">
+        <rdf:type rdf:resource="http://nemo.inf.ufes.br/ontologies/goop#Class"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://nemo.inf.ufes.br/ontologies/quality-assurance-process#Person_Stakeholder -->
+
+    <owl:NamedIndividual rdf:about="http://nemo.inf.ufes.br/ontologies/quality-assurance-process#Person_Stakeholder">
+        <rdf:type rdf:resource="http://nemo.inf.ufes.br/ontologies/goop#Class"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://nemo.inf.ufes.br/ontologies/quality-assurance-process#Process_Evaluation -->
+
+    <owl:NamedIndividual rdf:about="http://nemo.inf.ufes.br/ontologies/quality-assurance-process#Process_Evaluation">
+        <rdf:type rdf:resource="http://nemo.inf.ufes.br/ontologies/goop#Class"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://nemo.inf.ufes.br/ontologies/quality-assurance-process#Project_Manager -->
+
+    <owl:NamedIndividual rdf:about="http://nemo.inf.ufes.br/ontologies/quality-assurance-process#Project_Manager">
+        <rdf:type rdf:resource="http://nemo.inf.ufes.br/ontologies/goop#Class"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://nemo.inf.ufes.br/ontologies/quality-assurance-process#Project_Plan -->
+
+    <owl:NamedIndividual rdf:about="http://nemo.inf.ufes.br/ontologies/quality-assurance-process#Project_Plan">
+        <rdf:type rdf:resource="http://nemo.inf.ufes.br/ontologies/goop#Class"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://nemo.inf.ufes.br/ontologies/quality-assurance-process#Project_Team -->
+
+    <owl:NamedIndividual rdf:about="http://nemo.inf.ufes.br/ontologies/quality-assurance-process#Project_Team">
+        <rdf:type rdf:resource="http://nemo.inf.ufes.br/ontologies/goop#Class"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://nemo.inf.ufes.br/ontologies/quality-assurance-process#Quality_Assurance_Plan -->
+
+    <owl:NamedIndividual rdf:about="http://nemo.inf.ufes.br/ontologies/quality-assurance-process#Quality_Assurance_Plan">
+        <rdf:type rdf:resource="http://nemo.inf.ufes.br/ontologies/goop#Class"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://nemo.inf.ufes.br/ontologies/quality-assurance-process#Quality_Assurance_Planning -->
+
+    <owl:NamedIndividual rdf:about="http://nemo.inf.ufes.br/ontologies/quality-assurance-process#Quality_Assurance_Planning">
+        <rdf:type rdf:resource="http://nemo.inf.ufes.br/ontologies/goop#Class"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://nemo.inf.ufes.br/ontologies/quality-assurance-process#Quality_Assurance_Process -->
+
+    <owl:NamedIndividual rdf:about="http://nemo.inf.ufes.br/ontologies/quality-assurance-process#Quality_Assurance_Process">
+        <rdf:type rdf:resource="http://nemo.inf.ufes.br/ontologies/goop#Class"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://nemo.inf.ufes.br/ontologies/quality-assurance-process#Quality_Auditor -->
+
+    <owl:NamedIndividual rdf:about="http://nemo.inf.ufes.br/ontologies/quality-assurance-process#Quality_Auditor">
+        <rdf:type rdf:resource="http://nemo.inf.ufes.br/ontologies/goop#Class"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://nemo.inf.ufes.br/ontologies/quality-assurance-process#Simple_Artifact -->
+
+    <owl:NamedIndividual rdf:about="http://nemo.inf.ufes.br/ontologies/quality-assurance-process#Simple_Artifact">
+        <rdf:type rdf:resource="http://nemo.inf.ufes.br/ontologies/goop#Class"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://nemo.inf.ufes.br/ontologies/quality-assurance-process#Software_Item -->
+
+    <owl:NamedIndividual rdf:about="http://nemo.inf.ufes.br/ontologies/quality-assurance-process#Software_Item">
+        <rdf:type rdf:resource="http://nemo.inf.ufes.br/ontologies/goop#Class"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://nemo.inf.ufes.br/ontologies/quality-assurance-process#Software_Product -->
+
+    <owl:NamedIndividual rdf:about="http://nemo.inf.ufes.br/ontologies/quality-assurance-process#Software_Product">
+        <rdf:type rdf:resource="http://nemo.inf.ufes.br/ontologies/goop#Class"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://nemo.inf.ufes.br/ontologies/quality-assurance-process#Stakeholder -->
+
+    <owl:NamedIndividual rdf:about="http://nemo.inf.ufes.br/ontologies/quality-assurance-process#Stakeholder">
+        <rdf:type rdf:resource="http://nemo.inf.ufes.br/ontologies/goop#Class"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://nemo.inf.ufes.br/ontologies/quality-assurance-process#System_Testing -->
+
+    <owl:NamedIndividual rdf:about="http://nemo.inf.ufes.br/ontologies/quality-assurance-process#System_Testing">
+        <rdf:type rdf:resource="http://nemo.inf.ufes.br/ontologies/goop#Class"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://nemo.inf.ufes.br/ontologies/quality-assurance-process#Team_Stakeholder -->
+
+    <owl:NamedIndividual rdf:about="http://nemo.inf.ufes.br/ontologies/quality-assurance-process#Team_Stakeholder">
+        <rdf:type rdf:resource="http://nemo.inf.ufes.br/ontologies/goop#Class"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://nemo.inf.ufes.br/ontologies/quality-assurance-process#changes -->
+
+    <owl:NamedIndividual rdf:about="http://nemo.inf.ufes.br/ontologies/quality-assurance-process#changes">
+        <rdf:type rdf:resource="http://nemo.inf.ufes.br/ontologies/goop#Object_Property"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://nemo.inf.ufes.br/ontologies/quality-assurance-process#creates -->
+
+    <owl:NamedIndividual rdf:about="http://nemo.inf.ufes.br/ontologies/quality-assurance-process#creates">
+        <rdf:type rdf:resource="http://nemo.inf.ufes.br/ontologies/goop#Object_Property"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://nemo.inf.ufes.br/ontologies/quality-assurance-process#is_in_charge_of -->
+
+    <owl:NamedIndividual rdf:about="http://nemo.inf.ufes.br/ontologies/quality-assurance-process#is_in_charge_of">
+        <rdf:type rdf:resource="http://nemo.inf.ufes.br/ontologies/goop#Object_Property"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://nemo.inf.ufes.br/ontologies/quality-assurance-process#participates_in -->
+
+    <owl:NamedIndividual rdf:about="http://nemo.inf.ufes.br/ontologies/quality-assurance-process#participates_in">
+        <rdf:type rdf:resource="http://nemo.inf.ufes.br/ontologies/goop#Object_Property"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://nemo.inf.ufes.br/ontologies/quality-assurance-process#subProcess -->
+
+    <owl:NamedIndividual rdf:about="http://nemo.inf.ufes.br/ontologies/quality-assurance-process#subProcess">
+        <rdf:type rdf:resource="http://nemo.inf.ufes.br/ontologies/goop#Object_Property"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://nemo.inf.ufes.br/ontologies/quality-assurance-process#uses -->
+
+    <owl:NamedIndividual rdf:about="http://nemo.inf.ufes.br/ontologies/quality-assurance-process#uses">
+        <rdf:type rdf:resource="http://nemo.inf.ufes.br/ontologies/goop#Object_Property"/>
+    </owl:NamedIndividual>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 4.5.6.2018-09-06T00:27:41Z) https://github.com/owlcs/owlapi -->
+

@@ -1,0 +1,248 @@
+@prefix : <http://nemo.inf.ufes.br/ontologies/fragments/intended-process-structure#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix goop: <http://nemo.inf.ufes.br/ontologies/goop#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@base <http://nemo.inf.ufes.br/ontologies/fragments/intended-process-structure> .
+
+<http://nemo.inf.ufes.br/ontologies/fragments/intended-process-structure> rdf:type owl:Ontology ;
+                                                                           owl:imports <http://nemo.inf.ufes.br/ontologies/goop> .
+
+#################################################################
+#    Individuals
+#################################################################
+
+###  http://nemo.inf.ufes.br/ontologies/fragments/intended-process-structure#Activity_Universal
+:Activity_Universal rdf:type owl:NamedIndividual ,
+                             goop:Class ;
+                    rdfs:comment """Action Universal representing any generic activity in an Organization (formalized or not), which is the powertype of every Performed Activity. 
+Ex.: a formalized standard Requirements Elicitation activity, a non-formalized generic (alternative) Requirements Elicitation activity."""^^rdfs:Literal .
+
+
+###  http://nemo.inf.ufes.br/ontologies/fragments/intended-process-structure#Composite_Intended_Activity
+:Composite_Intended_Activity rdf:type owl:NamedIndividual ;
+                             goop:specifies :Intended_Activity ;
+                             rdfs:comment "Intended Activity composed of other Intended Activities."^^rdfs:Literal .
+
+
+###  http://nemo.inf.ufes.br/ontologies/fragments/intended-process-structure#Composite_Standard_Activity
+:Composite_Standard_Activity rdf:type owl:NamedIndividual ,
+                                      goop:Class ;
+                             goop:component_of :Standard_Activity ;
+                             goop:specifies :Standard_Activity ;
+                             rdfs:comment "Standard Activity composed of other Standard Activities."^^rdfs:Literal .
+
+
+###  http://nemo.inf.ufes.br/ontologies/fragments/intended-process-structure#Describe_Intended_Processes_in_terms_of_sub-process_and_activies
+:Describe_Intended_Processes_in_terms_of_sub-process_and_activies rdf:type owl:NamedIndividual ,
+                                                                           goop:Goal_Based_Requirement ;
+                                                                  rdfs:comment """An Intended Process refers to the commitments made for defining a process intended to be performed in a specific project or organizational area, considering its peculiarities. It is often defined by adapting a Standard Process, considering a specific context. For Projects, it is a Project Process defining how to conduct the activities within the Project (e.g. the Development Process defined for the Alpha Project). It also can be defined in an organizational context, regardless of specific projects, being an Organizational Intended Process (e.g. the Human Resource Management Process defined for hiring new Employees). Intended Processes can be general or specific. A General Intended Process is composed of at least two Specific Intended Processes (e.g. a Training Process composed of Planning, Preparation, Execution and Evaluation Processes). A Specific Intended Process is composed of at least two Intended Activities.
+An Intended Activity refers to the commitments made within a broader Intended Process. Analogously, it uses to be adapted from a Standard Activity, and can be composite or simple. A Composite Standard Activity is composed of other two or more Intended Activities; a Simple Intended Activity is not decomposable into smaller activities. Moreover, Intended Activities can depend on other Intended Activities."""^^rdfs:Literal .
+
+
+###  http://nemo.inf.ufes.br/ontologies/fragments/intended-process-structure#Describe_Standard_Process
+:Describe_Standard_Process rdf:type owl:NamedIndividual ,
+                                    goop:Goal_Based_Requirement ;
+                           rdfs:comment """Standard Processes and Activities are institutionalized generic actions establishing basic requirements for intended processes and activities to be performed in an organization or in its projects (for example, a standard Development Process, and its activities, to be performed in the Projects of an Organization). A Standard Process Definition Document, used for describing a set of Standard Processes, is recognized by one or more Organizations.
+A Standard Process is established to be performed in the context of projects, configuring a Project Standard Process (such as a standard Development Process), in the context of an organization, configuring an Organizational Standard Process (such as a standard Portfolio Management Process), or can be applicable to both contexts, configuring a Hybrid Standard Process (such as a standard Training Process).
+A Standard Process can be general or specific. A General Standard Process is composed of two or more Specific Standard Processes (e.g. a standard Development Process composed of standard Requirements, Design, Constructions and Test Processes). A Specific Standard Process is composed of two or more Standard Activities. A Standard Activity, analogously, can be composite or simple. A Composite Standard Activity is composed of other two or more Standard Activities; a Simple Standard Activity is not decomposable into smaller activities.
+Every process and activity performed in an organization or project happen based on an action type. For processes, this action type is the Process Universal, and for activities, this type is the Activity Universal. These generic actions can be formalized in an organization (configuring the discussed Standard Process and Activities), or remain non-formalized."""^^rdfs:Literal .
+
+
+###  http://nemo.inf.ufes.br/ontologies/fragments/intended-process-structure#General_Intended_Process
+:General_Intended_Process rdf:type owl:NamedIndividual ,
+                                   goop:Class ;
+                          goop:specifies :Intended_Process ;
+                          rdfs:comment """Intended Process that is composed of Specific Intended Processes, allowing an Organization or Project to define sub-processes that are part of a complete Intended Process. 
+Ex.: the overall Development Process defined for the Alpha Project."""^^rdfs:Literal .
+
+
+###  http://nemo.inf.ufes.br/ontologies/fragments/intended-process-structure#General_Project_Process
+:General_Project_Process rdf:type owl:NamedIndividual ,
+                                  goop:Class ;
+                         goop:specifies :Project_Process .
+
+
+###  http://nemo.inf.ufes.br/ontologies/fragments/intended-process-structure#General_Standard_Process
+:General_Standard_Process rdf:type owl:NamedIndividual ,
+                                   goop:Class ;
+                          goop:specifies :Standard_Process ;
+                          rdfs:comment """Standard Process that is composed of Specific Standard Processes, allowing an Organization to establish sub-processes that are part of a complete Standard Process. 
+Ex.: the overall Development Process established for the Organization Projects."""^^rdfs:Literal .
+
+
+###  http://nemo.inf.ufes.br/ontologies/fragments/intended-process-structure#Goop-1
+:Goop-1 rdf:type owl:NamedIndividual ,
+                 goop:Goop ;
+        goop:composed_by :Describe_Intended_Processes_in_terms_of_sub-process_and_activies .
+
+
+###  http://nemo.inf.ufes.br/ontologies/fragments/intended-process-structure#Goop-2
+:Goop-2 rdf:type owl:NamedIndividual ,
+                 goop:Goop ;
+        goop:composed_by :Describe_Standard_Process .
+
+
+###  http://nemo.inf.ufes.br/ontologies/fragments/intended-process-structure#Intended_Activity
+:Intended_Activity rdf:type owl:NamedIndividual ;
+                   goop:component_of :Composite_Intended_Activity ,
+                                     :Specific_Intended_Process ;
+                   rdfs:comment """Intention (Internal Commitment) representing the activity defined to be performed as part of an Intended Process, by a defined role, potentially consuming and producing artifacts, using resources and adopting procedures. 
+Ex.: Unit Testing, Measure Collection, Strategic Goals Definition."""^^rdfs:Literal .
+
+
+###  http://nemo.inf.ufes.br/ontologies/fragments/intended-process-structure#Intended_Process
+:Intended_Process rdf:type owl:NamedIndividual ,
+                           goop:Class ;
+                  rdfs:comment """Intention (Internal Commitment) representing the process defined to be performed in a specific project or organizational area, considering its particularities. 
+Ex.: Testing, Measurement, Strategic Planning intended processes."""^^rdfs:Literal .
+
+
+###  http://nemo.inf.ufes.br/ontologies/fragments/intended-process-structure#Model_Fragment-1
+:Model_Fragment-1 rdf:type owl:NamedIndividual ,
+                           goop:Model_Fragment ;
+                  goop:composed_by :Composite_Intended_Activity ,
+                                   :General_Intended_Process ,
+                                   :General_Project_Process ,
+                                   :Intended_Activity ,
+                                   :Intended_Process ,
+                                   :Organizational_Intended_Process ,
+                                   :Project_Activity ,
+                                   :Project_Process ,
+                                   :Simple_Intended_Activity ,
+                                   :Software_Project ,
+                                   :Specific_Intended_Process ,
+                                   :Specific_Project_Process ,
+                                   :adapts ,
+                                   :defined_for ,
+                                   :depends_on ;
+                  goop:is_used_to_satisfy :Goop-1 .
+
+
+###  http://nemo.inf.ufes.br/ontologies/fragments/intended-process-structure#Model_Fragment-2
+:Model_Fragment-2 rdf:type owl:NamedIndividual ,
+                           goop:Model_Fragment ;
+                  goop:composed_by :Activity_Universal ,
+                                   :Composite_Standard_Activity ,
+                                   :General_Standard_Process ,
+                                   :Process_Universal ,
+                                   :Simple_Standard_Activity ,
+                                   :Specific_Standard_Process ,
+                                   :Standard_Activity ,
+                                   :Standard_Process ,
+                                   :depends_on ;
+                  goop:is_used_to_satisfy :Goop-2 .
+
+
+###  http://nemo.inf.ufes.br/ontologies/fragments/intended-process-structure#Organizational_Intended_Process
+:Organizational_Intended_Process rdf:type owl:NamedIndividual ,
+                                          goop:Class ;
+                                 goop:specifies :Intended_Process ;
+                                 rdfs:comment """Intended Process defined to be performed in the context of an Organization, regardless of specific Projects. 
+Ex.: an intended Portfolio Management Process, a intended Human Resource Hiring Process."""^^rdfs:Literal .
+
+
+###  http://nemo.inf.ufes.br/ontologies/fragments/intended-process-structure#Process_Universal
+:Process_Universal rdf:type owl:NamedIndividual ,
+                            goop:Class ;
+                   rdfs:comment """Complex Action Universal representing any generic process in an Organization (formalized or not), which is the powertype of every Performed Process. 
+Ex.: a formalized Standard Process (e.g. Development Process), a non-formalized generic process (e.g. Reuse Process)."""^^rdfs:Literal .
+
+
+###  http://nemo.inf.ufes.br/ontologies/fragments/intended-process-structure#Project_Activity
+:Project_Activity rdf:type owl:NamedIndividual ,
+                           goop:Class ;
+                  goop:component_of :Specific_Project_Process ;
+                  goop:specifies :Intended_Activity ;
+                  rdfs:comment """Intended Activity defined to be performed within a Project, and thus that is part of a Project Process. 
+Ex.: a project Requirement Process, a project Construction Process."""^^rdfs:Literal .
+
+
+###  http://nemo.inf.ufes.br/ontologies/fragments/intended-process-structure#Project_Process
+:Project_Process rdf:type owl:NamedIndividual ,
+                          goop:Class ;
+                 goop:specifies :Intended_Process ;
+                 rdfs:comment """Intended Process defined to be performed within a Project. 
+Ex.: a project Requirement Process, a project Construction Process."""^^rdfs:Literal .
+
+
+###  http://nemo.inf.ufes.br/ontologies/fragments/intended-process-structure#Simple_Intended_Activity
+:Simple_Intended_Activity rdf:type owl:NamedIndividual ,
+                                   goop:Class ;
+                          goop:specifies :Intended_Activity ;
+                          rdfs:comment "Intended Activity that is not further decomposed into other Intended Activities."^^rdfs:Literal .
+
+
+###  http://nemo.inf.ufes.br/ontologies/fragments/intended-process-structure#Simple_Standard_Activity
+:Simple_Standard_Activity rdf:type owl:NamedIndividual ,
+                                   goop:Class ;
+                          goop:specifies :Standard_Activity ;
+                          rdfs:comment "Standard Activity that is not further decomposed into other Standard Activities."^^rdfs:Literal .
+
+
+###  http://nemo.inf.ufes.br/ontologies/fragments/intended-process-structure#Software_Project
+:Software_Project rdf:type owl:NamedIndividual ,
+                           goop:Class ;
+                  rdfs:comment "A Project related to software development or maintenance."^^rdfs:Literal .
+
+
+###  http://nemo.inf.ufes.br/ontologies/fragments/intended-process-structure#Specific_Intended_Process
+:Specific_Intended_Process rdf:type owl:NamedIndividual ,
+                                    goop:Class ;
+                           goop:component_of :General_Intended_Process ;
+                           goop:specifies :Intended_Process ;
+                           rdfs:comment """Intended Process that is part of the General Intended Process of a Project or Organization, necessarily composed of at least two Intended Activities. 
+Ex.: the Construction Process defined for a specific project; the Training Process defined for an organizational OO training."""^^rdfs:Literal .
+
+
+###  http://nemo.inf.ufes.br/ontologies/fragments/intended-process-structure#Specific_Project_Process
+:Specific_Project_Process rdf:type owl:NamedIndividual ,
+                                   goop:Class ;
+                          goop:component_of :General_Project_Process ;
+                          goop:specifies :Project_Process .
+
+
+###  http://nemo.inf.ufes.br/ontologies/fragments/intended-process-structure#Specific_Standard_Process
+:Specific_Standard_Process rdf:type owl:NamedIndividual ,
+                                    goop:Class ;
+                           goop:component_of :General_Standard_Process ;
+                           goop:specifies :Standard_Process ;
+                           rdfs:comment """Standard Process that can be part of a General Standard Process of a Project or Organization, necessarily composed of at least two Standard Activities. 
+Ex.: the standard Requirements Development Process established as part of a broader standard Development Process."""^^rdfs:Literal .
+
+
+###  http://nemo.inf.ufes.br/ontologies/fragments/intended-process-structure#Standard_Activity
+:Standard_Activity rdf:type owl:NamedIndividual ,
+                            goop:Class ;
+                   goop:component_of :Specific_Standard_Process ;
+                   goop:specifies :Activity_Universal ;
+                   rdfs:comment """Action Universal representing a generic activity institutionalized as part of a Standard Process in an Organization, establishing general information such as dependence on other activities, types of artifacts created, changed and used, required software and hardware resources, adopted procedures, and roles to perform it. 
+Ex.: Conceptual Modeling, Training Evaluation, Project Risks Planning."""^^rdfs:Literal .
+
+
+###  http://nemo.inf.ufes.br/ontologies/fragments/intended-process-structure#Standard_Process
+:Standard_Process rdf:type owl:NamedIndividual ,
+                           goop:Class ;
+                  goop:specifies :Process_Universal ;
+                  rdfs:comment """Complex Action Universal representing a generic process institutionalized in an Organization, establishing basic requirements for Intended Processes to be performed in that Organization or in its Projects. 
+Ex.: Development, Training, Acquisition standard processes."""^^rdfs:Literal .
+
+
+###  http://nemo.inf.ufes.br/ontologies/fragments/intended-process-structure#adapts
+:adapts rdf:type owl:NamedIndividual ,
+                 goop:Object_Property .
+
+
+###  http://nemo.inf.ufes.br/ontologies/fragments/intended-process-structure#defined_for
+:defined_for rdf:type owl:NamedIndividual ,
+                      goop:Object_Property .
+
+
+###  http://nemo.inf.ufes.br/ontologies/fragments/intended-process-structure#depends_on
+:depends_on rdf:type owl:NamedIndividual ,
+                     goop:Object_Property .
+
+
+###  Generated by the OWL API (version 4.5.7.2018-12-02T02:23:35Z) https://github.com/owlcs/owlapi

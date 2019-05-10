@@ -1,0 +1,361 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns="http://nemo.inf.ufes.br/ontologies/performed-process#"
+     xml:base="http://nemo.inf.ufes.br/ontologies/performed-process"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:goop="http://nemo.inf.ufes.br/ontologies/goop#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#">
+    <owl:Ontology rdf:about="http://nemo.inf.ufes.br/ontologies/performed-process">
+        <owl:imports rdf:resource="http://nemo.inf.ufes.br/ontologies/goop"/>
+    </owl:Ontology>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Individuals
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://nemo.inf.ufes.br/ontologies/performed-process#Activity_Universal -->
+
+    <owl:NamedIndividual rdf:about="http://nemo.inf.ufes.br/ontologies/performed-process#Activity_Universal">
+        <rdf:type rdf:resource="http://nemo.inf.ufes.br/ontologies/goop#Class"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://nemo.inf.ufes.br/ontologies/performed-process#Deal_with_Performed_Process_and_Activities -->
+
+    <owl:NamedIndividual rdf:about="http://nemo.inf.ufes.br/ontologies/performed-process#Deal_with_Performed_Process_and_Activities">
+        <rdf:type rdf:resource="http://nemo.inf.ufes.br/ontologies/goop#Goal_Based_Requirement"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://nemo.inf.ufes.br/ontologies/performed-process#Deal_with_how_Activities_are_composed -->
+
+    <owl:NamedIndividual rdf:about="http://nemo.inf.ufes.br/ontologies/performed-process#Deal_with_how_Activities_are_composed">
+        <rdf:type rdf:resource="http://nemo.inf.ufes.br/ontologies/goop#Goal_Based_Requirement"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://nemo.inf.ufes.br/ontologies/performed-process#Deal_with_how_Performed_Process_are_composed -->
+
+    <owl:NamedIndividual rdf:about="http://nemo.inf.ufes.br/ontologies/performed-process#Deal_with_how_Performed_Process_are_composed">
+        <rdf:type rdf:resource="http://nemo.inf.ufes.br/ontologies/goop#Goal_Based_Requirement"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://nemo.inf.ufes.br/ontologies/performed-process#General_Intended_Process -->
+
+    <owl:NamedIndividual rdf:about="http://nemo.inf.ufes.br/ontologies/performed-process#General_Intended_Process">
+        <rdf:type rdf:resource="http://nemo.inf.ufes.br/ontologies/goop#Class"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://nemo.inf.ufes.br/ontologies/performed-process#Goop -->
+
+    <owl:NamedIndividual rdf:about="http://nemo.inf.ufes.br/ontologies/performed-process#Goop">
+        <rdf:type rdf:resource="http://nemo.inf.ufes.br/ontologies/goop#Goop"/>
+        <goop:composed_by rdf:resource="http://nemo.inf.ufes.br/ontologies/performed-process#Deal_with_Performed_Process_and_Activities"/>
+        <goop:composed_by rdf:resource="http://nemo.inf.ufes.br/ontologies/performed-process#Deal_with_how_Activities_are_composed"/>
+        <goop:composed_by rdf:resource="http://nemo.inf.ufes.br/ontologies/performed-process#Deal_with_how_Performed_Process_are_composed"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://nemo.inf.ufes.br/ontologies/performed-process#Intended_Activity -->
+
+    <owl:NamedIndividual rdf:about="http://nemo.inf.ufes.br/ontologies/performed-process#Intended_Activity">
+        <rdf:type rdf:resource="http://nemo.inf.ufes.br/ontologies/goop#Class"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://nemo.inf.ufes.br/ontologies/performed-process#Intended_Process -->
+
+    <owl:NamedIndividual rdf:about="http://nemo.inf.ufes.br/ontologies/performed-process#Intended_Process">
+        <rdf:type rdf:resource="http://nemo.inf.ufes.br/ontologies/goop#Class"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://nemo.inf.ufes.br/ontologies/performed-process#Model_Fragment -->
+
+    <owl:NamedIndividual rdf:about="http://nemo.inf.ufes.br/ontologies/performed-process#Model_Fragment">
+        <rdf:type rdf:resource="http://nemo.inf.ufes.br/ontologies/goop#Model_Fragment"/>
+        <goop:composed_by rdf:resource="http://nemo.inf.ufes.br/ontologies/performed-process#Activity_Universal"/>
+        <goop:composed_by rdf:resource="http://nemo.inf.ufes.br/ontologies/performed-process#General_Intended_Process"/>
+        <goop:composed_by rdf:resource="http://nemo.inf.ufes.br/ontologies/performed-process#Intended_Activity"/>
+        <goop:composed_by rdf:resource="http://nemo.inf.ufes.br/ontologies/performed-process#Intended_Process"/>
+        <goop:composed_by rdf:resource="http://nemo.inf.ufes.br/ontologies/performed-process#Perfomed_Activity"/>
+        <goop:composed_by rdf:resource="http://nemo.inf.ufes.br/ontologies/performed-process#Performed_Composite_Activity"/>
+        <goop:composed_by rdf:resource="http://nemo.inf.ufes.br/ontologies/performed-process#Performed_General_Process"/>
+        <goop:composed_by rdf:resource="http://nemo.inf.ufes.br/ontologies/performed-process#Performed_Organizational_Process"/>
+        <goop:composed_by rdf:resource="http://nemo.inf.ufes.br/ontologies/performed-process#Performed_Process"/>
+        <goop:composed_by rdf:resource="http://nemo.inf.ufes.br/ontologies/performed-process#Performed_Project_Activity"/>
+        <goop:composed_by rdf:resource="http://nemo.inf.ufes.br/ontologies/performed-process#Performed_Project_Process"/>
+        <goop:composed_by rdf:resource="http://nemo.inf.ufes.br/ontologies/performed-process#Performed_Simple_Activity"/>
+        <goop:composed_by rdf:resource="http://nemo.inf.ufes.br/ontologies/performed-process#Performed_Specific_Process"/>
+        <goop:composed_by rdf:resource="http://nemo.inf.ufes.br/ontologies/performed-process#Process_Universal"/>
+        <goop:composed_by rdf:resource="http://nemo.inf.ufes.br/ontologies/performed-process#Project_Activity"/>
+        <goop:composed_by rdf:resource="http://nemo.inf.ufes.br/ontologies/performed-process#Project_Process"/>
+        <goop:composed_by rdf:resource="http://nemo.inf.ufes.br/ontologies/performed-process#Software_Project"/>
+        <goop:composed_by rdf:resource="http://nemo.inf.ufes.br/ontologies/performed-process#Specific_Intended_Process"/>
+        <goop:composed_by rdf:resource="http://nemo.inf.ufes.br/ontologies/performed-process#caused_by"/>
+        <goop:composed_by rdf:resource="http://nemo.inf.ufes.br/ontologies/performed-process#defined_for"/>
+        <goop:composed_by rdf:resource="http://nemo.inf.ufes.br/ontologies/performed-process#depends_on"/>
+        <goop:composed_by rdf:resource="http://nemo.inf.ufes.br/ontologies/performed-process#instance_of"/>
+        <goop:composed_by rdf:resource="http://nemo.inf.ufes.br/ontologies/performed-process#isPowertypeOf"/>
+        <goop:composed_by rdf:resource="http://nemo.inf.ufes.br/ontologies/performed-process#performed_in"/>
+        <goop:composed_by rdf:resource="http://nemo.inf.ufes.br/ontologies/performed-process#subProcess"/>
+        <goop:composed_by rdf:resource="http://nemo.inf.ufes.br/ontologies/performed-process#EO::Organization"/>
+        <goop:composed_by rdf:resource="http://nemo.inf.ufes.br/ontologies/performed-process#UFO-B::Event"/>
+        <goop:composed_by rdf:resource="http://nemo.inf.ufes.br/ontologies/performed-process#UFO-C::Action"/>
+        <goop:composed_by rdf:resource="http://nemo.inf.ufes.br/ontologies/performed-process#UFO-C::Atomic_Action"/>
+        <goop:composed_by rdf:resource="http://nemo.inf.ufes.br/ontologies/performed-process#UFO-C::Commitment"/>
+        <goop:composed_by rdf:resource="http://nemo.inf.ufes.br/ontologies/performed-process#UFO-C::Complex_Action"/>
+        <goop:composed_by rdf:resource="http://nemo.inf.ufes.br/ontologies/performed-process#UFO-C::Intention"/>
+        <goop:is_used_to_satisfy rdf:resource="http://nemo.inf.ufes.br/ontologies/performed-process#Goop"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://nemo.inf.ufes.br/ontologies/performed-process#Perfomed_Activity -->
+
+    <owl:NamedIndividual rdf:about="http://nemo.inf.ufes.br/ontologies/performed-process#Perfomed_Activity">
+        <rdf:type rdf:resource="http://nemo.inf.ufes.br/ontologies/goop#Class"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://nemo.inf.ufes.br/ontologies/performed-process#Performed_Composite_Activity -->
+
+    <owl:NamedIndividual rdf:about="http://nemo.inf.ufes.br/ontologies/performed-process#Performed_Composite_Activity">
+        <rdf:type rdf:resource="http://nemo.inf.ufes.br/ontologies/goop#Class"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://nemo.inf.ufes.br/ontologies/performed-process#Performed_General_Process -->
+
+    <owl:NamedIndividual rdf:about="http://nemo.inf.ufes.br/ontologies/performed-process#Performed_General_Process">
+        <rdf:type rdf:resource="http://nemo.inf.ufes.br/ontologies/goop#Class"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://nemo.inf.ufes.br/ontologies/performed-process#Performed_Organizational_Process -->
+
+    <owl:NamedIndividual rdf:about="http://nemo.inf.ufes.br/ontologies/performed-process#Performed_Organizational_Process">
+        <rdf:type rdf:resource="http://nemo.inf.ufes.br/ontologies/goop#Class"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://nemo.inf.ufes.br/ontologies/performed-process#Performed_Process -->
+
+    <owl:NamedIndividual rdf:about="http://nemo.inf.ufes.br/ontologies/performed-process#Performed_Process">
+        <rdf:type rdf:resource="http://nemo.inf.ufes.br/ontologies/goop#Class"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://nemo.inf.ufes.br/ontologies/performed-process#Performed_Project_Activity -->
+
+    <owl:NamedIndividual rdf:about="http://nemo.inf.ufes.br/ontologies/performed-process#Performed_Project_Activity">
+        <rdf:type rdf:resource="http://nemo.inf.ufes.br/ontologies/goop#Class"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://nemo.inf.ufes.br/ontologies/performed-process#Performed_Project_Process -->
+
+    <owl:NamedIndividual rdf:about="http://nemo.inf.ufes.br/ontologies/performed-process#Performed_Project_Process">
+        <rdf:type rdf:resource="http://nemo.inf.ufes.br/ontologies/goop#Class"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://nemo.inf.ufes.br/ontologies/performed-process#Performed_Simple_Activity -->
+
+    <owl:NamedIndividual rdf:about="http://nemo.inf.ufes.br/ontologies/performed-process#Performed_Simple_Activity">
+        <rdf:type rdf:resource="http://nemo.inf.ufes.br/ontologies/goop#Class"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://nemo.inf.ufes.br/ontologies/performed-process#Performed_Specific_Process -->
+
+    <owl:NamedIndividual rdf:about="http://nemo.inf.ufes.br/ontologies/performed-process#Performed_Specific_Process">
+        <rdf:type rdf:resource="http://nemo.inf.ufes.br/ontologies/goop#Class"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://nemo.inf.ufes.br/ontologies/performed-process#Process_Universal -->
+
+    <owl:NamedIndividual rdf:about="http://nemo.inf.ufes.br/ontologies/performed-process#Process_Universal">
+        <rdf:type rdf:resource="http://nemo.inf.ufes.br/ontologies/goop#Class"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://nemo.inf.ufes.br/ontologies/performed-process#Project_Activity -->
+
+    <owl:NamedIndividual rdf:about="http://nemo.inf.ufes.br/ontologies/performed-process#Project_Activity">
+        <rdf:type rdf:resource="http://nemo.inf.ufes.br/ontologies/goop#Class"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://nemo.inf.ufes.br/ontologies/performed-process#Project_Process -->
+
+    <owl:NamedIndividual rdf:about="http://nemo.inf.ufes.br/ontologies/performed-process#Project_Process">
+        <rdf:type rdf:resource="http://nemo.inf.ufes.br/ontologies/goop#Class"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://nemo.inf.ufes.br/ontologies/performed-process#Software_Project -->
+
+    <owl:NamedIndividual rdf:about="http://nemo.inf.ufes.br/ontologies/performed-process#Software_Project">
+        <rdf:type rdf:resource="http://nemo.inf.ufes.br/ontologies/goop#Class"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://nemo.inf.ufes.br/ontologies/performed-process#Specific_Intended_Process -->
+
+    <owl:NamedIndividual rdf:about="http://nemo.inf.ufes.br/ontologies/performed-process#Specific_Intended_Process">
+        <rdf:type rdf:resource="http://nemo.inf.ufes.br/ontologies/goop#Class"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://nemo.inf.ufes.br/ontologies/performed-process#caused_by -->
+
+    <owl:NamedIndividual rdf:about="http://nemo.inf.ufes.br/ontologies/performed-process#caused_by">
+        <rdf:type rdf:resource="http://nemo.inf.ufes.br/ontologies/goop#Object_Property"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://nemo.inf.ufes.br/ontologies/performed-process#defined_for -->
+
+    <owl:NamedIndividual rdf:about="http://nemo.inf.ufes.br/ontologies/performed-process#defined_for">
+        <rdf:type rdf:resource="http://nemo.inf.ufes.br/ontologies/goop#Object_Property"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://nemo.inf.ufes.br/ontologies/performed-process#depends_on -->
+
+    <owl:NamedIndividual rdf:about="http://nemo.inf.ufes.br/ontologies/performed-process#depends_on">
+        <rdf:type rdf:resource="http://nemo.inf.ufes.br/ontologies/goop#Object_Property"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://nemo.inf.ufes.br/ontologies/performed-process#instance_of -->
+
+    <owl:NamedIndividual rdf:about="http://nemo.inf.ufes.br/ontologies/performed-process#instance_of">
+        <rdf:type rdf:resource="http://nemo.inf.ufes.br/ontologies/goop#Object_Property"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://nemo.inf.ufes.br/ontologies/performed-process#isPowertypeOf -->
+
+    <owl:NamedIndividual rdf:about="http://nemo.inf.ufes.br/ontologies/performed-process#isPowertypeOf">
+        <rdf:type rdf:resource="http://nemo.inf.ufes.br/ontologies/goop#Object_Property"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://nemo.inf.ufes.br/ontologies/performed-process#performed_in -->
+
+    <owl:NamedIndividual rdf:about="http://nemo.inf.ufes.br/ontologies/performed-process#performed_in">
+        <rdf:type rdf:resource="http://nemo.inf.ufes.br/ontologies/goop#Object_Property"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://nemo.inf.ufes.br/ontologies/performed-process#subProcess -->
+
+    <owl:NamedIndividual rdf:about="http://nemo.inf.ufes.br/ontologies/performed-process#subProcess">
+        <rdf:type rdf:resource="http://nemo.inf.ufes.br/ontologies/goop#Object_Property"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://nemo.inf.ufes.br/ontologies/performed-process#EO::Organization -->
+
+    <owl:NamedIndividual rdf:about="http://nemo.inf.ufes.br/ontologies/performed-process#EO::Organization">
+        <rdf:type rdf:resource="http://nemo.inf.ufes.br/ontologies/goop#Class"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://nemo.inf.ufes.br/ontologies/performed-process#UFO-B::Event -->
+
+    <owl:NamedIndividual rdf:about="http://nemo.inf.ufes.br/ontologies/performed-process#UFO-B::Event">
+        <rdf:type rdf:resource="http://nemo.inf.ufes.br/ontologies/goop#Class"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://nemo.inf.ufes.br/ontologies/performed-process#UFO-C::Action -->
+
+    <owl:NamedIndividual rdf:about="http://nemo.inf.ufes.br/ontologies/performed-process#UFO-C::Action">
+        <rdf:type rdf:resource="http://nemo.inf.ufes.br/ontologies/goop#Class"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://nemo.inf.ufes.br/ontologies/performed-process#UFO-C::Atomic_Action -->
+
+    <owl:NamedIndividual rdf:about="http://nemo.inf.ufes.br/ontologies/performed-process#UFO-C::Atomic_Action">
+        <rdf:type rdf:resource="http://nemo.inf.ufes.br/ontologies/goop#Class"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://nemo.inf.ufes.br/ontologies/performed-process#UFO-C::Commitment -->
+
+    <owl:NamedIndividual rdf:about="http://nemo.inf.ufes.br/ontologies/performed-process#UFO-C::Commitment">
+        <rdf:type rdf:resource="http://nemo.inf.ufes.br/ontologies/goop#Class"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://nemo.inf.ufes.br/ontologies/performed-process#UFO-C::Complex_Action -->
+
+    <owl:NamedIndividual rdf:about="http://nemo.inf.ufes.br/ontologies/performed-process#UFO-C::Complex_Action">
+        <rdf:type rdf:resource="http://nemo.inf.ufes.br/ontologies/goop#Class"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://nemo.inf.ufes.br/ontologies/performed-process#UFO-C::Intention -->
+
+    <owl:NamedIndividual rdf:about="http://nemo.inf.ufes.br/ontologies/performed-process#UFO-C::Intention">
+        <rdf:type rdf:resource="http://nemo.inf.ufes.br/ontologies/goop#Class"/>
+    </owl:NamedIndividual>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 4.5.6.2018-09-06T00:27:41Z) https://github.com/owlcs/owlapi -->
+

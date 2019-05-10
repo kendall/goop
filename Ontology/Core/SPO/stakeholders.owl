@@ -1,0 +1,172 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns="http://nemo.inf.ufes.br/ontologies/stakeholders#"
+     xml:base="http://nemo.inf.ufes.br/ontologies/stakeholders"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:goop="http://nemo.inf.ufes.br/ontologies/goop#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#">
+    <owl:Ontology rdf:about="http://nemo.inf.ufes.br/ontologies/stakeholders">
+        <owl:imports rdf:resource="http://nemo.inf.ufes.br/ontologies/goop"/>
+    </owl:Ontology>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Individuals
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://nemo.inf.ufes.br/ontologies/stakeholders#Deal_with_the_different_types_of_stakeholders_in_a_software_process -->
+
+    <owl:NamedIndividual rdf:about="http://nemo.inf.ufes.br/ontologies/stakeholders#Deal_with_the_different_types_of_stakeholders_in_a_software_process">
+        <rdf:type rdf:resource="http://nemo.inf.ufes.br/ontologies/goop#Goal_Based_Requirement"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://nemo.inf.ufes.br/ontologies/stakeholders#Goop -->
+
+    <owl:NamedIndividual rdf:about="http://nemo.inf.ufes.br/ontologies/stakeholders#Goop">
+        <rdf:type rdf:resource="http://nemo.inf.ufes.br/ontologies/goop#Goop"/>
+        <goop:composed_by rdf:resource="http://nemo.inf.ufes.br/ontologies/stakeholders#Deal_with_the_different_types_of_stakeholders_in_a_software_process"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://nemo.inf.ufes.br/ontologies/stakeholders#Model_Fragment -->
+
+    <owl:NamedIndividual rdf:about="http://nemo.inf.ufes.br/ontologies/stakeholders#Model_Fragment">
+        <rdf:type rdf:resource="http://nemo.inf.ufes.br/ontologies/goop#Model_Fragment"/>
+        <goop:composed_by rdf:resource="http://nemo.inf.ufes.br/ontologies/stakeholders#Organization_Stakeholder"/>
+        <goop:composed_by rdf:resource="http://nemo.inf.ufes.br/ontologies/stakeholders#Person_Stakeholder"/>
+        <goop:composed_by rdf:resource="http://nemo.inf.ufes.br/ontologies/stakeholders#Project_Stakeholder"/>
+        <goop:composed_by rdf:resource="http://nemo.inf.ufes.br/ontologies/stakeholders#Software_Project"/>
+        <goop:composed_by rdf:resource="http://nemo.inf.ufes.br/ontologies/stakeholders#Stakeholder"/>
+        <goop:composed_by rdf:resource="http://nemo.inf.ufes.br/ontologies/stakeholders#Team_Stakeholder"/>
+        <goop:composed_by rdf:resource="http://nemo.inf.ufes.br/ontologies/stakeholders#interested_in"/>
+        <goop:composed_by rdf:resource="http://nemo.inf.ufes.br/ontologies/stakeholders#EO::Organization"/>
+        <goop:composed_by rdf:resource="http://nemo.inf.ufes.br/ontologies/stakeholders#EO::Team"/>
+        <goop:composed_by rdf:resource="http://nemo.inf.ufes.br/ontologies/stakeholders#UFO-C::Agent"/>
+        <goop:composed_by rdf:resource="http://nemo.inf.ufes.br/ontologies/stakeholders#UFO-C::Person"/>
+        <goop:composed_by rdf:resource="http://nemo.inf.ufes.br/ontologies/stakeholders#UFO-C::Physical_Agent"/>
+        <goop:composed_by rdf:resource="http://nemo.inf.ufes.br/ontologies/stakeholders#UFO-C::Social_Agent"/>
+        <goop:is_used_to_satisfy rdf:resource="http://nemo.inf.ufes.br/ontologies/stakeholders#Goop"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://nemo.inf.ufes.br/ontologies/stakeholders#Organization_Stakeholder -->
+
+    <owl:NamedIndividual rdf:about="http://nemo.inf.ufes.br/ontologies/stakeholders#Organization_Stakeholder">
+        <rdf:type rdf:resource="http://nemo.inf.ufes.br/ontologies/goop#Class"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://nemo.inf.ufes.br/ontologies/stakeholders#Person_Stakeholder -->
+
+    <owl:NamedIndividual rdf:about="http://nemo.inf.ufes.br/ontologies/stakeholders#Person_Stakeholder">
+        <rdf:type rdf:resource="http://nemo.inf.ufes.br/ontologies/goop#Class"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://nemo.inf.ufes.br/ontologies/stakeholders#Project_Stakeholder -->
+
+    <owl:NamedIndividual rdf:about="http://nemo.inf.ufes.br/ontologies/stakeholders#Project_Stakeholder">
+        <rdf:type rdf:resource="http://nemo.inf.ufes.br/ontologies/goop#Class"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://nemo.inf.ufes.br/ontologies/stakeholders#Software_Project -->
+
+    <owl:NamedIndividual rdf:about="http://nemo.inf.ufes.br/ontologies/stakeholders#Software_Project">
+        <rdf:type rdf:resource="http://nemo.inf.ufes.br/ontologies/goop#Class"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://nemo.inf.ufes.br/ontologies/stakeholders#Stakeholder -->
+
+    <owl:NamedIndividual rdf:about="http://nemo.inf.ufes.br/ontologies/stakeholders#Stakeholder">
+        <rdf:type rdf:resource="http://nemo.inf.ufes.br/ontologies/goop#Class"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://nemo.inf.ufes.br/ontologies/stakeholders#Team_Stakeholder -->
+
+    <owl:NamedIndividual rdf:about="http://nemo.inf.ufes.br/ontologies/stakeholders#Team_Stakeholder">
+        <rdf:type rdf:resource="http://nemo.inf.ufes.br/ontologies/goop#Class"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://nemo.inf.ufes.br/ontologies/stakeholders#interested_in -->
+
+    <owl:NamedIndividual rdf:about="http://nemo.inf.ufes.br/ontologies/stakeholders#interested_in">
+        <rdf:type rdf:resource="http://nemo.inf.ufes.br/ontologies/goop#Object_Property"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://nemo.inf.ufes.br/ontologies/stakeholders#EO::Organization -->
+
+    <owl:NamedIndividual rdf:about="http://nemo.inf.ufes.br/ontologies/stakeholders#EO::Organization">
+        <rdf:type rdf:resource="http://nemo.inf.ufes.br/ontologies/goop#Class"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://nemo.inf.ufes.br/ontologies/stakeholders#EO::Team -->
+
+    <owl:NamedIndividual rdf:about="http://nemo.inf.ufes.br/ontologies/stakeholders#EO::Team">
+        <rdf:type rdf:resource="http://nemo.inf.ufes.br/ontologies/goop#Class"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://nemo.inf.ufes.br/ontologies/stakeholders#UFO-C::Agent -->
+
+    <owl:NamedIndividual rdf:about="http://nemo.inf.ufes.br/ontologies/stakeholders#UFO-C::Agent">
+        <rdf:type rdf:resource="http://nemo.inf.ufes.br/ontologies/goop#Class"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://nemo.inf.ufes.br/ontologies/stakeholders#UFO-C::Person -->
+
+    <owl:NamedIndividual rdf:about="http://nemo.inf.ufes.br/ontologies/stakeholders#UFO-C::Person">
+        <rdf:type rdf:resource="http://nemo.inf.ufes.br/ontologies/goop#Class"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://nemo.inf.ufes.br/ontologies/stakeholders#UFO-C::Physical_Agent -->
+
+    <owl:NamedIndividual rdf:about="http://nemo.inf.ufes.br/ontologies/stakeholders#UFO-C::Physical_Agent">
+        <rdf:type rdf:resource="http://nemo.inf.ufes.br/ontologies/goop#Class"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://nemo.inf.ufes.br/ontologies/stakeholders#UFO-C::Social_Agent -->
+
+    <owl:NamedIndividual rdf:about="http://nemo.inf.ufes.br/ontologies/stakeholders#UFO-C::Social_Agent">
+        <rdf:type rdf:resource="http://nemo.inf.ufes.br/ontologies/goop#Class"/>
+    </owl:NamedIndividual>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 4.5.6.2018-09-06T00:27:41Z) https://github.com/owlcs/owlapi -->
+

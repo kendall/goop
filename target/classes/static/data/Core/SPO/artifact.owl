@@ -1,0 +1,155 @@
+@prefix : <http://nemo.inf.ufes.br/ontologies/fragments/artifact#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix goop: <http://nemo.inf.ufes.br/ontologies/goop#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@base <http://nemo.inf.ufes.br/ontologies/fragments/artifact> .
+
+<http://nemo.inf.ufes.br/ontologies/fragments/artifact> rdf:type owl:Ontology ;
+                                                         owl:imports <http://nemo.inf.ufes.br/ontologies/goop> .
+
+#################################################################
+#    Individuals
+#################################################################
+
+###  http://nemo.inf.ufes.br/ontologies/fragments/artifact#Artifact
+:Artifact rdf:type owl:NamedIndividual ,
+                   goop:Class ;
+          rdfs:comment """Object intentionally made to serve a given purpose in the context of a software Project or Organization. 
+Ex.: a document, a model, a library, an e-mail, a bug."""^^rdfs:Literal .
+
+
+###  http://nemo.inf.ufes.br/ontologies/fragments/artifact#Composite_Artifact
+:Composite_Artifact rdf:type owl:NamedIndividual ,
+                             goop:Class ;
+                    goop:component_of :Composite_Artifact ;
+                    goop:specifies :Artifact ;
+                    rdfs:comment "Artifact composed of other Artifacts."^^rdfs:Literal .
+
+
+###  http://nemo.inf.ufes.br/ontologies/fragments/artifact#Define_Artifact
+:Define_Artifact rdf:type owl:NamedIndividual ,
+                          goop:Goal_Based_Requirement ;
+                 goop:composed_by :Define_Artifact_by_Nature ,
+                                  :Define_Artifact_by_Parts ;
+                 rdfs:comment "In the context of the software domain, Artifacts are objects intentionally made to serve a given purpose in the context of a Software Project or Organization."^^rdfs:Literal .
+
+
+###  http://nemo.inf.ufes.br/ontologies/fragments/artifact#Define_Artifact_by_Nature
+:Define_Artifact_by_Nature rdf:type owl:NamedIndividual ,
+                                    goop:Goal_Based_Requirement ;
+                           rdfs:comment "Artifact Type partitions the generalization set of Artifacts according to their nature, giving rise to a taxonomy of artifacts. More specific taxonomies can be established for specific types of artifacts, such as documents (established by instances of Document Type) and Software Product (Software Product Type), among others."^^rdfs:Literal .
+
+
+###  http://nemo.inf.ufes.br/ontologies/fragments/artifact#Define_Artifact_by_Parts
+:Define_Artifact_by_Parts rdf:type owl:NamedIndividual ,
+                                   goop:Goal_Based_Requirement ;
+                          rdfs:comment "Can be composed of other artifacts (Composite Artifact) or not (Simple Artifact)."^^rdfs:Literal .
+
+
+###  http://nemo.inf.ufes.br/ontologies/fragments/artifact#Document
+:Document rdf:type owl:NamedIndividual ,
+                   goop:Class ;
+          goop:specifies :Artifact ;
+          rdfs:comment """Any written or pictorial, uniquely identified, information related to the software development, usually presented in a predefined format. 
+Ex.: a Requirements Document, a specification, a report."""^^rdfs:Literal .
+
+
+###  http://nemo.inf.ufes.br/ontologies/fragments/artifact#Goop-1
+:Goop-1 rdf:type owl:NamedIndividual ,
+                 goop:Goop ;
+        goop:composed_by :Define_Artifact_by_Nature .
+
+
+###  http://nemo.inf.ufes.br/ontologies/fragments/artifact#Goop-2
+:Goop-2 rdf:type owl:NamedIndividual ,
+                 goop:Goop ;
+        goop:composed_by :Define_Artifact_by_Parts .
+
+
+###  http://nemo.inf.ufes.br/ontologies/fragments/artifact#Goop-General
+:Goop-General rdf:type owl:NamedIndividual ,
+                       goop:Goop ;
+              goop:composed_by :Define_Artifact .
+
+
+###  http://nemo.inf.ufes.br/ontologies/fragments/artifact#Information_Item
+:Information_Item rdf:type owl:NamedIndividual ,
+                           goop:Class ;
+                  goop:specifies :Artifact ;
+                  rdfs:comment """Relevant information for human use, produced or used by Performed Activity. 
+Ex.: a documented requirement, a bug reported, an agreement e-mail, a component description."""^^rdfs:Literal .
+
+
+###  http://nemo.inf.ufes.br/ontologies/fragments/artifact#Model
+:Model rdf:type owl:NamedIndividual ,
+                goop:Class ;
+       goop:specifies :Artifact ;
+       rdfs:comment """A representation (abstraction) of a process or system from a particular perspective. 
+Ex.: a use case model, a class model, a component model."""^^rdfs:Literal .
+
+
+###  http://nemo.inf.ufes.br/ontologies/fragments/artifact#Model_Fragment-1
+:Model_Fragment-1 rdf:type owl:NamedIndividual ,
+                           goop:Model_Fragment ;
+                  goop:composed_by :Artifact ,
+                                   :Document ,
+                                   :Information_Item ,
+                                   :Model ,
+                                   :Software_Item ,
+                                   :Software_Product ;
+                  goop:is_used_to_satisfy :Goop-1 .
+
+
+###  http://nemo.inf.ufes.br/ontologies/fragments/artifact#Model_Fragment-2
+:Model_Fragment-2 rdf:type owl:NamedIndividual ,
+                           goop:Model_Fragment ;
+                  goop:composed_by :Artifact ,
+                                   :Composite_Artifact ,
+                                   :Simple_Artifact ;
+                  goop:is_used_to_satisfy :Goop-2 .
+
+
+###  http://nemo.inf.ufes.br/ontologies/fragments/artifact#Model_Fragment-General
+:Model_Fragment-General rdf:type owl:NamedIndividual ,
+                                 goop:Model_Fragment ;
+                        goop:composed_by :depends_on ;
+                        goop:is_used_to_satisfy :Goop-General .
+
+
+###  http://nemo.inf.ufes.br/ontologies/fragments/artifact#Simple_Artifact
+:Simple_Artifact rdf:type owl:NamedIndividual ,
+                          goop:Class ;
+                 goop:specifies :Artifact ;
+                 rdfs:comment "Artifact that is not decomposed into other Artifacts."^^rdfs:Literal .
+
+
+###  http://nemo.inf.ufes.br/ontologies/fragments/artifact#Software_Item
+:Software_Item rdf:type owl:NamedIndividual ,
+                        goop:Class ;
+               goop:specifies :Artifact ;
+               rdfs:comment """Piece of software, produced during the software process, not considered a complete Software Product, but an intermediary result. 
+Ex.: a component, database schema, a script."""^^rdfs:Literal .
+
+
+###  http://nemo.inf.ufes.br/ontologies/fragments/artifact#Software_Product
+:Software_Product rdf:type owl:NamedIndividual ,
+                           goop:Class ;
+                  goop:specifies :Artifact ;
+                  rdfs:comment """One or more computer programs together with any accompanying auxiliary items, such as documentation, delivered under a single name, ready for use. 
+Ex.: Astah modeling tool, Microsoft Word, Eclipse IDE."""^^rdfs:Literal .
+
+
+###  http://nemo.inf.ufes.br/ontologies/fragments/artifact#depends_on
+:depends_on rdf:type owl:NamedIndividual ,
+                     goop:Object_Property .
+
+
+###  http://nemo.inf.ufes.br/ontologies/fragments/artifact#describes
+:describes rdf:type owl:NamedIndividual ,
+                    goop:Object_Property .
+
+
+###  Generated by the OWL API (version 4.5.7.2018-12-02T02:23:35Z) https://github.com/owlcs/owlapi

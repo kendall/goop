@@ -1,0 +1,339 @@
+@prefix : <http://nemo.inf.ufes.br/ontologies/fragments/testing-artifacts#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix goop: <http://nemo.inf.ufes.br/ontologies/goop#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@base <http://nemo.inf.ufes.br/ontologies/fragments/testing-artifacts> .
+
+<http://nemo.inf.ufes.br/ontologies/fragments/testing-artifacts> rdf:type owl:Ontology ;
+                                                                  owl:imports <http://nemo.inf.ufes.br/ontologies/goop> .
+
+#################################################################
+#    Individuals
+#################################################################
+
+###  http://nemo.inf.ufes.br/ontologies/fragments/testing-artifacts#Artifact
+:Artifact rdf:type owl:NamedIndividual ,
+                   goop:Class ;
+          rdfs:comment """Object intentionally made to serve a given purpose in the context of a software Project or Organization. 
+Ex.: a document, a model, a library, an e-mail, a bug."""^^rdfs:Literal .
+
+
+###  http://nemo.inf.ufes.br/ontologies/fragments/testing-artifacts#Code
+:Code rdf:type owl:NamedIndividual ,
+               goop:Class ;
+      goop:specifies :Software_Item .
+
+
+###  http://nemo.inf.ufes.br/ontologies/fragments/testing-artifacts#Code_To_Be_Tested
+:Code_To_Be_Tested rdf:type owl:NamedIndividual ,
+                            goop:Class ;
+                   goop:specifies :Code ;
+                   rdfs:comment "Portion of Code (software module) to be tested by a Test Case."^^rdfs:Literal .
+
+
+###  http://nemo.inf.ufes.br/ontologies/fragments/testing-artifacts#Define_Artifact
+:Define_Artifact rdf:type owl:NamedIndividual ,
+                          goop:Goal_Based_Requirement ;
+                 goop:composed_by :Define_Artifact_by_Nature ;
+                 rdfs:comment "In the context of the software domain, Artifacts are objects intentionally made to serve a given purpose in the context of a Software Project or Organization."^^rdfs:Literal .
+
+
+###  http://nemo.inf.ufes.br/ontologies/fragments/testing-artifacts#Define_Artifact_by_Nature
+:Define_Artifact_by_Nature rdf:type owl:NamedIndividual ,
+                                    goop:Goal_Based_Requirement ;
+                           rdfs:comment "Artifact Type partitions the generalization set of Artifacts according to their nature, giving rise to a taxonomy of artifacts. More specific taxonomies can be established for specific types of artifacts, such as documents (established by instances of Document Type) and Software Product (Software Product Type), among others."^^rdfs:Literal .
+
+
+###  http://nemo.inf.ufes.br/ontologies/fragments/testing-artifacts#Define_Test_Code
+:Define_Test_Code rdf:type owl:NamedIndividual ,
+                           goop:Goal_Based_Requirement .
+
+
+###  http://nemo.inf.ufes.br/ontologies/fragments/testing-artifacts#Define_Test_Documents
+:Define_Test_Documents rdf:type owl:NamedIndividual ,
+                                goop:Goal_Based_Requirement .
+
+
+###  http://nemo.inf.ufes.br/ontologies/fragments/testing-artifacts#Define_Test_Relevant_Information
+:Define_Test_Relevant_Information rdf:type owl:NamedIndividual ,
+                                           goop:Goal_Based_Requirement .
+
+
+###  http://nemo.inf.ufes.br/ontologies/fragments/testing-artifacts#Describe_Testing_Artifacts
+:Describe_Testing_Artifacts rdf:type owl:NamedIndividual ,
+                                     goop:Goal_Based_Requirement ;
+                            goop:composed_by :Define_Artifact_by_Nature ,
+                                             :Define_Test_Code ,
+                                             :Define_Test_Documents ,
+                                             :Define_Test_Relevant_Information ;
+                            rdfs:comment "Testing activities handle with several artifacts, which can present different nature and composition. Among the documents produced by testing activities the following detach: Test Plan, Test Suite, Test Case, Test Result and Test Analysis Report. Test Plans describe how the tests should be performed, providing a roadmap for the testing activities. Test Suites are collection of test cases that are intended to be used to test a software program to show that it has some specified set of behaviours. Test Cases are most important testing artifacts. They describe the input data, expected results, steps and general conditions for testing some situation regarding a Code To Be Tested. Some test cases are implemented by some Test Code, such as Test Driver, Stub or Test Script. Test Results documents the execution of a test case, and includes the Test Case Actual Result, and optionally a Test Incident Report. Finally, Test Analysis Reports documents the analyses done from a set of Test Results."^^rdfs:Literal .
+
+
+###  http://nemo.inf.ufes.br/ontologies/fragments/testing-artifacts#Document
+:Document rdf:type owl:NamedIndividual ,
+                   goop:Class ;
+          goop:specifies :Artifact ;
+          rdfs:comment """Any written or pictorial, uniquely identified, information related to the software development, usually presented in a predefined format. 
+Ex.: a Requirements Document, a specification, a report."""^^rdfs:Literal .
+
+
+###  http://nemo.inf.ufes.br/ontologies/fragments/testing-artifacts#Goop-1
+:Goop-1 rdf:type owl:NamedIndividual ,
+                 goop:Goop ;
+        goop:composed_by :Define_Artifact_by_Nature .
+
+
+###  http://nemo.inf.ufes.br/ontologies/fragments/testing-artifacts#Goop-2
+:Goop-2 rdf:type owl:NamedIndividual ,
+                 goop:Goop .
+
+
+###  http://nemo.inf.ufes.br/ontologies/fragments/testing-artifacts#Goop-3
+:Goop-3 rdf:type owl:NamedIndividual ,
+                 goop:Goop ;
+        goop:composed_by :Define_Test_Documents .
+
+
+###  http://nemo.inf.ufes.br/ontologies/fragments/testing-artifacts#Goop-4
+:Goop-4 rdf:type owl:NamedIndividual ,
+                 goop:Goop ;
+        goop:composed_by :Define_Test_Relevant_Information .
+
+
+###  http://nemo.inf.ufes.br/ontologies/fragments/testing-artifacts#Goop-5
+:Goop-5 rdf:type owl:NamedIndividual ,
+                 goop:Goop ;
+        goop:composed_by :Define_Test_Code .
+
+
+###  http://nemo.inf.ufes.br/ontologies/fragments/testing-artifacts#Goop-6
+:Goop-6 rdf:type owl:NamedIndividual ,
+                 goop:Goop ;
+        goop:composed_by :Describe_Testing_Artifacts .
+
+
+###  http://nemo.inf.ufes.br/ontologies/fragments/testing-artifacts#Goop-General
+:Goop-General rdf:type owl:NamedIndividual ,
+                       goop:Goop ;
+              goop:composed_by :Define_Artifact .
+
+
+###  http://nemo.inf.ufes.br/ontologies/fragments/testing-artifacts#Incident_Report
+:Incident_Report rdf:type owl:NamedIndividual ,
+                          goop:Class ;
+                 goop:specifies :Information_Item ;
+                 rdfs:comment "Report describing the occurrence, nature, and status of an incident (adapted from ISO/IEC/IEEE 29119-1:2013 Software and systems engineering--Software testing--Part 1: Concepts and definitions, 4.18)."^^rdfs:Literal .
+
+
+###  http://nemo.inf.ufes.br/ontologies/fragments/testing-artifacts#Information_Item
+:Information_Item rdf:type owl:NamedIndividual ,
+                           goop:Class ;
+                  goop:specifies :Artifact ;
+                  rdfs:comment """Relevant information for human use, produced or used by Performed Activity. 
+Ex.: a documented requirement, a bug reported, an agreement e-mail, a component description."""^^rdfs:Literal .
+
+
+###  http://nemo.inf.ufes.br/ontologies/fragments/testing-artifacts#Model_Fragment-1
+:Model_Fragment-1 rdf:type owl:NamedIndividual ,
+                           goop:Model_Fragment ;
+                  goop:composed_by :Artifact ,
+                                   :Document ,
+                                   :Information_Item ,
+                                   :Software_Item ;
+                  goop:is_used_to_satisfy :Goop-1 .
+
+
+###  http://nemo.inf.ufes.br/ontologies/fragments/testing-artifacts#Model_Fragment-2
+:Model_Fragment-2 rdf:type owl:NamedIndividual ,
+                           goop:Model_Fragment ;
+                  goop:composed_by :Artifact ;
+                  goop:is_used_to_satisfy :Goop-2 .
+
+
+###  http://nemo.inf.ufes.br/ontologies/fragments/testing-artifacts#Model_Fragment-3
+:Model_Fragment-3 rdf:type owl:NamedIndividual ,
+                           goop:Model_Fragment ;
+                  goop:composed_by :Document ,
+                                   :Test_Analysis_Report ,
+                                   :Test_Case ,
+                                   :Test_Plan ,
+                                   :Test_Result ,
+                                   :Test_Suite ,
+                                   :analyzes ,
+                                   :relative_to ,
+                                   :tests ;
+                  goop:is_used_to_satisfy :Goop-3 .
+
+
+###  http://nemo.inf.ufes.br/ontologies/fragments/testing-artifacts#Model_Fragment-4
+:Model_Fragment-4 rdf:type owl:NamedIndividual ,
+                           goop:Model_Fragment ;
+                  goop:composed_by :Incident_Report ,
+                                   :Information_Item ,
+                                   :Test_Case_Actual_Result ,
+                                   :Test_Case_Expected_Result ,
+                                   :Test_Incident_Report ,
+                                   :Test_Input ,
+                                   :compared_to ,
+                                   :is_expected_to_produce ;
+                  goop:is_used_to_satisfy :Goop-4 .
+
+
+###  http://nemo.inf.ufes.br/ontologies/fragments/testing-artifacts#Model_Fragment-5
+:Model_Fragment-5 rdf:type owl:NamedIndividual ,
+                           goop:Model_Fragment ;
+                  goop:composed_by :Code ,
+                                   :Code_To_Be_Tested ,
+                                   :Software_Item ,
+                                   :Stub ,
+                                   :Test_Code ,
+                                   :Test_Driver ,
+                                   :Test_Script ,
+                                   :implements ;
+                  goop:is_used_to_satisfy :Goop-5 .
+
+
+###  http://nemo.inf.ufes.br/ontologies/fragments/testing-artifacts#Model_Fragment-General
+:Model_Fragment-General rdf:type owl:NamedIndividual ,
+                                 goop:Model_Fragment ;
+                        goop:is_used_to_satisfy :Goop-General .
+
+
+###  http://nemo.inf.ufes.br/ontologies/fragments/testing-artifacts#Software_Item
+:Software_Item rdf:type owl:NamedIndividual ,
+                        goop:Class ;
+               goop:specifies :Artifact ;
+               rdfs:comment """Piece of software, produced during the software process, not considered a complete Software Product, but an intermediary result. 
+Ex.: a component, database schema, a script."""^^rdfs:Literal .
+
+
+###  http://nemo.inf.ufes.br/ontologies/fragments/testing-artifacts#Stub
+:Stub rdf:type owl:NamedIndividual ,
+               goop:Class ;
+      goop:specifies :Test_Code ;
+      rdfs:comment "Skeletal or special-purpose test code substituting a software module, used to test a module that calls or is otherwise dependent on it (adapted from ISO/IEC/IEEE 24765:2017 Systems and software engineering - Vocabulary)"^^rdfs:Literal .
+
+
+###  http://nemo.inf.ufes.br/ontologies/fragments/testing-artifacts#Test_Analysis_Report
+:Test_Analysis_Report rdf:type owl:NamedIndividual ,
+                               goop:Class ;
+                      goop:specifies :Document ;
+                      rdfs:comment "Document containing the analysis of Test Results and how they succeed."^^rdfs:Literal .
+
+
+###  http://nemo.inf.ufes.br/ontologies/fragments/testing-artifacts#Test_Case
+:Test_Case rdf:type owl:NamedIndividual ,
+                    goop:Class ;
+           goop:component_of :Test_Case_Expected_Result ,
+                             :Test_Input ;
+           goop:specifies :Document ;
+           rdfs:comment "Document containing the input data, expected results, steps and general conditions for testing some situation regarding a Code To Be Tested."^^rdfs:Literal .
+
+
+###  http://nemo.inf.ufes.br/ontologies/fragments/testing-artifacts#Test_Case_Actual_Result
+:Test_Case_Actual_Result rdf:type owl:NamedIndividual ,
+                                  goop:Class ;
+                         goop:specifies :Information_Item ;
+                         rdfs:comment "The actual result obtained from the execution of a test case."^^rdfs:Literal .
+
+
+###  http://nemo.inf.ufes.br/ontologies/fragments/testing-artifacts#Test_Case_Expected_Result
+:Test_Case_Expected_Result rdf:type owl:NamedIndividual ,
+                                    goop:Class ;
+                           goop:specifies :Information_Item ;
+                           rdfs:comment "The result expected from the execution of a test case."^^rdfs:Literal .
+
+
+###  http://nemo.inf.ufes.br/ontologies/fragments/testing-artifacts#Test_Code
+:Test_Code rdf:type owl:NamedIndividual ,
+                    goop:Class ;
+           goop:specifies :Code ;
+           rdfs:comment "Code produced for implementing a Test Case."^^rdfs:Literal .
+
+
+###  http://nemo.inf.ufes.br/ontologies/fragments/testing-artifacts#Test_Driver
+:Test_Driver rdf:type owl:NamedIndividual ,
+                      goop:Class ;
+             goop:specifies :Test_Code ;
+             rdfs:comment "Software item used to invoke a module under test and, often, provide test inputs, control and monitor execution, and report test results (adapted from ISO/IEC/IEEE 24765:2017 Systems and software engineering-Vocabulary)."^^rdfs:Literal .
+
+
+###  http://nemo.inf.ufes.br/ontologies/fragments/testing-artifacts#Test_Incident_Report
+:Test_Incident_Report rdf:type owl:NamedIndividual ,
+                               goop:Class ;
+                      goop:specifies :Incident_Report ;
+                      rdfs:comment "Report describing any event that occurs during the testing process which requires investigation (adapted from ISO/IEC/IEEE 24765:2017 Systems and software engineering-Vocabulary)"^^rdfs:Literal .
+
+
+###  http://nemo.inf.ufes.br/ontologies/fragments/testing-artifacts#Test_Input
+:Test_Input rdf:type owl:NamedIndividual ,
+                     goop:Class ;
+            goop:specifies :Information_Item ;
+            rdfs:comment "Descriptions of the parameters and values to be used in a test case, in order to produce an expected result."^^rdfs:Literal .
+
+
+###  http://nemo.inf.ufes.br/ontologies/fragments/testing-artifacts#Test_Plan
+:Test_Plan rdf:type owl:NamedIndividual ,
+                    goop:Class ;
+           goop:specifies :Document ;
+           rdfs:comment "Document describing how the tests should be performed, providing a roadmap for the testing activities."^^rdfs:Literal .
+
+
+###  http://nemo.inf.ufes.br/ontologies/fragments/testing-artifacts#Test_Result
+:Test_Result rdf:type owl:NamedIndividual ,
+                      goop:Class ;
+             goop:component_of :Test_Case_Actual_Result ,
+                               :Test_Incident_Report ;
+             goop:specifies :Document ;
+             rdfs:comment "Document containing the actual results and identified issues relative to a Test Case execution."^^rdfs:Literal .
+
+
+###  http://nemo.inf.ufes.br/ontologies/fragments/testing-artifacts#Test_Script
+:Test_Script rdf:type owl:NamedIndividual ,
+                      goop:Class ;
+             goop:specifies :Test_Code ;
+             rdfs:comment "Short program written in a programming language used to test part of the functionality of a software system. Test scripts written as a short program can either be written using a special automated functional GUI test tool or in a well-known programming language (Wikipedia)."^^rdfs:Literal .
+
+
+###  http://nemo.inf.ufes.br/ontologies/fragments/testing-artifacts#Test_Suite
+:Test_Suite rdf:type owl:NamedIndividual ,
+                     goop:Class ;
+            goop:component_of :Test_Case ;
+            goop:specifies :Document ;
+            rdfs:comment "A collection of test cases that are intended to be used to test a software program to show that it has some specified set of behaviours (Wikipedia)."^^rdfs:Literal .
+
+
+###  http://nemo.inf.ufes.br/ontologies/fragments/testing-artifacts#analyzes
+:analyzes rdf:type owl:NamedIndividual ,
+                   goop:Object_Property .
+
+
+###  http://nemo.inf.ufes.br/ontologies/fragments/testing-artifacts#compared_to
+:compared_to rdf:type owl:NamedIndividual ,
+                      goop:Object_Property .
+
+
+###  http://nemo.inf.ufes.br/ontologies/fragments/testing-artifacts#implements
+:implements rdf:type owl:NamedIndividual ,
+                     goop:Object_Property .
+
+
+###  http://nemo.inf.ufes.br/ontologies/fragments/testing-artifacts#is_expected_to_produce
+:is_expected_to_produce rdf:type owl:NamedIndividual ,
+                                 goop:Object_Property .
+
+
+###  http://nemo.inf.ufes.br/ontologies/fragments/testing-artifacts#relative_to
+:relative_to rdf:type owl:NamedIndividual ,
+                      goop:Object_Property .
+
+
+###  http://nemo.inf.ufes.br/ontologies/fragments/testing-artifacts#tests
+:tests rdf:type owl:NamedIndividual ,
+                goop:Object_Property .
+
+
+###  Generated by the OWL API (version 4.5.7.2018-12-02T02:23:35Z) https://github.com/owlcs/owlapi

@@ -1,0 +1,442 @@
+@prefix : <http://nemo.inf.ufes.br/ontologies/fragments/qapo#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix goop: <http://nemo.inf.ufes.br/ontologies/goop#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@base <http://nemo.inf.ufes.br/ontologies/fragments/qapo> .
+
+<http://nemo.inf.ufes.br/ontologies/fragments/qapo> rdf:type owl:Ontology ;
+                                                     owl:imports <http://nemo.inf.ufes.br/ontologies/goop> .
+
+#################################################################
+#    Individuals
+#################################################################
+
+###  http://nemo.inf.ufes.br/ontologies/fragments/qapo#Adherence_Evaluation
+:Adherence_Evaluation rdf:type owl:NamedIndividual ;
+                      goop:component_of :Artifact_Evaluation ,
+                                        :Noncompliance_Identification ,
+                                        :Process_Evaluation ;
+                      goop:specifies :Performed_Composite_Activity ;
+                      rdfs:comment "Activity for objectively evaluating the adherence of processes and products to the applicable requirements, registering the identified issues."^^rdfs:Literal .
+
+
+###  http://nemo.inf.ufes.br/ontologies/fragments/qapo#Artifact
+:Artifact rdf:type owl:NamedIndividual ,
+                   goop:Class ;
+          rdfs:comment """Object intentionally made to serve a given purpose in the context of a software Project or Organization. 
+Ex.: a document, a model, a library, an e-mail, a bug."""^^rdfs:Literal .
+
+
+###  http://nemo.inf.ufes.br/ontologies/fragments/qapo#Artifact_Evaluation
+:Artifact_Evaluation rdf:type owl:NamedIndividual ;
+                     goop:specifies :Performed_Simple_Activity ;
+                     rdfs:comment "Activity for objectively evaluating the adherence of products and deliverables to the applicable requirements."^^rdfs:Literal .
+
+
+###  http://nemo.inf.ufes.br/ontologies/fragments/qapo#Composite_Artifact
+:Composite_Artifact rdf:type owl:NamedIndividual ,
+                             goop:Class ;
+                    goop:component_of :Composite_Artifact ;
+                    goop:specifies :Artifact ;
+                    rdfs:comment "Artifact composed of other Artifacts."^^rdfs:Literal .
+
+
+###  http://nemo.inf.ufes.br/ontologies/fragments/qapo#Corrective_Action_Register
+:Corrective_Action_Register rdf:type owl:NamedIndividual ;
+                            goop:specifies :Information_Item .
+
+
+###  http://nemo.inf.ufes.br/ontologies/fragments/qapo#Define_Artifact
+:Define_Artifact rdf:type owl:NamedIndividual ,
+                          goop:Goal_Based_Requirement ;
+                 goop:composed_by :Define_Artifact_by_Nature ,
+                                  :Define_Artifact_by_Parts ;
+                 rdfs:comment "In the context of the software domain, Artifacts are objects intentionally made to serve a given purpose in the context of a Software Project or Organization."^^rdfs:Literal .
+
+
+###  http://nemo.inf.ufes.br/ontologies/fragments/qapo#Define_Artifact_by_Nature
+:Define_Artifact_by_Nature rdf:type owl:NamedIndividual ,
+                                    goop:Goal_Based_Requirement ;
+                           rdfs:comment "Artifact Type partitions the generalization set of Artifacts according to their nature, giving rise to a taxonomy of artifacts. More specific taxonomies can be established for specific types of artifacts, such as documents (established by instances of Document Type) and Software Product (Software Product Type), among others."^^rdfs:Literal .
+
+
+###  http://nemo.inf.ufes.br/ontologies/fragments/qapo#Define_Artifact_by_Parts
+:Define_Artifact_by_Parts rdf:type owl:NamedIndividual ,
+                                   goop:Goal_Based_Requirement ;
+                          rdfs:comment "Can be composed of other artifacts (Composite Artifact) or not (Simple Artifact)."^^rdfs:Literal .
+
+
+###  http://nemo.inf.ufes.br/ontologies/fragments/qapo#Define_Performed_Process
+:Define_Performed_Process rdf:type owl:NamedIndividual ,
+                                   goop:Goal_Based_Requirement .
+
+
+###  http://nemo.inf.ufes.br/ontologies/fragments/qapo#Define_Quality_Assurance_Process
+:Define_Quality_Assurance_Process rdf:type owl:NamedIndividual ;
+                                  goop:composed_by :Define_Artifact ,
+                                                   :Define_Performed_Process ,
+                                                   :Describe_Stakeholders_Involved_in_Quality_Assurance_Activities ;
+                                  rdfs:comment """The Quality Assurance Process is a Process with the purpose of conducting the activities related to software quality assurance, assessing and assuring adherence of the performed processes and produced artifacts to the applicable requirements. It is composed of three main activities. (1) Quality Assurance Planning plans the quality assurance activities, resulting in a Quality Assurance Plan. (2) Adherence Evaluation objectively evaluates the adherence of processes and products to the applicable requirements, registering the identified issues. It has three sub-actvities: Artifact Evaluation, for evaluating the adherence of products and deliverables; Process Evaluation, for evaluating the adherence of processes and activities; and Noncompliance Identification, for registering the noncompliances identified in processes and artifacts. (3) Noncompliance Control manages the registered noncompliances until their effective resolution. It is decomposed into two sub-activities: Noncompliance Resolution, for analyzing a Noncompliance, planning and executing the applicable Corrective Actions to its resolution; and Noncompliance Closing, for finishing a noncompliance once it is satisfactorily solved.
+The process involves four Stakeholders: the Quality Auditor, who is responsible for conducting the objective evaluations; the Noncompliance Responsible, who is assigned for solving a noncompliance; the Project Manager, who is in charge of planning the Quality Assurance Process; and Project Team, who is involved in the objective evaluations of its project."""^^rdfs:Literal .
+
+
+###  http://nemo.inf.ufes.br/ontologies/fragments/qapo#Describe_Stakeholders_Involved_in_Quality_Assurance_Activities
+:Describe_Stakeholders_Involved_in_Quality_Assurance_Activities rdf:type owl:NamedIndividual ,
+                                                                         goop:Goal_Based_Requirement .
+
+
+###  http://nemo.inf.ufes.br/ontologies/fragments/qapo#Document
+:Document rdf:type owl:NamedIndividual ,
+                   goop:Class ;
+          goop:specifies :Artifact ;
+          rdfs:comment """Any written or pictorial, uniquely identified, information related to the software development, usually presented in a predefined format. 
+Ex.: a Requirements Document, a specification, a report."""^^rdfs:Literal .
+
+
+###  http://nemo.inf.ufes.br/ontologies/fragments/qapo#Evaluated_Artifact
+:Evaluated_Artifact rdf:type owl:NamedIndividual ;
+                    goop:specifies :Artifact ;
+                    rdfs:comment "Artifact objectively evaluated."^^rdfs:Literal .
+
+
+###  http://nemo.inf.ufes.br/ontologies/fragments/qapo#Evaluated_Process
+:Evaluated_Process rdf:type owl:NamedIndividual ;
+                   goop:specifies :Performed_Process ;
+                   rdfs:comment "Process objectively evaluated."^^rdfs:Literal .
+
+
+###  http://nemo.inf.ufes.br/ontologies/fragments/qapo#Evaluation_Report
+:Evaluation_Report rdf:type owl:NamedIndividual ;
+                   goop:specifies :Document ;
+                   rdfs:comment "Document describing the evaluation results and identified issues."^^rdfs:Literal .
+
+
+###  http://nemo.inf.ufes.br/ontologies/fragments/qapo#Goop-1
+:Goop-1 rdf:type owl:NamedIndividual ,
+                 goop:Goop ;
+        goop:composed_by :Define_Artifact_by_Nature .
+
+
+###  http://nemo.inf.ufes.br/ontologies/fragments/qapo#Goop-2
+:Goop-2 rdf:type owl:NamedIndividual ,
+                 goop:Goop ;
+        goop:composed_by :Define_Artifact_by_Parts .
+
+
+###  http://nemo.inf.ufes.br/ontologies/fragments/qapo#Goop-3
+:Goop-3 rdf:type owl:NamedIndividual ,
+                 goop:Goop ;
+        goop:composed_by :Define_Performed_Process .
+
+
+###  http://nemo.inf.ufes.br/ontologies/fragments/qapo#Goop-4
+:Goop-4 rdf:type owl:NamedIndividual ,
+                 goop:Goop ;
+        goop:composed_by :Describe_Stakeholders_Involved_in_Quality_Assurance_Activities .
+
+
+###  http://nemo.inf.ufes.br/ontologies/fragments/qapo#Goop-5
+:Goop-5 rdf:type owl:NamedIndividual ;
+        goop:composed_by :Define_Quality_Assurance_Process .
+
+
+###  http://nemo.inf.ufes.br/ontologies/fragments/qapo#Goop-General
+:Goop-General rdf:type owl:NamedIndividual ,
+                       goop:Goop ;
+              goop:composed_by :Define_Artifact .
+
+
+###  http://nemo.inf.ufes.br/ontologies/fragments/qapo#Information_Item
+:Information_Item rdf:type owl:NamedIndividual ,
+                           goop:Class ;
+                  goop:specifies :Artifact ;
+                  rdfs:comment """Relevant information for human use, produced or used by Performed Activity. 
+Ex.: a documented requirement, a bug reported, an agreement e-mail, a component description."""^^rdfs:Literal .
+
+
+###  http://nemo.inf.ufes.br/ontologies/fragments/qapo#Model
+:Model rdf:type owl:NamedIndividual ,
+                goop:Class ;
+       goop:specifies :Artifact .
+
+
+###  http://nemo.inf.ufes.br/ontologies/fragments/qapo#Model_Fragment-1
+:Model_Fragment-1 rdf:type owl:NamedIndividual ,
+                           goop:Model_Fragment ;
+                  goop:composed_by :Artifact ,
+                                   :Document ,
+                                   :Information_Item ,
+                                   :Model ,
+                                   :Software_Item ,
+                                   :Software_Product ,
+                                   :describes ;
+                  goop:is_used_to_satisfy :Goop-1 .
+
+
+###  http://nemo.inf.ufes.br/ontologies/fragments/qapo#Model_Fragment-2
+:Model_Fragment-2 rdf:type owl:NamedIndividual ,
+                           goop:Model_Fragment ;
+                  goop:composed_by :Artifact ,
+                                   :Composite_Artifact ,
+                                   :Simple_Artifact ;
+                  goop:is_used_to_satisfy :Goop-2 .
+
+
+###  http://nemo.inf.ufes.br/ontologies/fragments/qapo#Model_Fragment-3
+:Model_Fragment-3 rdf:type owl:NamedIndividual ;
+                  goop:composed_by :Performed_Activity ,
+                                   :Performed_Composite_Activity ,
+                                   :Performed_General_Process ,
+                                   :Performed_Process ,
+                                   :Performed_Simple_Activity ,
+                                   :Performed_Specific_Process ,
+                                   :changes ,
+                                   :creates ,
+                                   :depends_on ,
+                                   :uses ;
+                  goop:is_used_to_satisfy :Goop-3 .
+
+
+###  http://nemo.inf.ufes.br/ontologies/fragments/qapo#Model_Fragment-4
+:Model_Fragment-4 rdf:type owl:NamedIndividual ;
+                  goop:composed_by :Noncompliance_Responsible ,
+                                   :Person_Stakeholder ,
+                                   :Project_Manager ,
+                                   :Project_Team ,
+                                   :Quality_Auditor ,
+                                   :Stakeholder ,
+                                   :Team_Stakeholder ,
+                                   :is_in_charge_of ,
+                                   :participates_in ;
+                  goop:is_used_to_satisfy :Goop-4 .
+
+
+###  http://nemo.inf.ufes.br/ontologies/fragments/qapo#Model_Fragment-5
+:Model_Fragment-5 rdf:type owl:NamedIndividual ;
+                  goop:composed_by :Adherence_Evaluation ,
+                                   :Artifact_Evaluation ,
+                                   :Corrective_Action_Register ,
+                                   :Evaluated_Artifact ,
+                                   :Evaluated_Process ,
+                                   :Evaluation_Report ,
+                                   :Noncompliance_Closing ,
+                                   :Noncompliance_Control ,
+                                   :Noncompliance_Identification ,
+                                   :Noncompliance_Register ,
+                                   :Noncompliance_Resolution ,
+                                   :Process_Evaluation ,
+                                   :Project_Plan ,
+                                   :Quality_Assurance_Plan ,
+                                   :Quality_Assurance_Planning ,
+                                   :Quality_Assurance_Process ,
+                                   :changes ,
+                                   :creates ,
+                                   :uses ;
+                  goop:is_used_to_satisfy :Goop-5 .
+
+
+###  http://nemo.inf.ufes.br/ontologies/fragments/qapo#Model_Fragment-General
+:Model_Fragment-General rdf:type owl:NamedIndividual ,
+                                 goop:Model_Fragment ;
+                        goop:composed_by :depends_on ;
+                        goop:is_used_to_satisfy :Goop-General .
+
+
+###  http://nemo.inf.ufes.br/ontologies/fragments/qapo#Noncompliance_Closing
+:Noncompliance_Closing rdf:type owl:NamedIndividual ;
+                       goop:specifies :Performed_Simple_Activity ;
+                       rdfs:comment "Activity for finishing a noncompliance once it is satisfactorily solved."^^rdfs:Literal .
+
+
+###  http://nemo.inf.ufes.br/ontologies/fragments/qapo#Noncompliance_Control
+:Noncompliance_Control rdf:type owl:NamedIndividual ;
+                       goop:component_of :Noncompliance_Closing ,
+                                         :Noncompliance_Resolution ;
+                       goop:specifies :Performed_Composite_Activity ;
+                       rdfs:comment "Activity for managing the registered noncompliances until their effective resolution."^^rdfs:Literal .
+
+
+###  http://nemo.inf.ufes.br/ontologies/fragments/qapo#Noncompliance_Identification
+:Noncompliance_Identification rdf:type owl:NamedIndividual ;
+                              goop:specifies :Performed_Simple_Activity ;
+                              rdfs:comment "Activity for registering the noncompliances identified in processes and artifacts."^^rdfs:Literal .
+
+
+###  http://nemo.inf.ufes.br/ontologies/fragments/qapo#Noncompliance_Register
+:Noncompliance_Register rdf:type owl:NamedIndividual ;
+                        goop:component_of :Corrective_Action_Register ;
+                        goop:specifies :Information_Item ;
+                        rdfs:comment """Information Item describing a noncompliance (a failure or refusal to conform to an applicable requirement) in a process or artifact, and related information to solve it. 
+Ex.: a neglected activity in a process; a document wrongly specified."""^^rdfs:Literal .
+
+
+###  http://nemo.inf.ufes.br/ontologies/fragments/qapo#Noncompliance_Resolution
+:Noncompliance_Resolution rdf:type owl:NamedIndividual ;
+                          goop:specifies :Performed_Simple_Activity ;
+                          rdfs:comment "Activity for analyzing a noncompliance, planning and executing the applicable corrective actions to its resolution."^^rdfs:Literal .
+
+
+###  http://nemo.inf.ufes.br/ontologies/fragments/qapo#Noncompliance_Responsible
+:Noncompliance_Responsible rdf:type owl:NamedIndividual ;
+                           goop:specifies :Person_Stakeholder ;
+                           rdfs:comment "Stakeholder responsible for solving a noncompliance."^^rdfs:Literal .
+
+
+###  http://nemo.inf.ufes.br/ontologies/fragments/qapo#Performed_Activity
+:Performed_Activity rdf:type owl:NamedIndividual ,
+                             goop:Class .
+
+
+###  http://nemo.inf.ufes.br/ontologies/fragments/qapo#Performed_Composite_Activity
+:Performed_Composite_Activity rdf:type owl:NamedIndividual ,
+                                       goop:Class ;
+                              goop:component_of :Performed_Activity ;
+                              goop:specifies :Performed_Composite_Activity .
+
+
+###  http://nemo.inf.ufes.br/ontologies/fragments/qapo#Performed_General_Process
+:Performed_General_Process rdf:type owl:NamedIndividual ,
+                                    goop:Class ;
+                           goop:component_of :Performed_Specific_Process ;
+                           goop:specifies :Performed_Process .
+
+
+###  http://nemo.inf.ufes.br/ontologies/fragments/qapo#Performed_Process
+:Performed_Process rdf:type owl:NamedIndividual ,
+                            goop:Class .
+
+
+###  http://nemo.inf.ufes.br/ontologies/fragments/qapo#Performed_Simple_Activity
+:Performed_Simple_Activity rdf:type owl:NamedIndividual ,
+                                    goop:Class ;
+                           goop:specifies :Performed_Activity .
+
+
+###  http://nemo.inf.ufes.br/ontologies/fragments/qapo#Performed_Specific_Process
+:Performed_Specific_Process rdf:type owl:NamedIndividual ,
+                                     goop:Class ;
+                            goop:component_of :Performed_Activity ;
+                            goop:specifies :Performed_Process .
+
+
+###  http://nemo.inf.ufes.br/ontologies/fragments/qapo#Person_Stakeholder
+:Person_Stakeholder rdf:type owl:NamedIndividual ;
+                    goop:specifies :Stakeholder .
+
+
+###  http://nemo.inf.ufes.br/ontologies/fragments/qapo#Process_Evaluation
+:Process_Evaluation rdf:type owl:NamedIndividual ;
+                    goop:specifies :Performed_Simple_Activity ;
+                    rdfs:comment "Activity for objectively evaluating the adherence of processes and activities to the applicable requirements."^^rdfs:Literal .
+
+
+###  http://nemo.inf.ufes.br/ontologies/fragments/qapo#Project_Manager
+:Project_Manager rdf:type owl:NamedIndividual ;
+                 goop:specifies :Person_Stakeholder .
+
+
+###  http://nemo.inf.ufes.br/ontologies/fragments/qapo#Project_Plan
+:Project_Plan rdf:type owl:NamedIndividual ;
+              goop:specifies :Document .
+
+
+###  http://nemo.inf.ufes.br/ontologies/fragments/qapo#Project_Team
+:Project_Team rdf:type owl:NamedIndividual ;
+              goop:specifies :Team_Stakeholder .
+
+
+###  http://nemo.inf.ufes.br/ontologies/fragments/qapo#Quality_Assurance_Plan
+:Quality_Assurance_Plan rdf:type owl:NamedIndividual ;
+                        goop:specifies :Document ;
+                        rdfs:comment "Document registering the planed quality assurance activities, processes and artifacts to be evaluated and involved personnel."^^rdfs:Literal .
+
+
+###  http://nemo.inf.ufes.br/ontologies/fragments/qapo#Quality_Assurance_Planning
+:Quality_Assurance_Planning rdf:type owl:NamedIndividual ;
+                            goop:specifies :Performed_Composite_Activity ;
+                            rdfs:comment "Activity for planning the quality assurance activities, resulting in a Quality Assurance Plan."^^rdfs:Literal .
+
+
+###  http://nemo.inf.ufes.br/ontologies/fragments/qapo#Quality_Assurance_Process
+:Quality_Assurance_Process rdf:type owl:NamedIndividual ;
+                           goop:component_of :Adherence_Evaluation ,
+                                             :Noncompliance_Control ,
+                                             :Quality_Assurance_Planning ;
+                           goop:specifies :Performed_Specific_Process ;
+                           rdfs:comment "Process for conducting the activities related to software quality assurance, assessing and assuring adherence of the performed processes and produced artifacts to the applicable requirements."^^rdfs:Literal .
+
+
+###  http://nemo.inf.ufes.br/ontologies/fragments/qapo#Quality_Auditor
+:Quality_Auditor rdf:type owl:NamedIndividual ;
+                 goop:specifies :Person_Stakeholder ;
+                 rdfs:comment "Stakeholder responsible for conducting objective evaluations."^^rdfs:Literal .
+
+
+###  http://nemo.inf.ufes.br/ontologies/fragments/qapo#Simple_Artifact
+:Simple_Artifact rdf:type owl:NamedIndividual ,
+                          goop:Class ;
+                 goop:specifies :Artifact ;
+                 rdfs:comment "Artifact that is not decomposed into other Artifacts."^^rdfs:Literal .
+
+
+###  http://nemo.inf.ufes.br/ontologies/fragments/qapo#Software_Item
+:Software_Item rdf:type owl:NamedIndividual ,
+                        goop:Class ;
+               goop:specifies :Artifact .
+
+
+###  http://nemo.inf.ufes.br/ontologies/fragments/qapo#Software_Product
+:Software_Product rdf:type owl:NamedIndividual ,
+                           goop:Class ;
+                  goop:specifies :Artifact .
+
+
+###  http://nemo.inf.ufes.br/ontologies/fragments/qapo#Stakeholder
+:Stakeholder rdf:type owl:NamedIndividual ,
+                      goop:Class .
+
+
+###  http://nemo.inf.ufes.br/ontologies/fragments/qapo#Team_Stakeholder
+:Team_Stakeholder rdf:type owl:NamedIndividual ;
+                  goop:specifies :Stakeholder .
+
+
+###  http://nemo.inf.ufes.br/ontologies/fragments/qapo#changes
+:changes rdf:type owl:NamedIndividual ,
+                  goop:Object_Property .
+
+
+###  http://nemo.inf.ufes.br/ontologies/fragments/qapo#creates
+:creates rdf:type owl:NamedIndividual ,
+                  goop:Object_Property .
+
+
+###  http://nemo.inf.ufes.br/ontologies/fragments/qapo#depends_on
+:depends_on rdf:type owl:NamedIndividual ,
+                     goop:Object_Property .
+
+
+###  http://nemo.inf.ufes.br/ontologies/fragments/qapo#describes
+:describes rdf:type owl:NamedIndividual ,
+                    goop:Object_Property .
+
+
+###  http://nemo.inf.ufes.br/ontologies/fragments/qapo#is_in_charge_of
+:is_in_charge_of rdf:type owl:NamedIndividual ,
+                          goop:Object_Property .
+
+
+###  http://nemo.inf.ufes.br/ontologies/fragments/qapo#participates_in
+:participates_in rdf:type owl:NamedIndividual ,
+                          goop:Object_Property .
+
+
+###  http://nemo.inf.ufes.br/ontologies/fragments/qapo#uses
+:uses rdf:type owl:NamedIndividual ,
+               goop:Object_Property .
+
+
+###  Generated by the OWL API (version 4.5.7.2018-12-02T02:23:35Z) https://github.com/owlcs/owlapi

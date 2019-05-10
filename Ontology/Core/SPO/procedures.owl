@@ -1,0 +1,190 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns="http://nemo.inf.ufes.br/ontologies/procedures#"
+     xml:base="http://nemo.inf.ufes.br/ontologies/procedures"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:goop="http://nemo.inf.ufes.br/ontologies/goop#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#">
+    <owl:Ontology rdf:about="http://nemo.inf.ufes.br/ontologies/procedures">
+        <owl:imports rdf:resource="http://nemo.inf.ufes.br/ontologies/goop"/>
+    </owl:Ontology>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Individuals
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://nemo.inf.ufes.br/ontologies/procedures#Composite_Method_Activity -->
+
+    <owl:NamedIndividual rdf:about="http://nemo.inf.ufes.br/ontologies/procedures#Composite_Method_Activity">
+        <rdf:type rdf:resource="http://nemo.inf.ufes.br/ontologies/goop#Class"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://nemo.inf.ufes.br/ontologies/procedures#Deal_with_different_types_of_procedures_adopted_in_a_software_process -->
+
+    <owl:NamedIndividual rdf:about="http://nemo.inf.ufes.br/ontologies/procedures#Deal_with_different_types_of_procedures_adopted_in_a_software_process">
+        <rdf:type rdf:resource="http://nemo.inf.ufes.br/ontologies/goop#Goal_Based_Requirement"/>
+        <goop:composed_by rdf:resource="http://nemo.inf.ufes.br/ontologies/procedures#Deal_with_different_types_of_procedures_adopted_in_a_software_process"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://nemo.inf.ufes.br/ontologies/procedures#Document_Template -->
+
+    <owl:NamedIndividual rdf:about="http://nemo.inf.ufes.br/ontologies/procedures#Document_Template">
+        <rdf:type rdf:resource="http://nemo.inf.ufes.br/ontologies/goop#Class"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://nemo.inf.ufes.br/ontologies/procedures#Document_Type -->
+
+    <owl:NamedIndividual rdf:about="http://nemo.inf.ufes.br/ontologies/procedures#Document_Type">
+        <rdf:type rdf:resource="http://nemo.inf.ufes.br/ontologies/goop#Class"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://nemo.inf.ufes.br/ontologies/procedures#Goop -->
+
+    <owl:NamedIndividual rdf:about="http://nemo.inf.ufes.br/ontologies/procedures#Goop">
+        <rdf:type rdf:resource="http://nemo.inf.ufes.br/ontologies/goop#Goop"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://nemo.inf.ufes.br/ontologies/procedures#Method -->
+
+    <owl:NamedIndividual rdf:about="http://nemo.inf.ufes.br/ontologies/procedures#Method">
+        <rdf:type rdf:resource="http://nemo.inf.ufes.br/ontologies/goop#Class"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://nemo.inf.ufes.br/ontologies/procedures#Method_Activity -->
+
+    <owl:NamedIndividual rdf:about="http://nemo.inf.ufes.br/ontologies/procedures#Method_Activity">
+        <rdf:type rdf:resource="http://nemo.inf.ufes.br/ontologies/goop#Class"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://nemo.inf.ufes.br/ontologies/procedures#Method_Workflow -->
+
+    <owl:NamedIndividual rdf:about="http://nemo.inf.ufes.br/ontologies/procedures#Method_Workflow">
+        <rdf:type rdf:resource="http://nemo.inf.ufes.br/ontologies/goop#Class"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://nemo.inf.ufes.br/ontologies/procedures#Model_Fragment -->
+
+    <owl:NamedIndividual rdf:about="http://nemo.inf.ufes.br/ontologies/procedures#Model_Fragment">
+        <rdf:type rdf:resource="http://nemo.inf.ufes.br/ontologies/goop#Model_Fragment"/>
+        <goop:composed_by rdf:resource="http://nemo.inf.ufes.br/ontologies/procedures#Composite_Method_Activity"/>
+        <goop:composed_by rdf:resource="http://nemo.inf.ufes.br/ontologies/procedures#Document_Template"/>
+        <goop:composed_by rdf:resource="http://nemo.inf.ufes.br/ontologies/procedures#Document_Type"/>
+        <goop:composed_by rdf:resource="http://nemo.inf.ufes.br/ontologies/procedures#Method"/>
+        <goop:composed_by rdf:resource="http://nemo.inf.ufes.br/ontologies/procedures#Method_Activity"/>
+        <goop:composed_by rdf:resource="http://nemo.inf.ufes.br/ontologies/procedures#Method_Workflow"/>
+        <goop:composed_by rdf:resource="http://nemo.inf.ufes.br/ontologies/procedures#Procedure"/>
+        <goop:composed_by rdf:resource="http://nemo.inf.ufes.br/ontologies/procedures#Simple_Method_Activity"/>
+        <goop:composed_by rdf:resource="http://nemo.inf.ufes.br/ontologies/procedures#Technique"/>
+        <goop:composed_by rdf:resource="http://nemo.inf.ufes.br/ontologies/procedures#applies_to"/>
+        <goop:composed_by rdf:resource="http://nemo.inf.ufes.br/ontologies/procedures#describes"/>
+        <goop:composed_by rdf:resource="http://nemo.inf.ufes.br/ontologies/procedures#UFO-C::Complex_Action_Universal"/>
+        <goop:composed_by rdf:resource="http://nemo.inf.ufes.br/ontologies/procedures#UFO-C::Normative_Description"/>
+        <goop:composed_by rdf:resource="http://nemo.inf.ufes.br/ontologies/procedures#UFO-C::Plan_Description"/>
+        <goop:composed_by rdf:resource="http://nemo.inf.ufes.br/ontologies/procedures#UFO-C::Action_Universal_(Plan)"/>
+        <goop:is_used_to_satisfy rdf:resource="http://nemo.inf.ufes.br/ontologies/procedures#Goop"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://nemo.inf.ufes.br/ontologies/procedures#Procedure -->
+
+    <owl:NamedIndividual rdf:about="http://nemo.inf.ufes.br/ontologies/procedures#Procedure">
+        <rdf:type rdf:resource="http://nemo.inf.ufes.br/ontologies/goop#Class"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://nemo.inf.ufes.br/ontologies/procedures#Simple_Method_Activity -->
+
+    <owl:NamedIndividual rdf:about="http://nemo.inf.ufes.br/ontologies/procedures#Simple_Method_Activity">
+        <rdf:type rdf:resource="http://nemo.inf.ufes.br/ontologies/goop#Class"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://nemo.inf.ufes.br/ontologies/procedures#Technique -->
+
+    <owl:NamedIndividual rdf:about="http://nemo.inf.ufes.br/ontologies/procedures#Technique">
+        <rdf:type rdf:resource="http://nemo.inf.ufes.br/ontologies/goop#Class"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://nemo.inf.ufes.br/ontologies/procedures#applies_to -->
+
+    <owl:NamedIndividual rdf:about="http://nemo.inf.ufes.br/ontologies/procedures#applies_to">
+        <rdf:type rdf:resource="http://nemo.inf.ufes.br/ontologies/goop#Object_Property"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://nemo.inf.ufes.br/ontologies/procedures#describes -->
+
+    <owl:NamedIndividual rdf:about="http://nemo.inf.ufes.br/ontologies/procedures#describes">
+        <rdf:type rdf:resource="http://nemo.inf.ufes.br/ontologies/goop#Object_Property"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://nemo.inf.ufes.br/ontologies/procedures#UFO-C::Complex_Action_Universal -->
+
+    <owl:NamedIndividual rdf:about="http://nemo.inf.ufes.br/ontologies/procedures#UFO-C::Complex_Action_Universal">
+        <rdf:type rdf:resource="http://nemo.inf.ufes.br/ontologies/goop#Class"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://nemo.inf.ufes.br/ontologies/procedures#UFO-C::Normative_Description -->
+
+    <owl:NamedIndividual rdf:about="http://nemo.inf.ufes.br/ontologies/procedures#UFO-C::Normative_Description">
+        <rdf:type rdf:resource="http://nemo.inf.ufes.br/ontologies/goop#Class"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://nemo.inf.ufes.br/ontologies/procedures#UFO-C::Plan_Description -->
+
+    <owl:NamedIndividual rdf:about="http://nemo.inf.ufes.br/ontologies/procedures#UFO-C::Plan_Description">
+        <rdf:type rdf:resource="http://nemo.inf.ufes.br/ontologies/goop#Class"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://nemo.inf.ufes.br/ontologies/procedures#UFO-C::Action_Universal_(Plan) -->
+
+    <owl:NamedIndividual rdf:about="http://nemo.inf.ufes.br/ontologies/procedures#UFO-C::Action_Universal_(Plan)">
+        <rdf:type rdf:resource="http://nemo.inf.ufes.br/ontologies/goop#Class"/>
+    </owl:NamedIndividual>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 4.5.6.2018-09-06T00:27:41Z) https://github.com/owlcs/owlapi -->
+

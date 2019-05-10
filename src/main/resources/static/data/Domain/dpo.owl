@@ -1,0 +1,525 @@
+@prefix : <http://nemo.inf.ufes.br/ontologies/fragments/dpo#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix goop: <http://nemo.inf.ufes.br/ontologies/goop#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@base <http://nemo.inf.ufes.br/ontologies/fragments/dpo> .
+
+<http://nemo.inf.ufes.br/ontologies/fragments/dpo> rdf:type owl:Ontology ;
+                                                    owl:imports <http://nemo.inf.ufes.br/ontologies/goop> .
+
+#################################################################
+#    Individuals
+#################################################################
+
+###  http://nemo.inf.ufes.br/ontologies/fragments/dpo#Architectural_Component
+:Architectural_Component rdf:type owl:NamedIndividual ,
+                                  goop:Class ;
+                         goop:component_of :Architectural_Component ;
+                         goop:specifies :Architectural_Element ;
+                         rdfs:comment "Architectural Element describing a software module as part of an Architecture."^^rdfs:Literal .
+
+
+###  http://nemo.inf.ufes.br/ontologies/fragments/dpo#Architectural_Connector
+:Architectural_Connector rdf:type owl:NamedIndividual ,
+                                  goop:Class ;
+                         goop:specifies :Architectural_Element ;
+                         rdfs:comment "Architectural Element connecting two or more Components in an Architecture."^^rdfs:Literal .
+
+
+###  http://nemo.inf.ufes.br/ontologies/fragments/dpo#Architectural_Design
+:Architectural_Design rdf:type owl:NamedIndividual ,
+                               goop:Class ;
+                      goop:component_of :Architecture_Development ,
+                                        :Data_High-level_Design ,
+                                        :Interface_High-level_Design ;
+                      goop:specifies :Performed_Composite_Activity ;
+                      rdfs:comment "Activity for making the high-level design choices, defining the Software Architecture and involved elements."^^rdfs:Literal .
+
+
+###  http://nemo.inf.ufes.br/ontologies/fragments/dpo#Architectural_Element
+:Architectural_Element rdf:type owl:NamedIndividual ,
+                                goop:Class ;
+                       rdfs:comment "Model Element referring to an Architectural Component or Connector, and its Interfaces."^^rdfs:Literal .
+
+
+###  http://nemo.inf.ufes.br/ontologies/fragments/dpo#Architecture_Development
+:Architecture_Development rdf:type owl:NamedIndividual ,
+                                   goop:Class ;
+                          goop:composed_by :Performed_Simple_Activity ;
+                          goop:specifies :Performed_Composite_Activity ;
+                          rdfs:comment "Activity aiming to produce the Software Architecture and specifying its Architectural Components and Connectors."^^rdfs:Literal .
+
+
+###  http://nemo.inf.ufes.br/ontologies/fragments/dpo#Artifact
+:Artifact rdf:type owl:NamedIndividual ,
+                   goop:Class ;
+          rdfs:comment """Object intentionally made to serve a given purpose in the context of a software Project or Organization. 
+Ex.: a document, a model, a library, an e-mail, a bug."""^^rdfs:Literal .
+
+
+###  http://nemo.inf.ufes.br/ontologies/fragments/dpo#Assumpiton
+:Assumpiton rdf:type owl:NamedIndividual ,
+                     goop:Class ;
+            rdfs:comment "Assumptions describe states-of-affairs in the environment of interest that the Stakeholders believe to be true, i.e., they are the propositional content of Stakeholders' Beliefs. They express the belief that a specific situation exists in the environment."^^rdfs:Literal .
+
+
+###  http://nemo.inf.ufes.br/ontologies/fragments/dpo#Component_Design
+:Component_Design rdf:type owl:NamedIndividual ,
+                           goop:Class ;
+                  goop:specifies :Performed_Simple_Activity ;
+                  rdfs:comment "Activity for refining each Architectural Component of a software."^^rdfs:Literal .
+
+
+###  http://nemo.inf.ufes.br/ontologies/fragments/dpo#Component_Interface_Design
+:Component_Interface_Design rdf:type owl:NamedIndividual ,
+                                     goop:Class ;
+                            goop:specifies :Component_Interface_Design ;
+                            rdfs:comment "Activity for refining each Interface Specification of a software."^^rdfs:Literal .
+
+
+###  http://nemo.inf.ufes.br/ontologies/fragments/dpo#Composite_Artifact
+:Composite_Artifact rdf:type owl:NamedIndividual ,
+                             goop:Class ;
+                    goop:component_of :Composite_Artifact ;
+                    goop:specifies :Artifact ;
+                    rdfs:comment "Artifact composed of other Artifacts."^^rdfs:Literal .
+
+
+###  http://nemo.inf.ufes.br/ontologies/fragments/dpo#Data_Definitions
+:Data_Definitions rdf:type owl:NamedIndividual ,
+                           goop:Class ;
+                  goop:specifies :Information_Item ;
+                  rdfs:comment "Information Item describing the high-level choices of how the software will manage data."^^rdfs:Literal .
+
+
+###  http://nemo.inf.ufes.br/ontologies/fragments/dpo#Data_Design
+:Data_Design rdf:type owl:NamedIndividual ,
+                      goop:Class ;
+             goop:specifies :Performed_Simple_Activity ;
+             rdfs:comment "Activity for producing a detailed Data Model for data storage and management."^^rdfs:Literal .
+
+
+###  http://nemo.inf.ufes.br/ontologies/fragments/dpo#Data_High-level_Design
+:Data_High-level_Design rdf:type owl:NamedIndividual ,
+                                 goop:Class ;
+                        goop:specifies :Performed_Simple_Activity ;
+                        rdfs:comment """Activity for establish the high-level choices regarding the software data. 
+Ex.: data management mechanisms, data distribution."""^^rdfs:Literal .
+
+
+###  http://nemo.inf.ufes.br/ontologies/fragments/dpo#Data_Model
+:Data_Model rdf:type owl:NamedIndividual ,
+                     goop:Class ;
+            goop:specifies :Model ;
+            rdfs:comment """Model containing the physical and logical decisions on how to manage and storage the software data. 
+Ex.: a database schema."""^^rdfs:Literal .
+
+
+###  http://nemo.inf.ufes.br/ontologies/fragments/dpo#Define_Artifact
+:Define_Artifact rdf:type owl:NamedIndividual ,
+                          goop:Goal_Based_Requirement ;
+                 goop:composed_by :Define_Artifact_by_Nature ,
+                                  :Define_Artifact_by_Parts ;
+                 rdfs:comment "In the context of the software domain, Artifacts are objects intentionally made to serve a given purpose in the context of a Software Project or Organization."^^rdfs:Literal .
+
+
+###  http://nemo.inf.ufes.br/ontologies/fragments/dpo#Define_Artifact_by_Nature
+:Define_Artifact_by_Nature rdf:type owl:NamedIndividual ,
+                                    goop:Goal_Based_Requirement ;
+                           rdfs:comment "Artifact Type partitions the generalization set of Artifacts according to their nature, giving rise to a taxonomy of artifacts. More specific taxonomies can be established for specific types of artifacts, such as documents (established by instances of Document Type) and Software Product (Software Product Type), among others."^^rdfs:Literal .
+
+
+###  http://nemo.inf.ufes.br/ontologies/fragments/dpo#Define_Artifact_by_Parts
+:Define_Artifact_by_Parts rdf:type owl:NamedIndividual ,
+                                   goop:Goal_Based_Requirement ;
+                          rdfs:comment "Can be composed of other artifacts (Composite Artifact) or not (Simple Artifact)."^^rdfs:Literal .
+
+
+###  http://nemo.inf.ufes.br/ontologies/fragments/dpo#Define_Design_Process
+:Define_Design_Process rdf:type owl:NamedIndividual ,
+                                goop:Goal_Based_Requirement ;
+                       rdfs:comment """The Design Process is a Process with the purpose of defining the architecture, elements, interfaces, and other characteristics of a software, aiming at its implementation.
+Some notions are important for this process. Software Architecture is a model describing the fundamental structures of a software. It is composed of Architectural Elements, which can be a Component, describing a software module, or a Connector, connecting two or more components. Architectural Elements have Interfaces, which can be internal or external. The Design is a refinement process involving several design choices. It starts defining an architecture and follows by detailing each element to the extent it can be implemented.
+The Design Process is composed of four main Activities. (1) Architectural Design makes the high-level design choices, defining a Software Architecture and involved elements. Its three sub-activities are Architecture Development, for producing the architecture and specifying its components and connectors; Interface High-level Design, for specifying the interfaces between components and with external elements (users or other systems); and Data High-level Design, for establishing the high-level choices regarding the software data. (2) Detailed Design refines a preliminary software design to the extent that it is sufficiently complete to be implemented. It has four sub-activities: Component Design, for refining each architectural component; Component Interface Design, for detailing each software interface; User Interface Design, specifically for detailing the user interfaces; and Data Design, for producing a detailed Data Model for data storage and management. (3) Design Documentation registers the architectural and detailed design choices made, producing a Design Document. (4) Finally, Design Evaluation evaluates a Design Document, registering the identified issues.
+The process has two main Stakeholders, the Software Architect, responsible for making the high-level design choices, and establishing a software architecture; and the Designer, responsible for making the detailed design choices."""^^rdfs:Literal .
+
+
+###  http://nemo.inf.ufes.br/ontologies/fragments/dpo#Define_Performed_Process
+:Define_Performed_Process rdf:type owl:NamedIndividual ,
+                                   goop:Goal_Based_Requirement .
+
+
+###  http://nemo.inf.ufes.br/ontologies/fragments/dpo#Design_Document
+:Design_Document rdf:type owl:NamedIndividual ,
+                          goop:Class ;
+                 goop:specifies :Document ;
+                 rdfs:comment "Document specifying the design of a software, by depicting the software architecture, components, interfaces and data models, as well as other information regarding the design choices and decisions."^^rdfs:Literal .
+
+
+###  http://nemo.inf.ufes.br/ontologies/fragments/dpo#Design_Documentation
+:Design_Documentation rdf:type owl:NamedIndividual ,
+                               goop:Class ;
+                      goop:specifies :Performed_Composite_Activity ;
+                      rdfs:comment "Activity for registering the architectural and detailed design choices and decisions, producing a Design Document."^^rdfs:Literal .
+
+
+###  http://nemo.inf.ufes.br/ontologies/fragments/dpo#Design_Evaluation
+:Design_Evaluation rdf:type owl:NamedIndividual ,
+                            goop:Class ;
+                   goop:specifies :Performed_Composite_Activity ;
+                   rdfs:comment "Activity for evaluating a Design Document, registering the identified issues."^^rdfs:Literal .
+
+
+###  http://nemo.inf.ufes.br/ontologies/fragments/dpo#Design_Evaluation_Document
+:Design_Evaluation_Document rdf:type owl:NamedIndividual ,
+                                     goop:Class ;
+                            goop:specifies :Document ;
+                            rdfs:comment "Document registering the issues identified in a Design Document evaluation."^^rdfs:Literal .
+
+
+###  http://nemo.inf.ufes.br/ontologies/fragments/dpo#Design_Process
+:Design_Process rdf:type owl:NamedIndividual ,
+                         goop:Class ;
+                goop:component_of :Architectural_Design ,
+                                  :Design_Documentation ,
+                                  :Design_Evaluation ,
+                                  :Detailed_Design ;
+                goop:specifies :Performed_Specific_Process ;
+                rdfs:comment "Process for defining and specifying a solution to be implemented for a software product, considering the requirements for it. It is a refinement process starting with the software architecture, and going down to the design of its elements, interfaces, and other characteristics of a software, until achieving the design of implementation units."^^rdfs:Literal .
+
+
+###  http://nemo.inf.ufes.br/ontologies/fragments/dpo#Designer
+:Designer rdf:type owl:NamedIndividual ,
+                   goop:Class ;
+          goop:specifies :Stakeholder ;
+          rdfs:comment "Stakeholder responsible for making the Detailed Design choices for a software."^^rdfs:Literal .
+
+
+###  http://nemo.inf.ufes.br/ontologies/fragments/dpo#Detailed_Design
+:Detailed_Design rdf:type owl:NamedIndividual ,
+                          goop:Class ;
+                 goop:component_of :Component_Design ,
+                                   :Component_Interface_Design ,
+                                   :Data_Design ,
+                                   :User_Interface_Design ;
+                 goop:specifies :Performed_Composite_Activity ;
+                 rdfs:comment "Activity for refining a preliminary software design to the extent that it is sufficiently complete to be implemented. [ISO/IEC/IEEE 24765]"^^rdfs:Literal .
+
+
+###  http://nemo.inf.ufes.br/ontologies/fragments/dpo#Document
+:Document rdf:type owl:NamedIndividual ,
+                   goop:Class ;
+          goop:specifies :Artifact ;
+          rdfs:comment """Any written or pictorial, uniquely identified, information related to the software development, usually presented in a predefined format. 
+Ex.: a Requirements Document, a specification, a report."""^^rdfs:Literal .
+
+
+###  http://nemo.inf.ufes.br/ontologies/fragments/dpo#Goop-1
+:Goop-1 rdf:type owl:NamedIndividual ,
+                 goop:Goop ;
+        goop:composed_by :Define_Artifact_by_Nature .
+
+
+###  http://nemo.inf.ufes.br/ontologies/fragments/dpo#Goop-2
+:Goop-2 rdf:type owl:NamedIndividual ,
+                 goop:Goop ;
+        goop:composed_by :Define_Artifact_by_Parts .
+
+
+###  http://nemo.inf.ufes.br/ontologies/fragments/dpo#Goop-3
+:Goop-3 rdf:type owl:NamedIndividual ;
+        goop:composed_by :Define_Performed_Process .
+
+
+###  http://nemo.inf.ufes.br/ontologies/fragments/dpo#Goop-4
+:Goop-4 rdf:type owl:NamedIndividual ;
+        goop:composed_by :Define_Design_Process .
+
+
+###  http://nemo.inf.ufes.br/ontologies/fragments/dpo#Goop-General
+:Goop-General rdf:type owl:NamedIndividual ,
+                       goop:Goop ;
+              goop:composed_by :Define_Artifact .
+
+
+###  http://nemo.inf.ufes.br/ontologies/fragments/dpo#Information_Item
+:Information_Item rdf:type owl:NamedIndividual ,
+                           goop:Class ;
+                  goop:specifies :Artifact ;
+                  rdfs:comment """Relevant information for human use, produced or used by Performed Activity. 
+Ex.: a documented requirement, a bug reported, an agreement e-mail, a component description."""^^rdfs:Literal .
+
+
+###  http://nemo.inf.ufes.br/ontologies/fragments/dpo#Interface_High-level_Design
+:Interface_High-level_Design rdf:type owl:NamedIndividual ,
+                                      goop:Class ;
+                             goop:specifies :Performed_Simple_Activity ;
+                             rdfs:comment "Activity for specifying the Interfaces between Architectural Components and with external elements (users or other systems)."^^rdfs:Literal .
+
+
+###  http://nemo.inf.ufes.br/ontologies/fragments/dpo#Interface_Specification
+:Interface_Specification rdf:type owl:NamedIndividual ,
+                                  goop:Class ;
+                         goop:specifies :Information_Item ;
+                         rdfs:comment "Information Item describing an internal or external interface of a software architecture."^^rdfs:Literal .
+
+
+###  http://nemo.inf.ufes.br/ontologies/fragments/dpo#Model
+:Model rdf:type owl:NamedIndividual ,
+                goop:Class ;
+       goop:specifies :Artifact .
+
+
+###  http://nemo.inf.ufes.br/ontologies/fragments/dpo#Model_Fragment-1
+:Model_Fragment-1 rdf:type owl:NamedIndividual ,
+                           goop:Model_Fragment ;
+                  goop:composed_by :Artifact ,
+                                   :Document ,
+                                   :Information_Item ,
+                                   :Model ,
+                                   :Software_Item ,
+                                   :Software_Product ,
+                                   :describes ;
+                  goop:is_used_to_satisfy :Goop-1 .
+
+
+###  http://nemo.inf.ufes.br/ontologies/fragments/dpo#Model_Fragment-2
+:Model_Fragment-2 rdf:type owl:NamedIndividual ,
+                           goop:Model_Fragment ;
+                  goop:composed_by :Artifact ,
+                                   :Composite_Artifact ,
+                                   :Simple_Artifact ;
+                  goop:is_used_to_satisfy :Goop-2 .
+
+
+###  http://nemo.inf.ufes.br/ontologies/fragments/dpo#Model_Fragment-3
+:Model_Fragment-3 rdf:type owl:NamedIndividual ;
+                  goop:composed_by :Performed_Activity ,
+                                   :Performed_Composite_Activity ,
+                                   :Performed_General_Process ,
+                                   :Performed_Process ,
+                                   :Performed_Simple_Activity ,
+                                   :Performed_Specific_Process ,
+                                   :changes ,
+                                   :creates ,
+                                   :depends_on ,
+                                   :uses ;
+                  goop:is_used_to_satisfy :Goop-3 .
+
+
+###  http://nemo.inf.ufes.br/ontologies/fragments/dpo#Model_Fragment-4
+:Model_Fragment-4 rdf:type owl:NamedIndividual ;
+                  goop:composed_by :Architectural_Component ,
+                                   :Architectural_Connector ,
+                                   :Architectural_Design ,
+                                   :Architectural_Element ,
+                                   :Architecture_Development ,
+                                   :Component_Design ,
+                                   :Component_Interface_Design ,
+                                   :Data_Definitions ,
+                                   :Data_Design ,
+                                   :Data_High-level_Design ,
+                                   :Data_Model ,
+                                   :Design_Document ,
+                                   :Design_Documentation ,
+                                   :Design_Evaluation ,
+                                   :Design_Evaluation_Document ,
+                                   :Design_Process ,
+                                   :Designer ,
+                                   :Detailed_Design ,
+                                   :Interface_High-level_Design ,
+                                   :Interface_Specification ,
+                                   :Software_Architect ,
+                                   :Software_Architecture ,
+                                   :Stakeholder ,
+                                   :User_Interface_Design ,
+                                   :changes ,
+                                   :conects ,
+                                   :creates ,
+                                   :depicts ,
+                                   :has ,
+                                   :is_in_charge_of ,
+                                   :participates_in ,
+                                   :uses ;
+                  goop:is_used_to_satisfy :Goop-4 .
+
+
+###  http://nemo.inf.ufes.br/ontologies/fragments/dpo#Model_Fragment-General
+:Model_Fragment-General rdf:type owl:NamedIndividual ,
+                                 goop:Model_Fragment ;
+                        goop:composed_by :depends_on ;
+                        goop:is_used_to_satisfy :Goop-General .
+
+
+###  http://nemo.inf.ufes.br/ontologies/fragments/dpo#Performed_Activity
+:Performed_Activity rdf:type owl:NamedIndividual ,
+                             goop:Class .
+
+
+###  http://nemo.inf.ufes.br/ontologies/fragments/dpo#Performed_Composite_Activity
+:Performed_Composite_Activity rdf:type owl:NamedIndividual ,
+                                       goop:Class ;
+                              goop:component_of :Performed_Activity ;
+                              goop:specifies :Performed_Composite_Activity .
+
+
+###  http://nemo.inf.ufes.br/ontologies/fragments/dpo#Performed_General_Process
+:Performed_General_Process rdf:type owl:NamedIndividual ,
+                                    goop:Class ;
+                           goop:component_of :Performed_Specific_Process ;
+                           goop:specifies :Performed_Process .
+
+
+###  http://nemo.inf.ufes.br/ontologies/fragments/dpo#Performed_Process
+:Performed_Process rdf:type owl:NamedIndividual ,
+                            goop:Class .
+
+
+###  http://nemo.inf.ufes.br/ontologies/fragments/dpo#Performed_Simple_Activity
+:Performed_Simple_Activity rdf:type owl:NamedIndividual ,
+                                    goop:Class ;
+                           goop:specifies :Performed_Activity .
+
+
+###  http://nemo.inf.ufes.br/ontologies/fragments/dpo#Performed_Specific_Process
+:Performed_Specific_Process rdf:type owl:NamedIndividual ,
+                                     goop:Class ;
+                            goop:component_of :Performed_Activity ;
+                            goop:specifies :Performed_Process .
+
+
+###  http://nemo.inf.ufes.br/ontologies/fragments/dpo#Requirements_Document
+:Requirements_Document rdf:type owl:NamedIndividual ,
+                                goop:Class ;
+                       goop:specifies :Document ;
+                       rdfs:comment """Document composed of Documented Requirements and related information, as a basis for other technical software processes, including maintenance. 
+Ex.: the Requirements Document of the Alfa Project."""^^rdfs:Literal .
+
+
+###  http://nemo.inf.ufes.br/ontologies/fragments/dpo#Simple_Artifact
+:Simple_Artifact rdf:type owl:NamedIndividual ,
+                          goop:Class ;
+                 goop:specifies :Artifact ;
+                 rdfs:comment "Artifact that is not decomposed into other Artifacts."^^rdfs:Literal .
+
+
+###  http://nemo.inf.ufes.br/ontologies/fragments/dpo#Software_Architect
+:Software_Architect rdf:type owl:NamedIndividual ,
+                             goop:Class ;
+                    goop:specifies :Stakeholder ;
+                    rdfs:comment "Stakeholder responsible for designing the Software Architecture."^^rdfs:Literal .
+
+
+###  http://nemo.inf.ufes.br/ontologies/fragments/dpo#Software_Architecture
+:Software_Architecture rdf:type owl:NamedIndividual ,
+                                goop:Class ;
+                       goop:component_of :Architectural_Element ;
+                       goop:specifies :Model ;
+                       rdfs:comment "Model describing the fundamental structures of a software, including its components, how they are connected, and its internal and external interfaces."^^rdfs:Literal .
+
+
+###  http://nemo.inf.ufes.br/ontologies/fragments/dpo#Software_Item
+:Software_Item rdf:type owl:NamedIndividual ,
+                        goop:Class ;
+               goop:specifies :Artifact .
+
+
+###  http://nemo.inf.ufes.br/ontologies/fragments/dpo#Software_Product
+:Software_Product rdf:type owl:NamedIndividual ,
+                           goop:Class ;
+                  goop:specifies :Artifact .
+
+
+###  http://nemo.inf.ufes.br/ontologies/fragments/dpo#Stakeholder
+:Stakeholder rdf:type owl:NamedIndividual ,
+                      goop:Class .
+
+
+###  http://nemo.inf.ufes.br/ontologies/fragments/dpo#User_Interface_Design
+:User_Interface_Design rdf:type owl:NamedIndividual ,
+                                goop:Class ;
+                       goop:specifies :Performed_Simple_Activity ;
+                       rdfs:comment "Activity for specifying the User Interfaces in detail."^^rdfs:Literal .
+
+
+###  http://nemo.inf.ufes.br/ontologies/fragments/dpo#User_Interface_Specification
+:User_Interface_Specification rdf:type owl:NamedIndividual ,
+                                       goop:Class ;
+                              goop:specifies :Interface_Specification ;
+                              rdfs:comment "Interface Specification focusing on the human-computer interaction."^^rdfs:Literal .
+
+
+###  http://nemo.inf.ufes.br/ontologies/fragments/dpo#changes
+:changes rdf:type owl:NamedIndividual ,
+                  goop:Object_Property .
+
+
+###  http://nemo.inf.ufes.br/ontologies/fragments/dpo#conects
+:conects rdf:type owl:NamedIndividual ,
+                  goop:Object_Property .
+
+
+###  http://nemo.inf.ufes.br/ontologies/fragments/dpo#creates
+:creates rdf:type owl:NamedIndividual ,
+                  goop:Object_Property .
+
+
+###  http://nemo.inf.ufes.br/ontologies/fragments/dpo#depends_on
+:depends_on rdf:type owl:NamedIndividual ,
+                     goop:Object_Property .
+
+
+###  http://nemo.inf.ufes.br/ontologies/fragments/dpo#depicts
+:depicts rdf:type owl:NamedIndividual ,
+                  goop:Object_Property .
+
+
+###  http://nemo.inf.ufes.br/ontologies/fragments/dpo#describes
+:describes rdf:type owl:NamedIndividual ,
+                    goop:Object_Property .
+
+
+###  http://nemo.inf.ufes.br/ontologies/fragments/dpo#got_from
+:got_from rdf:type owl:NamedIndividual ,
+                   goop:Object_Property .
+
+
+###  http://nemo.inf.ufes.br/ontologies/fragments/dpo#has
+:has rdf:type owl:NamedIndividual ,
+              goop:Object_Property .
+
+
+###  http://nemo.inf.ufes.br/ontologies/fragments/dpo#inheres_in
+:inheres_in rdf:type owl:NamedIndividual ,
+                     goop:Object_Property .
+
+
+###  http://nemo.inf.ufes.br/ontologies/fragments/dpo#interested_in
+:interested_in rdf:type owl:NamedIndividual ,
+                        goop:Object_Property .
+
+
+###  http://nemo.inf.ufes.br/ontologies/fragments/dpo#is_in_charge_of
+:is_in_charge_of rdf:type owl:NamedIndividual ,
+                          goop:Object_Property .
+
+
+###  http://nemo.inf.ufes.br/ontologies/fragments/dpo#participates_in
+:participates_in rdf:type owl:NamedIndividual ,
+                          goop:Object_Property .
+
+
+###  http://nemo.inf.ufes.br/ontologies/fragments/dpo#resposible_for
+:resposible_for rdf:type owl:NamedIndividual ,
+                         goop:Object_Property .
+
+
+###  http://nemo.inf.ufes.br/ontologies/fragments/dpo#uses
+:uses rdf:type owl:NamedIndividual ,
+               goop:Object_Property .
+
+
+###  Generated by the OWL API (version 4.5.7.2018-12-02T02:23:35Z) https://github.com/owlcs/owlapi

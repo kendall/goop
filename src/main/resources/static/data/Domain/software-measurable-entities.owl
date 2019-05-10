@@ -1,0 +1,204 @@
+@prefix : <http://nemo.inf.ufes.br/ontologies/fragments/software-measurable-entities#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix goop: <http://nemo.inf.ufes.br/ontologies/goop#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@base <http://nemo.inf.ufes.br/ontologies/fragments/software-measurable-entities> .
+
+<http://nemo.inf.ufes.br/ontologies/fragments/software-measurable-entities> rdf:type owl:Ontology ;
+                                                                             owl:imports <http://nemo.inf.ufes.br/ontologies/goop> .
+
+#################################################################
+#    Individuals
+#################################################################
+
+###  http://nemo.inf.ufes.br/ontologies/fragments/software-measurable-entities#Artifact
+:Artifact rdf:type owl:NamedIndividual ,
+                   goop:Class ;
+          goop:specifies :Measurable_Software-Related_Entity .
+
+
+###  http://nemo.inf.ufes.br/ontologies/fragments/software-measurable-entities#Define_Measurable_Entities
+:Define_Measurable_Entities rdf:type owl:NamedIndividual ,
+                                     goop:Goal_Based_Requirement ;
+                            goop:composed_by :Specifies_the_type_of_Measurable_Element .
+
+
+###  http://nemo.inf.ufes.br/ontologies/fragments/software-measurable-entities#Directly_Measurable_Element
+:Directly_Measurable_Element rdf:type owl:NamedIndividual ,
+                                      goop:Class ;
+                             goop:specifies :Directly_Measurable_Element ;
+                             rdfs:comment """Measurable Element that does not depend on others to be measured. 
+Ex.: weight and height."""^^rdfs:Literal .
+
+
+###  http://nemo.inf.ufes.br/ontologies/fragments/software-measurable-entities#Goop-1
+:Goop-1 rdf:type owl:NamedIndividual ,
+                 goop:Goop ;
+        goop:composed_by :Specifies_the_type_of_Measurable_Element .
+
+
+###  http://nemo.inf.ufes.br/ontologies/fragments/software-measurable-entities#Goop-2
+:Goop-2 rdf:type owl:NamedIndividual ,
+                 goop:Goop ;
+        goop:composed_by :Define_Measurable_Entities .
+
+
+###  http://nemo.inf.ufes.br/ontologies/fragments/software-measurable-entities#Goop-3
+:Goop-3 rdf:type owl:NamedIndividual ,
+                 goop:Goop ;
+        goop:composed_by :Specifies_Software_Measurable_Entities .
+
+
+###  http://nemo.inf.ufes.br/ontologies/fragments/software-measurable-entities#Indirectly_Measurable_Element
+:Indirectly_Measurable_Element rdf:type owl:NamedIndividual ,
+                                        goop:Class ;
+                               goop:component_of :Measurable_Element ;
+                               goop:specifies :Measurable_Element ;
+                               rdfs:comment """Measurable Element that depends on others (its sub-elements) to be measured. 
+Ex.: body mass index is an indirectly measurable element measured from weight and height."""^^rdfs:Literal .
+
+
+###  http://nemo.inf.ufes.br/ontologies/fragments/software-measurable-entities#Intended_Activity
+:Intended_Activity rdf:type owl:NamedIndividual ,
+                            goop:Class ;
+                   goop:specifies :Measurable_Software-Related_Entity .
+
+
+###  http://nemo.inf.ufes.br/ontologies/fragments/software-measurable-entities#Intended_Process
+:Intended_Process rdf:type owl:NamedIndividual ,
+                           goop:Class ;
+                  goop:specifies :Measurable_Software-Related_Entity .
+
+
+###  http://nemo.inf.ufes.br/ontologies/fragments/software-measurable-entities#Measurable_Element
+:Measurable_Element rdf:type owl:NamedIndividual ,
+                             goop:Class ;
+                    rdfs:comment """Measurable property that characterizes a Measurable Entity Type. 
+Ex.: height is a measurable element that characterizes measurable entities of the Person type."""^^rdfs:Literal .
+
+
+###  http://nemo.inf.ufes.br/ontologies/fragments/software-measurable-entities#Measurable_Entity
+:Measurable_Entity rdf:type owl:NamedIndividual ,
+                            goop:Class ;
+                   rdfs:comment """Anything that can be measured. 
+Ex.: a person, a project, an organization."""^^rdfs:Literal .
+
+
+###  http://nemo.inf.ufes.br/ontologies/fragments/software-measurable-entities#Measurable_Entity_Type
+:Measurable_Entity_Type rdf:type owl:NamedIndividual ,
+                                 goop:Class ;
+                        rdfs:comment """Type of entities that can be measured. 
+Ex.: John is a measurable entity of the type Person."""^^rdfs:Literal .
+
+
+###  http://nemo.inf.ufes.br/ontologies/fragments/software-measurable-entities#Measurable_Software-Related_Entity
+:Measurable_Software-Related_Entity rdf:type owl:NamedIndividual ,
+                                             goop:Class ;
+                                    goop:specifies :Measurable_Entity .
+
+
+###  http://nemo.inf.ufes.br/ontologies/fragments/software-measurable-entities#Measurable_Software-Related_Entity_Type
+:Measurable_Software-Related_Entity_Type rdf:type owl:NamedIndividual ,
+                                                  goop:Class ;
+                                         goop:specifies :Measurable_Entity_Type .
+
+
+###  http://nemo.inf.ufes.br/ontologies/fragments/software-measurable-entities#Model_Fragment-1
+:Model_Fragment-1 rdf:type owl:NamedIndividual ,
+                           goop:Model_Fragment ;
+                  goop:composed_by :Directly_Measurable_Element ,
+                                   :Indirectly_Measurable_Element ,
+                                   :Measurable_Element ;
+                  goop:is_used_to_satisfy :Goop-1 .
+
+
+###  http://nemo.inf.ufes.br/ontologies/fragments/software-measurable-entities#Model_Fragment-2
+:Model_Fragment-2 rdf:type owl:NamedIndividual ,
+                           goop:Model_Fragment ;
+                  goop:composed_by :Directly_Measurable_Element ,
+                                   :Indirectly_Measurable_Element ,
+                                   :Measurable_Element ,
+                                   :Measurable_Entity ,
+                                   :Measurable_Entity_Type ,
+                                   :characterized_by ,
+                                   :instance_of ;
+                  goop:is_used_to_satisfy :Goop-2 .
+
+
+###  http://nemo.inf.ufes.br/ontologies/fragments/software-measurable-entities#Model_Fragment-3
+:Model_Fragment-3 rdf:type owl:NamedIndividual ,
+                           goop:Model_Fragment ;
+                  goop:composed_by :Artifact ,
+                                   :Intended_Activity ,
+                                   :Intended_Process ,
+                                   :Measurable_Software-Related_Entity ,
+                                   :Measurable_Software-Related_Entity_Type ,
+                                   :Performed_Activity ,
+                                   :Performed_Process ,
+                                   :Software_Project ,
+                                   :Stakeholder ,
+                                   :Standard_Activity ,
+                                   :Standard_Process ,
+                                   :instance_of .
+
+
+###  http://nemo.inf.ufes.br/ontologies/fragments/software-measurable-entities#Performed_Activity
+:Performed_Activity rdf:type owl:NamedIndividual ,
+                             goop:Class ;
+                    goop:specifies :Measurable_Software-Related_Entity .
+
+
+###  http://nemo.inf.ufes.br/ontologies/fragments/software-measurable-entities#Performed_Process
+:Performed_Process rdf:type owl:NamedIndividual ,
+                            goop:Class ;
+                   goop:specifies :Measurable_Software-Related_Entity .
+
+
+###  http://nemo.inf.ufes.br/ontologies/fragments/software-measurable-entities#Software_Project
+:Software_Project rdf:type owl:NamedIndividual ,
+                           goop:Class ;
+                  goop:specifies :Measurable_Software-Related_Entity .
+
+
+###  http://nemo.inf.ufes.br/ontologies/fragments/software-measurable-entities#Specifies_Software_Measurable_Entities
+:Specifies_Software_Measurable_Entities rdf:type owl:NamedIndividual ,
+                                                 goop:Goal_Based_Requirement .
+
+
+###  http://nemo.inf.ufes.br/ontologies/fragments/software-measurable-entities#Specifies_the_type_of_Measurable_Element
+:Specifies_the_type_of_Measurable_Element rdf:type owl:NamedIndividual ,
+                                                   goop:Goal_Based_Requirement .
+
+
+###  http://nemo.inf.ufes.br/ontologies/fragments/software-measurable-entities#Stakeholder
+:Stakeholder rdf:type owl:NamedIndividual ,
+                      goop:Class ;
+             goop:specifies :Measurable_Software-Related_Entity .
+
+
+###  http://nemo.inf.ufes.br/ontologies/fragments/software-measurable-entities#Standard_Activity
+:Standard_Activity rdf:type owl:NamedIndividual ,
+                            goop:Class ;
+                   goop:specifies :Measurable_Software-Related_Entity .
+
+
+###  http://nemo.inf.ufes.br/ontologies/fragments/software-measurable-entities#Standard_Process
+:Standard_Process rdf:type owl:NamedIndividual ,
+                           goop:Class ;
+                  goop:specifies :Measurable_Software-Related_Entity .
+
+
+###  http://nemo.inf.ufes.br/ontologies/fragments/software-measurable-entities#characterized_by
+:characterized_by rdf:type owl:NamedIndividual ,
+                           goop:Object_Property .
+
+
+###  http://nemo.inf.ufes.br/ontologies/fragments/software-measurable-entities#instance_of
+:instance_of rdf:type owl:NamedIndividual ,
+                      goop:Object_Property .
+
+
+###  Generated by the OWL API (version 4.5.7.2018-12-02T02:23:35Z) https://github.com/owlcs/owlapi

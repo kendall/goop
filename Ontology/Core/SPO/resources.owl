@@ -1,0 +1,172 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns="http://nemo.inf.ufes.br/ontologies/resources#"
+     xml:base="http://nemo.inf.ufes.br/ontologies/resources"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:goop="http://nemo.inf.ufes.br/ontologies/goop#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#">
+    <owl:Ontology rdf:about="http://nemo.inf.ufes.br/ontologies/resources">
+        <owl:imports rdf:resource="http://nemo.inf.ufes.br/ontologies/goop"/>
+    </owl:Ontology>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Individuals
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://nemo.inf.ufes.br/ontologies/resources#Artifact -->
+
+    <owl:NamedIndividual rdf:about="http://nemo.inf.ufes.br/ontologies/resources#Artifact">
+        <rdf:type rdf:resource="http://nemo.inf.ufes.br/ontologies/goop#Class"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://nemo.inf.ufes.br/ontologies/resources#Artifact_Type -->
+
+    <owl:NamedIndividual rdf:about="http://nemo.inf.ufes.br/ontologies/resources#Artifact_Type">
+        <rdf:type rdf:resource="http://nemo.inf.ufes.br/ontologies/goop#Class"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://nemo.inf.ufes.br/ontologies/resources#CASE_Tool -->
+
+    <owl:NamedIndividual rdf:about="http://nemo.inf.ufes.br/ontologies/resources#CASE_Tool">
+        <rdf:type rdf:resource="http://nemo.inf.ufes.br/ontologies/goop#Class"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://nemo.inf.ufes.br/ontologies/resources#Deal_with_different_types_of_resources_used_in_a_software_process -->
+
+    <owl:NamedIndividual rdf:about="http://nemo.inf.ufes.br/ontologies/resources#Deal_with_different_types_of_resources_used_in_a_software_process">
+        <rdf:type rdf:resource="http://nemo.inf.ufes.br/ontologies/goop#Goal_Based_Requirement"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://nemo.inf.ufes.br/ontologies/resources#Goop -->
+
+    <owl:NamedIndividual rdf:about="http://nemo.inf.ufes.br/ontologies/resources#Goop">
+        <rdf:type rdf:resource="http://nemo.inf.ufes.br/ontologies/goop#Goop"/>
+        <goop:composed_by rdf:resource="http://nemo.inf.ufes.br/ontologies/resources#Deal_with_different_types_of_resources_used_in_a_software_process"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://nemo.inf.ufes.br/ontologies/resources#Hardware_Equipment -->
+
+    <owl:NamedIndividual rdf:about="http://nemo.inf.ufes.br/ontologies/resources#Hardware_Equipment">
+        <rdf:type rdf:resource="http://nemo.inf.ufes.br/ontologies/goop#Class"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://nemo.inf.ufes.br/ontologies/resources#Hardware_Resource -->
+
+    <owl:NamedIndividual rdf:about="http://nemo.inf.ufes.br/ontologies/resources#Hardware_Resource">
+        <rdf:type rdf:resource="http://nemo.inf.ufes.br/ontologies/goop#Class"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://nemo.inf.ufes.br/ontologies/resources#Hardware_Type -->
+
+    <owl:NamedIndividual rdf:about="http://nemo.inf.ufes.br/ontologies/resources#Hardware_Type">
+        <rdf:type rdf:resource="http://nemo.inf.ufes.br/ontologies/goop#Class"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://nemo.inf.ufes.br/ontologies/resources#Model_Fragment -->
+
+    <owl:NamedIndividual rdf:about="http://nemo.inf.ufes.br/ontologies/resources#Model_Fragment">
+        <rdf:type rdf:resource="http://nemo.inf.ufes.br/ontologies/goop#Model_Fragment"/>
+        <goop:composed_by rdf:resource="http://nemo.inf.ufes.br/ontologies/resources#Artifact"/>
+        <goop:composed_by rdf:resource="http://nemo.inf.ufes.br/ontologies/resources#Artifact_Type"/>
+        <goop:composed_by rdf:resource="http://nemo.inf.ufes.br/ontologies/resources#CASE_Tool"/>
+        <goop:composed_by rdf:resource="http://nemo.inf.ufes.br/ontologies/resources#Hardware_Equipment"/>
+        <goop:composed_by rdf:resource="http://nemo.inf.ufes.br/ontologies/resources#Hardware_Resource"/>
+        <goop:composed_by rdf:resource="http://nemo.inf.ufes.br/ontologies/resources#Hardware_Type"/>
+        <goop:composed_by rdf:resource="http://nemo.inf.ufes.br/ontologies/resources#Resource"/>
+        <goop:composed_by rdf:resource="http://nemo.inf.ufes.br/ontologies/resources#Software_Product"/>
+        <goop:composed_by rdf:resource="http://nemo.inf.ufes.br/ontologies/resources#Software_Product_Type"/>
+        <goop:composed_by rdf:resource="http://nemo.inf.ufes.br/ontologies/resources#Software_Resource"/>
+        <goop:composed_by rdf:resource="http://nemo.inf.ufes.br/ontologies/resources#instance_of"/>
+        <goop:composed_by rdf:resource="http://nemo.inf.ufes.br/ontologies/resources#UFO-C::Object"/>
+        <goop:composed_by rdf:resource="http://nemo.inf.ufes.br/ontologies/resources#UFO-C::Object_Kind"/>
+        <goop:is_used_to_satisfy rdf:resource="http://nemo.inf.ufes.br/ontologies/resources#Goop"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://nemo.inf.ufes.br/ontologies/resources#Resource -->
+
+    <owl:NamedIndividual rdf:about="http://nemo.inf.ufes.br/ontologies/resources#Resource">
+        <rdf:type rdf:resource="http://nemo.inf.ufes.br/ontologies/goop#Class"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://nemo.inf.ufes.br/ontologies/resources#Software_Product -->
+
+    <owl:NamedIndividual rdf:about="http://nemo.inf.ufes.br/ontologies/resources#Software_Product">
+        <rdf:type rdf:resource="http://nemo.inf.ufes.br/ontologies/goop#Class"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://nemo.inf.ufes.br/ontologies/resources#Software_Product_Type -->
+
+    <owl:NamedIndividual rdf:about="http://nemo.inf.ufes.br/ontologies/resources#Software_Product_Type">
+        <rdf:type rdf:resource="http://nemo.inf.ufes.br/ontologies/goop#Class"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://nemo.inf.ufes.br/ontologies/resources#Software_Resource -->
+
+    <owl:NamedIndividual rdf:about="http://nemo.inf.ufes.br/ontologies/resources#Software_Resource">
+        <rdf:type rdf:resource="http://nemo.inf.ufes.br/ontologies/goop#Class"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://nemo.inf.ufes.br/ontologies/resources#instance_of -->
+
+    <owl:NamedIndividual rdf:about="http://nemo.inf.ufes.br/ontologies/resources#instance_of">
+        <rdf:type rdf:resource="http://nemo.inf.ufes.br/ontologies/goop#Object_Property"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://nemo.inf.ufes.br/ontologies/resources#UFO-C::Object -->
+
+    <owl:NamedIndividual rdf:about="http://nemo.inf.ufes.br/ontologies/resources#UFO-C::Object">
+        <rdf:type rdf:resource="http://nemo.inf.ufes.br/ontologies/goop#Class"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://nemo.inf.ufes.br/ontologies/resources#UFO-C::Object_Kind -->
+
+    <owl:NamedIndividual rdf:about="http://nemo.inf.ufes.br/ontologies/resources#UFO-C::Object_Kind">
+        <rdf:type rdf:resource="http://nemo.inf.ufes.br/ontologies/goop#Class"/>
+    </owl:NamedIndividual>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 4.5.6.2018-09-06T00:27:41Z) https://github.com/owlcs/owlapi -->
+

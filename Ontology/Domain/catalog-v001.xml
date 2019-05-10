@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<catalog prefer="public" xmlns="urn:oasis:names:tc:entity:xmlns:xml:catalog">
+    <group id="Folder Repository, directory=, recursive=true, Auto-Update=true, version=2" prefer="public" xml:base="">
+        <uri id="Automatically generated entry, Timestamp=1548344769149" name="http://nemo.inf.ufes.br/ontologies/" uri="wbs.owl"/>
+        <uri id="Automatically generated entry, Timestamp=1548344769149" name="http://nemo.inf.ufes.br/ontologies/estimated-process" uri="estimated-process.owl"/>
+        <uri id="Automatically generated entry, Timestamp=1548344769149" name="http://nemo.inf.ufes.br/ontologies/quality-assurance-process" uri="configuration-management-process.owl"/>
+        <uri id="Automatically generated entry, Timestamp=1548344769149" name="http://nemo.inf.ufes.br/ontologies/software-measurement-analysis" uri="software-measurement-analysis.owl"/>
+        <uri id="Automatically generated entry, Timestamp=1548344769149" name="http://nemo.inf.ufes.br/ontologies/software-measurement-entities" uri="software-measurement-entities.owl"/>
+        <uri id="Automatically generated entry, Timestamp=1548344769149" name="http://nemo.inf.ufes.br/ontologies/software-measurement-execution" uri="software-measurement-execution.owl"/>
+        <uri id="Automatically generated entry, Timestamp=1548344769149" name="http://nemo.inf.ufes.br/ontologies/software-measurement-planning" uri="software-measurement-planning.owl"/>
+        <uri id="Automatically generated entry, Timestamp=1548344769149" name="http://nemo.inf.ufes.br/ontologies/software-measurement-process" uri="software-measurement-process.owl"/>
+        <uri id="Automatically generated entry, Timestamp=1548344769149" name="http://nemo.inf.ufes.br/ontologies/software-ontology" uri="software-ontology.owl"/>
+        <uri id="Automatically generated entry, Timestamp=1548344769149" name="http://nemo.inf.ufes.br/ontologies/testing-artifacts" uri="testing-artifacts.owl"/>
+        <uri id="Automatically generated entry, Timestamp=1548344769149" name="http://nemo.inf.ufes.br/ontologies/testing-environment" uri="testing-environment.owl"/>
+        <uri id="Automatically generated entry, Timestamp=1548344769149" name="duplicate:http://nemo.inf.ufes.br/ontologies/testing-process" uri="quality-assurance-process.owl"/>
+        <uri id="Automatically generated entry, Timestamp=1548344769149" name="duplicate:http://nemo.inf.ufes.br/ontologies/testing-process" uri="testing-proces.owl"/>
+        <uri id="Automatically generated entry, Timestamp=1548344769149" name="http://nemo.inf.ufes.br/ontologies/testing-stakeholders" uri="testing-stakeholders.owl"/>
+        <uri id="Automatically generated entry, Timestamp=1548344769149" name="http://nemo.inf.ufes.br/ontologies/testing-techniques" uri="testing-techniques.owl"/>
+        <uri id="Automatically generated entry, Timestamp=1548344769149" name="http://nemo.inf.ufes.br/ontologies/tracked-process" uri="tracked-process.owl"/>
+    </group>
+</catalog>

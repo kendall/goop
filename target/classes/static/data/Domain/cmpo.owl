@@ -1,0 +1,664 @@
+@prefix : <http://nemo.inf.ufes.br/ontologies/fragments/cmpo#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix goop: <http://nemo.inf.ufes.br/ontologies/goop#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@base <http://nemo.inf.ufes.br/ontologies/fragments/cmpo> .
+
+<http://nemo.inf.ufes.br/ontologies/fragments/cmpo> rdf:type owl:Ontology ;
+                                                     owl:imports <http://nemo.inf.ufes.br/ontologies/goop> .
+
+#################################################################
+#    Individuals
+#################################################################
+
+###  http://nemo.inf.ufes.br/ontologies/fragments/cmpo#Artifact
+:Artifact rdf:type owl:NamedIndividual ,
+                   goop:Class ;
+          rdfs:comment """Object intentionally made to serve a given purpose in the context of a software Project or Organization. 
+Ex.: a document, a model, a library, an e-mail, a bug."""^^rdfs:Literal .
+
+
+###  http://nemo.inf.ufes.br/ontologies/fragments/cmpo#Artifact_CI
+:Artifact_CI rdf:type owl:NamedIndividual ,
+                      goop:Class ;
+             goop:specifies :Artifact ,
+                            <http://nemo.inf.ufes.br/ontologies/fragments/cmpo#Configuration_Item_(CI)> ;
+             rdfs:comment """Artifact whose configuration is being managed. 
+Ex.: Documents, Models, Software Products under Configuration Management."""^^rdfs:Literal .
+
+
+###  http://nemo.inf.ufes.br/ontologies/fragments/cmpo#Artifact_Copy
+:Artifact_Copy rdf:type owl:NamedIndividual ,
+                        goop:Class ;
+               goop:specifies :Artifact_Copy ;
+               rdfs:comment "Copy of an Artifact that is under version control."^^rdfs:Literal .
+
+
+###  http://nemo.inf.ufes.br/ontologies/fragments/cmpo#Baseline
+:Baseline rdf:type owl:NamedIndividual ,
+                   goop:Class ;
+          goop:specifies :Information_Item ;
+          rdfs:comment """Information Item packaging a set of Configuration Items' Versions at a specific time in the product's life (for a product delivery or to establish a relevant point in the Project). 
+Ex.: Release 01 Baseline, established for the first delivered product for the client; Planning baseline, established after project planning is established and agreed."""^^rdfs:Literal .
+
+
+###  http://nemo.inf.ufes.br/ontologies/fragments/cmpo#Baseline_Establishment
+:Baseline_Establishment rdf:type owl:NamedIndividual ,
+                                 goop:Class ;
+                        goop:specifies :Performed_Composite_Activity ;
+                        rdfs:comment "Activity for establishing a Baseline embracing a planned set of Configuration Items' Versions."^^rdfs:Literal .
+
+
+###  http://nemo.inf.ufes.br/ontologies/fragments/cmpo#CR_Being_Solved
+:CR_Being_Solved rdf:type owl:NamedIndividual ,
+                          goop:Class ;
+                 goop:specifies <http://nemo.inf.ufes.br/ontologies/fragments/cmpo#Change_Request_(CI)> ;
+                 rdfs:comment "Change Request being solved after authorization."^^rdfs:Literal .
+
+
+###  http://nemo.inf.ufes.br/ontologies/fragments/cmpo#Change_Accomplishment
+:Change_Accomplishment rdf:type owl:NamedIndividual ,
+                                goop:Class ;
+                       goop:specifies :Performed_Composite_Activity ;
+                       rdfs:comment "Activity for performing the authorized changes in a set of Configuration Items under version control."^^rdfs:Literal .
+
+
+###  http://nemo.inf.ufes.br/ontologies/fragments/cmpo#Change_Control
+:Change_Control rdf:type owl:NamedIndividual ,
+                         goop:Class ;
+                goop:component_of :Change_Accomplishment ,
+                                  :Change_Request_Closing ,
+                                  :Change_Requesting ,
+                                  :Change_Review ,
+                                  :Request_Evaluation ;
+                goop:specifies :Performed_Composite_Activity ;
+                rdfs:comment "Activity for formally controlling the modification of Configuration Items, in a process of requesting, evaluating, changing and reviewing."^^rdfs:Literal .
+
+
+###  http://nemo.inf.ufes.br/ontologies/fragments/cmpo#Change_Implementation
+:Change_Implementation rdf:type owl:NamedIndividual ,
+                                goop:Class ;
+                       goop:specifies :Performed_Simple_Activity ;
+                       rdfs:comment "Activity for implementing the changes requested and approved for a Configuration Item."^^rdfs:Literal .
+
+
+###  http://nemo.inf.ufes.br/ontologies/fragments/cmpo#Change_Implementer
+:Change_Implementer rdf:type owl:NamedIndividual ,
+                             goop:Class ;
+                    goop:specifies :Stakeholder ;
+                    rdfs:comment "Stakeholder responsible for implementing a change in Configuration Items."^^rdfs:Literal .
+
+
+###  http://nemo.inf.ufes.br/ontologies/fragments/cmpo#Change_Request_Closing
+:Change_Request_Closing rdf:type owl:NamedIndividual ,
+                                 goop:Class ;
+                        rdfs:comment "Activity for closing a reviewed and approved Change Request."^^rdfs:Literal .
+
+
+###  http://nemo.inf.ufes.br/ontologies/fragments/cmpo#Change_Request_Evaluator
+:Change_Request_Evaluator rdf:type owl:NamedIndividual ,
+                                   goop:Class ;
+                          goop:specifies :Stakeholder ;
+                          rdfs:comment "Stakeholder responsible for evaluating if a Change Request should be implemented or not."^^rdfs:Literal .
+
+
+###  http://nemo.inf.ufes.br/ontologies/fragments/cmpo#Change_Requester
+:Change_Requester rdf:type owl:NamedIndividual ,
+                           goop:Class ;
+                  goop:specifies :Stakeholder ;
+                  rdfs:comment "Stakeholder responsible for requesting a change in Configuration Items."^^rdfs:Literal .
+
+
+###  http://nemo.inf.ufes.br/ontologies/fragments/cmpo#Change_Requesting
+:Change_Requesting rdf:type owl:NamedIndividual ,
+                            goop:Class ;
+                   goop:specifies :Performed_Simple_Activity ;
+                   rdfs:comment "Activity for requesting the modification of a set of Configuration Items."^^rdfs:Literal .
+
+
+###  http://nemo.inf.ufes.br/ontologies/fragments/cmpo#Change_Review
+:Change_Review rdf:type owl:NamedIndividual ,
+                        goop:Class ;
+               goop:specifies :Performed_Simple_Activity ;
+               rdfs:comment "Activity for reviewing an accomplished change assuring that the modifications were made as planned."^^rdfs:Literal .
+
+
+###  http://nemo.inf.ufes.br/ontologies/fragments/cmpo#Change_Reviewer
+:Change_Reviewer rdf:type owl:NamedIndividual ,
+                          goop:Class ;
+                 goop:specifies :Stakeholder ;
+                 rdfs:comment "Stakeholder responsible for reviewing the changes in Configuration Items regarding a Change Request."^^rdfs:Literal .
+
+
+###  http://nemo.inf.ufes.br/ontologies/fragments/cmpo#Checkin
+:Checkin rdf:type owl:NamedIndividual ,
+                  goop:Class ;
+         goop:specifies :Performed_Simple_Activity ;
+         rdfs:comment "Activity for including new Versions of Configuration Items into a version control repository."^^rdfs:Literal .
+
+
+###  http://nemo.inf.ufes.br/ontologies/fragments/cmpo#Checkout
+:Checkout rdf:type owl:NamedIndividual ,
+                   goop:Class ;
+          goop:specifies :Performed_Simple_Activity ;
+          rdfs:comment "Activity for accessing defined versions of Configuration Items from a version control repository, usually for changing purposes."^^rdfs:Literal .
+
+
+###  http://nemo.inf.ufes.br/ontologies/fragments/cmpo#Closed_CR
+:Closed_CR rdf:type owl:NamedIndividual ,
+                    goop:Class ;
+           goop:specifies <http://nemo.inf.ufes.br/ontologies/fragments/cmpo#Change_Request_(CI)> ;
+           rdfs:comment "Change Request closed after solved, reviewed and approved."^^rdfs:Literal .
+
+
+###  http://nemo.inf.ufes.br/ontologies/fragments/cmpo#Communicated_CR
+:Communicated_CR rdf:type owl:NamedIndividual ,
+                          goop:Class ;
+                 goop:specifies <http://nemo.inf.ufes.br/ontologies/fragments/cmpo#Change_Request_(CI)> ;
+                 rdfs:comment "Change Request in the first phase, communicated."^^rdfs:Literal .
+
+
+###  http://nemo.inf.ufes.br/ontologies/fragments/cmpo#Composite_Artifact
+:Composite_Artifact rdf:type owl:NamedIndividual ,
+                             goop:Class ;
+                    goop:component_of :Composite_Artifact ;
+                    goop:specifies :Artifact ;
+                    rdfs:comment "Artifact composed of other Artifacts."^^rdfs:Literal .
+
+
+###  http://nemo.inf.ufes.br/ontologies/fragments/cmpo#Configuration_Audit_Report
+:Configuration_Audit_Report rdf:type owl:NamedIndividual ,
+                                     goop:Class ;
+                            goop:specifies :Document ;
+                            rdfs:comment "Document reporting the results of a Quality Audit Performing, including Noncompliance and Corrective Action Registers."^^rdfs:Literal .
+
+
+###  http://nemo.inf.ufes.br/ontologies/fragments/cmpo#Configuration_Auditing
+:Configuration_Auditing rdf:type owl:NamedIndividual ,
+                                 goop:Class ;
+                        goop:specifies :Configuration_Auditing ;
+                        rdfs:comment "Activity for verifying that a Baseline or a Deliverable Product is complete, consistent and in conformity with the specified requirements."^^rdfs:Literal .
+
+
+###  http://nemo.inf.ufes.br/ontologies/fragments/cmpo#Configuration_Auditor
+:Configuration_Auditor rdf:type owl:NamedIndividual ,
+                                goop:Class ;
+                       goop:specifies :Stakeholder ;
+                       rdfs:comment "Stakeholder responsible for auditing the Configuration Management related results."^^rdfs:Literal .
+
+
+###  http://nemo.inf.ufes.br/ontologies/fragments/cmpo#Configuration_Items_Identification
+:Configuration_Items_Identification rdf:type owl:NamedIndividual ,
+                                             goop:Class ;
+                                    goop:specifies :Performed_Composite_Activity ;
+                                    rdfs:comment "Activity for identifying the Configuration Items of a Project."^^rdfs:Literal .
+
+
+###  http://nemo.inf.ufes.br/ontologies/fragments/cmpo#Configuration_Management_Plan
+:Configuration_Management_Plan rdf:type owl:NamedIndividual ,
+                                        goop:Class ;
+                               goop:specifies :Document ;
+                               rdfs:comment "Document describing the configuration management parameters for conducting the process, including the identified Configuration Items types, the configuration systems and the planned Baselines, Configuration Audits, and Products Deliveries."^^rdfs:Literal .
+
+
+###  http://nemo.inf.ufes.br/ontologies/fragments/cmpo#Configuration_Management_Planning
+:Configuration_Management_Planning rdf:type owl:NamedIndividual ,
+                                            goop:Class ;
+                                   goop:component_of :Configuration_Items_Identification ,
+                                                     :Configuration_Management_System_Establishment ;
+                                   goop:specifies :Performed_Composite_Activity ;
+                                   rdfs:comment "Activity for planning the Configuration Management Process, including, among others, the Configuration Management System Establishment and the Configuration Items Identification."^^rdfs:Literal .
+
+
+###  http://nemo.inf.ufes.br/ontologies/fragments/cmpo#Configuration_Management_Process
+:Configuration_Management_Process rdf:type owl:NamedIndividual ,
+                                           goop:Class ;
+                                  goop:component_of :Baseline_Establishment ,
+                                                    :Change_Control ,
+                                                    :Configuration_Auditing ,
+                                                    :Configuration_Management_Planning ,
+                                                    :Release_Management_and_Delivery ;
+                                  goop:specifies :Performed_Specific_Process ;
+                                  rdfs:comment "Process for conducting the activities related to software configuration management, ensuring the completeness and correctness of software Configuration Items."^^rdfs:Literal .
+
+
+###  http://nemo.inf.ufes.br/ontologies/fragments/cmpo#Configuration_Management_System_Establishment
+:Configuration_Management_System_Establishment rdf:type owl:NamedIndividual ,
+                                                        goop:Class ;
+                                               goop:specifies :Performed_Composite_Activity ;
+                                               rdfs:comment "Activity for establishing the configuration management system, usually composed of version control system, a change control system and a product building system."^^rdfs:Literal .
+
+
+###  http://nemo.inf.ufes.br/ontologies/fragments/cmpo#Configuration_Manager
+:Configuration_Manager rdf:type owl:NamedIndividual ,
+                                goop:Class ;
+                       goop:specifies :Stakeholder ;
+                       rdfs:comment "Stakeholder responsible for planning and managing the Configuration Management Process."^^rdfs:Literal .
+
+
+###  http://nemo.inf.ufes.br/ontologies/fragments/cmpo#Define_Artifact
+:Define_Artifact rdf:type owl:NamedIndividual ,
+                          goop:Goal_Based_Requirement ;
+                 goop:composed_by :Define_Artifact_by_Nature ,
+                                  :Define_Artifact_by_Parts ;
+                 rdfs:comment "In the context of the software domain, Artifacts are objects intentionally made to serve a given purpose in the context of a Software Project or Organization."^^rdfs:Literal .
+
+
+###  http://nemo.inf.ufes.br/ontologies/fragments/cmpo#Define_Artifact_by_Nature
+:Define_Artifact_by_Nature rdf:type owl:NamedIndividual ,
+                                    goop:Goal_Based_Requirement ;
+                           rdfs:comment "Artifact Type partitions the generalization set of Artifacts according to their nature, giving rise to a taxonomy of artifacts. More specific taxonomies can be established for specific types of artifacts, such as documents (established by instances of Document Type) and Software Product (Software Product Type), among others."^^rdfs:Literal .
+
+
+###  http://nemo.inf.ufes.br/ontologies/fragments/cmpo#Define_Artifact_by_Parts
+:Define_Artifact_by_Parts rdf:type owl:NamedIndividual ,
+                                   goop:Goal_Based_Requirement ;
+                          rdfs:comment "Can be composed of other artifacts (Composite Artifact) or not (Simple Artifact)."^^rdfs:Literal .
+
+
+###  http://nemo.inf.ufes.br/ontologies/fragments/cmpo#Define_Configuration_Management_Artifacts
+:Define_Configuration_Management_Artifacts rdf:type owl:NamedIndividual ,
+                                                    goop:Goal_Based_Requirement .
+
+
+###  http://nemo.inf.ufes.br/ontologies/fragments/cmpo#Define_Configuration_Management_Process
+:Define_Configuration_Management_Process rdf:type owl:NamedIndividual ;
+                                         rdfs:comment """The Configuration Management (CM) Process is a Process with the purpose of conducting the activities related to software configuration management, ensuring the completeness and correctness of software Configuration Items.
+Some notions are important for this process. Item is anything whose configuration may be managed (such as an artifact, tool, or process description). Configuration Item (CI) is an Item whose configuration is being managed. The most important type of CI in this context is the Artifact CI, an Artifact whose configuration is being managed, and, like so, subject of Change Requests. A CI bears Versions defining each of its important releases. When a Version of an Artifact CI is modified in a Change Control process, an Artifact Copy, based on the desired Version, is created to be modified and then gives rise to a new Version of that Artifact CI. Finally, Baselines are Information Items embracing a set of CIs' Versions at a specific time in the product's life.
+The CM Process is composed of five Activities: (1) Configuration Management Planning plans the Configuration Management Process creating the Configuration Management Plan, and including the activities for Configuration Management System Establishment and Configuration Items Identification. (2) Change Control formally controls the modification of CIs supported by an evolving Change Request artifact. Change Control is composed of five activities: Change Requesting, to someone communicate a request for a change; Request Evaluation, an evaluation to authorize or reject a Change Request; Change Accomplishment, for implementing the authorized changes in a version controlled context; Change Review, for approving the changes done if they were made as planned; and Change Request Closing, for finishing the Change Request. (3) Baseline Establishment creates Baselines embracing planned sets of CIs' Versions. (4) Configuration Auditing verifies the completeness, integrity and conformity of Baselines and Deliverable Products, registering nonconformities as needed. (5) Finally, Release Management and Delivery manages the building, releasing and delivering of products to the clients.
+Considering Stakeholders, the Configuration Manager is the main responsible for the process. Different roles apply for specific activities: Change Requester, Change Request Evaluator, Change Implementer, Change Reviewer and Configuration Auditor."""^^rdfs:Literal .
+
+
+###  http://nemo.inf.ufes.br/ontologies/fragments/cmpo#Define_Configuration_Management_Process_and_Activities
+:Define_Configuration_Management_Process_and_Activities rdf:type owl:NamedIndividual ,
+                                                                 goop:Goal_Based_Requirement .
+
+
+###  http://nemo.inf.ufes.br/ontologies/fragments/cmpo#Define_Performed_Process
+:Define_Performed_Process rdf:type owl:NamedIndividual ,
+                                   goop:Goal_Based_Requirement .
+
+
+###  http://nemo.inf.ufes.br/ontologies/fragments/cmpo#Define_Stakeholder_Participation
+:Define_Stakeholder_Participation rdf:type owl:NamedIndividual ,
+                                           goop:Goal_Based_Requirement .
+
+
+###  http://nemo.inf.ufes.br/ontologies/fragments/cmpo#Deliverable_Product
+:Deliverable_Product rdf:type owl:NamedIndividual ,
+                              goop:Class ;
+                     goop:specifies :Software_Product ;
+                     rdfs:comment "Software Product ready to be delivered to the client."^^rdfs:Literal .
+
+
+###  http://nemo.inf.ufes.br/ontologies/fragments/cmpo#Document
+:Document rdf:type owl:NamedIndividual ,
+                   goop:Class ;
+          goop:specifies :Artifact ;
+          rdfs:comment """Any written or pictorial, uniquely identified, information related to the software development, usually presented in a predefined format. 
+Ex.: a Requirements Document, a specification, a report."""^^rdfs:Literal .
+
+
+###  http://nemo.inf.ufes.br/ontologies/fragments/cmpo#Evaluated_CR
+:Evaluated_CR rdf:type owl:NamedIndividual ,
+                       goop:Class ;
+              goop:specifies <http://nemo.inf.ufes.br/ontologies/fragments/cmpo#Change_Request_(CI)> ;
+              rdfs:comment "Change Request evaluated and set as authorized or rejected."^^rdfs:Literal .
+
+
+###  http://nemo.inf.ufes.br/ontologies/fragments/cmpo#Goop-1
+:Goop-1 rdf:type owl:NamedIndividual ,
+                 goop:Goop ;
+        goop:composed_by :Define_Artifact_by_Nature .
+
+
+###  http://nemo.inf.ufes.br/ontologies/fragments/cmpo#Goop-2
+:Goop-2 rdf:type owl:NamedIndividual ,
+                 goop:Goop ;
+        goop:composed_by :Define_Artifact_by_Parts .
+
+
+###  http://nemo.inf.ufes.br/ontologies/fragments/cmpo#Goop-3
+:Goop-3 rdf:type owl:NamedIndividual ,
+                 goop:Goop ;
+        goop:composed_by :Define_Performed_Process .
+
+
+###  http://nemo.inf.ufes.br/ontologies/fragments/cmpo#Goop-4
+:Goop-4 rdf:type owl:NamedIndividual ,
+                 goop:Goop ;
+        goop:composed_by :Define_Stakeholder_Participation .
+
+
+###  http://nemo.inf.ufes.br/ontologies/fragments/cmpo#Goop-5
+:Goop-5 rdf:type owl:NamedIndividual ;
+        goop:composed_by :Define_Configuration_Management_Process_and_Activities .
+
+
+###  http://nemo.inf.ufes.br/ontologies/fragments/cmpo#Goop-6
+:Goop-6 rdf:type owl:NamedIndividual ;
+        goop:composed_by :Define_Configuration_Management_Artifacts .
+
+
+###  http://nemo.inf.ufes.br/ontologies/fragments/cmpo#Goop-General
+:Goop-General rdf:type owl:NamedIndividual ,
+                       goop:Goop ;
+              goop:composed_by :Define_Artifact .
+
+
+###  http://nemo.inf.ufes.br/ontologies/fragments/cmpo#Information_Item
+:Information_Item rdf:type owl:NamedIndividual ,
+                           goop:Class ;
+                  goop:specifies :Artifact ;
+                  rdfs:comment """Relevant information for human use, produced or used by Performed Activity. 
+Ex.: a documented requirement, a bug reported, an agreement e-mail, a component description."""^^rdfs:Literal .
+
+
+###  http://nemo.inf.ufes.br/ontologies/fragments/cmpo#Item
+:Item rdf:type owl:NamedIndividual ,
+               goop:Class ;
+      rdfs:comment """Object whose configuration may be managed. 
+Ex.: Artifacts, Process descriptions, Tools."""^^rdfs:Literal .
+
+
+###  http://nemo.inf.ufes.br/ontologies/fragments/cmpo#Model
+:Model rdf:type owl:NamedIndividual ,
+                goop:Class ;
+       goop:specifies :Artifact .
+
+
+###  http://nemo.inf.ufes.br/ontologies/fragments/cmpo#Model_Fragment-1
+:Model_Fragment-1 rdf:type owl:NamedIndividual ,
+                           goop:Model_Fragment ;
+                  goop:composed_by :Artifact ,
+                                   :Document ,
+                                   :Information_Item ,
+                                   :Model ,
+                                   :Software_Item ,
+                                   :Software_Product ,
+                                   :describes ;
+                  goop:is_used_to_satisfy :Goop-1 .
+
+
+###  http://nemo.inf.ufes.br/ontologies/fragments/cmpo#Model_Fragment-2
+:Model_Fragment-2 rdf:type owl:NamedIndividual ,
+                           goop:Model_Fragment ;
+                  goop:composed_by :Artifact ,
+                                   :Composite_Artifact ,
+                                   :Simple_Artifact ;
+                  goop:is_used_to_satisfy :Goop-2 .
+
+
+###  http://nemo.inf.ufes.br/ontologies/fragments/cmpo#Model_Fragment-3
+:Model_Fragment-3 rdf:type owl:NamedIndividual ,
+                           goop:Model_Fragment ;
+                  goop:composed_by :Performed_Activity ,
+                                   :Performed_Composite_Activity ,
+                                   :Performed_General_Process ,
+                                   :Performed_Process ,
+                                   :Performed_Simple_Activity ,
+                                   :Performed_Specific_Process ,
+                                   :changes ,
+                                   :creates ,
+                                   :depends_on ,
+                                   :uses ;
+                  goop:is_used_to_satisfy :Goop-3 .
+
+
+###  http://nemo.inf.ufes.br/ontologies/fragments/cmpo#Model_Fragment-4
+:Model_Fragment-4 rdf:type owl:NamedIndividual ,
+                           goop:Model_Fragment ;
+                  goop:composed_by :Change_Implementer ,
+                                   :Change_Request_Evaluator ,
+                                   :Change_Requester ,
+                                   :Change_Reviewer ,
+                                   :Configuration_Auditor ,
+                                   :Configuration_Manager ,
+                                   :Stakeholder ,
+                                   :is_in_charge_of ,
+                                   :participates_in ;
+                  goop:is_used_to_satisfy :Goop-4 .
+
+
+###  http://nemo.inf.ufes.br/ontologies/fragments/cmpo#Model_Fragment-5
+:Model_Fragment-5 rdf:type owl:NamedIndividual ,
+                           goop:Model_Fragment ;
+                  goop:composed_by :Baseline_Establishment ,
+                                   :Change_Accomplishment ,
+                                   :Change_Control ,
+                                   :Change_Implementation ,
+                                   :Change_Request_Closing ,
+                                   :Change_Requesting ,
+                                   :Change_Review ,
+                                   :Checkin ,
+                                   :Checkout ,
+                                   :Configuration_Auditing ,
+                                   :Configuration_Items_Identification ,
+                                   :Configuration_Management_Planning ,
+                                   :Configuration_Management_Process ,
+                                   :Configuration_Management_System_Establishment ,
+                                   :Release_Management_and_Delivery ,
+                                   :Request_Evaluation ,
+                                   :changes ,
+                                   :creates ,
+                                   :uses ;
+                  goop:is_used_to_satisfy :Goop-5 .
+
+
+###  http://nemo.inf.ufes.br/ontologies/fragments/cmpo#Model_Fragment-6
+:Model_Fragment-6 rdf:type owl:NamedIndividual ,
+                           goop:Model_Fragment ;
+                  goop:composed_by :Artifact_CI ,
+                                   :Artifact_Copy ,
+                                   :Baseline ,
+                                   :CR_Being_Solved ,
+                                   :Closed_CR ,
+                                   :Communicated_CR ,
+                                   :Configuration_Audit_Report ,
+                                   :Configuration_Management_Plan ,
+                                   :Deliverable_Product ,
+                                   :Evaluated_CR ,
+                                   :Item ,
+                                   :Noncompliance_Register ,
+                                   :Reviewed_CR ,
+                                   :Solved_CR ,
+                                   :Version ,
+                                   :addresses ,
+                                   :based_on ,
+                                   :depicts ,
+                                   :has ,
+                                   :packages ,
+                                   <http://nemo.inf.ufes.br/ontologies/fragments/cmpo#Change_Request_(CI)> ,
+                                   <http://nemo.inf.ufes.br/ontologies/fragments/cmpo#Configuration_Item_(CI)> ;
+                  goop:is_used_to_satisfy :Goop-6 .
+
+
+###  http://nemo.inf.ufes.br/ontologies/fragments/cmpo#Model_Fragment-General
+:Model_Fragment-General rdf:type owl:NamedIndividual ,
+                                 goop:Model_Fragment ;
+                        goop:composed_by :depends_on ;
+                        goop:is_used_to_satisfy :Goop-General .
+
+
+###  http://nemo.inf.ufes.br/ontologies/fragments/cmpo#Noncompliance_Register
+:Noncompliance_Register rdf:type owl:NamedIndividual ,
+                                 goop:Class ;
+                        goop:specifies :Information_Item .
+
+
+###  http://nemo.inf.ufes.br/ontologies/fragments/cmpo#Performed_Activity
+:Performed_Activity rdf:type owl:NamedIndividual ,
+                             goop:Class .
+
+
+###  http://nemo.inf.ufes.br/ontologies/fragments/cmpo#Performed_Composite_Activity
+:Performed_Composite_Activity rdf:type owl:NamedIndividual ,
+                                       goop:Class ;
+                              goop:component_of :Performed_Activity ;
+                              goop:specifies :Performed_Composite_Activity .
+
+
+###  http://nemo.inf.ufes.br/ontologies/fragments/cmpo#Performed_General_Process
+:Performed_General_Process rdf:type owl:NamedIndividual ,
+                                    goop:Class ;
+                           goop:component_of :Performed_Specific_Process ;
+                           goop:specifies :Performed_Process .
+
+
+###  http://nemo.inf.ufes.br/ontologies/fragments/cmpo#Performed_Process
+:Performed_Process rdf:type owl:NamedIndividual ,
+                            goop:Class .
+
+
+###  http://nemo.inf.ufes.br/ontologies/fragments/cmpo#Performed_Simple_Activity
+:Performed_Simple_Activity rdf:type owl:NamedIndividual ,
+                                    goop:Class ;
+                           goop:specifies :Performed_Activity .
+
+
+###  http://nemo.inf.ufes.br/ontologies/fragments/cmpo#Performed_Specific_Process
+:Performed_Specific_Process rdf:type owl:NamedIndividual ,
+                                     goop:Class ;
+                            goop:component_of :Performed_Activity ;
+                            goop:specifies :Performed_Process .
+
+
+###  http://nemo.inf.ufes.br/ontologies/fragments/cmpo#Release_Management_and_Delivery
+:Release_Management_and_Delivery rdf:type owl:NamedIndividual ,
+                                          goop:Class ;
+                                 goop:specifies :Performed_Composite_Activity ;
+                                 rdfs:comment "Activity for managing the building, releasing and delivering of the products to be delivered to clients."^^rdfs:Literal .
+
+
+###  http://nemo.inf.ufes.br/ontologies/fragments/cmpo#Request_Evaluation
+:Request_Evaluation rdf:type owl:NamedIndividual ,
+                             goop:Class ;
+                    goop:specifies :Performed_Simple_Activity ;
+                    rdfs:comment "Activity for evaluating the Change Request for a set of Configuration Items, authorizing or rejecting it."^^rdfs:Literal .
+
+
+###  http://nemo.inf.ufes.br/ontologies/fragments/cmpo#Reviewed_CR
+:Reviewed_CR rdf:type owl:NamedIndividual ,
+                      goop:Class ;
+             goop:specifies <http://nemo.inf.ufes.br/ontologies/fragments/cmpo#Change_Request_(CI)> ;
+             rdfs:comment "Change Request reviewed to check if the modifications done are correct."^^rdfs:Literal .
+
+
+###  http://nemo.inf.ufes.br/ontologies/fragments/cmpo#Simple_Artifact
+:Simple_Artifact rdf:type owl:NamedIndividual ,
+                          goop:Class ;
+                 goop:specifies :Artifact ;
+                 rdfs:comment "Artifact that is not decomposed into other Artifacts."^^rdfs:Literal .
+
+
+###  http://nemo.inf.ufes.br/ontologies/fragments/cmpo#Software_Item
+:Software_Item rdf:type owl:NamedIndividual ,
+                        goop:Class ;
+               goop:specifies :Artifact .
+
+
+###  http://nemo.inf.ufes.br/ontologies/fragments/cmpo#Software_Product
+:Software_Product rdf:type owl:NamedIndividual ,
+                           goop:Class ;
+                  goop:specifies :Artifact .
+
+
+###  http://nemo.inf.ufes.br/ontologies/fragments/cmpo#Solved_CR
+:Solved_CR rdf:type owl:NamedIndividual ,
+                    goop:Class ;
+           goop:specifies <http://nemo.inf.ufes.br/ontologies/fragments/cmpo#Change_Request_(CI)> ;
+           rdfs:comment "Change Request solved through the Change Implementation."^^rdfs:Literal .
+
+
+###  http://nemo.inf.ufes.br/ontologies/fragments/cmpo#Stakeholder
+:Stakeholder rdf:type owl:NamedIndividual ,
+                      goop:Class .
+
+
+###  http://nemo.inf.ufes.br/ontologies/fragments/cmpo#Version
+:Version rdf:type owl:NamedIndividual ,
+                  goop:Class ;
+         rdfs:comment """Each identified release of a Configuration Item submitted to a version control repository. 
+Ex.: Project Plan of Project Alfa, version 01; Requirements Document of Project Alfa, version 03."""^^rdfs:Literal .
+
+
+###  http://nemo.inf.ufes.br/ontologies/fragments/cmpo#addresses
+:addresses rdf:type owl:NamedIndividual ,
+                    goop:Object_Property .
+
+
+###  http://nemo.inf.ufes.br/ontologies/fragments/cmpo#based_on
+:based_on rdf:type owl:NamedIndividual ,
+                   goop:Object_Property .
+
+
+###  http://nemo.inf.ufes.br/ontologies/fragments/cmpo#changes
+:changes rdf:type owl:NamedIndividual ,
+                  goop:Object_Property .
+
+
+###  http://nemo.inf.ufes.br/ontologies/fragments/cmpo#creates
+:creates rdf:type owl:NamedIndividual ,
+                  goop:Object_Property .
+
+
+###  http://nemo.inf.ufes.br/ontologies/fragments/cmpo#depends_on
+:depends_on rdf:type owl:NamedIndividual ,
+                     goop:Object_Property .
+
+
+###  http://nemo.inf.ufes.br/ontologies/fragments/cmpo#depicts
+:depicts rdf:type owl:NamedIndividual ,
+                  goop:Object_Property .
+
+
+###  http://nemo.inf.ufes.br/ontologies/fragments/cmpo#describes
+:describes rdf:type owl:NamedIndividual ,
+                    goop:Object_Property .
+
+
+###  http://nemo.inf.ufes.br/ontologies/fragments/cmpo#has
+:has rdf:type owl:NamedIndividual ,
+              goop:Object_Property .
+
+
+###  http://nemo.inf.ufes.br/ontologies/fragments/cmpo#is_in_charge_of
+:is_in_charge_of rdf:type owl:NamedIndividual ,
+                          goop:Object_Property .
+
+
+###  http://nemo.inf.ufes.br/ontologies/fragments/cmpo#packages
+:packages rdf:type owl:NamedIndividual ,
+                   goop:Object_Property .
+
+
+###  http://nemo.inf.ufes.br/ontologies/fragments/cmpo#participates_in
+:participates_in rdf:type owl:NamedIndividual ,
+                          goop:Object_Property .
+
+
+###  http://nemo.inf.ufes.br/ontologies/fragments/cmpo#uses
+:uses rdf:type owl:NamedIndividual ,
+               goop:Object_Property .
+
+
+###  http://nemo.inf.ufes.br/ontologies/fragments/cmpo#Change_Request_(CI)
+<http://nemo.inf.ufes.br/ontologies/fragments/cmpo#Change_Request_(CI)> rdf:type owl:NamedIndividual ,
+                                                                                 goop:Class ;
+                                                                        goop:specifies :Information_Item ;
+                                                                        rdfs:comment """Information Item describing a request for modification on a set of Configuration Items. 
+Ex.: a request for changing the project planning replacing a developer, which affects the Project Plan and the Project Schedule."""^^rdfs:Literal .
+
+
+###  http://nemo.inf.ufes.br/ontologies/fragments/cmpo#Configuration_Item_(CI)
+<http://nemo.inf.ufes.br/ontologies/fragments/cmpo#Configuration_Item_(CI)> rdf:type owl:NamedIndividual ,
+                                                                                     goop:Class ;
+                                                                            goop:specifies :Item ;
+                                                                            rdfs:comment """Object whose configuration is being managed. 
+Ex.: Artifacts, Process descriptions, Tools under Configuration Management."""^^rdfs:Literal .
+
+
+###  Generated by the OWL API (version 4.5.7.2018-12-02T02:23:35Z) https://github.com/owlcs/owlapi

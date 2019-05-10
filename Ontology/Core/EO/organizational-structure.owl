@@ -1,0 +1,181 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns="http://nemo.inf.ufes.br/ontologies/organizational-structure#"
+     xml:base="http://nemo.inf.ufes.br/ontologies/organizational-structure"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:goop="http://nemo.inf.ufes.br/ontologies/goop#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#">
+    <owl:Ontology rdf:about="http://nemo.inf.ufes.br/ontologies/organizational-structure">
+        <owl:imports rdf:resource="http://nemo.inf.ufes.br/ontologies/goop"/>
+    </owl:Ontology>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Individuals
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://nemo.inf.ufes.br/ontologies/organizational-structure#Complex_Organizational_Unit -->
+
+    <owl:NamedIndividual rdf:about="http://nemo.inf.ufes.br/ontologies/organizational-structure#Complex_Organizational_Unit">
+        <rdf:type rdf:resource="http://nemo.inf.ufes.br/ontologies/goop#Class"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://nemo.inf.ufes.br/ontologies/organizational-structure#Complex_Standalone_Formal_Organization -->
+
+    <owl:NamedIndividual rdf:about="http://nemo.inf.ufes.br/ontologies/organizational-structure#Complex_Standalone_Formal_Organization">
+        <rdf:type rdf:resource="http://nemo.inf.ufes.br/ontologies/goop#Class"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://nemo.inf.ufes.br/ontologies/organizational-structure#Defines_the_organization_structure -->
+
+    <owl:NamedIndividual rdf:about="http://nemo.inf.ufes.br/ontologies/organizational-structure#Defines_the_organization_structure">
+        <rdf:type rdf:resource="http://nemo.inf.ufes.br/ontologies/goop#Goal_Based_Requirement"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://nemo.inf.ufes.br/ontologies/organizational-structure#Formal_Organization -->
+
+    <owl:NamedIndividual rdf:about="http://nemo.inf.ufes.br/ontologies/organizational-structure#Formal_Organization">
+        <rdf:type rdf:resource="http://nemo.inf.ufes.br/ontologies/goop#Class"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://nemo.inf.ufes.br/ontologies/organizational-structure#Formal_Organization_Type -->
+
+    <owl:NamedIndividual rdf:about="http://nemo.inf.ufes.br/ontologies/organizational-structure#Formal_Organization_Type">
+        <rdf:type rdf:resource="http://nemo.inf.ufes.br/ontologies/goop#Class"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://nemo.inf.ufes.br/ontologies/organizational-structure#Goop -->
+
+    <owl:NamedIndividual rdf:about="http://nemo.inf.ufes.br/ontologies/organizational-structure#Goop">
+        <rdf:type rdf:resource="http://nemo.inf.ufes.br/ontologies/goop#Goop"/>
+        <goop:composed_by rdf:resource="http://nemo.inf.ufes.br/ontologies/organizational-structure#Defines_the_organization_structure"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://nemo.inf.ufes.br/ontologies/organizational-structure#Model_Fragment -->
+
+    <owl:NamedIndividual rdf:about="http://nemo.inf.ufes.br/ontologies/organizational-structure#Model_Fragment">
+        <rdf:type rdf:resource="http://nemo.inf.ufes.br/ontologies/goop#Model_Fragment"/>
+        <goop:composed_by rdf:resource="http://nemo.inf.ufes.br/ontologies/organizational-structure#Complex_Organizational_Unit"/>
+        <goop:composed_by rdf:resource="http://nemo.inf.ufes.br/ontologies/organizational-structure#Complex_Standalone_Formal_Organization"/>
+        <goop:composed_by rdf:resource="http://nemo.inf.ufes.br/ontologies/organizational-structure#Formal_Organization"/>
+        <goop:composed_by rdf:resource="http://nemo.inf.ufes.br/ontologies/organizational-structure#Formal_Organization_Type"/>
+        <goop:composed_by rdf:resource="http://nemo.inf.ufes.br/ontologies/organizational-structure#Multi_Formal_Organization"/>
+        <goop:composed_by rdf:resource="http://nemo.inf.ufes.br/ontologies/organizational-structure#Organizational_Unit"/>
+        <goop:composed_by rdf:resource="http://nemo.inf.ufes.br/ontologies/organizational-structure#Organizational_Unit_Type"/>
+        <goop:composed_by rdf:resource="http://nemo.inf.ufes.br/ontologies/organizational-structure#Simple_Organizational_Unit"/>
+        <goop:composed_by rdf:resource="http://nemo.inf.ufes.br/ontologies/organizational-structure#Simple_Standalone_Formal_Organization"/>
+        <goop:composed_by rdf:resource="http://nemo.inf.ufes.br/ontologies/organizational-structure#Standalone_Formal_Organization"/>
+        <goop:composed_by rdf:resource="http://nemo.inf.ufes.br/ontologies/organizational-structure#is_compatible_with_org_type"/>
+        <goop:composed_by rdf:resource="http://nemo.inf.ufes.br/ontologies/organizational-structure#is_compatible_with_subunit_type"/>
+        <goop:composed_by rdf:resource="http://nemo.inf.ufes.br/ontologies/organizational-structure#EO::Organization"/>
+        <goop:composed_by rdf:resource="http://nemo.inf.ufes.br/ontologies/organizational-structure#UFO-C::Social_Agent"/>
+        <goop:is_used_to_satisfy rdf:resource="http://nemo.inf.ufes.br/ontologies/organizational-structure#Goop"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://nemo.inf.ufes.br/ontologies/organizational-structure#Multi_Formal_Organization -->
+
+    <owl:NamedIndividual rdf:about="http://nemo.inf.ufes.br/ontologies/organizational-structure#Multi_Formal_Organization">
+        <rdf:type rdf:resource="http://nemo.inf.ufes.br/ontologies/goop#Class"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://nemo.inf.ufes.br/ontologies/organizational-structure#Organizational_Unit -->
+
+    <owl:NamedIndividual rdf:about="http://nemo.inf.ufes.br/ontologies/organizational-structure#Organizational_Unit">
+        <rdf:type rdf:resource="http://nemo.inf.ufes.br/ontologies/goop#Class"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://nemo.inf.ufes.br/ontologies/organizational-structure#Organizational_Unit_Type -->
+
+    <owl:NamedIndividual rdf:about="http://nemo.inf.ufes.br/ontologies/organizational-structure#Organizational_Unit_Type">
+        <rdf:type rdf:resource="http://nemo.inf.ufes.br/ontologies/goop#Class"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://nemo.inf.ufes.br/ontologies/organizational-structure#Simple_Organizational_Unit -->
+
+    <owl:NamedIndividual rdf:about="http://nemo.inf.ufes.br/ontologies/organizational-structure#Simple_Organizational_Unit">
+        <rdf:type rdf:resource="http://nemo.inf.ufes.br/ontologies/goop#Class"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://nemo.inf.ufes.br/ontologies/organizational-structure#Simple_Standalone_Formal_Organization -->
+
+    <owl:NamedIndividual rdf:about="http://nemo.inf.ufes.br/ontologies/organizational-structure#Simple_Standalone_Formal_Organization">
+        <rdf:type rdf:resource="http://nemo.inf.ufes.br/ontologies/goop#Class"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://nemo.inf.ufes.br/ontologies/organizational-structure#Standalone_Formal_Organization -->
+
+    <owl:NamedIndividual rdf:about="http://nemo.inf.ufes.br/ontologies/organizational-structure#Standalone_Formal_Organization">
+        <rdf:type rdf:resource="http://nemo.inf.ufes.br/ontologies/goop#Class"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://nemo.inf.ufes.br/ontologies/organizational-structure#is_compatible_with_org_type -->
+
+    <owl:NamedIndividual rdf:about="http://nemo.inf.ufes.br/ontologies/organizational-structure#is_compatible_with_org_type">
+        <rdf:type rdf:resource="http://nemo.inf.ufes.br/ontologies/goop#Object_Property"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://nemo.inf.ufes.br/ontologies/organizational-structure#is_compatible_with_subunit_type -->
+
+    <owl:NamedIndividual rdf:about="http://nemo.inf.ufes.br/ontologies/organizational-structure#is_compatible_with_subunit_type">
+        <rdf:type rdf:resource="http://nemo.inf.ufes.br/ontologies/goop#Object_Property"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://nemo.inf.ufes.br/ontologies/organizational-structure#EO::Organization -->
+
+    <owl:NamedIndividual rdf:about="http://nemo.inf.ufes.br/ontologies/organizational-structure#EO::Organization">
+        <rdf:type rdf:resource="http://nemo.inf.ufes.br/ontologies/goop#Class"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://nemo.inf.ufes.br/ontologies/organizational-structure#UFO-C::Social_Agent -->
+
+    <owl:NamedIndividual rdf:about="http://nemo.inf.ufes.br/ontologies/organizational-structure#UFO-C::Social_Agent">
+        <rdf:type rdf:resource="http://nemo.inf.ufes.br/ontologies/goop#Class"/>
+    </owl:NamedIndividual>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 4.5.6.2018-09-06T00:27:41Z) https://github.com/owlcs/owlapi -->
+

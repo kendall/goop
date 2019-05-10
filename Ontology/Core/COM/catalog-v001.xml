@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<catalog prefer="public" xmlns="urn:oasis:names:tc:entity:xmlns:xml:catalog">
+    <group id="Folder Repository, directory=, recursive=true, Auto-Update=true, version=2" prefer="public" xml:base="">
+        <uri id="Automatically generated entry, Timestamp=1548163258311" name="http://nemo.inf.ufes.br/ontologies/measurable-entities" uri="measurable-entities.owl"/>
+        <uri id="Automatically generated entry, Timestamp=1548163258311" name="http://nemo.inf.ufes.br/ontologies/measure" uri="measure.owl"/>
+        <uri id="Automatically generated entry, Timestamp=1548163258311" name="http://nemo.inf.ufes.br/ontologies/measurement" uri="measurement.owl"/>
+        <uri id="Automatically generated entry, Timestamp=1548163258311" name="http://nemo.inf.ufes.br/ontologies/measurement-analysis" uri="measurement-analysis.owl"/>
+        <uri id="Automatically generated entry, Timestamp=1548163258311" name="http://nemo.inf.ufes.br/ontologies/measurement-planning" uri="measurement-planning.owl"/>
+    </group>
+</catalog>

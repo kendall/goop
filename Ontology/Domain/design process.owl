@@ -1,0 +1,530 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns="http://nemo.inf.ufes.br/ontologies/stakeholders#"
+     xml:base="http://nemo.inf.ufes.br/ontologies/stakeholders"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:goop="http://nemo.inf.ufes.br/ontologies/goop#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#">
+    <owl:Ontology rdf:about="http://nemo.inf.ufes.br/ontologies/desing-process">
+        <owl:imports rdf:resource="http://nemo.inf.ufes.br/ontologies/goop"/>
+    </owl:Ontology>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Individuals
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://nemo.inf.ufes.br/ontologies/desing-process#Archictetural_Component -->
+
+    <owl:NamedIndividual rdf:about="http://nemo.inf.ufes.br/ontologies/desing-process#Archictetural_Component">
+        <rdf:type rdf:resource="http://nemo.inf.ufes.br/ontologies/goop#Class"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://nemo.inf.ufes.br/ontologies/desing-process#Architectural_Connector -->
+
+    <owl:NamedIndividual rdf:about="http://nemo.inf.ufes.br/ontologies/desing-process#Architectural_Connector">
+        <rdf:type rdf:resource="http://nemo.inf.ufes.br/ontologies/goop#Class"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://nemo.inf.ufes.br/ontologies/desing-process#Architectural_Design -->
+
+    <owl:NamedIndividual rdf:about="http://nemo.inf.ufes.br/ontologies/desing-process#Architectural_Design">
+        <rdf:type rdf:resource="http://nemo.inf.ufes.br/ontologies/goop#Class"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://nemo.inf.ufes.br/ontologies/desing-process#Architectural_Development -->
+
+    <owl:NamedIndividual rdf:about="http://nemo.inf.ufes.br/ontologies/desing-process#Architectural_Development">
+        <rdf:type rdf:resource="http://nemo.inf.ufes.br/ontologies/goop#Class"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://nemo.inf.ufes.br/ontologies/desing-process#Architectural_Element -->
+
+    <owl:NamedIndividual rdf:about="http://nemo.inf.ufes.br/ontologies/desing-process#Architectural_Element">
+        <rdf:type rdf:resource="http://nemo.inf.ufes.br/ontologies/goop#Class"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://nemo.inf.ufes.br/ontologies/desing-process#Architectural_High-level_Design -->
+
+    <owl:NamedIndividual rdf:about="http://nemo.inf.ufes.br/ontologies/desing-process#Architectural_High-level_Design">
+        <rdf:type rdf:resource="http://nemo.inf.ufes.br/ontologies/goop#Class"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://nemo.inf.ufes.br/ontologies/desing-process#Artifact -->
+
+    <owl:NamedIndividual rdf:about="http://nemo.inf.ufes.br/ontologies/desing-process#Artifact">
+        <rdf:type rdf:resource="http://nemo.inf.ufes.br/ontologies/goop#Class"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://nemo.inf.ufes.br/ontologies/desing-process#Component_Design -->
+
+    <owl:NamedIndividual rdf:about="http://nemo.inf.ufes.br/ontologies/desing-process#Component_Design">
+        <rdf:type rdf:resource="http://nemo.inf.ufes.br/ontologies/goop#Class"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://nemo.inf.ufes.br/ontologies/desing-process#Component_Interface_Design -->
+
+    <owl:NamedIndividual rdf:about="http://nemo.inf.ufes.br/ontologies/desing-process#Component_Interface_Design">
+        <rdf:type rdf:resource="http://nemo.inf.ufes.br/ontologies/goop#Class"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://nemo.inf.ufes.br/ontologies/desing-process#Composite_Artifact -->
+
+    <owl:NamedIndividual rdf:about="http://nemo.inf.ufes.br/ontologies/desing-process#Composite_Artifact">
+        <rdf:type rdf:resource="http://nemo.inf.ufes.br/ontologies/goop#Class"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://nemo.inf.ufes.br/ontologies/desing-process#Data_Definitions -->
+
+    <owl:NamedIndividual rdf:about="http://nemo.inf.ufes.br/ontologies/desing-process#Data_Definitions">
+        <rdf:type rdf:resource="http://nemo.inf.ufes.br/ontologies/goop#Class"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://nemo.inf.ufes.br/ontologies/desing-process#Data_Design -->
+
+    <owl:NamedIndividual rdf:about="http://nemo.inf.ufes.br/ontologies/desing-process#Data_Design">
+        <rdf:type rdf:resource="http://nemo.inf.ufes.br/ontologies/goop#Class"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://nemo.inf.ufes.br/ontologies/desing-process#Data_High-level_Design -->
+
+    <owl:NamedIndividual rdf:about="http://nemo.inf.ufes.br/ontologies/desing-process#Data_High-level_Design">
+        <rdf:type rdf:resource="http://nemo.inf.ufes.br/ontologies/goop#Class"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://nemo.inf.ufes.br/ontologies/desing-process#Data_Model -->
+
+    <owl:NamedIndividual rdf:about="http://nemo.inf.ufes.br/ontologies/desing-process#Data_Model">
+        <rdf:type rdf:resource="http://nemo.inf.ufes.br/ontologies/goop#Class"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://nemo.inf.ufes.br/ontologies/desing-process#Define_architecture -->
+
+    <owl:NamedIndividual rdf:about="http://nemo.inf.ufes.br/ontologies/desing-process#Define_architecture">
+        <rdf:type rdf:resource="http://nemo.inf.ufes.br/ontologies/goop#Goal_Based_Requirement"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://nemo.inf.ufes.br/ontologies/desing-process#Define_elements -->
+
+    <owl:NamedIndividual rdf:about="http://nemo.inf.ufes.br/ontologies/desing-process#Define_elements">
+        <rdf:type rdf:resource="http://nemo.inf.ufes.br/ontologies/goop#Goal_Based_Requirement"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://nemo.inf.ufes.br/ontologies/desing-process#Define_interfaces -->
+
+    <owl:NamedIndividual rdf:about="http://nemo.inf.ufes.br/ontologies/desing-process#Define_interfaces">
+        <rdf:type rdf:resource="http://nemo.inf.ufes.br/ontologies/goop#Goal_Based_Requirement"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://nemo.inf.ufes.br/ontologies/desing-process#Design_Document -->
+
+    <owl:NamedIndividual rdf:about="http://nemo.inf.ufes.br/ontologies/desing-process#Design_Document">
+        <rdf:type rdf:resource="http://nemo.inf.ufes.br/ontologies/goop#Class"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://nemo.inf.ufes.br/ontologies/desing-process#Design_Documentation -->
+
+    <owl:NamedIndividual rdf:about="http://nemo.inf.ufes.br/ontologies/desing-process#Design_Documentation">
+        <rdf:type rdf:resource="http://nemo.inf.ufes.br/ontologies/goop#Class"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://nemo.inf.ufes.br/ontologies/desing-process#Design_Evaluation -->
+
+    <owl:NamedIndividual rdf:about="http://nemo.inf.ufes.br/ontologies/desing-process#Design_Evaluation">
+        <rdf:type rdf:resource="http://nemo.inf.ufes.br/ontologies/goop#Class"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://nemo.inf.ufes.br/ontologies/desing-process#Design_Evaluation_Document -->
+
+    <owl:NamedIndividual rdf:about="http://nemo.inf.ufes.br/ontologies/desing-process#Design_Evaluation_Document">
+        <rdf:type rdf:resource="http://nemo.inf.ufes.br/ontologies/goop#Class"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://nemo.inf.ufes.br/ontologies/desing-process#Design_Process -->
+
+    <owl:NamedIndividual rdf:about="http://nemo.inf.ufes.br/ontologies/desing-process#Design_Process">
+        <rdf:type rdf:resource="http://nemo.inf.ufes.br/ontologies/goop#Class"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://nemo.inf.ufes.br/ontologies/desing-process#Designer -->
+
+    <owl:NamedIndividual rdf:about="http://nemo.inf.ufes.br/ontologies/desing-process#Designer">
+        <rdf:type rdf:resource="http://nemo.inf.ufes.br/ontologies/goop#Class"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://nemo.inf.ufes.br/ontologies/desing-process#Detailed_Design -->
+
+    <owl:NamedIndividual rdf:about="http://nemo.inf.ufes.br/ontologies/desing-process#Detailed_Design">
+        <rdf:type rdf:resource="http://nemo.inf.ufes.br/ontologies/goop#Class"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://nemo.inf.ufes.br/ontologies/desing-process#Document -->
+
+    <owl:NamedIndividual rdf:about="http://nemo.inf.ufes.br/ontologies/desing-process#Document">
+        <rdf:type rdf:resource="http://nemo.inf.ufes.br/ontologies/goop#Class"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://nemo.inf.ufes.br/ontologies/desing-process#Goop -->
+
+    <owl:NamedIndividual rdf:about="http://nemo.inf.ufes.br/ontologies/desing-process#Goop">
+        <rdf:type rdf:resource="http://nemo.inf.ufes.br/ontologies/goop#Goop"/>
+        <goop:composed_by rdf:resource="http://nemo.inf.ufes.br/ontologies/desing-process#Define_architecture"/>
+        <goop:composed_by rdf:resource="http://nemo.inf.ufes.br/ontologies/desing-process#Define_elements"/>
+        <goop:composed_by rdf:resource="http://nemo.inf.ufes.br/ontologies/desing-process#Define_interfaces"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://nemo.inf.ufes.br/ontologies/desing-process#Information_Item -->
+
+    <owl:NamedIndividual rdf:about="http://nemo.inf.ufes.br/ontologies/desing-process#Information_Item">
+        <rdf:type rdf:resource="http://nemo.inf.ufes.br/ontologies/goop#Class"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://nemo.inf.ufes.br/ontologies/desing-process#Interface_Specification -->
+
+    <owl:NamedIndividual rdf:about="http://nemo.inf.ufes.br/ontologies/desing-process#Interface_Specification">
+        <rdf:type rdf:resource="http://nemo.inf.ufes.br/ontologies/goop#Class"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://nemo.inf.ufes.br/ontologies/desing-process#Model -->
+
+    <owl:NamedIndividual rdf:about="http://nemo.inf.ufes.br/ontologies/desing-process#Model">
+        <rdf:type rdf:resource="http://nemo.inf.ufes.br/ontologies/goop#Class"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://nemo.inf.ufes.br/ontologies/desing-process#Model_Fragment -->
+
+    <owl:NamedIndividual rdf:about="http://nemo.inf.ufes.br/ontologies/desing-process#Model_Fragment">
+        <rdf:type rdf:resource="http://nemo.inf.ufes.br/ontologies/goop#Model_Fragment"/>
+        <goop:composed_by rdf:resource="http://nemo.inf.ufes.br/ontologies/desing-process#Archictetural_Component"/>
+        <goop:composed_by rdf:resource="http://nemo.inf.ufes.br/ontologies/desing-process#Architectural_Connector"/>
+        <goop:composed_by rdf:resource="http://nemo.inf.ufes.br/ontologies/desing-process#Architectural_Design"/>
+        <goop:composed_by rdf:resource="http://nemo.inf.ufes.br/ontologies/desing-process#Architectural_Development"/>
+        <goop:composed_by rdf:resource="http://nemo.inf.ufes.br/ontologies/desing-process#Architectural_Element"/>
+        <goop:composed_by rdf:resource="http://nemo.inf.ufes.br/ontologies/desing-process#Architectural_High-level_Design"/>
+        <goop:composed_by rdf:resource="http://nemo.inf.ufes.br/ontologies/desing-process#Artifact"/>
+        <goop:composed_by rdf:resource="http://nemo.inf.ufes.br/ontologies/desing-process#Component_Design"/>
+        <goop:composed_by rdf:resource="http://nemo.inf.ufes.br/ontologies/desing-process#Component_Interface_Design"/>
+        <goop:composed_by rdf:resource="http://nemo.inf.ufes.br/ontologies/desing-process#Composite_Artifact"/>
+        <goop:composed_by rdf:resource="http://nemo.inf.ufes.br/ontologies/desing-process#Data_Definitions"/>
+        <goop:composed_by rdf:resource="http://nemo.inf.ufes.br/ontologies/desing-process#Data_Design"/>
+        <goop:composed_by rdf:resource="http://nemo.inf.ufes.br/ontologies/desing-process#Data_High-level_Design"/>
+        <goop:composed_by rdf:resource="http://nemo.inf.ufes.br/ontologies/desing-process#Data_Model"/>
+        <goop:composed_by rdf:resource="http://nemo.inf.ufes.br/ontologies/desing-process#Design_Document"/>
+        <goop:composed_by rdf:resource="http://nemo.inf.ufes.br/ontologies/desing-process#Design_Documentation"/>
+        <goop:composed_by rdf:resource="http://nemo.inf.ufes.br/ontologies/desing-process#Design_Evaluation"/>
+        <goop:composed_by rdf:resource="http://nemo.inf.ufes.br/ontologies/desing-process#Design_Evaluation_Document"/>
+        <goop:composed_by rdf:resource="http://nemo.inf.ufes.br/ontologies/desing-process#Design_Process"/>
+        <goop:composed_by rdf:resource="http://nemo.inf.ufes.br/ontologies/desing-process#Designer"/>
+        <goop:composed_by rdf:resource="http://nemo.inf.ufes.br/ontologies/desing-process#Detailed_Design"/>
+        <goop:composed_by rdf:resource="http://nemo.inf.ufes.br/ontologies/desing-process#Information_Item"/>
+        <goop:composed_by rdf:resource="http://nemo.inf.ufes.br/ontologies/desing-process#Interface_Specification"/>
+        <goop:composed_by rdf:resource="http://nemo.inf.ufes.br/ontologies/desing-process#Model"/>
+        <goop:composed_by rdf:resource="http://nemo.inf.ufes.br/ontologies/desing-process#Performed_Activity"/>
+        <goop:composed_by rdf:resource="http://nemo.inf.ufes.br/ontologies/desing-process#Performed_Composite_Activity"/>
+        <goop:composed_by rdf:resource="http://nemo.inf.ufes.br/ontologies/desing-process#Performed_General_Process"/>
+        <goop:composed_by rdf:resource="http://nemo.inf.ufes.br/ontologies/desing-process#Performed_Process"/>
+        <goop:composed_by rdf:resource="http://nemo.inf.ufes.br/ontologies/desing-process#Performed_Simple_Activity"/>
+        <goop:composed_by rdf:resource="http://nemo.inf.ufes.br/ontologies/desing-process#Performed_Specific_Process"/>
+        <goop:composed_by rdf:resource="http://nemo.inf.ufes.br/ontologies/desing-process#Requirements_Document"/>
+        <goop:composed_by rdf:resource="http://nemo.inf.ufes.br/ontologies/desing-process#Simple_Artifact"/>
+        <goop:composed_by rdf:resource="http://nemo.inf.ufes.br/ontologies/desing-process#Software_Architect"/>
+        <goop:composed_by rdf:resource="http://nemo.inf.ufes.br/ontologies/desing-process#Software_Architecture"/>
+        <goop:composed_by rdf:resource="http://nemo.inf.ufes.br/ontologies/desing-process#Software_Item"/>
+        <goop:composed_by rdf:resource="http://nemo.inf.ufes.br/ontologies/desing-process#Software_Product"/>
+        <goop:composed_by rdf:resource="http://nemo.inf.ufes.br/ontologies/desing-process#Stakeholder"/>
+        <goop:composed_by rdf:resource="http://nemo.inf.ufes.br/ontologies/desing-process#User_Interface_Design"/>
+        <goop:composed_by rdf:resource="http://nemo.inf.ufes.br/ontologies/desing-process#User_Interface_Specification"/>
+        <goop:composed_by rdf:resource="http://nemo.inf.ufes.br/ontologies/desing-process#changes"/>
+        <goop:composed_by rdf:resource="http://nemo.inf.ufes.br/ontologies/desing-process#conects"/>
+        <goop:composed_by rdf:resource="http://nemo.inf.ufes.br/ontologies/desing-process#creates"/>
+        <goop:composed_by rdf:resource="http://nemo.inf.ufes.br/ontologies/desing-process#depends_on"/>
+        <goop:composed_by rdf:resource="http://nemo.inf.ufes.br/ontologies/desing-process#depicts"/>
+        <goop:composed_by rdf:resource="http://nemo.inf.ufes.br/ontologies/desing-process#describes"/>
+        <goop:composed_by rdf:resource="http://nemo.inf.ufes.br/ontologies/desing-process#has"/>
+        <goop:composed_by rdf:resource="http://nemo.inf.ufes.br/ontologies/desing-process#participates_in"/>
+        <goop:composed_by rdf:resource="http://nemo.inf.ufes.br/ontologies/desing-process#subProcess"/>
+        <goop:composed_by rdf:resource="http://nemo.inf.ufes.br/ontologies/desing-process#uses"/>
+        <goop:is_used_to_satisfy rdf:resource="http://nemo.inf.ufes.br/ontologies/desing-process#Goop"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://nemo.inf.ufes.br/ontologies/desing-process#Performed_Activity -->
+
+    <owl:NamedIndividual rdf:about="http://nemo.inf.ufes.br/ontologies/desing-process#Performed_Activity">
+        <rdf:type rdf:resource="http://nemo.inf.ufes.br/ontologies/goop#Class"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://nemo.inf.ufes.br/ontologies/desing-process#Performed_Composite_Activity -->
+
+    <owl:NamedIndividual rdf:about="http://nemo.inf.ufes.br/ontologies/desing-process#Performed_Composite_Activity">
+        <rdf:type rdf:resource="http://nemo.inf.ufes.br/ontologies/goop#Class"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://nemo.inf.ufes.br/ontologies/desing-process#Performed_General_Process -->
+
+    <owl:NamedIndividual rdf:about="http://nemo.inf.ufes.br/ontologies/desing-process#Performed_General_Process">
+        <rdf:type rdf:resource="http://nemo.inf.ufes.br/ontologies/goop#Class"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://nemo.inf.ufes.br/ontologies/desing-process#Performed_Process -->
+
+    <owl:NamedIndividual rdf:about="http://nemo.inf.ufes.br/ontologies/desing-process#Performed_Process">
+        <rdf:type rdf:resource="http://nemo.inf.ufes.br/ontologies/goop#Class"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://nemo.inf.ufes.br/ontologies/desing-process#Performed_Simple_Activity -->
+
+    <owl:NamedIndividual rdf:about="http://nemo.inf.ufes.br/ontologies/desing-process#Performed_Simple_Activity">
+        <rdf:type rdf:resource="http://nemo.inf.ufes.br/ontologies/goop#Class"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://nemo.inf.ufes.br/ontologies/desing-process#Performed_Specific_Process -->
+
+    <owl:NamedIndividual rdf:about="http://nemo.inf.ufes.br/ontologies/desing-process#Performed_Specific_Process">
+        <rdf:type rdf:resource="http://nemo.inf.ufes.br/ontologies/goop#Class"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://nemo.inf.ufes.br/ontologies/desing-process#Requirements_Document -->
+
+    <owl:NamedIndividual rdf:about="http://nemo.inf.ufes.br/ontologies/desing-process#Requirements_Document">
+        <rdf:type rdf:resource="http://nemo.inf.ufes.br/ontologies/goop#Class"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://nemo.inf.ufes.br/ontologies/desing-process#Simple_Artifact -->
+
+    <owl:NamedIndividual rdf:about="http://nemo.inf.ufes.br/ontologies/desing-process#Simple_Artifact">
+        <rdf:type rdf:resource="http://nemo.inf.ufes.br/ontologies/goop#Class"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://nemo.inf.ufes.br/ontologies/desing-process#Software_Architect -->
+
+    <owl:NamedIndividual rdf:about="http://nemo.inf.ufes.br/ontologies/desing-process#Software_Architect">
+        <rdf:type rdf:resource="http://nemo.inf.ufes.br/ontologies/goop#Class"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://nemo.inf.ufes.br/ontologies/desing-process#Software_Architecture -->
+
+    <owl:NamedIndividual rdf:about="http://nemo.inf.ufes.br/ontologies/desing-process#Software_Architecture">
+        <rdf:type rdf:resource="http://nemo.inf.ufes.br/ontologies/goop#Class"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://nemo.inf.ufes.br/ontologies/desing-process#Software_Item -->
+
+    <owl:NamedIndividual rdf:about="http://nemo.inf.ufes.br/ontologies/desing-process#Software_Item">
+        <rdf:type rdf:resource="http://nemo.inf.ufes.br/ontologies/goop#Class"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://nemo.inf.ufes.br/ontologies/desing-process#Software_Product -->
+
+    <owl:NamedIndividual rdf:about="http://nemo.inf.ufes.br/ontologies/desing-process#Software_Product">
+        <rdf:type rdf:resource="http://nemo.inf.ufes.br/ontologies/goop#Class"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://nemo.inf.ufes.br/ontologies/desing-process#Stakeholder -->
+
+    <owl:NamedIndividual rdf:about="http://nemo.inf.ufes.br/ontologies/desing-process#Stakeholder">
+        <rdf:type rdf:resource="http://nemo.inf.ufes.br/ontologies/goop#Class"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://nemo.inf.ufes.br/ontologies/desing-process#User_Interface_Design -->
+
+    <owl:NamedIndividual rdf:about="http://nemo.inf.ufes.br/ontologies/desing-process#User_Interface_Design">
+        <rdf:type rdf:resource="http://nemo.inf.ufes.br/ontologies/goop#Class"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://nemo.inf.ufes.br/ontologies/desing-process#User_Interface_Specification -->
+
+    <owl:NamedIndividual rdf:about="http://nemo.inf.ufes.br/ontologies/desing-process#User_Interface_Specification">
+        <rdf:type rdf:resource="http://nemo.inf.ufes.br/ontologies/goop#Class"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://nemo.inf.ufes.br/ontologies/desing-process#changes -->
+
+    <owl:NamedIndividual rdf:about="http://nemo.inf.ufes.br/ontologies/desing-process#changes">
+        <rdf:type rdf:resource="http://nemo.inf.ufes.br/ontologies/goop#Object_Property"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://nemo.inf.ufes.br/ontologies/desing-process#conects -->
+
+    <owl:NamedIndividual rdf:about="http://nemo.inf.ufes.br/ontologies/desing-process#conects">
+        <rdf:type rdf:resource="http://nemo.inf.ufes.br/ontologies/goop#Object_Property"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://nemo.inf.ufes.br/ontologies/desing-process#creates -->
+
+    <owl:NamedIndividual rdf:about="http://nemo.inf.ufes.br/ontologies/desing-process#creates">
+        <rdf:type rdf:resource="http://nemo.inf.ufes.br/ontologies/goop#Object_Property"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://nemo.inf.ufes.br/ontologies/desing-process#depends_on -->
+
+    <owl:NamedIndividual rdf:about="http://nemo.inf.ufes.br/ontologies/desing-process#depends_on">
+        <rdf:type rdf:resource="http://nemo.inf.ufes.br/ontologies/goop#Object_Property"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://nemo.inf.ufes.br/ontologies/desing-process#depicts -->
+
+    <owl:NamedIndividual rdf:about="http://nemo.inf.ufes.br/ontologies/desing-process#depicts">
+        <rdf:type rdf:resource="http://nemo.inf.ufes.br/ontologies/goop#Object_Property"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://nemo.inf.ufes.br/ontologies/desing-process#describes -->
+
+    <owl:NamedIndividual rdf:about="http://nemo.inf.ufes.br/ontologies/desing-process#describes">
+        <rdf:type rdf:resource="http://nemo.inf.ufes.br/ontologies/goop#Object_Property"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://nemo.inf.ufes.br/ontologies/desing-process#has -->
+
+    <owl:NamedIndividual rdf:about="http://nemo.inf.ufes.br/ontologies/desing-process#has">
+        <rdf:type rdf:resource="http://nemo.inf.ufes.br/ontologies/goop#Object_Property"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://nemo.inf.ufes.br/ontologies/desing-process#is_in_charge_of -->
+
+    <owl:NamedIndividual rdf:about="http://nemo.inf.ufes.br/ontologies/desing-process#is_in_charge_of">
+        <rdf:type rdf:resource="http://nemo.inf.ufes.br/ontologies/goop#Object_Property"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://nemo.inf.ufes.br/ontologies/desing-process#participates_in -->
+
+    <owl:NamedIndividual rdf:about="http://nemo.inf.ufes.br/ontologies/desing-process#participates_in">
+        <rdf:type rdf:resource="http://nemo.inf.ufes.br/ontologies/goop#Object_Property"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://nemo.inf.ufes.br/ontologies/desing-process#subProcess -->
+
+    <owl:NamedIndividual rdf:about="http://nemo.inf.ufes.br/ontologies/desing-process#subProcess">
+        <rdf:type rdf:resource="http://nemo.inf.ufes.br/ontologies/goop#Object_Property"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://nemo.inf.ufes.br/ontologies/desing-process#uses -->
+
+    <owl:NamedIndividual rdf:about="http://nemo.inf.ufes.br/ontologies/desing-process#uses">
+        <rdf:type rdf:resource="http://nemo.inf.ufes.br/ontologies/goop#Object_Property"/>
+    </owl:NamedIndividual>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 4.5.7.2018-12-02T02:23:35Z) https://github.com/owlcs/owlapi -->
+

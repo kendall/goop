@@ -1,0 +1,357 @@
+@prefix : <http://nemo.inf.ufes.br/ontologies/fragments/cpo#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix goop: <http://nemo.inf.ufes.br/ontologies/goop#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@base <http://nemo.inf.ufes.br/ontologies/fragments/cpo> .
+
+<http://nemo.inf.ufes.br/ontologies/fragments/cpo> rdf:type owl:Ontology ;
+                                                    owl:imports <http://nemo.inf.ufes.br/ontologies/goop> .
+
+#################################################################
+#    Individuals
+#################################################################
+
+###  http://nemo.inf.ufes.br/ontologies/fragments/cpo#Artifact
+:Artifact rdf:type owl:NamedIndividual ,
+                   goop:Class ;
+          rdfs:comment """Object intentionally made to serve a given purpose in the context of a software Project or Organization. 
+Ex.: a document, a model, a library, an e-mail, a bug."""^^rdfs:Literal .
+
+
+###  http://nemo.inf.ufes.br/ontologies/fragments/cpo#Code
+:Code rdf:type owl:NamedIndividual ,
+               goop:Class ;
+      goop:specifies :Software_Item .
+
+
+###  http://nemo.inf.ufes.br/ontologies/fragments/cpo#Code_Development
+:Code_Development rdf:type owl:NamedIndividual ,
+                           goop:Class ;
+                  goop:specifies :Performed_Simple_Activity ;
+                  rdfs:comment "Simple Performed Activity executed for developing the software Code according to previews definitions."^^rdfs:Literal .
+
+
+###  http://nemo.inf.ufes.br/ontologies/fragments/cpo#Code_Documentation
+:Code_Documentation rdf:type owl:NamedIndividual ,
+                             goop:Class ;
+                    goop:specifies :Performed_Simple_Activity ;
+                    rdfs:comment "Simple Performed Activity executed for documenting the software Code with useful information."^^rdfs:Literal .
+
+
+###  http://nemo.inf.ufes.br/ontologies/fragments/cpo#Code_Review
+:Code_Review rdf:type owl:NamedIndividual ,
+                      goop:Class ;
+             goop:specifies :Performed_Simple_Activity ;
+             rdfs:comment "Simple Performed Activity executed for reviewing the software Code to identify errors and non-conformances."^^rdfs:Literal .
+
+
+###  http://nemo.inf.ufes.br/ontologies/fragments/cpo#Code_Review_Report
+:Code_Review_Report rdf:type owl:NamedIndividual ,
+                             goop:Class ;
+                    goop:specifies :Document ;
+                    rdfs:comment "Document pointing out problems identified in the Code during review activities."^^rdfs:Literal .
+
+
+###  http://nemo.inf.ufes.br/ontologies/fragments/cpo#Code_Reviewer
+:Code_Reviewer rdf:type owl:NamedIndividual ,
+                        goop:Class ;
+               goop:specifies :Stakeholder ;
+               rdfs:comment "Stakeholder responsible for reviewing the Code according to the Requirements Document and Design Document."^^rdfs:Literal .
+
+
+###  http://nemo.inf.ufes.br/ontologies/fragments/cpo#Coding
+:Coding rdf:type owl:NamedIndividual ,
+                 goop:Class ;
+        goop:component_of :Code_Development ,
+                          :Code_Documentation ;
+        goop:specifies :Performed_Composite_Activity ;
+        rdfs:comment "Composite Performed Activity executed for coordinating the Code development and documentation, according to definitions from the Requirements Document and Design Document."^^rdfs:Literal .
+
+
+###  http://nemo.inf.ufes.br/ontologies/fragments/cpo#Coding_Process
+:Coding_Process rdf:type owl:NamedIndividual ,
+                         goop:Class ;
+                goop:component_of :Code_Review ,
+                                  :Coding ;
+                goop:specifies :Performed_Specific_Process ;
+                rdfs:comment "Specific Performed Process for conducting the activities related to software Code production."^^rdfs:Literal .
+
+
+###  http://nemo.inf.ufes.br/ontologies/fragments/cpo#Composite_Artifact
+:Composite_Artifact rdf:type owl:NamedIndividual ,
+                             goop:Class ;
+                    goop:component_of :Composite_Artifact ;
+                    goop:specifies :Artifact ;
+                    rdfs:comment "Artifact composed of other Artifacts."^^rdfs:Literal .
+
+
+###  http://nemo.inf.ufes.br/ontologies/fragments/cpo#Define_Artifact
+:Define_Artifact rdf:type owl:NamedIndividual ,
+                          goop:Goal_Based_Requirement ;
+                 goop:composed_by :Define_Artifact_by_Nature ,
+                                  :Define_Artifact_by_Parts ;
+                 rdfs:comment "In the context of the software domain, Artifacts are objects intentionally made to serve a given purpose in the context of a Software Project or Organization."^^rdfs:Literal .
+
+
+###  http://nemo.inf.ufes.br/ontologies/fragments/cpo#Define_Artifact_by_Nature
+:Define_Artifact_by_Nature rdf:type owl:NamedIndividual ,
+                                    goop:Goal_Based_Requirement ;
+                           rdfs:comment "Artifact Type partitions the generalization set of Artifacts according to their nature, giving rise to a taxonomy of artifacts. More specific taxonomies can be established for specific types of artifacts, such as documents (established by instances of Document Type) and Software Product (Software Product Type), among others."^^rdfs:Literal .
+
+
+###  http://nemo.inf.ufes.br/ontologies/fragments/cpo#Define_Artifact_by_Parts
+:Define_Artifact_by_Parts rdf:type owl:NamedIndividual ,
+                                   goop:Goal_Based_Requirement ;
+                          rdfs:comment "Can be composed of other artifacts (Composite Artifact) or not (Simple Artifact)."^^rdfs:Literal .
+
+
+###  http://nemo.inf.ufes.br/ontologies/fragments/cpo#Define_Coding_Process
+:Define_Coding_Process rdf:type owl:NamedIndividual ,
+                                goop:Goal_Based_Requirement ;
+                       rdfs:comment "Coding Process is a Performed Process with the purpose of producing software Code in conformance with the requirements and design decisions established in the previous technical processes (requirements development and design processes). It is composed of a set of Coding activity, when the Programmer uses the requirements and definitions established in the Requirements Document and Design Document for developing and documenting the code. Code Development activity creates the software Code , while Code Documentation changes the Code by adding comments with useful information. Finally, in the Code Review activity, the Code Reviewer reviews the Code searching for errors and non-conformances and produces a Code Review Report."^^rdfs:Literal .
+
+
+###  http://nemo.inf.ufes.br/ontologies/fragments/cpo#Define_Performed_Process
+:Define_Performed_Process rdf:type owl:NamedIndividual ,
+                                   goop:Goal_Based_Requirement .
+
+
+###  http://nemo.inf.ufes.br/ontologies/fragments/cpo#Design_Document
+:Design_Document rdf:type owl:NamedIndividual ,
+                          goop:Class ;
+                 goop:specifies :Document .
+
+
+###  http://nemo.inf.ufes.br/ontologies/fragments/cpo#Document
+:Document rdf:type owl:NamedIndividual ,
+                   goop:Class ;
+          goop:specifies :Artifact ;
+          rdfs:comment """Any written or pictorial, uniquely identified, information related to the software development, usually presented in a predefined format. 
+Ex.: a Requirements Document, a specification, a report."""^^rdfs:Literal .
+
+
+###  http://nemo.inf.ufes.br/ontologies/fragments/cpo#Goop-1
+:Goop-1 rdf:type owl:NamedIndividual ,
+                 goop:Goop ;
+        goop:composed_by :Define_Artifact_by_Nature .
+
+
+###  http://nemo.inf.ufes.br/ontologies/fragments/cpo#Goop-2
+:Goop-2 rdf:type owl:NamedIndividual ,
+                 goop:Goop ;
+        goop:composed_by :Define_Artifact_by_Parts .
+
+
+###  http://nemo.inf.ufes.br/ontologies/fragments/cpo#Goop-3
+:Goop-3 rdf:type owl:NamedIndividual ,
+                 goop:Goop ;
+        goop:composed_by :Define_Performed_Process .
+
+
+###  http://nemo.inf.ufes.br/ontologies/fragments/cpo#Goop-4
+:Goop-4 rdf:type owl:NamedIndividual ,
+                 goop:Goop ;
+        goop:composed_by :Define_Coding_Process .
+
+
+###  http://nemo.inf.ufes.br/ontologies/fragments/cpo#Goop-General
+:Goop-General rdf:type owl:NamedIndividual ,
+                       goop:Goop ;
+              goop:composed_by :Define_Artifact .
+
+
+###  http://nemo.inf.ufes.br/ontologies/fragments/cpo#Information_Item
+:Information_Item rdf:type owl:NamedIndividual ,
+                           goop:Class ;
+                  goop:specifies :Artifact ;
+                  rdfs:comment """Relevant information for human use, produced or used by Performed Activity. 
+Ex.: a documented requirement, a bug reported, an agreement e-mail, a component description."""^^rdfs:Literal .
+
+
+###  http://nemo.inf.ufes.br/ontologies/fragments/cpo#Model
+:Model rdf:type owl:NamedIndividual ,
+                goop:Class ;
+       goop:specifies :Artifact .
+
+
+###  http://nemo.inf.ufes.br/ontologies/fragments/cpo#Model_Fragment-1
+:Model_Fragment-1 rdf:type owl:NamedIndividual ,
+                           goop:Model_Fragment ;
+                  goop:composed_by :Artifact ,
+                                   :Document ,
+                                   :Information_Item ,
+                                   :Model ,
+                                   :Software_Item ,
+                                   :Software_Product ,
+                                   :describes ;
+                  goop:is_used_to_satisfy :Goop-1 .
+
+
+###  http://nemo.inf.ufes.br/ontologies/fragments/cpo#Model_Fragment-2
+:Model_Fragment-2 rdf:type owl:NamedIndividual ,
+                           goop:Model_Fragment ;
+                  goop:composed_by :Artifact ,
+                                   :Composite_Artifact ,
+                                   :Simple_Artifact ;
+                  goop:is_used_to_satisfy :Goop-2 .
+
+
+###  http://nemo.inf.ufes.br/ontologies/fragments/cpo#Model_Fragment-3
+:Model_Fragment-3 rdf:type owl:NamedIndividual ;
+                  goop:composed_by :Performed_Activity ,
+                                   :Performed_Composite_Activity ,
+                                   :Performed_General_Process ,
+                                   :Performed_Process ,
+                                   :Performed_Simple_Activity ,
+                                   :Performed_Specific_Process ,
+                                   :changes ,
+                                   :creates ,
+                                   :depends_on ,
+                                   :uses ;
+                  goop:is_used_to_satisfy :Goop-3 .
+
+
+###  http://nemo.inf.ufes.br/ontologies/fragments/cpo#Model_Fragment-4
+:Model_Fragment-4 rdf:type owl:NamedIndividual ;
+                  goop:composed_by :Code ,
+                                   :Code_Development ,
+                                   :Code_Documentation ,
+                                   :Code_Review ,
+                                   :Code_Review_Report ,
+                                   :Code_Reviewer ,
+                                   :Coding ,
+                                   :Coding_Process ,
+                                   :Design_Document ,
+                                   :Programmer ,
+                                   :Requirements_Document ,
+                                   :Stakeholder ,
+                                   :changes ,
+                                   :creates ,
+                                   :is_in_charge_of ,
+                                   :participates_in ,
+                                   :uses ;
+                  goop:is_used_to_satisfy :Goop-4 .
+
+
+###  http://nemo.inf.ufes.br/ontologies/fragments/cpo#Model_Fragment-General
+:Model_Fragment-General rdf:type owl:NamedIndividual ,
+                                 goop:Model_Fragment ;
+                        goop:composed_by :depends_on ;
+                        goop:is_used_to_satisfy :Goop-General .
+
+
+###  http://nemo.inf.ufes.br/ontologies/fragments/cpo#Performed_Activity
+:Performed_Activity rdf:type owl:NamedIndividual ,
+                             goop:Class .
+
+
+###  http://nemo.inf.ufes.br/ontologies/fragments/cpo#Performed_Composite_Activity
+:Performed_Composite_Activity rdf:type owl:NamedIndividual ,
+                                       goop:Class ;
+                              goop:component_of :Performed_Activity ;
+                              goop:specifies :Performed_Composite_Activity .
+
+
+###  http://nemo.inf.ufes.br/ontologies/fragments/cpo#Performed_General_Process
+:Performed_General_Process rdf:type owl:NamedIndividual ,
+                                    goop:Class ;
+                           goop:component_of :Performed_Specific_Process ;
+                           goop:specifies :Performed_Process .
+
+
+###  http://nemo.inf.ufes.br/ontologies/fragments/cpo#Performed_Process
+:Performed_Process rdf:type owl:NamedIndividual ,
+                            goop:Class .
+
+
+###  http://nemo.inf.ufes.br/ontologies/fragments/cpo#Performed_Simple_Activity
+:Performed_Simple_Activity rdf:type owl:NamedIndividual ,
+                                    goop:Class ;
+                           goop:specifies :Performed_Activity .
+
+
+###  http://nemo.inf.ufes.br/ontologies/fragments/cpo#Performed_Specific_Process
+:Performed_Specific_Process rdf:type owl:NamedIndividual ,
+                                     goop:Class ;
+                            goop:component_of :Performed_Activity ;
+                            goop:specifies :Performed_Process .
+
+
+###  http://nemo.inf.ufes.br/ontologies/fragments/cpo#Programmer
+:Programmer rdf:type owl:NamedIndividual ,
+                     goop:Class ;
+            goop:specifies :Stakeholder ;
+            rdfs:comment "Stakeholder with programming skills responsible for producing and documenting the software Code."^^rdfs:Literal .
+
+
+###  http://nemo.inf.ufes.br/ontologies/fragments/cpo#Requirements_Document
+:Requirements_Document rdf:type owl:NamedIndividual ,
+                                goop:Class ;
+                       goop:specifies :Document ;
+                       rdfs:comment """Document composed of Documented Requirements and related information, as a basis for other technical software processes, including maintenance. 
+Ex.: the Requirements Document of the Alfa Project."""^^rdfs:Literal .
+
+
+###  http://nemo.inf.ufes.br/ontologies/fragments/cpo#Simple_Artifact
+:Simple_Artifact rdf:type owl:NamedIndividual ,
+                          goop:Class ;
+                 goop:specifies :Artifact ;
+                 rdfs:comment "Artifact that is not decomposed into other Artifacts."^^rdfs:Literal .
+
+
+###  http://nemo.inf.ufes.br/ontologies/fragments/cpo#Software_Item
+:Software_Item rdf:type owl:NamedIndividual ,
+                        goop:Class ;
+               goop:specifies :Artifact .
+
+
+###  http://nemo.inf.ufes.br/ontologies/fragments/cpo#Software_Product
+:Software_Product rdf:type owl:NamedIndividual ,
+                           goop:Class ;
+                  goop:specifies :Artifact .
+
+
+###  http://nemo.inf.ufes.br/ontologies/fragments/cpo#Stakeholder
+:Stakeholder rdf:type owl:NamedIndividual ,
+                      goop:Class .
+
+
+###  http://nemo.inf.ufes.br/ontologies/fragments/cpo#changes
+:changes rdf:type owl:NamedIndividual ,
+                  goop:Object_Property .
+
+
+###  http://nemo.inf.ufes.br/ontologies/fragments/cpo#creates
+:creates rdf:type owl:NamedIndividual ,
+                  goop:Object_Property .
+
+
+###  http://nemo.inf.ufes.br/ontologies/fragments/cpo#depends_on
+:depends_on rdf:type owl:NamedIndividual ,
+                     goop:Object_Property .
+
+
+###  http://nemo.inf.ufes.br/ontologies/fragments/cpo#describes
+:describes rdf:type owl:NamedIndividual ,
+                    goop:Object_Property .
+
+
+###  http://nemo.inf.ufes.br/ontologies/fragments/cpo#is_in_charge_of
+:is_in_charge_of rdf:type owl:NamedIndividual ,
+                          goop:Object_Property .
+
+
+###  http://nemo.inf.ufes.br/ontologies/fragments/cpo#participates_in
+:participates_in rdf:type owl:NamedIndividual ,
+                          goop:Object_Property .
+
+
+###  http://nemo.inf.ufes.br/ontologies/fragments/cpo#uses
+:uses rdf:type owl:NamedIndividual ,
+               goop:Object_Property .
+
+
+###  Generated by the OWL API (version 4.5.7.2018-12-02T02:23:35Z) https://github.com/owlcs/owlapi

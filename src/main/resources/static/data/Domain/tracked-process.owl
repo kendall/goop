@@ -1,0 +1,320 @@
+@prefix : <http://nemo.inf.ufes.br/ontologies/fragments/tracked-process#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix goop: <http://nemo.inf.ufes.br/ontologies/goop#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@base <http://nemo.inf.ufes.br/ontologies/fragments/tracked-process> .
+
+<http://nemo.inf.ufes.br/ontologies/fragments/tracked-process> rdf:type owl:Ontology ;
+                                                                owl:imports <http://nemo.inf.ufes.br/ontologies/goop> .
+
+#################################################################
+#    Individuals
+#################################################################
+
+###  http://nemo.inf.ufes.br/ontologies/fragments/tracked-process#Define_Intended_Process_and_Activity
+:Define_Intended_Process_and_Activity rdf:type owl:NamedIndividual ,
+                                               goop:Goal_Based_Requirement .
+
+
+###  http://nemo.inf.ufes.br/ontologies/fragments/tracked-process#Define_Performed_Process_and_Activity
+:Define_Performed_Process_and_Activity rdf:type owl:NamedIndividual ,
+                                                goop:Goal_Based_Requirement .
+
+
+###  http://nemo.inf.ufes.br/ontologies/fragments/tracked-process#Define_Stakeholder_Participation
+:Define_Stakeholder_Participation rdf:type owl:NamedIndividual ,
+                                           goop:Goal_Based_Requirement .
+
+
+###  http://nemo.inf.ufes.br/ontologies/fragments/tracked-process#Define_Tracked_Process
+:Define_Tracked_Process rdf:type owl:NamedIndividual ,
+                                 goop:Goal_Based_Requirement ;
+                        goop:composed_by :Define_Intended_Process_and_Activity ,
+                                         :Define_Performed_Process_and_Activity ,
+                                         :Define_Stakeholder_Participation .
+
+
+###  http://nemo.inf.ufes.br/ontologies/fragments/tracked-process#Estimated_Activity
+:Estimated_Activity rdf:type owl:NamedIndividual ,
+                             goop:Class ;
+                    goop:specifies :Project_Activity ,
+                                   :Scope_Estimated_Activity .
+
+
+###  http://nemo.inf.ufes.br/ontologies/fragments/tracked-process#Estimated_Process
+:Estimated_Process rdf:type owl:NamedIndividual ,
+                            goop:Class ;
+                   goop:specifies :Project_Process .
+
+
+###  http://nemo.inf.ufes.br/ontologies/fragments/tracked-process#Estimated_Stakeholder_Allocation
+:Estimated_Stakeholder_Allocation rdf:type owl:NamedIndividual ,
+                                           goop:Class ;
+                                  goop:specifies :Stakeholder_Allocation .
+
+
+###  http://nemo.inf.ufes.br/ontologies/fragments/tracked-process#General_Intended_Process
+:General_Intended_Process rdf:type owl:NamedIndividual ,
+                                   goop:Class ;
+                          goop:component_of :Specific_Intended_Process ;
+                          goop:specifies :Intended_Process .
+
+
+###  http://nemo.inf.ufes.br/ontologies/fragments/tracked-process#Goop-1
+:Goop-1 rdf:type owl:NamedIndividual ,
+                 goop:Goop ;
+        goop:composed_by :Define_Intended_Process_and_Activity .
+
+
+###  http://nemo.inf.ufes.br/ontologies/fragments/tracked-process#Goop-2
+:Goop-2 rdf:type owl:NamedIndividual ,
+                 goop:Goop ;
+        goop:composed_by :Define_Performed_Process_and_Activity .
+
+
+###  http://nemo.inf.ufes.br/ontologies/fragments/tracked-process#Goop-3
+:Goop-3 rdf:type owl:NamedIndividual ,
+                 goop:Goop ;
+        goop:composed_by :Define_Stakeholder_Participation .
+
+
+###  http://nemo.inf.ufes.br/ontologies/fragments/tracked-process#Goop-4
+:Goop-4 rdf:type owl:NamedIndividual ,
+                 goop:Goop ;
+        goop:composed_by :Define_Tracked_Process .
+
+
+###  http://nemo.inf.ufes.br/ontologies/fragments/tracked-process#Intended_Activity
+:Intended_Activity rdf:type owl:NamedIndividual ,
+                            goop:Class .
+
+
+###  http://nemo.inf.ufes.br/ontologies/fragments/tracked-process#Intended_Process
+:Intended_Process rdf:type owl:NamedIndividual ,
+                           goop:Class .
+
+
+###  http://nemo.inf.ufes.br/ontologies/fragments/tracked-process#Model_Fragment-1
+:Model_Fragment-1 rdf:type owl:NamedIndividual ,
+                           goop:Model_Fragment ;
+                  goop:composed_by :General_Intended_Process ,
+                                   :Intended_Activity ,
+                                   :Intended_Process ,
+                                   :Project_Activity ,
+                                   :Project_Process ,
+                                   :Specific_Intended_Process ,
+                                   :defined_for ;
+                  goop:is_used_to_satisfy :Goop-1 .
+
+
+###  http://nemo.inf.ufes.br/ontologies/fragments/tracked-process#Model_Fragment-2
+:Model_Fragment-2 rdf:type owl:NamedIndividual ,
+                           goop:Model_Fragment ;
+                  goop:composed_by :Performed_Activity ,
+                                   :Performed_General_Process ,
+                                   :Performed_Process ,
+                                   :Performed_Project_Activity ,
+                                   :Performed_Project_Process ,
+                                   :Performed_Specific_Process ,
+                                   :Software_Process ,
+                                   :caused_by ,
+                                   :depends_on ,
+                                   :performed_in ;
+                  goop:is_used_to_satisfy :Goop-2 .
+
+
+###  http://nemo.inf.ufes.br/ontologies/fragments/tracked-process#Model_Fragment-3
+:Model_Fragment-3 rdf:type owl:NamedIndividual ,
+                           goop:Model_Fragment ;
+                  goop:composed_by :Stakeholder ,
+                                   :Stakeholder_Allocation ,
+                                   :Stakeholder_Participation ,
+                                   :allocates ,
+                                   :participation_of ,
+                                   :refers_to ;
+                  goop:is_used_to_satisfy :Goop-3 .
+
+
+###  http://nemo.inf.ufes.br/ontologies/fragments/tracked-process#Model_Fragment-4
+:Model_Fragment-4 rdf:type owl:NamedIndividual ,
+                           goop:Model_Fragment ;
+                  goop:composed_by :Estimated_Activity ,
+                                   :Estimated_Process ,
+                                   :Estimated_Stakeholder_Allocation ,
+                                   :Scope_Estimated_Activity ,
+                                   :Tracked_Activity ,
+                                   :Tracked_Process ,
+                                   :Tracked_Stakeholder_Participation ,
+                                   :Work_Package ,
+                                   :contributes_to_produce ,
+                                   :is_to_perform ,
+                                   :is_to_produce ,
+                                   :refers_to ,
+                                   :tracked_in_relation_to ;
+                  goop:is_used_to_satisfy :Goop-4 .
+
+
+###  http://nemo.inf.ufes.br/ontologies/fragments/tracked-process#Performed_Activity
+:Performed_Activity rdf:type owl:NamedIndividual ,
+                             goop:Class ;
+                    goop:component_of :Stakeholder_Participation .
+
+
+###  http://nemo.inf.ufes.br/ontologies/fragments/tracked-process#Performed_General_Process
+:Performed_General_Process rdf:type owl:NamedIndividual ,
+                                    goop:Class ;
+                           goop:component_of :Performed_Specific_Process ;
+                           goop:specifies :Performed_Process .
+
+
+###  http://nemo.inf.ufes.br/ontologies/fragments/tracked-process#Performed_Process
+:Performed_Process rdf:type owl:NamedIndividual ,
+                            goop:Class .
+
+
+###  http://nemo.inf.ufes.br/ontologies/fragments/tracked-process#Performed_Project_Activity
+:Performed_Project_Activity rdf:type owl:NamedIndividual ,
+                                     goop:Class ;
+                            goop:specifies :Performed_Activity .
+
+
+###  http://nemo.inf.ufes.br/ontologies/fragments/tracked-process#Performed_Project_Process
+:Performed_Project_Process rdf:type owl:NamedIndividual ,
+                                    goop:Class ;
+                           goop:specifies :Performed_Process .
+
+
+###  http://nemo.inf.ufes.br/ontologies/fragments/tracked-process#Performed_Specific_Process
+:Performed_Specific_Process rdf:type owl:NamedIndividual ,
+                                     goop:Class ;
+                            goop:component_of :Performed_Activity ;
+                            goop:specifies :Performed_Process .
+
+
+###  http://nemo.inf.ufes.br/ontologies/fragments/tracked-process#Project_Activity
+:Project_Activity rdf:type owl:NamedIndividual ,
+                           goop:Class ;
+                  goop:specifies :Project_Activity .
+
+
+###  http://nemo.inf.ufes.br/ontologies/fragments/tracked-process#Project_Process
+:Project_Process rdf:type owl:NamedIndividual ,
+                          goop:Class ;
+                 goop:specifies :Intended_Process .
+
+
+###  http://nemo.inf.ufes.br/ontologies/fragments/tracked-process#Scope_Estimated_Activity
+:Scope_Estimated_Activity rdf:type owl:NamedIndividual ,
+                                   goop:Class ;
+                          goop:specifies :Project_Activity .
+
+
+###  http://nemo.inf.ufes.br/ontologies/fragments/tracked-process#Software_Process
+:Software_Process rdf:type owl:NamedIndividual ,
+                           goop:Class .
+
+
+###  http://nemo.inf.ufes.br/ontologies/fragments/tracked-process#Specific_Intended_Process
+:Specific_Intended_Process rdf:type owl:NamedIndividual ,
+                                    goop:Class ;
+                           goop:component_of :Intended_Activity ;
+                           goop:specifies :Intended_Process .
+
+
+###  http://nemo.inf.ufes.br/ontologies/fragments/tracked-process#Stakeholder
+:Stakeholder rdf:type owl:NamedIndividual ,
+                      goop:Class .
+
+
+###  http://nemo.inf.ufes.br/ontologies/fragments/tracked-process#Stakeholder_Allocation
+:Stakeholder_Allocation rdf:type owl:NamedIndividual ,
+                                 goop:Class .
+
+
+###  http://nemo.inf.ufes.br/ontologies/fragments/tracked-process#Stakeholder_Participation
+:Stakeholder_Participation rdf:type owl:NamedIndividual ,
+                                    goop:Class .
+
+
+###  http://nemo.inf.ufes.br/ontologies/fragments/tracked-process#Tracked_Activity
+:Tracked_Activity rdf:type owl:NamedIndividual ,
+                           goop:Class ;
+                  goop:specifies :Performed_Project_Activity .
+
+
+###  http://nemo.inf.ufes.br/ontologies/fragments/tracked-process#Tracked_Process
+:Tracked_Process rdf:type owl:NamedIndividual ,
+                          goop:Class ;
+                 goop:specifies :Performed_Project_Process .
+
+
+###  http://nemo.inf.ufes.br/ontologies/fragments/tracked-process#Tracked_Stakeholder_Participation
+:Tracked_Stakeholder_Participation rdf:type owl:NamedIndividual ,
+                                            goop:Class ;
+                                   goop:specifies :Stakeholder_Participation .
+
+
+###  http://nemo.inf.ufes.br/ontologies/fragments/tracked-process#Work_Package
+:Work_Package rdf:type owl:NamedIndividual ,
+                       goop:Class .
+
+
+###  http://nemo.inf.ufes.br/ontologies/fragments/tracked-process#allocates
+:allocates rdf:type owl:NamedIndividual ,
+                    goop:Object_Property .
+
+
+###  http://nemo.inf.ufes.br/ontologies/fragments/tracked-process#caused_by
+:caused_by rdf:type owl:NamedIndividual ,
+                    goop:Object_Property .
+
+
+###  http://nemo.inf.ufes.br/ontologies/fragments/tracked-process#contributes_to_produce
+:contributes_to_produce rdf:type owl:NamedIndividual ,
+                                 goop:Object_Property .
+
+
+###  http://nemo.inf.ufes.br/ontologies/fragments/tracked-process#defined_for
+:defined_for rdf:type owl:NamedIndividual ,
+                      goop:Object_Property .
+
+
+###  http://nemo.inf.ufes.br/ontologies/fragments/tracked-process#depends_on
+:depends_on rdf:type owl:NamedIndividual ,
+                     goop:Object_Property .
+
+
+###  http://nemo.inf.ufes.br/ontologies/fragments/tracked-process#is_to_perform
+:is_to_perform rdf:type owl:NamedIndividual ,
+                        goop:Object_Property .
+
+
+###  http://nemo.inf.ufes.br/ontologies/fragments/tracked-process#is_to_produce
+:is_to_produce rdf:type owl:NamedIndividual ,
+                        goop:Object_Property .
+
+
+###  http://nemo.inf.ufes.br/ontologies/fragments/tracked-process#participation_of
+:participation_of rdf:type owl:NamedIndividual ,
+                           goop:Object_Property .
+
+
+###  http://nemo.inf.ufes.br/ontologies/fragments/tracked-process#performed_in
+:performed_in rdf:type owl:NamedIndividual ,
+                       goop:Object_Property .
+
+
+###  http://nemo.inf.ufes.br/ontologies/fragments/tracked-process#refers_to
+:refers_to rdf:type owl:NamedIndividual ,
+                    goop:Object_Property .
+
+
+###  http://nemo.inf.ufes.br/ontologies/fragments/tracked-process#tracked_in_relation_to
+:tracked_in_relation_to rdf:type owl:NamedIndividual ,
+                                 goop:Object_Property .
+
+
+###  Generated by the OWL API (version 4.5.7.2018-12-02T02:23:35Z) https://github.com/owlcs/owlapi

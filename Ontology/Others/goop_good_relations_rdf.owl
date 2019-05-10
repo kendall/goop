@@ -1,0 +1,635 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns="http://nemo.inf.ufes.br/ontologies/goop#"
+     xml:base="http://nemo.inf.ufes.br/ontologies/goop"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:goop="http://nemo.inf.ufes.br/ontology/goop#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#">
+    <owl:Ontology rdf:about="http://nemo.inf.ufes.br/ontologies/goop"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://nemo.inf.ufes.br/ontology/goop#achieves -->
+
+    <owl:ObjectProperty rdf:about="http://nemo.inf.ufes.br/ontology/goop#achieves"/>
+    
+
+
+    <!-- http://nemo.inf.ufes.br/ontology/goop#composedBy -->
+
+    <owl:ObjectProperty rdf:about="http://nemo.inf.ufes.br/ontology/goop#composedBy"/>
+    
+
+
+    <!-- http://nemo.inf.ufes.br/ontology/goop#hasDomain -->
+
+    <owl:ObjectProperty rdf:about="http://nemo.inf.ufes.br/ontology/goop#hasDomain"/>
+    
+
+
+    <!-- http://nemo.inf.ufes.br/ontology/goop#hasRange -->
+
+    <owl:ObjectProperty rdf:about="http://nemo.inf.ufes.br/ontology/goop#hasRange"/>
+    
+
+
+    <!-- http://nemo.inf.ufes.br/ontology/goop#performs -->
+
+    <owl:ObjectProperty rdf:about="http://nemo.inf.ufes.br/ontology/goop#performs"/>
+    
+
+
+    <!-- http://nemo.inf.ufes.br/ontology/goop#satisfies -->
+
+    <owl:ObjectProperty rdf:about="http://nemo.inf.ufes.br/ontology/goop#satisfies"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Data properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://nemo.inf.ufes.br/ontologies/goop#Description -->
+
+    <owl:DatatypeProperty rdf:about="http://nemo.inf.ufes.br/ontologies/goop#Description"/>
+    
+
+
+    <!-- http://nemo.inf.ufes.br/ontologies/goop#IRI -->
+
+    <owl:DatatypeProperty rdf:about="http://nemo.inf.ufes.br/ontologies/goop#IRI"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://nemo.inf.ufes.br/ontology/goop#Class -->
+
+    <owl:Class rdf:about="http://nemo.inf.ufes.br/ontology/goop#Class"/>
+    
+
+
+    <!-- http://nemo.inf.ufes.br/ontology/goop#Goal -->
+
+    <owl:Class rdf:about="http://nemo.inf.ufes.br/ontology/goop#Goal">
+        <rdfs:subClassOf rdf:resource="http://nemo.inf.ufes.br/ontology/goop#IntentionalElement"/>
+    </owl:Class>
+    
+
+
+    <!-- http://nemo.inf.ufes.br/ontology/goop#Goop -->
+
+    <owl:Class rdf:about="http://nemo.inf.ufes.br/ontology/goop#Goop"/>
+    
+
+
+    <!-- http://nemo.inf.ufes.br/ontology/goop#IntentionalElement -->
+
+    <owl:Class rdf:about="http://nemo.inf.ufes.br/ontology/goop#IntentionalElement"/>
+    
+
+
+    <!-- http://nemo.inf.ufes.br/ontology/goop#ModelFragment -->
+
+    <owl:Class rdf:about="http://nemo.inf.ufes.br/ontology/goop#ModelFragment"/>
+    
+
+
+    <!-- http://nemo.inf.ufes.br/ontology/goop#Object -->
+
+    <owl:Class rdf:about="http://nemo.inf.ufes.br/ontology/goop#Object"/>
+    
+
+
+    <!-- http://nemo.inf.ufes.br/ontology/goop#Ontology_User -->
+
+    <owl:Class rdf:about="http://nemo.inf.ufes.br/ontology/goop#Ontology_User"/>
+    
+
+
+    <!-- http://nemo.inf.ufes.br/ontology/goop#Task -->
+
+    <owl:Class rdf:about="http://nemo.inf.ufes.br/ontology/goop#Task">
+        <rdfs:subClassOf rdf:resource="http://nemo.inf.ufes.br/ontology/goop#IntentionalElement"/>
+    </owl:Class>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Individuals
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://nemo.inf.ufes.br/ontologies/goop#Atomic_Offering_Item_Comp -->
+
+    <owl:NamedIndividual rdf:about="http://nemo.inf.ufes.br/ontologies/goop#Atomic_Offering_Item_Comp">
+        <rdf:type rdf:resource="http://nemo.inf.ufes.br/ontology/goop#Class"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://nemo.inf.ufes.br/ontologies/goop#Business_Entity -->
+
+    <owl:NamedIndividual rdf:about="http://nemo.inf.ufes.br/ontologies/goop#Business_Entity">
+        <rdf:type rdf:resource="http://nemo.inf.ufes.br/ontology/goop#Class"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://nemo.inf.ufes.br/ontologies/goop#Characterization -->
+
+    <owl:NamedIndividual rdf:about="http://nemo.inf.ufes.br/ontologies/goop#Characterization">
+        <rdf:type rdf:resource="http://nemo.inf.ufes.br/ontology/goop#Object"/>
+        <goop:hasDomain rdf:resource="http://nemo.inf.ufes.br/ontologies/goop#Delivery_Method"/>
+        <goop:hasRange rdf:resource="http://nemo.inf.ufes.br/ontologies/goop#Offering"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://nemo.inf.ufes.br/ontologies/goop#Characterization1 -->
+
+    <owl:NamedIndividual rdf:about="http://nemo.inf.ufes.br/ontologies/goop#Characterization1">
+        <rdf:type rdf:resource="http://nemo.inf.ufes.br/ontology/goop#Object"/>
+        <goop:hasDomain rdf:resource="http://nemo.inf.ufes.br/ontologies/goop#Offering_Price_Specification"/>
+        <goop:hasRange rdf:resource="http://nemo.inf.ufes.br/ontologies/goop#Offering"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://nemo.inf.ufes.br/ontologies/goop#Characterization2 -->
+
+    <owl:NamedIndividual rdf:about="http://nemo.inf.ufes.br/ontologies/goop#Characterization2">
+        <rdf:type rdf:resource="http://nemo.inf.ufes.br/ontology/goop#Object"/>
+        <goop:hasDomain rdf:resource="http://nemo.inf.ufes.br/ontologies/goop#Offering_Type"/>
+        <goop:hasRange rdf:resource="http://nemo.inf.ufes.br/ontologies/goop#Offering"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://nemo.inf.ufes.br/ontologies/goop#Characterization3 -->
+
+    <owl:NamedIndividual rdf:about="http://nemo.inf.ufes.br/ontologies/goop#Characterization3">
+        <rdf:type rdf:resource="http://nemo.inf.ufes.br/ontology/goop#Object"/>
+        <goop:hasDomain rdf:resource="http://nemo.inf.ufes.br/ontologies/goop#Offering_Payment_Method"/>
+        <goop:hasRange rdf:resource="http://nemo.inf.ufes.br/ontologies/goop#Offering"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://nemo.inf.ufes.br/ontologies/goop#Complex_Offering_Item_Component -->
+
+    <owl:NamedIndividual rdf:about="http://nemo.inf.ufes.br/ontologies/goop#Complex_Offering_Item_Component">
+        <rdf:type rdf:resource="http://nemo.inf.ufes.br/ontology/goop#Class"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://nemo.inf.ufes.br/ontologies/goop#ComponentOf -->
+
+    <owl:NamedIndividual rdf:about="http://nemo.inf.ufes.br/ontologies/goop#ComponentOf">
+        <rdf:type rdf:resource="http://nemo.inf.ufes.br/ontology/goop#Object"/>
+        <goop:hasDomain rdf:resource="http://nemo.inf.ufes.br/ontologies/goop#Complex_Offering_Item_Component"/>
+        <goop:hasRange rdf:resource="http://nemo.inf.ufes.br/ontologies/goop#Offering_Item_Component"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://nemo.inf.ufes.br/ontologies/goop#ComponentOf1 -->
+
+    <owl:NamedIndividual rdf:about="http://nemo.inf.ufes.br/ontologies/goop#ComponentOf1">
+        <rdf:type rdf:resource="http://nemo.inf.ufes.br/ontology/goop#Object"/>
+        <goop:hasDomain rdf:resource="http://nemo.inf.ufes.br/ontologies/goop#Offering"/>
+        <goop:hasRange rdf:resource="http://nemo.inf.ufes.br/ontologies/goop#Delivery_Entity"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://nemo.inf.ufes.br/ontologies/goop#ComponentOf2 -->
+
+    <owl:NamedIndividual rdf:about="http://nemo.inf.ufes.br/ontologies/goop#ComponentOf2">
+        <goop:hasDomain rdf:resource="http://nemo.inf.ufes.br/ontologies/goop#Offering_Item"/>
+        <goop:hasRange rdf:resource="http://nemo.inf.ufes.br/ontologies/goop#Offering_Item_Component"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://nemo.inf.ufes.br/ontologies/goop#ComponentOf3 -->
+
+    <owl:NamedIndividual rdf:about="http://nemo.inf.ufes.br/ontologies/goop#ComponentOf3">
+        <rdf:type rdf:resource="http://nemo.inf.ufes.br/ontology/goop#Object"/>
+        <goop:hasDomain rdf:resource="http://nemo.inf.ufes.br/ontologies/goop#Offering"/>
+        <goop:hasRange rdf:resource="http://nemo.inf.ufes.br/ontologies/goop#Offering_Provider"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://nemo.inf.ufes.br/ontologies/goop#ComponentOf4 -->
+
+    <owl:NamedIndividual rdf:about="http://nemo.inf.ufes.br/ontologies/goop#ComponentOf4">
+        <rdf:type rdf:resource="http://nemo.inf.ufes.br/ontology/goop#Object"/>
+        <goop:hasDomain rdf:resource="http://nemo.inf.ufes.br/ontologies/goop#Offering"/>
+        <goop:hasRange rdf:resource="http://nemo.inf.ufes.br/ontologies/goop#Warrantier_Entity"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://nemo.inf.ufes.br/ontologies/goop#ComponentOf5 -->
+
+    <owl:NamedIndividual rdf:about="http://nemo.inf.ufes.br/ontologies/goop#ComponentOf5">
+        <rdf:type rdf:resource="http://nemo.inf.ufes.br/ontology/goop#Object"/>
+        <goop:hasDomain rdf:resource="http://nemo.inf.ufes.br/ontologies/goop#Offering"/>
+        <goop:hasRange rdf:resource="http://nemo.inf.ufes.br/ontologies/goop#Payment_Entity"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://nemo.inf.ufes.br/ontologies/goop#ComponentOf6 -->
+
+    <owl:NamedIndividual rdf:about="http://nemo.inf.ufes.br/ontologies/goop#ComponentOf6">
+        <rdf:type rdf:resource="http://nemo.inf.ufes.br/ontology/goop#Object"/>
+        <goop:hasDomain rdf:resource="http://nemo.inf.ufes.br/ontologies/goop#Specification_With_Warranty"/>
+        <goop:hasRange rdf:resource="http://nemo.inf.ufes.br/ontologies/goop#Warranty"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://nemo.inf.ufes.br/ontologies/goop#Delivery_Entity -->
+
+    <owl:NamedIndividual rdf:about="http://nemo.inf.ufes.br/ontologies/goop#Delivery_Entity">
+        <rdf:type rdf:resource="http://nemo.inf.ufes.br/ontology/goop#Class"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://nemo.inf.ufes.br/ontologies/goop#Delivery_Method -->
+
+    <owl:NamedIndividual rdf:about="http://nemo.inf.ufes.br/ontologies/goop#Delivery_Method">
+        <rdf:type rdf:resource="http://nemo.inf.ufes.br/ontology/goop#Class"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://nemo.inf.ufes.br/ontologies/goop#Delivery_Price_Specification -->
+
+    <owl:NamedIndividual rdf:about="http://nemo.inf.ufes.br/ontologies/goop#Delivery_Price_Specification">
+        <rdf:type rdf:resource="http://nemo.inf.ufes.br/ontology/goop#Class"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://nemo.inf.ufes.br/ontologies/goop#Entity -->
+
+    <owl:NamedIndividual rdf:about="http://nemo.inf.ufes.br/ontologies/goop#Entity">
+        <rdf:type rdf:resource="http://nemo.inf.ufes.br/ontology/goop#Class"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://nemo.inf.ufes.br/ontologies/goop#HaveDeliveryOrShip -->
+
+    <owl:NamedIndividual rdf:about="http://nemo.inf.ufes.br/ontologies/goop#HaveDeliveryOrShip">
+        <rdf:type rdf:resource="http://nemo.inf.ufes.br/ontology/goop#Goal"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://nemo.inf.ufes.br/ontologies/goop#HaveOfferingDescrSpec -->
+
+    <owl:NamedIndividual rdf:about="http://nemo.inf.ufes.br/ontologies/goop#HaveOfferingDescrSpec">
+        <rdf:type rdf:resource="http://nemo.inf.ufes.br/ontology/goop#Goal"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://nemo.inf.ufes.br/ontologies/goop#HaveOfferingSpecified -->
+
+    <owl:NamedIndividual rdf:about="http://nemo.inf.ufes.br/ontologies/goop#HaveOfferingSpecified">
+        <rdf:type rdf:resource="http://nemo.inf.ufes.br/ontology/goop#Goal"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://nemo.inf.ufes.br/ontologies/goop#HavePaymentMethSpec -->
+
+    <owl:NamedIndividual rdf:about="http://nemo.inf.ufes.br/ontologies/goop#HavePaymentMethSpec">
+        <rdf:type rdf:resource="http://nemo.inf.ufes.br/ontology/goop#Goal"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://nemo.inf.ufes.br/ontologies/goop#Individual_Entity -->
+
+    <owl:NamedIndividual rdf:about="http://nemo.inf.ufes.br/ontologies/goop#Individual_Entity">
+        <rdf:type rdf:resource="http://nemo.inf.ufes.br/ontology/goop#Class"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://nemo.inf.ufes.br/ontologies/goop#Individual_Product -->
+
+    <owl:NamedIndividual rdf:about="http://nemo.inf.ufes.br/ontologies/goop#Individual_Product">
+        <rdf:type rdf:resource="http://nemo.inf.ufes.br/ontology/goop#Class"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://nemo.inf.ufes.br/ontologies/goop#Individual_Product_SM_Specification -->
+
+    <owl:NamedIndividual rdf:about="http://nemo.inf.ufes.br/ontologies/goop#Individual_Product_SM_Specification">
+        <rdf:type rdf:resource="http://nemo.inf.ufes.br/ontology/goop#Class"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://nemo.inf.ufes.br/ontologies/goop#Individual_Product_Specified_By_Model -->
+
+    <owl:NamedIndividual rdf:about="http://nemo.inf.ufes.br/ontologies/goop#Individual_Product_Specified_By_Model">
+        <rdf:type rdf:resource="http://nemo.inf.ufes.br/ontology/goop#Class"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://nemo.inf.ufes.br/ontologies/goop#InformOffering -->
+
+    <owl:NamedIndividual rdf:about="http://nemo.inf.ufes.br/ontologies/goop#InformOffering">
+        <rdf:type rdf:resource="http://nemo.inf.ufes.br/ontology/goop#Task"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://nemo.inf.ufes.br/ontologies/goop#InformOfferingType -->
+
+    <owl:NamedIndividual rdf:about="http://nemo.inf.ufes.br/ontologies/goop#InformOfferingType">
+        <rdf:type rdf:resource="http://nemo.inf.ufes.br/ontology/goop#Task"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://nemo.inf.ufes.br/ontologies/goop#InformPaymentMethods -->
+
+    <owl:NamedIndividual rdf:about="http://nemo.inf.ufes.br/ontologies/goop#InformPaymentMethods">
+        <rdf:type rdf:resource="http://nemo.inf.ufes.br/ontology/goop#Task"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://nemo.inf.ufes.br/ontologies/goop#InformShippingOrDelvMeth -->
+
+    <owl:NamedIndividual rdf:about="http://nemo.inf.ufes.br/ontologies/goop#InformShippingOrDelvMeth">
+        <rdf:type rdf:resource="http://nemo.inf.ufes.br/ontology/goop#Task"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://nemo.inf.ufes.br/ontologies/goop#Location -->
+
+    <owl:NamedIndividual rdf:about="http://nemo.inf.ufes.br/ontologies/goop#Location">
+        <rdf:type rdf:resource="http://nemo.inf.ufes.br/ontology/goop#Class"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://nemo.inf.ufes.br/ontologies/goop#Material -->
+
+    <owl:NamedIndividual rdf:about="http://nemo.inf.ufes.br/ontologies/goop#Material">
+        <rdf:type rdf:resource="http://nemo.inf.ufes.br/ontology/goop#Object"/>
+        <goop:hasDomain rdf:resource="http://nemo.inf.ufes.br/ontologies/goop#Individual_Product_Specified_By_Model"/>
+        <goop:hasRange rdf:resource="http://nemo.inf.ufes.br/ontologies/goop#Product_Model"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://nemo.inf.ufes.br/ontologies/goop#Mediation -->
+
+    <owl:NamedIndividual rdf:about="http://nemo.inf.ufes.br/ontologies/goop#Mediation">
+        <rdf:type rdf:resource="http://nemo.inf.ufes.br/ontology/goop#Object"/>
+        <goop:hasDomain rdf:resource="http://nemo.inf.ufes.br/ontologies/goop#Individual_Product_SM_Specification"/>
+        <goop:hasRange rdf:resource="http://nemo.inf.ufes.br/ontologies/goop#Product_Model"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://nemo.inf.ufes.br/ontologies/goop#Mediation1 -->
+
+    <owl:NamedIndividual rdf:about="http://nemo.inf.ufes.br/ontologies/goop#Mediation1">
+        <rdf:type rdf:resource="http://nemo.inf.ufes.br/ontology/goop#Object"/>
+        <goop:hasDomain rdf:resource="http://nemo.inf.ufes.br/ontologies/goop#Individual_Product_SM_Specification"/>
+        <goop:hasRange rdf:resource="http://nemo.inf.ufes.br/ontologies/goop#Individual_Product_Specified_By_Model"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://nemo.inf.ufes.br/ontologies/goop#Model_Specification -->
+
+    <owl:NamedIndividual rdf:about="http://nemo.inf.ufes.br/ontologies/goop#Model_Specification">
+        <rdf:type rdf:resource="http://nemo.inf.ufes.br/ontology/goop#Class"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://nemo.inf.ufes.br/ontologies/goop#Offering -->
+
+    <owl:NamedIndividual rdf:about="http://nemo.inf.ufes.br/ontologies/goop#Offering">
+        <rdf:type rdf:resource="http://nemo.inf.ufes.br/ontology/goop#Class"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://nemo.inf.ufes.br/ontologies/goop#OfferingSpecifier -->
+
+    <owl:NamedIndividual rdf:about="http://nemo.inf.ufes.br/ontologies/goop#OfferingSpecifier">
+        <rdf:type rdf:resource="http://nemo.inf.ufes.br/ontology/goop#Ontology_User"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://nemo.inf.ufes.br/ontologies/goop#Offering_Item -->
+
+    <owl:NamedIndividual rdf:about="http://nemo.inf.ufes.br/ontologies/goop#Offering_Item">
+        <rdf:type rdf:resource="http://nemo.inf.ufes.br/ontology/goop#Class"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://nemo.inf.ufes.br/ontologies/goop#Offering_Item_Component -->
+
+    <owl:NamedIndividual rdf:about="http://nemo.inf.ufes.br/ontologies/goop#Offering_Item_Component">
+        <rdf:type rdf:resource="http://nemo.inf.ufes.br/ontology/goop#Class"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://nemo.inf.ufes.br/ontologies/goop#Offering_Payment_Method -->
+
+    <owl:NamedIndividual rdf:about="http://nemo.inf.ufes.br/ontologies/goop#Offering_Payment_Method">
+        <rdf:type rdf:resource="http://nemo.inf.ufes.br/ontology/goop#Class"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://nemo.inf.ufes.br/ontologies/goop#Offering_Price_Specification -->
+
+    <owl:NamedIndividual rdf:about="http://nemo.inf.ufes.br/ontologies/goop#Offering_Price_Specification">
+        <rdf:type rdf:resource="http://nemo.inf.ufes.br/ontology/goop#Class"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://nemo.inf.ufes.br/ontologies/goop#Offering_Provider -->
+
+    <owl:NamedIndividual rdf:about="http://nemo.inf.ufes.br/ontologies/goop#Offering_Provider">
+        <rdf:type rdf:resource="http://nemo.inf.ufes.br/ontology/goop#Class"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://nemo.inf.ufes.br/ontologies/goop#Offering_Type -->
+
+    <owl:NamedIndividual rdf:about="http://nemo.inf.ufes.br/ontologies/goop#Offering_Type">
+        <rdf:type rdf:resource="http://nemo.inf.ufes.br/ontology/goop#Class"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://nemo.inf.ufes.br/ontologies/goop#Offerred_Model_Specification -->
+
+    <owl:NamedIndividual rdf:about="http://nemo.inf.ufes.br/ontologies/goop#Offerred_Model_Specification">
+        <rdf:type rdf:resource="http://nemo.inf.ufes.br/ontology/goop#Class"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://nemo.inf.ufes.br/ontologies/goop#OntologyEngineer -->
+
+    <owl:NamedIndividual rdf:about="http://nemo.inf.ufes.br/ontologies/goop#OntologyEngineer">
+        <rdf:type rdf:resource="http://nemo.inf.ufes.br/ontology/goop#Ontology_User"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://nemo.inf.ufes.br/ontologies/goop#Payment_Entity -->
+
+    <owl:NamedIndividual rdf:about="http://nemo.inf.ufes.br/ontologies/goop#Payment_Entity">
+        <rdf:type rdf:resource="http://nemo.inf.ufes.br/ontology/goop#Class"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://nemo.inf.ufes.br/ontologies/goop#Period -->
+
+    <owl:NamedIndividual rdf:about="http://nemo.inf.ufes.br/ontologies/goop#Period">
+        <rdf:type rdf:resource="http://nemo.inf.ufes.br/ontology/goop#Class"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://nemo.inf.ufes.br/ontologies/goop#Price_Specification -->
+
+    <owl:NamedIndividual rdf:about="http://nemo.inf.ufes.br/ontologies/goop#Price_Specification">
+        <rdf:type rdf:resource="http://nemo.inf.ufes.br/ontology/goop#Class"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://nemo.inf.ufes.br/ontologies/goop#Product_Model -->
+
+    <owl:NamedIndividual rdf:about="http://nemo.inf.ufes.br/ontologies/goop#Product_Model">
+        <rdf:type rdf:resource="http://nemo.inf.ufes.br/ontology/goop#Class"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://nemo.inf.ufes.br/ontologies/goop#Product_Type -->
+
+    <owl:NamedIndividual rdf:about="http://nemo.inf.ufes.br/ontologies/goop#Product_Type">
+        <rdf:type rdf:resource="http://nemo.inf.ufes.br/ontology/goop#Class"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://nemo.inf.ufes.br/ontologies/goop#Qualititative_Property -->
+
+    <owl:NamedIndividual rdf:about="http://nemo.inf.ufes.br/ontologies/goop#Qualititative_Property">
+        <rdf:type rdf:resource="http://nemo.inf.ufes.br/ontology/goop#Class"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://nemo.inf.ufes.br/ontologies/goop#Quantitative_Property -->
+
+    <owl:NamedIndividual rdf:about="http://nemo.inf.ufes.br/ontologies/goop#Quantitative_Property">
+        <rdf:type rdf:resource="http://nemo.inf.ufes.br/ontology/goop#Class"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://nemo.inf.ufes.br/ontologies/goop#Specification -->
+
+    <owl:NamedIndividual rdf:about="http://nemo.inf.ufes.br/ontologies/goop#Specification">
+        <rdf:type rdf:resource="http://nemo.inf.ufes.br/ontology/goop#Class"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://nemo.inf.ufes.br/ontologies/goop#Specification_With_Warranty -->
+
+    <owl:NamedIndividual rdf:about="http://nemo.inf.ufes.br/ontologies/goop#Specification_With_Warranty">
+        <rdf:type rdf:resource="http://nemo.inf.ufes.br/ontology/goop#Class"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://nemo.inf.ufes.br/ontologies/goop#Warrantier_Entity -->
+
+    <owl:NamedIndividual rdf:about="http://nemo.inf.ufes.br/ontologies/goop#Warrantier_Entity">
+        <rdf:type rdf:resource="http://nemo.inf.ufes.br/ontology/goop#Class"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://nemo.inf.ufes.br/ontologies/goop#Warranty -->
+
+    <owl:NamedIndividual rdf:about="http://nemo.inf.ufes.br/ontologies/goop#Warranty">
+        <rdf:type rdf:resource="http://nemo.inf.ufes.br/ontology/goop#Class"/>
+    </owl:NamedIndividual>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 4.5.6.2018-09-06T00:27:41Z) https://github.com/owlcs/owlapi -->
+

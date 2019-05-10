@@ -1,0 +1,25 @@
+-- Retorna todas as classes que compoes um Fragmento e qual Goop ele satisfaz.
+
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX goop: <http://nemo.inf.ufes.br/ontologies/goop#>
+prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+
+SELECT *
+WHERE { ?s rdf:type goop:Model_Fragment .
+                 ?s goop:composed_by ?composed_by .
+                 ?s goop:is_used_to_satisfy ?satisfies .
+                 ?satisfies goop:composed_by ?goals
+               } LIMIT 10
+
+-- Retorna a quantidade de classes que compoe um fragmento
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX goop: <http://nemo.inf.ufes.br/ontologies/goop#>
+prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+
+SELECT (COUNT(*) AS ?count)
+{
+      <http://nemo.inf.ufes.br/ontologies/fragments/measurable-entities#Model_Fragment-1> goop:composed_by ?o .
+       ?o rdf:type goop:Class .
+}
+
+--

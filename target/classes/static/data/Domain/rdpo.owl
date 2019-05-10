@@ -1,0 +1,516 @@
+@prefix : <http://nemo.inf.ufes.br/ontologies/fragments/rdpo#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix goop: <http://nemo.inf.ufes.br/ontologies/goop#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@base <http://nemo.inf.ufes.br/ontologies/fragments/rdpo> .
+
+<http://nemo.inf.ufes.br/ontologies/fragments/rdpo> rdf:type owl:Ontology ;
+                                                     owl:imports <http://nemo.inf.ufes.br/ontologies/goop> .
+
+#################################################################
+#    Individuals
+#################################################################
+
+###  http://nemo.inf.ufes.br/ontologies/fragments/rdpo#Artifact
+:Artifact rdf:type owl:NamedIndividual ,
+                   goop:Class ;
+          rdfs:comment """Object intentionally made to serve a given purpose in the context of a software Project or Organization. 
+Ex.: a document, a model, a library, an e-mail, a bug."""^^rdfs:Literal .
+
+
+###  http://nemo.inf.ufes.br/ontologies/fragments/rdpo#Assumpiton
+:Assumpiton rdf:type owl:NamedIndividual ,
+                     goop:Class ;
+            rdfs:comment "Assumptions describe states-of-affairs in the environment of interest that the Stakeholders believe to be true, i.e., they are the propositional content of Stakeholders' Beliefs. They express the belief that a specific situation exists in the environment."^^rdfs:Literal .
+
+
+###  http://nemo.inf.ufes.br/ontologies/fragments/rdpo#Composite_Artifact
+:Composite_Artifact rdf:type owl:NamedIndividual ,
+                             goop:Class ;
+                    goop:component_of :Composite_Artifact ;
+                    goop:specifies :Artifact ;
+                    rdfs:comment "Artifact composed of other Artifacts."^^rdfs:Literal .
+
+
+###  http://nemo.inf.ufes.br/ontologies/fragments/rdpo#Conceptual_Model
+:Conceptual_Model rdf:type owl:NamedIndividual ,
+                           goop:Class ;
+                  goop:specifies :Model ;
+                  rdfs:comment """Model describing the Product Requirements under different and relevant views. 
+Ex.: a class diagram."""^^rdfs:Literal .
+
+
+###  http://nemo.inf.ufes.br/ontologies/fragments/rdpo#Conceptual_Modeling
+:Conceptual_Modeling rdf:type owl:NamedIndividual ,
+                              goop:Class ;
+                     goop:specifies :Performed_Composite_Activity ;
+                     rdfs:comment "Composite Performed Activity executed for modeling requirements, producing Conceptual Models that provide a more comprehensive view of the problem."^^rdfs:Literal .
+
+
+###  http://nemo.inf.ufes.br/ontologies/fragments/rdpo#Define_Artifact
+:Define_Artifact rdf:type owl:NamedIndividual ,
+                          goop:Goal_Based_Requirement ;
+                 goop:composed_by :Define_Artifact_by_Nature ,
+                                  :Define_Artifact_by_Parts ;
+                 rdfs:comment "In the context of the software domain, Artifacts are objects intentionally made to serve a given purpose in the context of a Software Project or Organization."^^rdfs:Literal .
+
+
+###  http://nemo.inf.ufes.br/ontologies/fragments/rdpo#Define_Artifact_by_Nature
+:Define_Artifact_by_Nature rdf:type owl:NamedIndividual ,
+                                    goop:Goal_Based_Requirement ;
+                           rdfs:comment "Artifact Type partitions the generalization set of Artifacts according to their nature, giving rise to a taxonomy of artifacts. More specific taxonomies can be established for specific types of artifacts, such as documents (established by instances of Document Type) and Software Product (Software Product Type), among others."^^rdfs:Literal .
+
+
+###  http://nemo.inf.ufes.br/ontologies/fragments/rdpo#Define_Artifact_by_Parts
+:Define_Artifact_by_Parts rdf:type owl:NamedIndividual ,
+                                   goop:Goal_Based_Requirement ;
+                          rdfs:comment "Can be composed of other artifacts (Composite Artifact) or not (Simple Artifact)."^^rdfs:Literal .
+
+
+###  http://nemo.inf.ufes.br/ontologies/fragments/rdpo#Define_Performed_Process
+:Define_Performed_Process rdf:type owl:NamedIndividual ,
+                                   goop:Goal_Based_Requirement .
+
+
+###  http://nemo.inf.ufes.br/ontologies/fragments/rdpo#Define_RSRO
+:Define_RSRO rdf:type owl:NamedIndividual ,
+                      goop:Goal_Based_Requirement ;
+             goop:composed_by :Define_Artifact ,
+                              :Define_Requirement ,
+                              :Describe_Stakeholder_Participation ;
+             rdfs:comment """The main RSRO concept is Requirement. It is a goal, representing the users' needs and expectations (Stakeholder Intention) to be achieved as result of the system development. Requirements can be functional or non-functional. Functional Requirements are the ones defining a function to be available from the target system (e.g. the need for providing a client register or controlling an order). They refer to Software Function Types, i.e. types of functions that the software must provide (e.g., providing a client register, controlling an order). Non-Functional Requirements define criteria or capabilities for the system (e.g. being easy to operate, being in conformance with a standard). A special type of NFR is Product Quality Requirement, which refers to Quality Characteristics that the product shall present in some degree, such as reliability, usability, efficiency.
+Requirements are documented by Requirement Artifacts, an Information Item that describes the Requirement in a proper way. The Requirements Document is composed of Requirement Artifacts and related information (such as models, information sources and varied descriptions). This Document is under the responsibility of the Requirements Engineer, a Stakeholder that conducts the requirements development activities. The Requirements Stakeholder represents the Stakeholders from whom the Requirements are collected and, consequently, are the ones interested in the Requirement Artifacts."""^^rdfs:Literal .
+
+
+###  http://nemo.inf.ufes.br/ontologies/fragments/rdpo#Define_Requirement
+:Define_Requirement rdf:type owl:NamedIndividual ,
+                             goop:Goal_Based_Requirement .
+
+
+###  http://nemo.inf.ufes.br/ontologies/fragments/rdpo#Define_Requirements_Process
+:Define_Requirements_Process rdf:type owl:NamedIndividual ;
+                             goop:composed_by :Define_RSRO ;
+                             rdfs:comment """Requirements Development Process is a Performed Process with the purpose of conducting the establishment and development of requirements, from the elicitation to the agreement. It is composed of five Performed Activities: (1) The Requirements Elicitation activity identifies a set of Functional and Non-Functional Requirements and documents them as Documented Requirements. This activity counts on the participation of the Requirements Stakeholders and can collect information from other sources (not presented in the model). (2) Conceptual Modeling uses the Documented Requirements for developing Conceptual Models (e.g. a class diagram), providing relevant views of the problem. (3) Requirements Documentation creates the Requirements Document, which is composed of Documented Requirements and describes the Conceptual Models and possibly other related information. (4) Requirements Verification and Validation evaluates requirements and models documented in the Requirements Document, producing the Requirements Evaluation Document. (5) Finally, Requirements Agreement is obtained from the authorized Requirements Stakeholders in the Requirements Negotiation and Prioritization activity.
+Considering Stakeholders, the Requirements Engineer is in charge of all activities of the Requirements Development Process, except for Requirements Verification and Validation where he/she participates in, but the responsibility is of the Requirements Reviewer. The Requirements Stakeholder participates only in Requirements Elicitation and, then, in Requirements Verification and Validation and Requirements Negotiation and Prioritization.
+The Requirements Development Process can be applied for dealing with different levels of Documented Requirements. For example, it can deal with more general requirements such as higher level Customer Requirements, typically identified in software development preliminary stages, or with a more detailed level such as Product Requirements, defined in more advanced stages."""^^rdfs:Literal .
+
+
+###  http://nemo.inf.ufes.br/ontologies/fragments/rdpo#Describe_Stakeholder_Participation
+:Describe_Stakeholder_Participation rdf:type owl:NamedIndividual ,
+                                             goop:Goal_Based_Requirement .
+
+
+###  http://nemo.inf.ufes.br/ontologies/fragments/rdpo#Document
+:Document rdf:type owl:NamedIndividual ,
+                   goop:Class ;
+          goop:specifies :Artifact ;
+          rdfs:comment """Any written or pictorial, uniquely identified, information related to the software development, usually presented in a predefined format. 
+Ex.: a Requirements Document, a specification, a report."""^^rdfs:Literal .
+
+
+###  http://nemo.inf.ufes.br/ontologies/fragments/rdpo#Functional_Requirement
+:Functional_Requirement rdf:type owl:NamedIndividual ,
+                                 goop:Class ;
+                        goop:specifies :Requirement ;
+                        rdfs:comment """Requirement defining a function to be available in the product being built. 
+Ex.: The need for the system to control client orders."""^^rdfs:Literal .
+
+
+###  http://nemo.inf.ufes.br/ontologies/fragments/rdpo#Goop-1
+:Goop-1 rdf:type owl:NamedIndividual ,
+                 goop:Goop ;
+        goop:composed_by :Define_Artifact_by_Nature .
+
+
+###  http://nemo.inf.ufes.br/ontologies/fragments/rdpo#Goop-2
+:Goop-2 rdf:type owl:NamedIndividual ,
+                 goop:Goop ;
+        goop:composed_by :Define_Artifact_by_Parts .
+
+
+###  http://nemo.inf.ufes.br/ontologies/fragments/rdpo#Goop-3
+:Goop-3 rdf:type owl:NamedIndividual ,
+                 goop:Goop ;
+        goop:composed_by :Describe_Stakeholder_Participation .
+
+
+###  http://nemo.inf.ufes.br/ontologies/fragments/rdpo#Goop-4
+:Goop-4 rdf:type owl:NamedIndividual ,
+                 goop:Goop ;
+        goop:composed_by :Define_Requirement .
+
+
+###  http://nemo.inf.ufes.br/ontologies/fragments/rdpo#Goop-5
+:Goop-5 rdf:type owl:NamedIndividual ,
+                 goop:Goop ;
+        goop:composed_by :Define_RSRO .
+
+
+###  http://nemo.inf.ufes.br/ontologies/fragments/rdpo#Goop-6
+:Goop-6 rdf:type owl:NamedIndividual ;
+        goop:composed_by :Define_Performed_Process .
+
+
+###  http://nemo.inf.ufes.br/ontologies/fragments/rdpo#Goop-7
+:Goop-7 rdf:type owl:NamedIndividual ;
+        goop:composed_by :Define_Requirements_Process .
+
+
+###  http://nemo.inf.ufes.br/ontologies/fragments/rdpo#Goop-General
+:Goop-General rdf:type owl:NamedIndividual ,
+                       goop:Goop ;
+              goop:composed_by :Define_Artifact .
+
+
+###  http://nemo.inf.ufes.br/ontologies/fragments/rdpo#Information_Item
+:Information_Item rdf:type owl:NamedIndividual ,
+                           goop:Class ;
+                  goop:specifies :Artifact ;
+                  rdfs:comment """Relevant information for human use, produced or used by Performed Activity. 
+Ex.: a documented requirement, a bug reported, an agreement e-mail, a component description."""^^rdfs:Literal .
+
+
+###  http://nemo.inf.ufes.br/ontologies/fragments/rdpo#Model
+:Model rdf:type owl:NamedIndividual ;
+       goop:specifies :Artifact .
+
+
+###  http://nemo.inf.ufes.br/ontologies/fragments/rdpo#Model_Fragment-1
+:Model_Fragment-1 rdf:type owl:NamedIndividual ,
+                           goop:Model_Fragment ;
+                  goop:composed_by :Artifact ,
+                                   :Document ,
+                                   :Information_Item ,
+                                   :Model ,
+                                   :Software_Item ,
+                                   :Software_Product ,
+                                   :describes ;
+                  goop:is_used_to_satisfy :Goop-1 .
+
+
+###  http://nemo.inf.ufes.br/ontologies/fragments/rdpo#Model_Fragment-2
+:Model_Fragment-2 rdf:type owl:NamedIndividual ,
+                           goop:Model_Fragment ;
+                  goop:composed_by :Artifact ,
+                                   :Composite_Artifact ,
+                                   :Simple_Artifact ;
+                  goop:is_used_to_satisfy :Goop-2 .
+
+
+###  http://nemo.inf.ufes.br/ontologies/fragments/rdpo#Model_Fragment-3
+:Model_Fragment-3 rdf:type owl:NamedIndividual ,
+                           goop:Model_Fragment ;
+                  goop:composed_by :Assumpiton ,
+                                   :Requirement_Artifact ,
+                                   :Requirements_Document ,
+                                   :Requirements_Engineer ,
+                                   :Requirements_Stakeholder ,
+                                   :Stakeholder ,
+                                   :describes ,
+                                   :interested_in ;
+                  goop:is_used_to_satisfy :Goop-3 .
+
+
+###  http://nemo.inf.ufes.br/ontologies/fragments/rdpo#Model_Fragment-4
+:Model_Fragment-4 rdf:type owl:NamedIndividual ,
+                           goop:Model_Fragment ;
+                  goop:composed_by :Functional_Requirement ,
+                                   :Non-Functional_Requirement ,
+                                   :Product_Quality_Requirement ,
+                                   :Quality_Characteristic ,
+                                   :Requirement ;
+                  goop:is_used_to_satisfy :Goop-4 .
+
+
+###  http://nemo.inf.ufes.br/ontologies/fragments/rdpo#Model_Fragment-6
+:Model_Fragment-6 rdf:type owl:NamedIndividual ;
+                  goop:composed_by :Performed_Activity ,
+                                   :Performed_Composite_Activity ,
+                                   :Performed_General_Process ,
+                                   :Performed_Process ,
+                                   :Performed_Simple_Activity ,
+                                   :Performed_Specific_Process ,
+                                   :changes ,
+                                   :creates ,
+                                   :depends_on ,
+                                   :uses ;
+                  goop:is_used_to_satisfy :Goop-6 .
+
+
+###  http://nemo.inf.ufes.br/ontologies/fragments/rdpo#Model_Fragment-7
+:Model_Fragment-7 rdf:type owl:NamedIndividual ;
+                  goop:composed_by :Conceptual_Model ,
+                                   :Conceptual_Modeling ,
+                                   :Requirements_Agreement ,
+                                   :Requirements_Development_Process ,
+                                   :Requirements_Documentation ,
+                                   :Requirements_Elicitation ,
+                                   :Requirements_Evaluation_Document ,
+                                   :Requirements_Negotiation_and_Prioritization ,
+                                   :Requirements_Reviewer ,
+                                   :Requirements_Verification_and_Validation ,
+                                   :changes ,
+                                   :creates ,
+                                   :depends_on ,
+                                   :is_in_charge_of ,
+                                   :participates_in ,
+                                   :uses ;
+                  goop:is_used_to_satisfy :Goop-7 .
+
+
+###  http://nemo.inf.ufes.br/ontologies/fragments/rdpo#Model_Fragment-General
+:Model_Fragment-General rdf:type owl:NamedIndividual ,
+                                 goop:Model_Fragment ;
+                        goop:composed_by :depends_on ;
+                        goop:is_used_to_satisfy :Goop-General .
+
+
+###  http://nemo.inf.ufes.br/ontologies/fragments/rdpo#Non-Functional_Requirement
+:Non-Functional_Requirement rdf:type owl:NamedIndividual ,
+                                     goop:Class ;
+                            goop:specifies :Requirement ;
+                            rdfs:comment """Requirement defining criteria or capabilities for the product. 
+Ex.: Being accessible from some specific browsers, Being in conformance with a standard, Performing a function in an established time."""^^rdfs:Literal .
+
+
+###  http://nemo.inf.ufes.br/ontologies/fragments/rdpo#Performed_Activity
+:Performed_Activity rdf:type owl:NamedIndividual ,
+                             goop:Class .
+
+
+###  http://nemo.inf.ufes.br/ontologies/fragments/rdpo#Performed_Composite_Activity
+:Performed_Composite_Activity rdf:type owl:NamedIndividual ;
+                              goop:component_of :Performed_Activity ;
+                              goop:specifies :Performed_Composite_Activity .
+
+
+###  http://nemo.inf.ufes.br/ontologies/fragments/rdpo#Performed_General_Process
+:Performed_General_Process rdf:type owl:NamedIndividual ;
+                           goop:component_of :Performed_Specific_Process ;
+                           goop:specifies :Performed_Process .
+
+
+###  http://nemo.inf.ufes.br/ontologies/fragments/rdpo#Performed_Process
+:Performed_Process rdf:type owl:NamedIndividual ,
+                            goop:Class .
+
+
+###  http://nemo.inf.ufes.br/ontologies/fragments/rdpo#Performed_Simple_Activity
+:Performed_Simple_Activity rdf:type owl:NamedIndividual ;
+                           goop:specifies :Performed_Activity .
+
+
+###  http://nemo.inf.ufes.br/ontologies/fragments/rdpo#Performed_Specific_Process
+:Performed_Specific_Process rdf:type owl:NamedIndividual ;
+                            goop:component_of :Performed_Activity ;
+                            goop:specifies :Performed_Process .
+
+
+###  http://nemo.inf.ufes.br/ontologies/fragments/rdpo#Product_Quality_Requirement
+:Product_Quality_Requirement rdf:type owl:NamedIndividual ,
+                                      goop:Class ;
+                             goop:specifies :Non-Functional_Requirement ;
+                             rdfs:comment """Non-Functional Requirement referring to a Quality Characteristic of the software product. 
+Ex.: Being accessible from some specific browsers, Performing a function in an established time."""^^rdfs:Literal .
+
+
+###  http://nemo.inf.ufes.br/ontologies/fragments/rdpo#Quality_Characteristic
+:Quality_Characteristic rdf:type owl:NamedIndividual ,
+                                 goop:Class ;
+                        rdfs:comment """Quality Universal denoting the types of quality characteristics expected in a software. 
+Ex.: reliability, usability, efficiency, maintainability, portability."""^^rdfs:Literal .
+
+
+###  http://nemo.inf.ufes.br/ontologies/fragments/rdpo#Requirement
+:Requirement rdf:type owl:NamedIndividual ,
+                      goop:Class ;
+             rdfs:comment """Goal to be achieved, representing a condition or capacity needed for the system users for solving a problem. 
+Ex.: Providing a product register; Performing a function in an established time."""^^rdfs:Literal .
+
+
+###  http://nemo.inf.ufes.br/ontologies/fragments/rdpo#Requirement_Artifact
+:Requirement_Artifact rdf:type owl:NamedIndividual ,
+                               goop:Class ;
+                      goop:specifies :Information_Item ;
+                      rdfs:comment """Information Item describing a Requirement. 
+Ex.: \"The system shall provide a product register.\", \"The system shall control the client orders.\", \"The system shall be operable from Google Chrome version 32+.\""""^^rdfs:Literal .
+
+
+###  http://nemo.inf.ufes.br/ontologies/fragments/rdpo#Requirements_Agreement
+:Requirements_Agreement rdf:type owl:NamedIndividual ,
+                                 goop:Class ;
+                        goop:specifies :Information_Item ;
+                        rdfs:comment """Information Item representing the agreement achieved by the Stakeholders, regarding the Requirements for the product. 
+Ex.: the agreement on the requirements than can be contained in an e-mail or in a document section."""^^rdfs:Literal .
+
+
+###  http://nemo.inf.ufes.br/ontologies/fragments/rdpo#Requirements_Development_Process
+:Requirements_Development_Process rdf:type owl:NamedIndividual ,
+                                           goop:Class ;
+                                  goop:component_of :Requirements_Documentation ,
+                                                    :Requirements_Elicitation ,
+                                                    :Requirements_Negotiation_and_Prioritization ,
+                                                    :Requirements_Verification_and_Validation ;
+                                  goop:specifies :Performed_Specific_Process ;
+                                  rdfs:comment "Specific Performed Process for establishing and developing the requirements for a system or software."^^rdfs:Literal .
+
+
+###  http://nemo.inf.ufes.br/ontologies/fragments/rdpo#Requirements_Document
+:Requirements_Document rdf:type owl:NamedIndividual ,
+                                goop:Class ;
+                       goop:component_of :Requirement_Artifact ;
+                       goop:specifies :Document ;
+                       rdfs:comment """Document composed of Documented Requirements and related information, as a basis for other technical software processes, including maintenance. 
+Ex.: the Requirements Document of the Alfa Project."""^^rdfs:Literal .
+
+
+###  http://nemo.inf.ufes.br/ontologies/fragments/rdpo#Requirements_Documentation
+:Requirements_Documentation rdf:type owl:NamedIndividual ,
+                                     goop:Class ;
+                            goop:specifies :Performed_Composite_Activity ;
+                            rdfs:comment "Composite Performed Activity executed for recording Documented Requirements and related Conceptual Models in Requirements Documents, assuring proper recording and management of them during and after the project."^^rdfs:Literal .
+
+
+###  http://nemo.inf.ufes.br/ontologies/fragments/rdpo#Requirements_Elicitation
+:Requirements_Elicitation rdf:type owl:NamedIndividual ,
+                                   goop:Class ;
+                          goop:specifies :Performed_Composite_Activity ;
+                          rdfs:comment "Composite Performed Activity executed for identifying requirements from the Stakeholders and other sources, and documenting them."^^rdfs:Literal .
+
+
+###  http://nemo.inf.ufes.br/ontologies/fragments/rdpo#Requirements_Engineer
+:Requirements_Engineer rdf:type owl:NamedIndividual ,
+                                goop:Class ;
+                       goop:specifies :Stakeholder ;
+                       rdfs:comment """Stakeholder responsible for conducting the requirements development activities. 
+Ex.: an organization employee assigned as Requirements Engineer in the requirements development activities."""^^rdfs:Literal .
+
+
+###  http://nemo.inf.ufes.br/ontologies/fragments/rdpo#Requirements_Evaluation_Document
+:Requirements_Evaluation_Document rdf:type owl:NamedIndividual ,
+                                           goop:Class ;
+                                  goop:specifies :Document ;
+                                  rdfs:comment "Document pointing out problems identified in Documented Requirements and Conceptual Models registered in a Requirements Document."^^rdfs:Literal .
+
+
+###  http://nemo.inf.ufes.br/ontologies/fragments/rdpo#Requirements_Negotiation_and_Prioritization
+:Requirements_Negotiation_and_Prioritization rdf:type owl:NamedIndividual ,
+                                                      goop:Class ;
+                                             goop:specifies :Performed_Composite_Activity ;
+                                             rdfs:comment "Composite Performed Activity executed to solve problems in the requirements and to reach an agreement on the set of requirements to be considered in the Project and their priorities."^^rdfs:Literal .
+
+
+###  http://nemo.inf.ufes.br/ontologies/fragments/rdpo#Requirements_Reviewer
+:Requirements_Reviewer rdf:type owl:NamedIndividual ,
+                                goop:Class ;
+                       goop:specifies :Stakeholder ;
+                       rdfs:comment """Stakeholder responsible for conducting reviews in requirements artifacts. 
+Ex.: the person in charge of the Requirements Verification and Validation activity."""^^rdfs:Literal .
+
+
+###  http://nemo.inf.ufes.br/ontologies/fragments/rdpo#Requirements_Stakeholder
+:Requirements_Stakeholder rdf:type owl:NamedIndividual ,
+                                   goop:Class ;
+                          goop:specifies :Stakeholder ;
+                          rdfs:comment """Stakeholder that provides needs and expectations for the product. 
+Ex.: users, operators, customers, suppliers."""^^rdfs:Literal .
+
+
+###  http://nemo.inf.ufes.br/ontologies/fragments/rdpo#Requirements_Verification_and_Validation
+:Requirements_Verification_and_Validation rdf:type owl:NamedIndividual ,
+                                                   goop:Class ;
+                                          goop:specifies :Performed_Composite_Activity ;
+                                          rdfs:comment "Composite Performed Activity executed for evaluating Documented Requirements and Conceptual Models registered in Requirements Documents, and for recording the identified problems."^^rdfs:Literal .
+
+
+###  http://nemo.inf.ufes.br/ontologies/fragments/rdpo#Simple_Artifact
+:Simple_Artifact rdf:type owl:NamedIndividual ,
+                          goop:Class ;
+                 goop:specifies :Artifact ;
+                 rdfs:comment "Artifact that is not decomposed into other Artifacts."^^rdfs:Literal .
+
+
+###  http://nemo.inf.ufes.br/ontologies/fragments/rdpo#Software_Item
+:Software_Item rdf:type owl:NamedIndividual ;
+               goop:specifies :Artifact .
+
+
+###  http://nemo.inf.ufes.br/ontologies/fragments/rdpo#Software_Product
+:Software_Product rdf:type owl:NamedIndividual ;
+                  goop:specifies :Artifact .
+
+
+###  http://nemo.inf.ufes.br/ontologies/fragments/rdpo#Stakeholder
+:Stakeholder rdf:type owl:NamedIndividual ,
+                      goop:Class .
+
+
+###  http://nemo.inf.ufes.br/ontologies/fragments/rdpo#changes
+:changes rdf:type owl:NamedIndividual ,
+                  goop:Object_Property .
+
+
+###  http://nemo.inf.ufes.br/ontologies/fragments/rdpo#creates
+:creates rdf:type owl:NamedIndividual ,
+                  goop:Object_Property .
+
+
+###  http://nemo.inf.ufes.br/ontologies/fragments/rdpo#depends_on
+:depends_on rdf:type owl:NamedIndividual ,
+                     goop:Object_Property .
+
+
+###  http://nemo.inf.ufes.br/ontologies/fragments/rdpo#describes
+:describes rdf:type owl:NamedIndividual ,
+                    goop:Object_Property .
+
+
+###  http://nemo.inf.ufes.br/ontologies/fragments/rdpo#got_from
+:got_from rdf:type owl:NamedIndividual ,
+                   goop:Object_Property .
+
+
+###  http://nemo.inf.ufes.br/ontologies/fragments/rdpo#inheres_in
+:inheres_in rdf:type owl:NamedIndividual ,
+                     goop:Object_Property .
+
+
+###  http://nemo.inf.ufes.br/ontologies/fragments/rdpo#interested_in
+:interested_in rdf:type owl:NamedIndividual ,
+                        goop:Object_Property .
+
+
+###  http://nemo.inf.ufes.br/ontologies/fragments/rdpo#is_in_charge_of
+:is_in_charge_of rdf:type owl:NamedIndividual ,
+                          goop:Object_Property .
+
+
+###  http://nemo.inf.ufes.br/ontologies/fragments/rdpo#participates_in
+:participates_in rdf:type owl:NamedIndividual ,
+                          goop:Object_Property .
+
+
+###  http://nemo.inf.ufes.br/ontologies/fragments/rdpo#propostional_content_of
+:propostional_content_of rdf:type owl:NamedIndividual ,
+                                  goop:Object_Property .
+
+
+###  http://nemo.inf.ufes.br/ontologies/fragments/rdpo#refers_to
+:refers_to rdf:type owl:NamedIndividual ,
+                    goop:Object_Property .
+
+
+###  http://nemo.inf.ufes.br/ontologies/fragments/rdpo#resposible_for
+:resposible_for rdf:type owl:NamedIndividual ,
+                         goop:Object_Property .
+
+
+###  http://nemo.inf.ufes.br/ontologies/fragments/rdpo#uses
+:uses rdf:type owl:NamedIndividual ,
+               goop:Object_Property .
+
+
+###  Generated by the OWL API (version 4.5.7.2018-12-02T02:23:35Z) https://github.com/owlcs/owlapi

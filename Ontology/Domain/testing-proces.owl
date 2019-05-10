@@ -1,0 +1,558 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns="http://nemo.inf.ufes.br/ontologies/testing-process#"
+     xml:base="http://nemo.inf.ufes.br/ontologies/testing-process"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:goop="http://nemo.inf.ufes.br/ontologies/goop#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#">
+    <owl:Ontology rdf:about="http://nemo.inf.ufes.br/ontologies/testing-process">
+        <owl:imports rdf:resource="http://nemo.inf.ufes.br/ontologies/goop"/>
+    </owl:Ontology>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Individuals
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://nemo.inf.ufes.br/ontologies/testing-process#Artifact -->
+
+    <owl:NamedIndividual rdf:about="http://nemo.inf.ufes.br/ontologies/testing-process#Artifact">
+        <rdf:type rdf:resource="http://nemo.inf.ufes.br/ontologies/goop#Class"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://nemo.inf.ufes.br/ontologies/testing-process#Code -->
+
+    <owl:NamedIndividual rdf:about="http://nemo.inf.ufes.br/ontologies/testing-process#Code">
+        <rdf:type rdf:resource="http://nemo.inf.ufes.br/ontologies/goop#Class"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://nemo.inf.ufes.br/ontologies/testing-process#Code_To_Be_Tested -->
+
+    <owl:NamedIndividual rdf:about="http://nemo.inf.ufes.br/ontologies/testing-process#Code_To_Be_Tested">
+        <rdf:type rdf:resource="http://nemo.inf.ufes.br/ontologies/goop#Class"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://nemo.inf.ufes.br/ontologies/testing-process#Composite_Artifact -->
+
+    <owl:NamedIndividual rdf:about="http://nemo.inf.ufes.br/ontologies/testing-process#Composite_Artifact">
+        <rdf:type rdf:resource="http://nemo.inf.ufes.br/ontologies/goop#Class"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://nemo.inf.ufes.br/ontologies/testing-process#Conducting_dynamic_softwaew_testing_realted_activities -->
+
+    <owl:NamedIndividual rdf:about="http://nemo.inf.ufes.br/ontologies/testing-process#Conducting_dynamic_softwaew_testing_realted_activities">
+        <rdf:type rdf:resource="http://nemo.inf.ufes.br/ontologies/goop#Goal_Based_Requirement"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://nemo.inf.ufes.br/ontologies/testing-process#Document -->
+
+    <owl:NamedIndividual rdf:about="http://nemo.inf.ufes.br/ontologies/testing-process#Document">
+        <rdf:type rdf:resource="http://nemo.inf.ufes.br/ontologies/goop#Class"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://nemo.inf.ufes.br/ontologies/testing-process#Goop -->
+
+    <owl:NamedIndividual rdf:about="http://nemo.inf.ufes.br/ontologies/testing-process#Goop">
+        <rdf:type rdf:resource="http://nemo.inf.ufes.br/ontologies/goop#Goop"/>
+        <goop:composed_by rdf:resource="http://nemo.inf.ufes.br/ontologies/testing-process#Conducting_dynamic_softwaew_testing_realted_activities"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://nemo.inf.ufes.br/ontologies/testing-process#Information_Item -->
+
+    <owl:NamedIndividual rdf:about="http://nemo.inf.ufes.br/ontologies/testing-process#Information_Item">
+        <rdf:type rdf:resource="http://nemo.inf.ufes.br/ontologies/goop#Class"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://nemo.inf.ufes.br/ontologies/testing-process#Integration_Testing -->
+
+    <owl:NamedIndividual rdf:about="http://nemo.inf.ufes.br/ontologies/testing-process#Integration_Testing">
+        <rdf:type rdf:resource="http://nemo.inf.ufes.br/ontologies/goop#Class"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://nemo.inf.ufes.br/ontologies/testing-process#Level-based_Testing -->
+
+    <owl:NamedIndividual rdf:about="http://nemo.inf.ufes.br/ontologies/testing-process#Level-based_Testing">
+        <rdf:type rdf:resource="http://nemo.inf.ufes.br/ontologies/goop#Class"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://nemo.inf.ufes.br/ontologies/testing-process#Model -->
+
+    <owl:NamedIndividual rdf:about="http://nemo.inf.ufes.br/ontologies/testing-process#Model">
+        <rdf:type rdf:resource="http://nemo.inf.ufes.br/ontologies/goop#Class"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://nemo.inf.ufes.br/ontologies/testing-process#Model_Fragment -->
+
+    <owl:NamedIndividual rdf:about="http://nemo.inf.ufes.br/ontologies/testing-process#Model_Fragment">
+        <rdf:type rdf:resource="http://nemo.inf.ufes.br/ontologies/goop#Model_Fragment"/>
+        <goop:composed_by rdf:resource="http://nemo.inf.ufes.br/ontologies/testing-process#Artifact"/>
+        <goop:composed_by rdf:resource="http://nemo.inf.ufes.br/ontologies/testing-process#Code"/>
+        <goop:composed_by rdf:resource="http://nemo.inf.ufes.br/ontologies/testing-process#Code_To_Be_Tested"/>
+        <goop:composed_by rdf:resource="http://nemo.inf.ufes.br/ontologies/testing-process#Composite_Artifact"/>
+        <goop:composed_by rdf:resource="http://nemo.inf.ufes.br/ontologies/testing-process#Document"/>
+        <goop:composed_by rdf:resource="http://nemo.inf.ufes.br/ontologies/testing-process#Information_Item"/>
+        <goop:composed_by rdf:resource="http://nemo.inf.ufes.br/ontologies/testing-process#Integration_Testing"/>
+        <goop:composed_by rdf:resource="http://nemo.inf.ufes.br/ontologies/testing-process#Level-based_Testing"/>
+        <goop:composed_by rdf:resource="http://nemo.inf.ufes.br/ontologies/testing-process#Model"/>
+        <goop:composed_by rdf:resource="http://nemo.inf.ufes.br/ontologies/testing-process#Perfomed_Composite_Activity"/>
+        <goop:composed_by rdf:resource="http://nemo.inf.ufes.br/ontologies/testing-process#Perfomed_Process"/>
+        <goop:composed_by rdf:resource="http://nemo.inf.ufes.br/ontologies/testing-process#Performed_Activity"/>
+        <goop:composed_by rdf:resource="http://nemo.inf.ufes.br/ontologies/testing-process#Performed_General_Process"/>
+        <goop:composed_by rdf:resource="http://nemo.inf.ufes.br/ontologies/testing-process#Performed_Simple_Activity"/>
+        <goop:composed_by rdf:resource="http://nemo.inf.ufes.br/ontologies/testing-process#Performed_Specific_Process"/>
+        <goop:composed_by rdf:resource="http://nemo.inf.ufes.br/ontologies/testing-process#Procedure"/>
+        <goop:composed_by rdf:resource="http://nemo.inf.ufes.br/ontologies/testing-process#Simple_Artifact"/>
+        <goop:composed_by rdf:resource="http://nemo.inf.ufes.br/ontologies/testing-process#Software_Item"/>
+        <goop:composed_by rdf:resource="http://nemo.inf.ufes.br/ontologies/testing-process#Software_Product"/>
+        <goop:composed_by rdf:resource="http://nemo.inf.ufes.br/ontologies/testing-process#Stakeholder"/>
+        <goop:composed_by rdf:resource="http://nemo.inf.ufes.br/ontologies/testing-process#System_Testing"/>
+        <goop:composed_by rdf:resource="http://nemo.inf.ufes.br/ontologies/testing-process#Technique"/>
+        <goop:composed_by rdf:resource="http://nemo.inf.ufes.br/ontologies/testing-process#Test_Analysis_Report"/>
+        <goop:composed_by rdf:resource="http://nemo.inf.ufes.br/ontologies/testing-process#Test_Case"/>
+        <goop:composed_by rdf:resource="http://nemo.inf.ufes.br/ontologies/testing-process#Test_Case_Design"/>
+        <goop:composed_by rdf:resource="http://nemo.inf.ufes.br/ontologies/testing-process#Test_Case_Design_Input"/>
+        <goop:composed_by rdf:resource="http://nemo.inf.ufes.br/ontologies/testing-process#Test_Case_Designer"/>
+        <goop:composed_by rdf:resource="http://nemo.inf.ufes.br/ontologies/testing-process#Test_Code"/>
+        <goop:composed_by rdf:resource="http://nemo.inf.ufes.br/ontologies/testing-process#Test_Coding"/>
+        <goop:composed_by rdf:resource="http://nemo.inf.ufes.br/ontologies/testing-process#Test_Execution"/>
+        <goop:composed_by rdf:resource="http://nemo.inf.ufes.br/ontologies/testing-process#Test_Manager"/>
+        <goop:composed_by rdf:resource="http://nemo.inf.ufes.br/ontologies/testing-process#Test_Plan"/>
+        <goop:composed_by rdf:resource="http://nemo.inf.ufes.br/ontologies/testing-process#Test_Planning"/>
+        <goop:composed_by rdf:resource="http://nemo.inf.ufes.br/ontologies/testing-process#Test_Result"/>
+        <goop:composed_by rdf:resource="http://nemo.inf.ufes.br/ontologies/testing-process#Test_Result_Analysis"/>
+        <goop:composed_by rdf:resource="http://nemo.inf.ufes.br/ontologies/testing-process#Tester"/>
+        <goop:composed_by rdf:resource="http://nemo.inf.ufes.br/ontologies/testing-process#Testing_Level"/>
+        <goop:composed_by rdf:resource="http://nemo.inf.ufes.br/ontologies/testing-process#Testing_Process"/>
+        <goop:composed_by rdf:resource="http://nemo.inf.ufes.br/ontologies/testing-process#Testing_Technique"/>
+        <goop:composed_by rdf:resource="http://nemo.inf.ufes.br/ontologies/testing-process#Unit_Testing"/>
+        <goop:composed_by rdf:resource="http://nemo.inf.ufes.br/ontologies/testing-process#analyzes"/>
+        <goop:composed_by rdf:resource="http://nemo.inf.ufes.br/ontologies/testing-process#built_applying"/>
+        <goop:composed_by rdf:resource="http://nemo.inf.ufes.br/ontologies/testing-process#changes"/>
+        <goop:composed_by rdf:resource="http://nemo.inf.ufes.br/ontologies/testing-process#creates"/>
+        <goop:composed_by rdf:resource="http://nemo.inf.ufes.br/ontologies/testing-process#depends_on"/>
+        <goop:composed_by rdf:resource="http://nemo.inf.ufes.br/ontologies/testing-process#describes"/>
+        <goop:composed_by rdf:resource="http://nemo.inf.ufes.br/ontologies/testing-process#executes"/>
+        <goop:composed_by rdf:resource="http://nemo.inf.ufes.br/ontologies/testing-process#implements"/>
+        <goop:composed_by rdf:resource="http://nemo.inf.ufes.br/ontologies/testing-process#instanceOf"/>
+        <goop:composed_by rdf:resource="http://nemo.inf.ufes.br/ontologies/testing-process#is_in_charge_of"/>
+        <goop:composed_by rdf:resource="http://nemo.inf.ufes.br/ontologies/testing-process#participates_in"/>
+        <goop:composed_by rdf:resource="http://nemo.inf.ufes.br/ontologies/testing-process#relative_to"/>
+        <goop:composed_by rdf:resource="http://nemo.inf.ufes.br/ontologies/testing-process#subProcess"/>
+        <goop:composed_by rdf:resource="http://nemo.inf.ufes.br/ontologies/testing-process#tests"/>
+        <goop:composed_by rdf:resource="http://nemo.inf.ufes.br/ontologies/testing-process#uses"/>
+        <goop:is_used_to_satisfy rdf:resource="http://nemo.inf.ufes.br/ontologies/testing-process#Goop"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://nemo.inf.ufes.br/ontologies/testing-process#Perfomed_Composite_Activity -->
+
+    <owl:NamedIndividual rdf:about="http://nemo.inf.ufes.br/ontologies/testing-process#Perfomed_Composite_Activity">
+        <rdf:type rdf:resource="http://nemo.inf.ufes.br/ontologies/goop#Class"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://nemo.inf.ufes.br/ontologies/testing-process#Perfomed_Process -->
+
+    <owl:NamedIndividual rdf:about="http://nemo.inf.ufes.br/ontologies/testing-process#Perfomed_Process">
+        <rdf:type rdf:resource="http://nemo.inf.ufes.br/ontologies/goop#Class"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://nemo.inf.ufes.br/ontologies/testing-process#Performed_Activity -->
+
+    <owl:NamedIndividual rdf:about="http://nemo.inf.ufes.br/ontologies/testing-process#Performed_Activity">
+        <rdf:type rdf:resource="http://nemo.inf.ufes.br/ontologies/goop#Class"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://nemo.inf.ufes.br/ontologies/testing-process#Performed_General_Process -->
+
+    <owl:NamedIndividual rdf:about="http://nemo.inf.ufes.br/ontologies/testing-process#Performed_General_Process">
+        <rdf:type rdf:resource="http://nemo.inf.ufes.br/ontologies/goop#Class"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://nemo.inf.ufes.br/ontologies/testing-process#Performed_Simple_Activity -->
+
+    <owl:NamedIndividual rdf:about="http://nemo.inf.ufes.br/ontologies/testing-process#Performed_Simple_Activity">
+        <rdf:type rdf:resource="http://nemo.inf.ufes.br/ontologies/goop#Class"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://nemo.inf.ufes.br/ontologies/testing-process#Performed_Specific_Process -->
+
+    <owl:NamedIndividual rdf:about="http://nemo.inf.ufes.br/ontologies/testing-process#Performed_Specific_Process">
+        <rdf:type rdf:resource="http://nemo.inf.ufes.br/ontologies/goop#Class"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://nemo.inf.ufes.br/ontologies/testing-process#Procedure -->
+
+    <owl:NamedIndividual rdf:about="http://nemo.inf.ufes.br/ontologies/testing-process#Procedure">
+        <rdf:type rdf:resource="http://nemo.inf.ufes.br/ontologies/goop#Class"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://nemo.inf.ufes.br/ontologies/testing-process#Simple_Artifact -->
+
+    <owl:NamedIndividual rdf:about="http://nemo.inf.ufes.br/ontologies/testing-process#Simple_Artifact">
+        <rdf:type rdf:resource="http://nemo.inf.ufes.br/ontologies/goop#Class"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://nemo.inf.ufes.br/ontologies/testing-process#Software_Item -->
+
+    <owl:NamedIndividual rdf:about="http://nemo.inf.ufes.br/ontologies/testing-process#Software_Item">
+        <rdf:type rdf:resource="http://nemo.inf.ufes.br/ontologies/goop#Class"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://nemo.inf.ufes.br/ontologies/testing-process#Software_Product -->
+
+    <owl:NamedIndividual rdf:about="http://nemo.inf.ufes.br/ontologies/testing-process#Software_Product">
+        <rdf:type rdf:resource="http://nemo.inf.ufes.br/ontologies/goop#Class"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://nemo.inf.ufes.br/ontologies/testing-process#Stakeholder -->
+
+    <owl:NamedIndividual rdf:about="http://nemo.inf.ufes.br/ontologies/testing-process#Stakeholder">
+        <rdf:type rdf:resource="http://nemo.inf.ufes.br/ontologies/goop#Class"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://nemo.inf.ufes.br/ontologies/testing-process#System_Testing -->
+
+    <owl:NamedIndividual rdf:about="http://nemo.inf.ufes.br/ontologies/testing-process#System_Testing">
+        <rdf:type rdf:resource="http://nemo.inf.ufes.br/ontologies/goop#Class"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://nemo.inf.ufes.br/ontologies/testing-process#Technique -->
+
+    <owl:NamedIndividual rdf:about="http://nemo.inf.ufes.br/ontologies/testing-process#Technique">
+        <rdf:type rdf:resource="http://nemo.inf.ufes.br/ontologies/goop#Class"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://nemo.inf.ufes.br/ontologies/testing-process#Test_Analysis_Report -->
+
+    <owl:NamedIndividual rdf:about="http://nemo.inf.ufes.br/ontologies/testing-process#Test_Analysis_Report">
+        <rdf:type rdf:resource="http://nemo.inf.ufes.br/ontologies/goop#Class"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://nemo.inf.ufes.br/ontologies/testing-process#Test_Case -->
+
+    <owl:NamedIndividual rdf:about="http://nemo.inf.ufes.br/ontologies/testing-process#Test_Case">
+        <rdf:type rdf:resource="http://nemo.inf.ufes.br/ontologies/goop#Class"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://nemo.inf.ufes.br/ontologies/testing-process#Test_Case_Design -->
+
+    <owl:NamedIndividual rdf:about="http://nemo.inf.ufes.br/ontologies/testing-process#Test_Case_Design">
+        <rdf:type rdf:resource="http://nemo.inf.ufes.br/ontologies/goop#Class"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://nemo.inf.ufes.br/ontologies/testing-process#Test_Case_Design_Input -->
+
+    <owl:NamedIndividual rdf:about="http://nemo.inf.ufes.br/ontologies/testing-process#Test_Case_Design_Input">
+        <rdf:type rdf:resource="http://nemo.inf.ufes.br/ontologies/goop#Class"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://nemo.inf.ufes.br/ontologies/testing-process#Test_Case_Designer -->
+
+    <owl:NamedIndividual rdf:about="http://nemo.inf.ufes.br/ontologies/testing-process#Test_Case_Designer">
+        <rdf:type rdf:resource="http://nemo.inf.ufes.br/ontologies/goop#Class"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://nemo.inf.ufes.br/ontologies/testing-process#Test_Code -->
+
+    <owl:NamedIndividual rdf:about="http://nemo.inf.ufes.br/ontologies/testing-process#Test_Code">
+        <rdf:type rdf:resource="http://nemo.inf.ufes.br/ontologies/goop#Class"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://nemo.inf.ufes.br/ontologies/testing-process#Test_Coding -->
+
+    <owl:NamedIndividual rdf:about="http://nemo.inf.ufes.br/ontologies/testing-process#Test_Coding">
+        <rdf:type rdf:resource="http://nemo.inf.ufes.br/ontologies/goop#Class"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://nemo.inf.ufes.br/ontologies/testing-process#Test_Execution -->
+
+    <owl:NamedIndividual rdf:about="http://nemo.inf.ufes.br/ontologies/testing-process#Test_Execution">
+        <rdf:type rdf:resource="http://nemo.inf.ufes.br/ontologies/goop#Class"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://nemo.inf.ufes.br/ontologies/testing-process#Test_Manager -->
+
+    <owl:NamedIndividual rdf:about="http://nemo.inf.ufes.br/ontologies/testing-process#Test_Manager">
+        <rdf:type rdf:resource="http://nemo.inf.ufes.br/ontologies/goop#Class"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://nemo.inf.ufes.br/ontologies/testing-process#Test_Plan -->
+
+    <owl:NamedIndividual rdf:about="http://nemo.inf.ufes.br/ontologies/testing-process#Test_Plan">
+        <rdf:type rdf:resource="http://nemo.inf.ufes.br/ontologies/goop#Class"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://nemo.inf.ufes.br/ontologies/testing-process#Test_Planning -->
+
+    <owl:NamedIndividual rdf:about="http://nemo.inf.ufes.br/ontologies/testing-process#Test_Planning">
+        <rdf:type rdf:resource="http://nemo.inf.ufes.br/ontologies/goop#Class"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://nemo.inf.ufes.br/ontologies/testing-process#Test_Result -->
+
+    <owl:NamedIndividual rdf:about="http://nemo.inf.ufes.br/ontologies/testing-process#Test_Result">
+        <rdf:type rdf:resource="http://nemo.inf.ufes.br/ontologies/goop#Class"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://nemo.inf.ufes.br/ontologies/testing-process#Test_Result_Analysis -->
+
+    <owl:NamedIndividual rdf:about="http://nemo.inf.ufes.br/ontologies/testing-process#Test_Result_Analysis">
+        <rdf:type rdf:resource="http://nemo.inf.ufes.br/ontologies/goop#Class"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://nemo.inf.ufes.br/ontologies/testing-process#Tester -->
+
+    <owl:NamedIndividual rdf:about="http://nemo.inf.ufes.br/ontologies/testing-process#Tester">
+        <rdf:type rdf:resource="http://nemo.inf.ufes.br/ontologies/goop#Class"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://nemo.inf.ufes.br/ontologies/testing-process#Testing_Level -->
+
+    <owl:NamedIndividual rdf:about="http://nemo.inf.ufes.br/ontologies/testing-process#Testing_Level">
+        <rdf:type rdf:resource="http://nemo.inf.ufes.br/ontologies/goop#Class"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://nemo.inf.ufes.br/ontologies/testing-process#Testing_Process -->
+
+    <owl:NamedIndividual rdf:about="http://nemo.inf.ufes.br/ontologies/testing-process#Testing_Process">
+        <rdf:type rdf:resource="http://nemo.inf.ufes.br/ontologies/goop#Class"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://nemo.inf.ufes.br/ontologies/testing-process#Testing_Technique -->
+
+    <owl:NamedIndividual rdf:about="http://nemo.inf.ufes.br/ontologies/testing-process#Testing_Technique">
+        <rdf:type rdf:resource="http://nemo.inf.ufes.br/ontologies/goop#Class"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://nemo.inf.ufes.br/ontologies/testing-process#Unit_Testing -->
+
+    <owl:NamedIndividual rdf:about="http://nemo.inf.ufes.br/ontologies/testing-process#Unit_Testing">
+        <rdf:type rdf:resource="http://nemo.inf.ufes.br/ontologies/goop#Class"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://nemo.inf.ufes.br/ontologies/testing-process#adopts -->
+
+    <owl:NamedIndividual rdf:about="http://nemo.inf.ufes.br/ontologies/testing-process#adopts">
+        <rdf:type rdf:resource="http://nemo.inf.ufes.br/ontologies/goop#Object_Property"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://nemo.inf.ufes.br/ontologies/testing-process#analyzes -->
+
+    <owl:NamedIndividual rdf:about="http://nemo.inf.ufes.br/ontologies/testing-process#analyzes">
+        <rdf:type rdf:resource="http://nemo.inf.ufes.br/ontologies/goop#Object_Property"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://nemo.inf.ufes.br/ontologies/testing-process#built_applying -->
+
+    <owl:NamedIndividual rdf:about="http://nemo.inf.ufes.br/ontologies/testing-process#built_applying">
+        <rdf:type rdf:resource="http://nemo.inf.ufes.br/ontologies/goop#Object_Property"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://nemo.inf.ufes.br/ontologies/testing-process#changes -->
+
+    <owl:NamedIndividual rdf:about="http://nemo.inf.ufes.br/ontologies/testing-process#changes">
+        <rdf:type rdf:resource="http://nemo.inf.ufes.br/ontologies/goop#Object_Property"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://nemo.inf.ufes.br/ontologies/testing-process#creates -->
+
+    <owl:NamedIndividual rdf:about="http://nemo.inf.ufes.br/ontologies/testing-process#creates">
+        <rdf:type rdf:resource="http://nemo.inf.ufes.br/ontologies/goop#Object_Property"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://nemo.inf.ufes.br/ontologies/testing-process#depends_on -->
+
+    <owl:NamedIndividual rdf:about="http://nemo.inf.ufes.br/ontologies/testing-process#depends_on">
+        <rdf:type rdf:resource="http://nemo.inf.ufes.br/ontologies/goop#Object_Property"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://nemo.inf.ufes.br/ontologies/testing-process#describes -->
+
+    <owl:NamedIndividual rdf:about="http://nemo.inf.ufes.br/ontologies/testing-process#describes">
+        <rdf:type rdf:resource="http://nemo.inf.ufes.br/ontologies/goop#Object_Property"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://nemo.inf.ufes.br/ontologies/testing-process#executes -->
+
+    <owl:NamedIndividual rdf:about="http://nemo.inf.ufes.br/ontologies/testing-process#executes">
+        <rdf:type rdf:resource="http://nemo.inf.ufes.br/ontologies/goop#Object_Property"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://nemo.inf.ufes.br/ontologies/testing-process#implements -->
+
+    <owl:NamedIndividual rdf:about="http://nemo.inf.ufes.br/ontologies/testing-process#implements">
+        <rdf:type rdf:resource="http://nemo.inf.ufes.br/ontologies/goop#Object_Property"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://nemo.inf.ufes.br/ontologies/testing-process#instanceOf -->
+
+    <owl:NamedIndividual rdf:about="http://nemo.inf.ufes.br/ontologies/testing-process#instanceOf">
+        <rdf:type rdf:resource="http://nemo.inf.ufes.br/ontologies/goop#Object_Property"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://nemo.inf.ufes.br/ontologies/testing-process#is_in_charge_of -->
+
+    <owl:NamedIndividual rdf:about="http://nemo.inf.ufes.br/ontologies/testing-process#is_in_charge_of">
+        <rdf:type rdf:resource="http://nemo.inf.ufes.br/ontologies/goop#Object_Property"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://nemo.inf.ufes.br/ontologies/testing-process#participates_in -->
+
+    <owl:NamedIndividual rdf:about="http://nemo.inf.ufes.br/ontologies/testing-process#participates_in">
+        <rdf:type rdf:resource="http://nemo.inf.ufes.br/ontologies/goop#Object_Property"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://nemo.inf.ufes.br/ontologies/testing-process#relative_to -->
+
+    <owl:NamedIndividual rdf:about="http://nemo.inf.ufes.br/ontologies/testing-process#relative_to">
+        <rdf:type rdf:resource="http://nemo.inf.ufes.br/ontologies/goop#Object_Property"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://nemo.inf.ufes.br/ontologies/testing-process#subProcess -->
+
+    <owl:NamedIndividual rdf:about="http://nemo.inf.ufes.br/ontologies/testing-process#subProcess">
+        <rdf:type rdf:resource="http://nemo.inf.ufes.br/ontologies/goop#Object_Property"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://nemo.inf.ufes.br/ontologies/testing-process#tests -->
+
+    <owl:NamedIndividual rdf:about="http://nemo.inf.ufes.br/ontologies/testing-process#tests">
+        <rdf:type rdf:resource="http://nemo.inf.ufes.br/ontologies/goop#Object_Property"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://nemo.inf.ufes.br/ontologies/testing-process#uses -->
+
+    <owl:NamedIndividual rdf:about="http://nemo.inf.ufes.br/ontologies/testing-process#uses">
+        <rdf:type rdf:resource="http://nemo.inf.ufes.br/ontologies/goop#Object_Property"/>
+    </owl:NamedIndividual>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 4.5.6.2018-09-06T00:27:41Z) https://github.com/owlcs/owlapi -->
+

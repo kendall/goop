@@ -1,0 +1,255 @@
+@prefix : <http://nemo.inf.ufes.br/ontologies/fragments/estimated-process#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix goop: <http://nemo.inf.ufes.br/ontologies/goop#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@base <http://nemo.inf.ufes.br/ontologies/fragments/estimated-process> .
+
+<http://nemo.inf.ufes.br/ontologies/fragments/estimated-process> rdf:type owl:Ontology ;
+                                                                  owl:imports <http://nemo.inf.ufes.br/ontologies/goop> .
+
+#################################################################
+#    Individuals
+#################################################################
+
+###  http://nemo.inf.ufes.br/ontologies/fragments/estimated-process#Cost_Estimated_Activity
+:Cost_Estimated_Activity rdf:type owl:NamedIndividual ;
+                         goop:specifies :Project_Activity .
+
+
+###  http://nemo.inf.ufes.br/ontologies/fragments/estimated-process#Cost_Estimated_Process
+:Cost_Estimated_Process rdf:type owl:NamedIndividual ;
+                        goop:specifies :Project_Process .
+
+
+###  http://nemo.inf.ufes.br/ontologies/fragments/estimated-process#Define_Estimated_Process
+:Define_Estimated_Process rdf:type owl:NamedIndividual ,
+                                   goop:Goal_Based_Requirement ;
+                          goop:composed_by :Define_Intended_Process_and_Activities ,
+                                           :Define_Stakeholder_Allocation ,
+                                           :Define_WBS ;
+                          goop:specifies :Project_Process .
+
+
+###  http://nemo.inf.ufes.br/ontologies/fragments/estimated-process#Define_Intended_Process_and_Activities
+:Define_Intended_Process_and_Activities rdf:type owl:NamedIndividual ,
+                                                 goop:Goal_Based_Requirement .
+
+
+###  http://nemo.inf.ufes.br/ontologies/fragments/estimated-process#Define_Stakeholder_Allocation
+:Define_Stakeholder_Allocation rdf:type owl:NamedIndividual ,
+                                        goop:Goal_Based_Requirement .
+
+
+###  http://nemo.inf.ufes.br/ontologies/fragments/estimated-process#Define_WBS
+:Define_WBS rdf:type owl:NamedIndividual ,
+                     goop:Goal_Based_Requirement .
+
+
+###  http://nemo.inf.ufes.br/ontologies/fragments/estimated-process#Deliverable
+:Deliverable rdf:type owl:NamedIndividual ,
+                      goop:Class .
+
+
+###  http://nemo.inf.ufes.br/ontologies/fragments/estimated-process#Duration_Estimated_Activity
+:Duration_Estimated_Activity rdf:type owl:NamedIndividual ;
+                             goop:specifies :Project_Activity .
+
+
+###  http://nemo.inf.ufes.br/ontologies/fragments/estimated-process#Duration_Estimated_Process
+:Duration_Estimated_Process rdf:type owl:NamedIndividual ;
+                            goop:specifies :Project_Process .
+
+
+###  http://nemo.inf.ufes.br/ontologies/fragments/estimated-process#Estimated_Activity
+:Estimated_Activity rdf:type owl:NamedIndividual ;
+                    goop:specifies :Cost_Estimated_Activity ,
+                                   :Duration_Estimated_Activity ,
+                                   :Scheduled_Activity ,
+                                   :Scope_Estimated_Activity .
+
+
+###  http://nemo.inf.ufes.br/ontologies/fragments/estimated-process#Estimated_Process
+:Estimated_Process rdf:type owl:NamedIndividual ;
+                   goop:specifies :Cost_Estimated_Process ,
+                                  :Duration_Estimated_Process ,
+                                  :Scheduled_Process .
+
+
+###  http://nemo.inf.ufes.br/ontologies/fragments/estimated-process#Estimated_Stakeholder_Allocation
+:Estimated_Stakeholder_Allocation rdf:type owl:NamedIndividual ;
+                                  goop:specifies :Estimated_Stakeholder_Allocation .
+
+
+###  http://nemo.inf.ufes.br/ontologies/fragments/estimated-process#General_Project_Process
+:General_Project_Process rdf:type owl:NamedIndividual ,
+                                  goop:Class ;
+                         goop:component_of :Specific_Project_Process ;
+                         goop:specifies :Project_Process .
+
+
+###  http://nemo.inf.ufes.br/ontologies/fragments/estimated-process#Goop-1
+:Goop-1 rdf:type owl:NamedIndividual ,
+                 goop:Goop .
+
+
+###  http://nemo.inf.ufes.br/ontologies/fragments/estimated-process#Goop-2
+:Goop-2 rdf:type owl:NamedIndividual ,
+                 goop:Goop .
+
+
+###  http://nemo.inf.ufes.br/ontologies/fragments/estimated-process#Goop-3
+:Goop-3 rdf:type owl:NamedIndividual ,
+                 goop:Goop .
+
+
+###  http://nemo.inf.ufes.br/ontologies/fragments/estimated-process#Goop-4
+:Goop-4 rdf:type owl:NamedIndividual ,
+                 goop:Goop .
+
+
+###  http://nemo.inf.ufes.br/ontologies/fragments/estimated-process#Intended_Activity
+:Intended_Activity rdf:type owl:NamedIndividual ,
+                            goop:Class .
+
+
+###  http://nemo.inf.ufes.br/ontologies/fragments/estimated-process#Intended_Process
+:Intended_Process rdf:type owl:NamedIndividual ,
+                           goop:Class .
+
+
+###  http://nemo.inf.ufes.br/ontologies/fragments/estimated-process#Model_Fragment-1
+:Model_Fragment-1 rdf:type owl:NamedIndividual ,
+                           goop:Model_Fragment ;
+                  goop:composed_by :Pratical_Result ,
+                                   :Software_Project ,
+                                   :Work_Package ,
+                                   :has ;
+                  goop:is_used_to_satisfy :Goop-1 .
+
+
+###  http://nemo.inf.ufes.br/ontologies/fragments/estimated-process#Model_Fragment-2
+:Model_Fragment-2 rdf:type owl:NamedIndividual ,
+                           goop:Model_Fragment ;
+                  goop:composed_by :General_Project_Process ,
+                                   :Intended_Activity ,
+                                   :Intended_Process ,
+                                   :Project_Activity ,
+                                   :Project_Process ,
+                                   :Specific_Project_Process .
+
+
+###  http://nemo.inf.ufes.br/ontologies/fragments/estimated-process#Model_Fragment-3
+:Model_Fragment-3 rdf:type owl:NamedIndividual ,
+                           goop:Model_Fragment ;
+                  goop:composed_by :Stakeholder ,
+                                   :Stakeholder_Allocation ,
+                                   :allocates .
+
+
+###  http://nemo.inf.ufes.br/ontologies/fragments/estimated-process#Model_Fragment-4
+:Model_Fragment-4 rdf:type owl:NamedIndividual ,
+                           goop:Model_Fragment ;
+                  goop:composed_by :Cost_Estimated_Activity ,
+                                   :Cost_Estimated_Process ,
+                                   :Duration_Estimated_Activity ,
+                                   :Duration_Estimated_Process ,
+                                   :Estimated_Activity ,
+                                   :Estimated_Process ,
+                                   :Estimated_Stakeholder_Allocation ,
+                                   :Scheduled_Activity ,
+                                   :Scheduled_Process ,
+                                   :Scope_Estimated_Activity ,
+                                   :is_to_perform ,
+                                   :is_to_produce ;
+                  goop:is_used_to_satisfy :Goop-4 .
+
+
+###  http://nemo.inf.ufes.br/ontologies/fragments/estimated-process#Pratical_Result
+:Pratical_Result rdf:type owl:NamedIndividual ,
+                          goop:Class ;
+                 goop:component_of :Deliverable ;
+                 goop:specifies :Deliverable .
+
+
+###  http://nemo.inf.ufes.br/ontologies/fragments/estimated-process#Project_Activity
+:Project_Activity rdf:type owl:NamedIndividual ,
+                           goop:Class ;
+                  goop:specifies :Intended_Activity .
+
+
+###  http://nemo.inf.ufes.br/ontologies/fragments/estimated-process#Project_Process
+:Project_Process rdf:type owl:NamedIndividual ;
+                 goop:specifies :Intended_Process .
+
+
+###  http://nemo.inf.ufes.br/ontologies/fragments/estimated-process#Scheduled_Activity
+:Scheduled_Activity rdf:type owl:NamedIndividual ;
+                    goop:specifies :Intended_Activity .
+
+
+###  http://nemo.inf.ufes.br/ontologies/fragments/estimated-process#Scheduled_Process
+:Scheduled_Process rdf:type owl:NamedIndividual ;
+                   goop:specifies :Intended_Process .
+
+
+###  http://nemo.inf.ufes.br/ontologies/fragments/estimated-process#Scope_Estimated_Activity
+:Scope_Estimated_Activity rdf:type owl:NamedIndividual ;
+                          goop:specifies :Project_Activity .
+
+
+###  http://nemo.inf.ufes.br/ontologies/fragments/estimated-process#Software_Project
+:Software_Project rdf:type owl:NamedIndividual ,
+                           goop:Class .
+
+
+###  http://nemo.inf.ufes.br/ontologies/fragments/estimated-process#Specific_Project_Process
+:Specific_Project_Process rdf:type owl:NamedIndividual ,
+                                   goop:Class ;
+                          goop:component_of :Project_Activity ;
+                          goop:specifies :Project_Process .
+
+
+###  http://nemo.inf.ufes.br/ontologies/fragments/estimated-process#Stakeholder
+:Stakeholder rdf:type owl:NamedIndividual ,
+                      goop:Class .
+
+
+###  http://nemo.inf.ufes.br/ontologies/fragments/estimated-process#Stakeholder_Allocation
+:Stakeholder_Allocation rdf:type owl:NamedIndividual ,
+                                 goop:Class .
+
+
+###  http://nemo.inf.ufes.br/ontologies/fragments/estimated-process#Work_Package
+:Work_Package rdf:type owl:NamedIndividual ,
+                       goop:Class ;
+              goop:specifies :Deliverable .
+
+
+###  http://nemo.inf.ufes.br/ontologies/fragments/estimated-process#allocates
+:allocates rdf:type owl:NamedIndividual ,
+                    goop:Object_Property .
+
+
+###  http://nemo.inf.ufes.br/ontologies/fragments/estimated-process#defined_for
+:defined_for rdf:type owl:NamedIndividual ,
+                      goop:Object_Property ;
+             goop:composed_by :defined_for .
+
+
+###  http://nemo.inf.ufes.br/ontologies/fragments/estimated-process#has
+:has rdf:type owl:NamedIndividual ,
+              goop:Object_Property .
+
+
+###  http://nemo.inf.ufes.br/ontologies/fragments/estimated-process#is_to_perform
+:is_to_perform rdf:type owl:NamedIndividual .
+
+
+###  http://nemo.inf.ufes.br/ontologies/fragments/estimated-process#is_to_produce
+:is_to_produce rdf:type owl:NamedIndividual .
+
+
+###  Generated by the OWL API (version 4.5.7.2018-12-02T02:23:35Z) https://github.com/owlcs/owlapi

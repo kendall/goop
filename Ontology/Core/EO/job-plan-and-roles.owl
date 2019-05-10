@@ -1,0 +1,133 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns="http://nemo.inf.ufes.br/ontologies/job-plan-and-roles#"
+     xml:base="http://nemo.inf.ufes.br/ontologies/job-plan-and-roles"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:goop="http://nemo.inf.ufes.br/ontologies/goop#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#">
+    <owl:Ontology rdf:about="http://nemo.inf.ufes.br/ontologies/job-plan-and-roles">
+        <owl:imports rdf:resource="http://nemo.inf.ufes.br/ontologies/goop"/>
+    </owl:Ontology>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Individuals
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://nemo.inf.ufes.br/ontologies/job-plan-and-roles#Defines_Job_Plan -->
+
+    <owl:NamedIndividual rdf:about="http://nemo.inf.ufes.br/ontologies/job-plan-and-roles#Defines_Job_Plan"/>
+    
+
+
+    <!-- http://nemo.inf.ufes.br/ontologies/job-plan-and-roles#Defines_Roles -->
+
+    <owl:NamedIndividual rdf:about="http://nemo.inf.ufes.br/ontologies/job-plan-and-roles#Defines_Roles">
+        <goop:composed_by rdf:resource="http://nemo.inf.ufes.br/ontologies/job-plan-and-roles#Defines_Job_Plan"/>
+        <goop:composed_by rdf:resource="http://nemo.inf.ufes.br/ontologies/job-plan-and-roles#Defines_Roles"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://nemo.inf.ufes.br/ontologies/job-plan-and-roles#Goop -->
+
+    <owl:NamedIndividual rdf:about="http://nemo.inf.ufes.br/ontologies/job-plan-and-roles#Goop">
+        <rdf:type rdf:resource="http://nemo.inf.ufes.br/ontologies/goop#Goop"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://nemo.inf.ufes.br/ontologies/job-plan-and-roles#Job_Plan -->
+
+    <owl:NamedIndividual rdf:about="http://nemo.inf.ufes.br/ontologies/job-plan-and-roles#Job_Plan">
+        <rdf:type rdf:resource="http://nemo.inf.ufes.br/ontologies/goop#Class"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://nemo.inf.ufes.br/ontologies/job-plan-and-roles#Model_Fragment -->
+
+    <owl:NamedIndividual rdf:about="http://nemo.inf.ufes.br/ontologies/job-plan-and-roles#Model_Fragment">
+        <rdf:type rdf:resource="http://nemo.inf.ufes.br/ontologies/goop#Model_Fragment"/>
+        <goop:composed_by rdf:resource="http://nemo.inf.ufes.br/ontologies/job-plan-and-roles#Job_Plan"/>
+        <goop:composed_by rdf:resource="http://nemo.inf.ufes.br/ontologies/job-plan-and-roles#Organization"/>
+        <goop:composed_by rdf:resource="http://nemo.inf.ufes.br/ontologies/job-plan-and-roles#Organizational_Role"/>
+        <goop:composed_by rdf:resource="http://nemo.inf.ufes.br/ontologies/job-plan-and-roles#defines"/>
+        <goop:composed_by rdf:resource="http://nemo.inf.ufes.br/ontologies/job-plan-and-roles#recognized_by"/>
+        <goop:composed_by rdf:resource="http://nemo.inf.ufes.br/ontologies/job-plan-and-roles#UFO-C::Normative_Description"/>
+        <goop:composed_by rdf:resource="http://nemo.inf.ufes.br/ontologies/job-plan-and-roles#UFO-C::Social_Agent"/>
+        <goop:composed_by rdf:resource="http://nemo.inf.ufes.br/ontologies/job-plan-and-roles#UFO-C::Social_Role"/>
+        <goop:is_used_to_satisfy rdf:resource="http://nemo.inf.ufes.br/ontologies/job-plan-and-roles#Goop"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://nemo.inf.ufes.br/ontologies/job-plan-and-roles#Organization -->
+
+    <owl:NamedIndividual rdf:about="http://nemo.inf.ufes.br/ontologies/job-plan-and-roles#Organization">
+        <rdf:type rdf:resource="http://nemo.inf.ufes.br/ontologies/goop#Class"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://nemo.inf.ufes.br/ontologies/job-plan-and-roles#Organizational_Role -->
+
+    <owl:NamedIndividual rdf:about="http://nemo.inf.ufes.br/ontologies/job-plan-and-roles#Organizational_Role">
+        <rdf:type rdf:resource="http://nemo.inf.ufes.br/ontologies/goop#Class"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://nemo.inf.ufes.br/ontologies/job-plan-and-roles#defines -->
+
+    <owl:NamedIndividual rdf:about="http://nemo.inf.ufes.br/ontologies/job-plan-and-roles#defines">
+        <rdf:type rdf:resource="http://nemo.inf.ufes.br/ontologies/goop#Object_Property"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://nemo.inf.ufes.br/ontologies/job-plan-and-roles#recognized_by -->
+
+    <owl:NamedIndividual rdf:about="http://nemo.inf.ufes.br/ontologies/job-plan-and-roles#recognized_by">
+        <rdf:type rdf:resource="http://nemo.inf.ufes.br/ontologies/goop#Object_Property"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://nemo.inf.ufes.br/ontologies/job-plan-and-roles#UFO-C::Normative_Description -->
+
+    <owl:NamedIndividual rdf:about="http://nemo.inf.ufes.br/ontologies/job-plan-and-roles#UFO-C::Normative_Description">
+        <rdf:type rdf:resource="http://nemo.inf.ufes.br/ontologies/goop#Class"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://nemo.inf.ufes.br/ontologies/job-plan-and-roles#UFO-C::Social_Agent -->
+
+    <owl:NamedIndividual rdf:about="http://nemo.inf.ufes.br/ontologies/job-plan-and-roles#UFO-C::Social_Agent">
+        <rdf:type rdf:resource="http://nemo.inf.ufes.br/ontologies/goop#Class"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://nemo.inf.ufes.br/ontologies/job-plan-and-roles#UFO-C::Social_Role -->
+
+    <owl:NamedIndividual rdf:about="http://nemo.inf.ufes.br/ontologies/job-plan-and-roles#UFO-C::Social_Role">
+        <rdf:type rdf:resource="http://nemo.inf.ufes.br/ontologies/goop#Class"/>
+    </owl:NamedIndividual>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 4.5.6.2018-09-06T00:27:41Z) https://github.com/owlcs/owlapi -->
+

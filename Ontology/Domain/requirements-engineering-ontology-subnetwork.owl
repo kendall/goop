@@ -1,0 +1,369 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns="http://nemo.inf.ufes.br/ontologies/stakeholders#"
+     xml:base="http://nemo.inf.ufes.br/ontologies/stakeholders"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:goop="http://nemo.inf.ufes.br/ontologies/goop#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#">
+    <owl:Ontology rdf:about="http://nemo.inf.ufes.br/ontologies/requirements-engineering-ontology-subnetwork">
+        <owl:imports rdf:resource="http://nemo.inf.ufes.br/ontologies/goop"/>
+    </owl:Ontology>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Individuals
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://nemo.inf.ufes.br/ontologies/requirements-engineering-ontology-subnetwork#Artifact -->
+
+    <owl:NamedIndividual rdf:about="http://nemo.inf.ufes.br/ontologies/requirements-engineering-ontology-subnetwork#Artifact">
+        <rdf:type rdf:resource="http://nemo.inf.ufes.br/ontologies/goop#Class"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://nemo.inf.ufes.br/ontologies/requirements-engineering-ontology-subnetwork#Assumption -->
+
+    <owl:NamedIndividual rdf:about="http://nemo.inf.ufes.br/ontologies/requirements-engineering-ontology-subnetwork#Assumption">
+        <rdf:type rdf:resource="http://nemo.inf.ufes.br/ontologies/goop#Class"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://nemo.inf.ufes.br/ontologies/requirements-engineering-ontology-subnetwork#Composite_Artifact -->
+
+    <owl:NamedIndividual rdf:about="http://nemo.inf.ufes.br/ontologies/requirements-engineering-ontology-subnetwork#Composite_Artifact">
+        <rdf:type rdf:resource="http://nemo.inf.ufes.br/ontologies/goop#Class"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://nemo.inf.ufes.br/ontologies/requirements-engineering-ontology-subnetwork#Document -->
+
+    <owl:NamedIndividual rdf:about="http://nemo.inf.ufes.br/ontologies/requirements-engineering-ontology-subnetwork#Document">
+        <rdf:type rdf:resource="http://nemo.inf.ufes.br/ontologies/goop#Class"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://nemo.inf.ufes.br/ontologies/requirements-engineering-ontology-subnetwork#Functional_Requirement -->
+
+    <owl:NamedIndividual rdf:about="http://nemo.inf.ufes.br/ontologies/requirements-engineering-ontology-subnetwork#Functional_Requirement">
+        <rdf:type rdf:resource="http://nemo.inf.ufes.br/ontologies/goop#Class"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://nemo.inf.ufes.br/ontologies/requirements-engineering-ontology-subnetwork#Goop -->
+
+    <owl:NamedIndividual rdf:about="http://nemo.inf.ufes.br/ontologies/requirements-engineering-ontology-subnetwork#Goop">
+        <rdf:type rdf:resource="http://nemo.inf.ufes.br/ontologies/goop#Goop"/>
+        <goop:composed_by rdf:resource="http://nemo.inf.ufes.br/ontologies/requirements-engineering-ontology-subnetwork#Represent_the_users_needs_and_expectations"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://nemo.inf.ufes.br/ontologies/requirements-engineering-ontology-subnetwork#Information_Item -->
+
+    <owl:NamedIndividual rdf:about="http://nemo.inf.ufes.br/ontologies/requirements-engineering-ontology-subnetwork#Information_Item">
+        <rdf:type rdf:resource="http://nemo.inf.ufes.br/ontologies/goop#Class"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://nemo.inf.ufes.br/ontologies/requirements-engineering-ontology-subnetwork#Model_Fragment -->
+
+    <owl:NamedIndividual rdf:about="http://nemo.inf.ufes.br/ontologies/requirements-engineering-ontology-subnetwork#Model_Fragment">
+        <rdf:type rdf:resource="http://nemo.inf.ufes.br/ontologies/goop#Model_Fragment"/>
+        <goop:composed_by rdf:resource="http://nemo.inf.ufes.br/ontologies/requirements-engineering-ontology-subnetwork#Artifact"/>
+        <goop:composed_by rdf:resource="http://nemo.inf.ufes.br/ontologies/requirements-engineering-ontology-subnetwork#Assumption"/>
+        <goop:composed_by rdf:resource="http://nemo.inf.ufes.br/ontologies/requirements-engineering-ontology-subnetwork#Composite_Artifact"/>
+        <goop:composed_by rdf:resource="http://nemo.inf.ufes.br/ontologies/requirements-engineering-ontology-subnetwork#Document"/>
+        <goop:composed_by rdf:resource="http://nemo.inf.ufes.br/ontologies/requirements-engineering-ontology-subnetwork#Functional_Requirement"/>
+        <goop:composed_by rdf:resource="http://nemo.inf.ufes.br/ontologies/requirements-engineering-ontology-subnetwork#Information_Item"/>
+        <goop:composed_by rdf:resource="http://nemo.inf.ufes.br/ontologies/requirements-engineering-ontology-subnetwork#Non-Functional_Requirement"/>
+        <goop:composed_by rdf:resource="http://nemo.inf.ufes.br/ontologies/requirements-engineering-ontology-subnetwork#Product_Quality_Requirement"/>
+        <goop:composed_by rdf:resource="http://nemo.inf.ufes.br/ontologies/requirements-engineering-ontology-subnetwork#Quality_Characteristic"/>
+        <goop:composed_by rdf:resource="http://nemo.inf.ufes.br/ontologies/requirements-engineering-ontology-subnetwork#Requirement"/>
+        <goop:composed_by rdf:resource="http://nemo.inf.ufes.br/ontologies/requirements-engineering-ontology-subnetwork#Requirement_Artifact"/>
+        <goop:composed_by rdf:resource="http://nemo.inf.ufes.br/ontologies/requirements-engineering-ontology-subnetwork#Requirements_Document"/>
+        <goop:composed_by rdf:resource="http://nemo.inf.ufes.br/ontologies/requirements-engineering-ontology-subnetwork#Requirements_Enginner"/>
+        <goop:composed_by rdf:resource="http://nemo.inf.ufes.br/ontologies/requirements-engineering-ontology-subnetwork#Requirements_Stakeholder"/>
+        <goop:composed_by rdf:resource="http://nemo.inf.ufes.br/ontologies/requirements-engineering-ontology-subnetwork#Simple_Artifact"/>
+        <goop:composed_by rdf:resource="http://nemo.inf.ufes.br/ontologies/requirements-engineering-ontology-subnetwork#Software_Function_Universal"/>
+        <goop:composed_by rdf:resource="http://nemo.inf.ufes.br/ontologies/requirements-engineering-ontology-subnetwork#Stakeholder"/>
+        <goop:composed_by rdf:resource="http://nemo.inf.ufes.br/ontologies/requirements-engineering-ontology-subnetwork#Stakeholder_Belief"/>
+        <goop:composed_by rdf:resource="http://nemo.inf.ufes.br/ontologies/requirements-engineering-ontology-subnetwork#Stakeholder_Intention"/>
+        <goop:composed_by rdf:resource="http://nemo.inf.ufes.br/ontologies/requirements-engineering-ontology-subnetwork#describes"/>
+        <goop:composed_by rdf:resource="http://nemo.inf.ufes.br/ontologies/requirements-engineering-ontology-subnetwork#got_from"/>
+        <goop:composed_by rdf:resource="http://nemo.inf.ufes.br/ontologies/requirements-engineering-ontology-subnetwork#inheres_in"/>
+        <goop:composed_by rdf:resource="http://nemo.inf.ufes.br/ontologies/requirements-engineering-ontology-subnetwork#interested_in"/>
+        <goop:composed_by rdf:resource="http://nemo.inf.ufes.br/ontologies/requirements-engineering-ontology-subnetwork#refers_to"/>
+        <goop:composed_by rdf:resource="http://nemo.inf.ufes.br/ontologies/requirements-engineering-ontology-subnetwork#responsible_for"/>
+        <goop:composed_by rdf:resource="http://nemo.inf.ufes.br/ontologies/requirements-engineering-ontology-subnetwork#UFO-A::Quality_Universal"/>
+        <goop:composed_by rdf:resource="http://nemo.inf.ufes.br/ontologies/requirements-engineering-ontology-subnetwork#UFO-C::Agent"/>
+        <goop:composed_by rdf:resource="http://nemo.inf.ufes.br/ontologies/requirements-engineering-ontology-subnetwork#UFO-C::Belief"/>
+        <goop:composed_by rdf:resource="http://nemo.inf.ufes.br/ontologies/requirements-engineering-ontology-subnetwork#UFO-C::Function_Universal"/>
+        <goop:composed_by rdf:resource="http://nemo.inf.ufes.br/ontologies/requirements-engineering-ontology-subnetwork#UFO-C::Goal"/>
+        <goop:composed_by rdf:resource="http://nemo.inf.ufes.br/ontologies/requirements-engineering-ontology-subnetwork#UFO-C::Intention"/>
+        <goop:composed_by rdf:resource="http://nemo.inf.ufes.br/ontologies/requirements-engineering-ontology-subnetwork#UFO-C::Intentional_Moment"/>
+        <goop:composed_by rdf:resource="http://nemo.inf.ufes.br/ontologies/requirements-engineering-ontology-subnetwork#UFO-C::Mental_Moment"/>
+        <goop:composed_by rdf:resource="http://nemo.inf.ufes.br/ontologies/requirements-engineering-ontology-subnetwork#UFO-C::Proposition"/>
+        <goop:is_used_to_satisfy rdf:resource="http://nemo.inf.ufes.br/ontologies/requirements-engineering-ontology-subnetwork#Goop"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://nemo.inf.ufes.br/ontologies/requirements-engineering-ontology-subnetwork#Non-Functional_Requirement -->
+
+    <owl:NamedIndividual rdf:about="http://nemo.inf.ufes.br/ontologies/requirements-engineering-ontology-subnetwork#Non-Functional_Requirement">
+        <rdf:type rdf:resource="http://nemo.inf.ufes.br/ontologies/goop#Class"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://nemo.inf.ufes.br/ontologies/requirements-engineering-ontology-subnetwork#Product_Quality_Requirement -->
+
+    <owl:NamedIndividual rdf:about="http://nemo.inf.ufes.br/ontologies/requirements-engineering-ontology-subnetwork#Product_Quality_Requirement">
+        <rdf:type rdf:resource="http://nemo.inf.ufes.br/ontologies/goop#Class"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://nemo.inf.ufes.br/ontologies/requirements-engineering-ontology-subnetwork#Quality_Characteristic -->
+
+    <owl:NamedIndividual rdf:about="http://nemo.inf.ufes.br/ontologies/requirements-engineering-ontology-subnetwork#Quality_Characteristic">
+        <rdf:type rdf:resource="http://nemo.inf.ufes.br/ontologies/goop#Class"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://nemo.inf.ufes.br/ontologies/requirements-engineering-ontology-subnetwork#Represent_the_users_needs_and_expectations -->
+
+    <owl:NamedIndividual rdf:about="http://nemo.inf.ufes.br/ontologies/requirements-engineering-ontology-subnetwork#Represent_the_users_needs_and_expectations">
+        <rdf:type rdf:resource="http://nemo.inf.ufes.br/ontologies/goop#Goal_Based_Requirement"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://nemo.inf.ufes.br/ontologies/requirements-engineering-ontology-subnetwork#Requirement -->
+
+    <owl:NamedIndividual rdf:about="http://nemo.inf.ufes.br/ontologies/requirements-engineering-ontology-subnetwork#Requirement">
+        <rdf:type rdf:resource="http://nemo.inf.ufes.br/ontologies/goop#Class"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://nemo.inf.ufes.br/ontologies/requirements-engineering-ontology-subnetwork#Requirement_Artifact -->
+
+    <owl:NamedIndividual rdf:about="http://nemo.inf.ufes.br/ontologies/requirements-engineering-ontology-subnetwork#Requirement_Artifact">
+        <rdf:type rdf:resource="http://nemo.inf.ufes.br/ontologies/goop#Class"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://nemo.inf.ufes.br/ontologies/requirements-engineering-ontology-subnetwork#Requirements_Document -->
+
+    <owl:NamedIndividual rdf:about="http://nemo.inf.ufes.br/ontologies/requirements-engineering-ontology-subnetwork#Requirements_Document">
+        <rdf:type rdf:resource="http://nemo.inf.ufes.br/ontologies/goop#Class"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://nemo.inf.ufes.br/ontologies/requirements-engineering-ontology-subnetwork#Requirements_Enginner -->
+
+    <owl:NamedIndividual rdf:about="http://nemo.inf.ufes.br/ontologies/requirements-engineering-ontology-subnetwork#Requirements_Enginner">
+        <rdf:type rdf:resource="http://nemo.inf.ufes.br/ontologies/goop#Class"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://nemo.inf.ufes.br/ontologies/requirements-engineering-ontology-subnetwork#Requirements_Stakeholder -->
+
+    <owl:NamedIndividual rdf:about="http://nemo.inf.ufes.br/ontologies/requirements-engineering-ontology-subnetwork#Requirements_Stakeholder">
+        <rdf:type rdf:resource="http://nemo.inf.ufes.br/ontologies/goop#Class"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://nemo.inf.ufes.br/ontologies/requirements-engineering-ontology-subnetwork#Simple_Artifact -->
+
+    <owl:NamedIndividual rdf:about="http://nemo.inf.ufes.br/ontologies/requirements-engineering-ontology-subnetwork#Simple_Artifact">
+        <rdf:type rdf:resource="http://nemo.inf.ufes.br/ontologies/goop#Class"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://nemo.inf.ufes.br/ontologies/requirements-engineering-ontology-subnetwork#Software_Function_Universal -->
+
+    <owl:NamedIndividual rdf:about="http://nemo.inf.ufes.br/ontologies/requirements-engineering-ontology-subnetwork#Software_Function_Universal">
+        <rdf:type rdf:resource="http://nemo.inf.ufes.br/ontologies/goop#Class"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://nemo.inf.ufes.br/ontologies/requirements-engineering-ontology-subnetwork#Stakeholder -->
+
+    <owl:NamedIndividual rdf:about="http://nemo.inf.ufes.br/ontologies/requirements-engineering-ontology-subnetwork#Stakeholder">
+        <rdf:type rdf:resource="http://nemo.inf.ufes.br/ontologies/goop#Class"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://nemo.inf.ufes.br/ontologies/requirements-engineering-ontology-subnetwork#Stakeholder_Belief -->
+
+    <owl:NamedIndividual rdf:about="http://nemo.inf.ufes.br/ontologies/requirements-engineering-ontology-subnetwork#Stakeholder_Belief">
+        <rdf:type rdf:resource="http://nemo.inf.ufes.br/ontologies/goop#Class"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://nemo.inf.ufes.br/ontologies/requirements-engineering-ontology-subnetwork#Stakeholder_Intention -->
+
+    <owl:NamedIndividual rdf:about="http://nemo.inf.ufes.br/ontologies/requirements-engineering-ontology-subnetwork#Stakeholder_Intention">
+        <rdf:type rdf:resource="http://nemo.inf.ufes.br/ontologies/goop#Class"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://nemo.inf.ufes.br/ontologies/requirements-engineering-ontology-subnetwork#describes -->
+
+    <owl:NamedIndividual rdf:about="http://nemo.inf.ufes.br/ontologies/requirements-engineering-ontology-subnetwork#describes">
+        <rdf:type rdf:resource="http://nemo.inf.ufes.br/ontologies/goop#Object_Property"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://nemo.inf.ufes.br/ontologies/requirements-engineering-ontology-subnetwork#got_from -->
+
+    <owl:NamedIndividual rdf:about="http://nemo.inf.ufes.br/ontologies/requirements-engineering-ontology-subnetwork#got_from">
+        <rdf:type rdf:resource="http://nemo.inf.ufes.br/ontologies/goop#Object_Property"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://nemo.inf.ufes.br/ontologies/requirements-engineering-ontology-subnetwork#inheres_in -->
+
+    <owl:NamedIndividual rdf:about="http://nemo.inf.ufes.br/ontologies/requirements-engineering-ontology-subnetwork#inheres_in">
+        <rdf:type rdf:resource="http://nemo.inf.ufes.br/ontologies/goop#Object_Property"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://nemo.inf.ufes.br/ontologies/requirements-engineering-ontology-subnetwork#interested_in -->
+
+    <owl:NamedIndividual rdf:about="http://nemo.inf.ufes.br/ontologies/requirements-engineering-ontology-subnetwork#interested_in">
+        <rdf:type rdf:resource="http://nemo.inf.ufes.br/ontologies/goop#Object_Property"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://nemo.inf.ufes.br/ontologies/requirements-engineering-ontology-subnetwork#proprositional_content_of -->
+
+    <owl:NamedIndividual rdf:about="http://nemo.inf.ufes.br/ontologies/requirements-engineering-ontology-subnetwork#proprositional_content_of">
+        <rdf:type rdf:resource="http://nemo.inf.ufes.br/ontologies/goop#Object_Property"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://nemo.inf.ufes.br/ontologies/requirements-engineering-ontology-subnetwork#refers_to -->
+
+    <owl:NamedIndividual rdf:about="http://nemo.inf.ufes.br/ontologies/requirements-engineering-ontology-subnetwork#refers_to">
+        <rdf:type rdf:resource="http://nemo.inf.ufes.br/ontologies/goop#Object_Property"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://nemo.inf.ufes.br/ontologies/requirements-engineering-ontology-subnetwork#responsible_for -->
+
+    <owl:NamedIndividual rdf:about="http://nemo.inf.ufes.br/ontologies/requirements-engineering-ontology-subnetwork#responsible_for">
+        <rdf:type rdf:resource="http://nemo.inf.ufes.br/ontologies/goop#Object_Property"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://nemo.inf.ufes.br/ontologies/requirements-engineering-ontology-subnetwork#UFO-A::Quality_Universal -->
+
+    <owl:NamedIndividual rdf:about="http://nemo.inf.ufes.br/ontologies/requirements-engineering-ontology-subnetwork#UFO-A::Quality_Universal">
+        <rdf:type rdf:resource="http://nemo.inf.ufes.br/ontologies/goop#Class"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://nemo.inf.ufes.br/ontologies/requirements-engineering-ontology-subnetwork#UFO-C::Agent -->
+
+    <owl:NamedIndividual rdf:about="http://nemo.inf.ufes.br/ontologies/requirements-engineering-ontology-subnetwork#UFO-C::Agent">
+        <rdf:type rdf:resource="http://nemo.inf.ufes.br/ontologies/goop#Class"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://nemo.inf.ufes.br/ontologies/requirements-engineering-ontology-subnetwork#UFO-C::Belief -->
+
+    <owl:NamedIndividual rdf:about="http://nemo.inf.ufes.br/ontologies/requirements-engineering-ontology-subnetwork#UFO-C::Belief">
+        <rdf:type rdf:resource="http://nemo.inf.ufes.br/ontologies/goop#Class"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://nemo.inf.ufes.br/ontologies/requirements-engineering-ontology-subnetwork#UFO-C::Function_Universal -->
+
+    <owl:NamedIndividual rdf:about="http://nemo.inf.ufes.br/ontologies/requirements-engineering-ontology-subnetwork#UFO-C::Function_Universal">
+        <rdf:type rdf:resource="http://nemo.inf.ufes.br/ontologies/goop#Class"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://nemo.inf.ufes.br/ontologies/requirements-engineering-ontology-subnetwork#UFO-C::Goal -->
+
+    <owl:NamedIndividual rdf:about="http://nemo.inf.ufes.br/ontologies/requirements-engineering-ontology-subnetwork#UFO-C::Goal">
+        <rdf:type rdf:resource="http://nemo.inf.ufes.br/ontologies/goop#Class"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://nemo.inf.ufes.br/ontologies/requirements-engineering-ontology-subnetwork#UFO-C::Intention -->
+
+    <owl:NamedIndividual rdf:about="http://nemo.inf.ufes.br/ontologies/requirements-engineering-ontology-subnetwork#UFO-C::Intention">
+        <rdf:type rdf:resource="http://nemo.inf.ufes.br/ontologies/goop#Class"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://nemo.inf.ufes.br/ontologies/requirements-engineering-ontology-subnetwork#UFO-C::Intentional_Moment -->
+
+    <owl:NamedIndividual rdf:about="http://nemo.inf.ufes.br/ontologies/requirements-engineering-ontology-subnetwork#UFO-C::Intentional_Moment">
+        <rdf:type rdf:resource="http://nemo.inf.ufes.br/ontologies/goop#Class"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://nemo.inf.ufes.br/ontologies/requirements-engineering-ontology-subnetwork#UFO-C::Mental_Moment -->
+
+    <owl:NamedIndividual rdf:about="http://nemo.inf.ufes.br/ontologies/requirements-engineering-ontology-subnetwork#UFO-C::Mental_Moment">
+        <rdf:type rdf:resource="http://nemo.inf.ufes.br/ontologies/goop#Class"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://nemo.inf.ufes.br/ontologies/requirements-engineering-ontology-subnetwork#UFO-C::Proposition -->
+
+    <owl:NamedIndividual rdf:about="http://nemo.inf.ufes.br/ontologies/requirements-engineering-ontology-subnetwork#UFO-C::Proposition">
+        <rdf:type rdf:resource="http://nemo.inf.ufes.br/ontologies/goop#Class"/>
+    </owl:NamedIndividual>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 4.5.7.2018-12-02T02:23:35Z) https://github.com/owlcs/owlapi -->
+

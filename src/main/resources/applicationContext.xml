@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+       http://www.springframework.org/schema/beans/spring-beans.xsd">
+    <!--
+    <bean name="embeddedProvider" class="br.ufes.inf.nemo.stardog.config.EmbeddedProvider"></bean>
+
+    <bean name="dataSource" class="com.complexible.stardog.ext.spring.DataSourceFactoryBean">
+        <property name="to" value="testDB"/>
+        <property name="provider" ref="embeddedProvider"/>
+        <property name="username" value="admin"/>
+        <property name="password" value="admin"/>
+    </bean>
+    -->
+    <bean name="stardogAdmin" class="br.ufes.inf.nemo.stardog.StardogAdmin">
+        <property name="to" value="testDB"/>
+        <property name="username" value="admin"/>
+        <property name="password" value="admin"/>
+        <property name="url" value="http://200.137.66.31:5820"/>
+    </bean>
+
+    <bean name="dataSource" class="com.complexible.stardog.ext.spring.DataSourceFactoryBean">
+        <property name="to" value="testDB"/>
+        <property name="username" value="admin"/>
+        <property name="password" value="admin"/>
+        <property name="url" value="http://200.137.66.31:5820"/>
+    </bean>
+
+    <bean name="template" class="com.complexible.stardog.ext.spring.SnarlTemplate">
+        <property name="dataSource" ref="dataSource"/>
+    </bean>
+
+    <bean name="importer" class="com.complexible.stardog.ext.spring.DataImporter">
+        <property name="snarlTemplate" ref="template"/>
+        <property name="format" value="TURTLE"/>
+        <property name="inputFiles">
+            <list>
+                <value>classpath:data/foaf.rdf</value>
+                <value>classpath:data/marvel.rdf</value>
+                <value>classpath:data/marvel_v2.rdf</value>
+            </list>
+        </property>
+    </bean>
+</beans>

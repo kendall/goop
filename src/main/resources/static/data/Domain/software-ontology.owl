@@ -1,0 +1,297 @@
+@prefix : <http://nemo.inf.ufes.br/ontologies/fragments/software-ontology#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix goop: <http://nemo.inf.ufes.br/ontologies/goop#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@base <http://nemo.inf.ufes.br/ontologies/fragments/software-ontology> .
+
+<http://nemo.inf.ufes.br/ontologies/fragments/software-ontology> rdf:type owl:Ontology ;
+                                                                  owl:imports <http://nemo.inf.ufes.br/ontologies/goop> .
+
+#################################################################
+#    Individuals
+#################################################################
+
+###  http://nemo.inf.ufes.br/ontologies/fragments/software-ontology#Artifact
+:Artifact rdf:type owl:NamedIndividual ,
+                   goop:Class ;
+          rdfs:comment """Object intentionally made to serve a given purpose in the context of a software Project or Organization. 
+Ex.: a document, a model, a library, an e-mail, a bug."""^^rdfs:Literal .
+
+
+###  http://nemo.inf.ufes.br/ontologies/fragments/software-ontology#Code
+:Code rdf:type owl:NamedIndividual ,
+               goop:Class ;
+      rdfs:comment "Software Item representing a set of computer instructions and data definitions expressed in a programming language or in a form output by an assembler, compiler, or other translator (SEVOCAB)."^^rdfs:Literal .
+
+
+###  http://nemo.inf.ufes.br/ontologies/fragments/software-ontology#Composite_Artifact
+:Composite_Artifact rdf:type owl:NamedIndividual ,
+                             goop:Class ;
+                    goop:component_of :Composite_Artifact ;
+                    goop:specifies :Artifact ;
+                    rdfs:comment "Artifact composed of other Artifacts."^^rdfs:Literal .
+
+
+###  http://nemo.inf.ufes.br/ontologies/fragments/software-ontology#Define_Artifact
+:Define_Artifact rdf:type owl:NamedIndividual ,
+                          goop:Goal_Based_Requirement ;
+                 goop:composed_by :Define_Artifact_by_Nature ,
+                                  :Define_Artifact_by_Parts ;
+                 rdfs:comment "In the context of the software domain, Artifacts are objects intentionally made to serve a given purpose in the context of a Software Project or Organization."^^rdfs:Literal .
+
+
+###  http://nemo.inf.ufes.br/ontologies/fragments/software-ontology#Define_Artifact_by_Nature
+:Define_Artifact_by_Nature rdf:type owl:NamedIndividual ,
+                                    goop:Goal_Based_Requirement ;
+                           rdfs:comment "Artifact Type partitions the generalization set of Artifacts according to their nature, giving rise to a taxonomy of artifacts. More specific taxonomies can be established for specific types of artifacts, such as documents (established by instances of Document Type) and Software Product (Software Product Type), among others."^^rdfs:Literal .
+
+
+###  http://nemo.inf.ufes.br/ontologies/fragments/software-ontology#Define_Artifact_by_Parts
+:Define_Artifact_by_Parts rdf:type owl:NamedIndividual ,
+                                   goop:Goal_Based_Requirement ;
+                          rdfs:comment "Can be composed of other artifacts (Composite Artifact) or not (Simple Artifact)."^^rdfs:Literal .
+
+
+###  http://nemo.inf.ufes.br/ontologies/fragments/software-ontology#Define_Code
+:Define_Code rdf:type owl:NamedIndividual ,
+                      goop:Goal_Based_Requirement .
+
+
+###  http://nemo.inf.ufes.br/ontologies/fragments/software-ontology#Define_Software_Program
+:Define_Software_Program rdf:type owl:NamedIndividual ,
+                                  goop:Goal_Based_Requirement ;
+                         goop:composed_by :Define_Code .
+
+
+###  http://nemo.inf.ufes.br/ontologies/fragments/software-ontology#Define_what_composes_a_Software
+:Define_what_composes_a_Software rdf:type owl:NamedIndividual ,
+                                          goop:Goal_Based_Requirement ;
+                                 goop:composed_by :Define_Artifact ,
+                                                  :Define_Code ,
+                                                  :Define_Software_Program ;
+                                 rdfs:comment "The Software Ontology (SwO) captures that software products have a complex artifactual nature, being constituted of software artifacts of different nature, including software systems, programs and code."^^rdfs:Literal .
+
+
+###  http://nemo.inf.ufes.br/ontologies/fragments/software-ontology#Document
+:Document rdf:type owl:NamedIndividual ,
+                   goop:Class ;
+          goop:specifies :Artifact ;
+          rdfs:comment """Any written or pictorial, uniquely identified, information related to the software development, usually presented in a predefined format. 
+Ex.: a Requirements Document, a specification, a report."""^^rdfs:Literal .
+
+
+###  http://nemo.inf.ufes.br/ontologies/fragments/software-ontology#Goop-1
+:Goop-1 rdf:type owl:NamedIndividual ,
+                 goop:Goop ;
+        goop:composed_by :Define_Artifact_by_Nature .
+
+
+###  http://nemo.inf.ufes.br/ontologies/fragments/software-ontology#Goop-2
+:Goop-2 rdf:type owl:NamedIndividual ,
+                 goop:Goop ;
+        goop:composed_by :Define_Artifact_by_Parts .
+
+
+###  http://nemo.inf.ufes.br/ontologies/fragments/software-ontology#Goop-3
+:Goop-3 rdf:type owl:NamedIndividual ,
+                 goop:Goop ;
+        goop:composed_by :Define_Code .
+
+
+###  http://nemo.inf.ufes.br/ontologies/fragments/software-ontology#Goop-4
+:Goop-4 rdf:type owl:NamedIndividual ,
+                 goop:Goop ;
+        goop:composed_by :Define_what_composes_a_Software .
+
+
+###  http://nemo.inf.ufes.br/ontologies/fragments/software-ontology#Goop-5
+:Goop-5 rdf:type owl:NamedIndividual ,
+                 goop:Goop ;
+        goop:composed_by :Define_Software_Program .
+
+
+###  http://nemo.inf.ufes.br/ontologies/fragments/software-ontology#Goop-General
+:Goop-General rdf:type owl:NamedIndividual ,
+                       goop:Goop ;
+              goop:composed_by :Define_Artifact .
+
+
+###  http://nemo.inf.ufes.br/ontologies/fragments/software-ontology#Information_Item
+:Information_Item rdf:type owl:NamedIndividual ,
+                           goop:Class ;
+                  goop:specifies :Artifact ;
+                  rdfs:comment """Relevant information for human use, produced or used by Performed Activity. 
+Ex.: a documented requirement, a bug reported, an agreement e-mail, a component description."""^^rdfs:Literal .
+
+
+###  http://nemo.inf.ufes.br/ontologies/fragments/software-ontology#Machine_Code
+:Machine_Code rdf:type owl:NamedIndividual ,
+                       goop:Class ;
+              goop:specifies :Code ;
+              rdfs:comment "Computer instructions and data definitions expressed in a form output by an assembler, compiler, or other translator, which can be recognized by the processing unit of a computer machine."^^rdfs:Literal .
+
+
+###  http://nemo.inf.ufes.br/ontologies/fragments/software-ontology#Model
+:Model rdf:type owl:NamedIndividual ,
+                goop:Class ;
+       goop:specifies :Artifact ;
+       rdfs:comment """A representation (abstraction) of a process or system from a particular perspective. 
+Ex.: a use case model, a class model, a component model."""^^rdfs:Literal .
+
+
+###  http://nemo.inf.ufes.br/ontologies/fragments/software-ontology#Model_Fragment-1
+:Model_Fragment-1 rdf:type owl:NamedIndividual ,
+                           goop:Model_Fragment ;
+                  goop:composed_by :Artifact ,
+                                   :Document ,
+                                   :Information_Item ,
+                                   :Model ,
+                                   :Software_Item ,
+                                   :Software_Product ;
+                  goop:is_used_to_satisfy :Goop-1 .
+
+
+###  http://nemo.inf.ufes.br/ontologies/fragments/software-ontology#Model_Fragment-2
+:Model_Fragment-2 rdf:type owl:NamedIndividual ,
+                           goop:Model_Fragment ;
+                  goop:composed_by :Artifact ,
+                                   :Composite_Artifact ,
+                                   :Simple_Artifact ;
+                  goop:is_used_to_satisfy :Goop-2 .
+
+
+###  http://nemo.inf.ufes.br/ontologies/fragments/software-ontology#Model_Fragment-3
+:Model_Fragment-3 rdf:type owl:NamedIndividual ,
+                           goop:Model_Fragment ;
+                  goop:composed_by :Code ,
+                                   :Machine_Code ,
+                                   :Programming_Language ,
+                                   :Source_Code ,
+                                   :generated_from ,
+                                   :written_in ;
+                  goop:is_used_to_satisfy :Goop-3 .
+
+
+###  http://nemo.inf.ufes.br/ontologies/fragments/software-ontology#Model_Fragment-4
+:Model_Fragment-4 rdf:type owl:NamedIndividual ,
+                           goop:Model_Fragment ;
+                  goop:is_used_to_satisfy :Goop-4 .
+
+
+###  http://nemo.inf.ufes.br/ontologies/fragments/software-ontology#Model_Fragment-5
+:Model_Fragment-5 rdf:type owl:NamedIndividual ,
+                           goop:Model_Fragment ;
+                  goop:composed_by :Program ,
+                                   :Program_Specification ,
+                                   :Software_System ,
+                                   :System_Specification ,
+                                   :constituted_of ,
+                                   :implements ,
+                                   :intends_to_implement ,
+                                   :intends_to_satisfy ;
+                  goop:is_used_to_satisfy :Goop-5 .
+
+
+###  http://nemo.inf.ufes.br/ontologies/fragments/software-ontology#Model_Fragment-General
+:Model_Fragment-General rdf:type owl:NamedIndividual ,
+                                 goop:Model_Fragment ;
+                        goop:is_used_to_satisfy :Goop-General .
+
+
+###  http://nemo.inf.ufes.br/ontologies/fragments/software-ontology#Program
+:Program rdf:type owl:NamedIndividual ,
+                  goop:Class ;
+         goop:specifies :Software_Item ;
+         rdfs:comment "Software Item which aims at producing a certain result through execution on a computer, in a particular way, given by the Program Specification. A Program is constituted by code, but it is not identical to code. Code can be changed without altering the identity of its program, which is anchored to the program's essential property: its intended specification (Program Specification)."^^rdfs:Literal .
+
+
+###  http://nemo.inf.ufes.br/ontologies/fragments/software-ontology#Program_Specification
+:Program_Specification rdf:type owl:NamedIndividual ,
+                                goop:Class ;
+                       rdfs:comment "A document that describes the purpose (structure and functions) of a program in sufficient detail to permit coding and to facilitate maintenance."^^rdfs:Literal .
+
+
+###  http://nemo.inf.ufes.br/ontologies/fragments/software-ontology#Programming_Language
+:Programming_Language rdf:type owl:NamedIndividual ,
+                               goop:Class ;
+                      rdfs:comment "A language used to express computer programs."^^rdfs:Literal .
+
+
+###  http://nemo.inf.ufes.br/ontologies/fragments/software-ontology#Simple_Artifact
+:Simple_Artifact rdf:type owl:NamedIndividual ,
+                          goop:Class ;
+                 goop:specifies :Artifact ;
+                 rdfs:comment "Artifact that is not decomposed into other Artifacts."^^rdfs:Literal .
+
+
+###  http://nemo.inf.ufes.br/ontologies/fragments/software-ontology#Software_Item
+:Software_Item rdf:type owl:NamedIndividual ,
+                        goop:Class ;
+               goop:specifies :Artifact ;
+               rdfs:comment """Piece of software, produced during the software process, not considered a complete Software Product, but an intermediary result. 
+Ex.: a component, database schema, a script."""^^rdfs:Literal .
+
+
+###  http://nemo.inf.ufes.br/ontologies/fragments/software-ontology#Software_Product
+:Software_Product rdf:type owl:NamedIndividual ,
+                           goop:Class ;
+                  goop:specifies :Artifact ;
+                  rdfs:comment """One or more computer programs together with any accompanying auxiliary items, such as documentation, delivered under a single name, ready for use. 
+Ex.: Astah modeling tool, Microsoft Word, Eclipse IDE."""^^rdfs:Literal .
+
+
+###  http://nemo.inf.ufes.br/ontologies/fragments/software-ontology#Software_System
+:Software_System rdf:type owl:NamedIndividual ,
+                          goop:Class ;
+                 goop:specifies :Software_Item ;
+                 rdfs:comment "Software Item that aims at satisfying a specification (System Specification), concerning a desired change in a data structure inside a computer, abstracting away from the behavior."^^rdfs:Literal .
+
+
+###  http://nemo.inf.ufes.br/ontologies/fragments/software-ontology#Source_Code
+:Source_Code rdf:type owl:NamedIndividual ,
+                      goop:Class ;
+             goop:specifies :Code ;
+             rdfs:comment """A well-formed sequence of computer instructions and data definitions expressed in a programming language, in a form suitable for input to an assembler, compiler,
+or other translator."""^^rdfs:Literal .
+
+
+###  http://nemo.inf.ufes.br/ontologies/fragments/software-ontology#System_Specification
+:System_Specification rdf:type owl:NamedIndividual ,
+                               goop:Class ;
+                      goop:specifies :Document .
+
+
+###  http://nemo.inf.ufes.br/ontologies/fragments/software-ontology#constituted_of
+:constituted_of rdf:type owl:NamedIndividual ,
+                         goop:Object_Property .
+
+
+###  http://nemo.inf.ufes.br/ontologies/fragments/software-ontology#generated_from
+:generated_from rdf:type owl:NamedIndividual ,
+                         goop:Object_Property .
+
+
+###  http://nemo.inf.ufes.br/ontologies/fragments/software-ontology#implements
+:implements rdf:type owl:NamedIndividual ,
+                     goop:Object_Property .
+
+
+###  http://nemo.inf.ufes.br/ontologies/fragments/software-ontology#intends_to_implement
+:intends_to_implement rdf:type owl:NamedIndividual ,
+                               goop:Object_Property .
+
+
+###  http://nemo.inf.ufes.br/ontologies/fragments/software-ontology#intends_to_satisfy
+:intends_to_satisfy rdf:type owl:NamedIndividual ,
+                             goop:Object_Property .
+
+
+###  http://nemo.inf.ufes.br/ontologies/fragments/software-ontology#written_in
+:written_in rdf:type owl:NamedIndividual ,
+                     goop:Object_Property .
+
+
+###  Generated by the OWL API (version 4.5.7.2018-12-02T02:23:35Z) https://github.com/owlcs/owlapi
